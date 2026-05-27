@@ -1,0 +1,75 @@
+{
+  "sheet_name": "NanoSoft CRM",
+  "tabs": [
+    {
+      "name": "Leads",
+      "description": "All leads found by SCOUT. JUDGE scores and filters here.",
+      "headers": [
+        "lead_id",
+        "company_name",
+        "person_name",
+        "website",
+        "email",
+        "social_url",
+        "source_platform",
+        "lead_description",
+        "pain_point",
+        "outreach_angle",
+        "date_found",
+        "judge_score",
+        "judge_status",
+        "judge_notes"
+      ]
+    },
+    {
+      "name": "Outreach",
+      "description": "Top 30 qualified leads that QUILL drafts emails for.",
+      "headers": [
+        "lead_id",
+        "company_name",
+        "person_name",
+        "email",
+        "pain_point",
+        "outreach_angle",
+        "email_subject",
+        "email_body",
+        "followup_1",
+        "followup_2",
+        "draft_status",
+        "sent_status",
+        "followup_1_status",
+        "followup_2_status",
+        "last_contact_date",
+        "date_added"
+      ]
+    },
+    {
+      "name": "Analytics",
+      "description": "Daily pipeline stats.",
+      "headers": [
+        "date",
+        "leads_found",
+        "leads_verified",
+        "leads_rejected",
+        "top_30_selected",
+        "emails_drafted",
+        "emails_sent",
+        "replies_received",
+        "conversion_rate"
+      ]
+    }
+  ],
+  "judge_status_values": [
+    "pending",
+    "scored",
+    "rejected",
+    "qualified"
+  ],
+  "draft_status_values": [
+    "pending",
+    "drafted",
+    "ready_to_send",
+    "sent",
+    "replied"
+  ]
+}

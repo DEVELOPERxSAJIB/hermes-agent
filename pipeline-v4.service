@@ -1,0 +1,16 @@
+[Unit]
+Description=NanoSoft Pipeline v4 - Lead Generation & Outreach
+After=network.target
+Restart=always
+RestartSec=300
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/nanosoft
+ExecStart=/usr/bin/python3 /home/ubuntu/nanosoft/pipeline_v4.py
+StandardOutput=append:/home/ubuntu/nanosoft/pipeline_v4.log
+StandardError=append:/home/ubuntu/nanosoft/pipeline_v4.log
+
+[Install]
+WantedBy=multi-user.target

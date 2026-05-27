@@ -1,0 +1,90 @@
+{
+  "timestamp": "2026-05-25T08:00:28.213818+06:00",
+  "count": 24,
+  "top": [
+    {
+      "source": "RemoteOK",
+      "company": "360Dialog",
+      "role": "Finance Assistant",
+      "url": "https://remoteOK.com/remote-jobs/remote-finance-assistant-360dialog-1131689",
+      "budget": null,
+      "budget_num": 0,
+      "stack": [],
+      "description": "14:05:03 gepostet. About Us360Dialog is the leading Whatsapp platform for Independent Software Providers. We are\u00e2\u0080\u00a6. Sehen Sie sich dieses und weitere Jobangebote auf LinkedIn an.<br/><br/>Please ment",
+      "is_contract": true,
+      "is_fulltime": false,
+      "date_str": "2026-05-22T14:03:37+00:00",
+      "date_dt": "2026-05-22T14:03:37+00:00",
+      "is_very_fresh": false,
+      "score": 2
+    },
+    {
+      "source": "WeWorkRemotely",
+      "company": "Speechify Inc",
+      "role": "Senior Software Engineer, Web",
+      "url": "https://weworkremotely.com/remote-jobs/speechify-inc-senior-software-engineer-web-1",
+      "budget": null,
+      "budget_num": 0,
+      "stack": [
+        "javascript"
+      ],
+      "description": "\n\n<p>\n  <strong>Headquarters:</strong> Florida\n    <br /><strong>URL:</strong> <a href=\"http://www.speechify.com\">http://www.speechify.com</a>\n</p>\n\n<div><strong><br>Overview<br></strong></div>\n<div>W",
+      "is_contract": false,
+      "is_fulltime": false,
+      "date_str": "Sat, 23 May 2026 13:43:59 +0000",
+      "date_dt": "2026-05-23T13:43:59+00:00",
+      "is_very_fresh": false,
+      "score": 2
+    },
+    {
+      "source": "WeWorkRemotely",
+      "company": "ShiftForce LLC",
+      "role": "Full-Stack Developer \u2014 .NET + React + Azure \u2014 Remote (US)",
+      "url": "https://weworkremotely.com/remote-jobs/shiftforce-llc-full-stack-developer-net-react-azure-remote-us",
+      "budget": null,
+      "budget_num": 0,
+      "stack": [
+        "react"
+      ],
+      "description": "<img src=\"https://we-work-remotely.imgix.net/logos/0171/5210/logo.gif?ixlib=rails-4.0.0&w=50&h=50&dpr=2&fit=fill&auto=compress\" />\n\n<p>\n  <strong>Headquarters:</strong> Kansas City\n    <br /><strong>U",
+      "is_contract": false,
+      "is_fulltime": false,
+      "date_str": "Wed, 20 May 2026 14:08:40 +0000",
+      "date_dt": "2026-05-20T14:08:40+00:00",
+      "is_very_fresh": false,
+      "score": 2
+    },
+    {
+      "source": "WeWorkRemotely",
+      "company": "Figure 53",
+      "role": "Senior QLab Support Specialist (half time)",
+      "url": "https://weworkremotely.com/remote-jobs/figure-53-senior-qlab-support-specialist-half-time-1",
+      "budget": null,
+      "budget_num": 0,
+      "stack": [],
+      "description": "<img src=\"https://we-work-remotely.imgix.net/logos/0086/7680/logo.gif?ixlib=rails-4.0.0&w=50&h=50&dpr=2&fit=fill&auto=compress\" />\n\n<p>\n  <strong>Headquarters:</strong> Baltimore, MD\n    <br /><strong",
+      "is_contract": true,
+      "is_fulltime": false,
+      "date_str": "Mon, 18 May 2026 20:07:59 +0000",
+      "date_dt": "2026-05-18T20:07:59+00:00",
+      "is_very_fresh": false,
+      "score": 2
+    },
+    {
+      "source": "WeWorkRemotely",
+      "company": "Figure 53",
+      "role": "Senior QLab Support Specialist (half time)",
+      "url": "https://weworkremotely.com/remote-jobs/figure-53-senior-qlab-support-specialist-half-time",
+      "budget": null,
+      "budget_num": 0,
+      "stack": [],
+      "description": "\n\n<p>\n  <strong>Headquarters:</strong> Baltimore, MD\n    <br /><strong>URL:</strong> <a href=\"https://qlab.app/\">https://qlab.app/</a>\n</p>\n\n<p>Figure 53, a Baltimore-based software company, is hiring",
+      "is_contract": true,
+      "is_fulltime": false,
+      "date_str": "Mon, 18 May 2026 20:06:44 +0000",
+      "date_dt": "2026-05-18T20:06:44+00:00",
+      "is_very_fresh": false,
+      "score": 2
+    }
+  ]
+}

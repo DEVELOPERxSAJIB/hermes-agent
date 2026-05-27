@@ -1,0 +1,27 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Logs
+*.log
+
+# State files (generated at runtime)
+*_state.json
+*.flag
+scout_lead_counter.txt
+
+# Secrets
+client_secret.json
+gcp_service_account.json
+gmail_token.json
+google_places_key.json
+smtp_config.json
+.env
+
+# Node modules
+node_modules/
+
+# OS
+.DS_Store
+Thumbs.db

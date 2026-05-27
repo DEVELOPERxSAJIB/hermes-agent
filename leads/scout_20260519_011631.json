@@ -1,0 +1,91 @@
+{
+  "timestamp": "2026-05-19T01:16:31.268837",
+  "query": "Hey Scout",
+  "raw_count": 91,
+  "top_leads": [
+    {
+      "source": "RemoteOK",
+      "company": "Marketers in Demand",
+      "title": "Web Development Specialist",
+      "description": "<h1>Overview<br /></h1><p>We're looking for a Web Development Specialist to build and maintain marketing websites and landing pages for our agency's B2B technology clients. This is a hands-on production role across the three platforms our clients live on most: WordPress, HubSpot CMS (COS), and Webflow.<br />You should be equally comfortable building a custom WordPress theme, standing up a HubSpot ",
+      "url": "https://remoteOK.com/remote-jobs/remote-web-development-specialist-marketers-in-demand-1131516",
+      "budget": null,
+      "is_contract": false,
+      "is_fulltime": false,
+      "tags": [
+        "web dev",
+        "dev"
+      ],
+      "score": 7
+    },
+    {
+      "source": "RemoteOK",
+      "company": "Kalepa",
+      "title": "Staff Backend Engineer Core Product",
+      "description": "About Kalepa:\nInsurance is a $7T global industry built on professional labor: underwriting, claims, pricing, operations, and distribution. Kalepa is building AI that can perform that work.\nWe create professional-grade AI systems for insurers: software that can read, reason, decide, and act inside real workflows and operate over long-time horizons. Kalepa begins by augmenting professionals with the",
+      "url": "https://remoteOK.com/remote-jobs/remote-staff-backend-engineer-core-product-kalepa-1131586",
+      "budget": null,
+      "is_contract": false,
+      "is_fulltime": false,
+      "tags": [
+        "system",
+        "software",
+        "engineer",
+        "backend"
+      ],
+      "score": 6
+    },
+    {
+      "source": "RemoteOK",
+      "company": "LiveKit",
+      "title": "Staff Product Manager Enterprise",
+      "description": "<h2>About LiveKit</h2><p style=\"min-height:1.5em\">LiveKit is the developer platform for building and operating real-time voice AI agents. We started as the leading open-source WebRTC platform and have grown into a comprehensive stack: SDKs and developer tooling, agent hosting, inference, telephony, and observability. Our goal is to become the default platform for voice agents, the way Stripe becam",
+      "url": "https://remoteOK.com/remote-jobs/remote-staff-product-manager-enterprise-livekit-1131531",
+      "budget": null,
+      "is_contract": false,
+      "is_fulltime": false,
+      "tags": [
+        "manager",
+        "technical",
+        "developer",
+        "growth",
+        "code"
+      ],
+      "score": 5
+    },
+    {
+      "source": "RemoteOK",
+      "company": "SuperPlane",
+      "title": "DevRel Content Creator",
+      "description": "<h2>About SuperPlane</h2><p>SuperPlane is an open source control plane where AI agents and engineers run operations together. We're a team of 10, founded by the creators of Semaphore CI/CD. Our users are DevOps and platform engineers at mid-size to large engineering orgs.</p><p>We have a product engineers love, an open source repo with 2K+ stars, and events in the pipeline. What we don't have is s",
+      "url": "https://remoteOK.com/remote-jobs/remote-devrel-content-creator-superplane-1131594",
+      "budget": null,
+      "is_contract": false,
+      "is_fulltime": false,
+      "tags": [
+        "marketing",
+        "dev",
+        "devops"
+      ],
+      "score": 4
+    },
+    {
+      "source": "RemoteOK",
+      "company": "HighLevel",
+      "title": "Staff Engineer Platform Engineering",
+      "description": "<p><strong>About HighLevel:</strong><br>HighLevel is an AI-powered business operating system that gives agencies, entrepreneurs and SMBs the infrastructure to build, automate and scale. Today, HighLevel supports SMBs across 150+ countries, fueling community-driven growth rooted in real customer outcomes.<br aria-hidden=\"true\">To date, businesses operating on HighLevel have generated over $7 billio",
+      "url": "https://remoteOK.com/remote-jobs/remote-staff-engineer-platform-engineering-highlevel-1131588",
+      "budget": null,
+      "is_contract": false,
+      "is_fulltime": false,
+      "tags": [
+        "design",
+        "saas",
+        "system",
+        "technical",
+        "support"
+      ],
+      "score": 4
+    }
+  ]
+}

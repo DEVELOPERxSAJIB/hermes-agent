@@ -1,0 +1,78 @@
+{
+  "timestamp": "2026-05-18T23:40:21.269349",
+  "mode": "Keyword scoring (no LLM)",
+  "model_used": "keyword",
+  "raw_leads": 90,
+  "qualified_count": 3,
+  "archived_count": 87,
+  "qualified": [
+    {
+      "source": "remoteok",
+      "name": "Deep Fission, Inc",
+      "title": "Nuclear Engineer III Nuclear Safety Analysis",
+      "description": "Deep Fission is a nuclear technology company pioneering the development of a revolutionary deep borehole pressurized water reactor. We recently completed a private placement financing and Alternative Public Offering and are now operating as a public company while maintaining our startup agility and ",
+      "url": "https://remoteOK.com/remote-jobs/remote-nuclear-engineer-iii-nuclear-safety-analysis-deep-fission-inc-1131560",
+      "posted": "2026-05-12T08:01:50+00:00",
+      "budget": null,
+      "contact": null,
+      "is_contract": false,
+      "raw_tags": [
+        "support",
+        "growth",
+        "engineer",
+        "engineering"
+      ],
+      "score": 7,
+      "breakdown": "urgency+2 stack+2(react) decision_maker+2 fresh+1",
+      "reason": "stack match: react; urgency detected; decision maker language",
+      "email_angle": "React frontend development and component architecture",
+      "case_study_match": "general",
+      "status": "qualified"
+    },
+    {
+      "source": "remoteok",
+      "name": "Deep Fission, Inc",
+      "title": "Senior Director Nuclear Programs",
+      "description": "Deep Fission is a nuclear technology company pioneering the development of a revolutionary deep borehole pressurized water reactor. We recently completed a private placement financing and Alternative Public Offering and are now operating as a public company while maintaining our startup agility and ",
+      "url": "https://remoteOK.com/remote-jobs/remote-senior-director-nuclear-programs-deep-fission-inc-1131559",
+      "posted": "2026-05-12T08:01:15+00:00",
+      "budget": null,
+      "contact": null,
+      "is_contract": false,
+      "raw_tags": [
+        "director",
+        "system",
+        "growth",
+        "senior"
+      ],
+      "score": 7,
+      "breakdown": "urgency+2 stack+2(react) decision_maker+2 fresh+1",
+      "reason": "stack match: react; urgency detected; decision maker language",
+      "email_angle": "React frontend development and component architecture",
+      "case_study_match": "general",
+      "status": "qualified"
+    },
+    {
+      "source": "remoteok",
+      "name": "Marketers in Demand",
+      "title": "Web Development Specialist",
+      "description": "<h1>Overview<br /></h1><p>We're looking for a Web Development Specialist to build and maintain marketing websites and landing pages for our agency's B2B technology clients. This is a hands-on production role across the three platforms our clients live on most: WordPress, HubSpot CMS (COS), and Webfl",
+      "url": "https://remoteOK.com/remote-jobs/remote-web-development-specialist-marketers-in-demand-1131516",
+      "posted": "2026-05-08T01:00:28+00:00",
+      "budget": null,
+      "contact": null,
+      "is_contract": false,
+      "raw_tags": [
+        "web dev",
+        "dev"
+      ],
+      "score": 7,
+      "breakdown": "urgency+2 stack+2(wordpress) decision_maker+2 fresh+1",
+      "reason": "stack match: wordpress; urgency detected; decision maker language",
+      "email_angle": "WordPress custom theme and plugin development",
+      "case_study_match": "general",
+      "status": "qualified"
+    }
+  ],
+  "archived_count_only": 87
+}

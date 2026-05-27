@@ -1,0 +1,91 @@
+{
+  "timestamp": "2026-05-19T07:46:34.997582",
+  "query": "hey. You just updated. tell me about yourselft now",
+  "count": 74,
+  "top": [
+    {
+      "source": "DuckDuckGo",
+      "company": "See posting",
+      "role": "Hire Remote React Developers from $5/hr | Zedtreeo",
+      "url": "https://zedtreeo.com/services/hire-react-developer",
+      "budget": "$5",
+      "budget_num": 5,
+      "stack": [
+        "react"
+      ],
+      "description": "Why hire remote react developers with Zedtreeo. Every react developersis pre-",
+      "is_contract": false,
+      "is_fulltime": false,
+      "date_str": "",
+      "is_very_fresh": true,
+      "score": 7
+    },
+    {
+      "source": "DuckDuckGo",
+      "company": "See posting",
+      "role": "Freelance Next Js Developer Jobs (NOW HIRING) - ZipRecruiter",
+      "url": "https://www.ziprecruiter.com/Jobs/Freelance-Next-Js-Developer",
+      "budget": "$18",
+      "budget_num": 18,
+      "stack": [],
+      "description": "Browse 60 FREELANCE NEXT JS DEVELOPER jobs ($18-$85/hr) from employers hiring",
+      "is_contract": true,
+      "is_fulltime": false,
+      "date_str": "",
+      "is_very_fresh": true,
+      "score": 7
+    },
+    {
+      "source": "RemoteOK",
+      "company": "HighLevel",
+      "role": "Staff Engineer Platform Engineering",
+      "url": "https://remoteOK.com/remote-jobs/remote-staff-engineer-platform-engineering-highlevel-1131588",
+      "budget": "$7",
+      "budget_num": 7,
+      "stack": [
+        "node.js"
+      ],
+      "description": "<p><strong>About HighLevel:</strong><br>HighLevel is an AI-powered business operating system that gives agencies, entrepreneurs and SMBs the infrastructure to build, automate and scale. Today, HighLev",
+      "is_contract": false,
+      "is_fulltime": false,
+      "date_str": "2026-05-14T00:02:15+00:00",
+      "is_very_fresh": false,
+      "score": 6
+    },
+    {
+      "source": "RemoteOK",
+      "company": "Wealthsimple Technologies",
+      "role": "Senior AI System Software Developer",
+      "url": "https://remoteOK.com/remote-jobs/remote-senior-ai-system-software-developer-wealthsimple-technologies-1131572",
+      "budget": "$100",
+      "budget_num": 100,
+      "stack": [
+        "react"
+      ],
+      "description": "<h2><strong>Build something people love</strong></h2><p style=\"min-height:1.5em\">Wealthsimple's mission is to help everyone achieve financial freedom \u00e2\u0080\u0093 by making financial services simple, transpare",
+      "is_contract": false,
+      "is_fulltime": false,
+      "date_str": "2026-05-13T00:01:58+00:00",
+      "is_very_fresh": false,
+      "score": 6
+    },
+    {
+      "source": "Twitter/X",
+      "company": "See tweet",
+      "role": "Hiring Frontend Developer (React / JavaScript) | US ...",
+      "url": "https://x.com/ZamDeveloper/status/2039567613806715374",
+      "budget": null,
+      "budget_num": 0,
+      "stack": [
+        "react",
+        "javascript"
+      ],
+      "description": "Apr 2, 2026 \u00b7 \ud83d\udcbc Hiring Frontend Developer (React / JavaScript) | US | Remote |",
+      "is_contract": true,
+      "is_fulltime": false,
+      "date_str": "",
+      "is_very_fresh": true,
+      "score": 6
+    }
+  ]
+}

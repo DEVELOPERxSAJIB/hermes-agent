@@ -1,0 +1,91 @@
+{
+  "timestamp": "2026-05-23T08:00:07.586907+06:00",
+  "count": 40,
+  "top": [
+    {
+      "source": "RemoteOK",
+      "company": "Mercor",
+      "role": "PowerPoint Specialist Presentation Expert Upto $90 hr",
+      "url": "https://remoteOK.com/remote-jobs/remote-powerpoint-specialist-presentation-expert-upto-90-hr-mercor-1131801",
+      "budget": "$90",
+      "budget_num": 90,
+      "stack": [],
+      "description": "<strong>About The Job<br><br></strong><strong>Mercor</strong> connects elite creative and technical talent with leading AI research labs. Headquartered in San Francisco, our investors include <strong>",
+      "is_contract": true,
+      "is_fulltime": false,
+      "date_str": "2026-05-19T02:18:44+00:00",
+      "date_dt": "2026-05-19T02:18:44+00:00",
+      "is_very_fresh": false,
+      "score": 6
+    },
+    {
+      "source": "RemoteOK",
+      "company": "The Home Depot Canada",
+      "role": "Loss Prevention Specialist",
+      "url": "https://remoteOK.com/remote-jobs/remote-loss-prevention-specialist-the-home-depot-canada-1131717",
+      "budget": "$22",
+      "budget_num": 22,
+      "stack": [],
+      "description": "<strong>Are you someone who thrives on helping others succeed, enjoys making an impact, and takes pride in guiding customers to the right solutions for their projects? If you\u00e2\u0080\u0099re also naturally curio",
+      "is_contract": false,
+      "is_fulltime": false,
+      "date_str": "2026-05-21T19:03:23+00:00",
+      "date_dt": "2026-05-21T19:03:23+00:00",
+      "is_very_fresh": false,
+      "score": 4
+    },
+    {
+      "source": "RemoteOK",
+      "company": "Mercor",
+      "role": "Analytics Engineer Upto $125 hr",
+      "url": "https://remoteOK.com/remote-jobs/remote-analytics-engineer-upto-125-hr-mercor-1131797",
+      "budget": "$125",
+      "budget_num": 125,
+      "stack": [],
+      "description": "<strong>About The Job<br><br></strong><strong>Mercor</strong> connects elite creative and technical talent with leading AI research labs. Headquartered in San Francisco, our investors include <strong>",
+      "is_contract": false,
+      "is_fulltime": false,
+      "date_str": "2026-05-19T02:18:43+00:00",
+      "date_dt": "2026-05-19T02:18:43+00:00",
+      "is_very_fresh": false,
+      "score": 4
+    },
+    {
+      "source": "RemoteOK",
+      "company": "TOTVS",
+      "role": "Suporte T\u00c3\u00a9cnico de Suporte",
+      "url": "https://remoteOK.com/remote-jobs/remote-suporte-tecnico-de-suporte-totvs-1131841",
+      "budget": null,
+      "budget_num": 0,
+      "stack": [
+        "javascript"
+      ],
+      "description": "<strong>Descri\u00c3\u00a7\u00c3\u00a3o<br><br></strong>Apoiar no suporte t\u00c3\u00a9cnico dos nossos clientes com empatia e pro atividade, contribuindo com a satisfa\u00c3\u00a7\u00c3\u00a3o dos clientes com os produtos e servi\u00c3\u00a7os TOTVS.<br><br><",
+      "is_contract": false,
+      "is_fulltime": false,
+      "date_str": "2026-05-20T22:19:43+00:00",
+      "date_dt": "2026-05-20T22:19:43+00:00",
+      "is_very_fresh": false,
+      "score": 2
+    },
+    {
+      "source": "RemoteOK",
+      "company": "Copious",
+      "role": "Intern SD Engineer",
+      "url": "https://remoteOK.com/remote-jobs/remote-intern-sd-engineer-copious-1131629",
+      "budget": null,
+      "budget_num": 0,
+      "stack": [
+        "typescript",
+        "firebase"
+      ],
+      "description": "&lt;p dir=&quot;ltr&quot; style=&quot;line-height:1.38;text-align: justify;background-color:#ffffff;margin-top:0pt;margin-bottom:0pt;&quot;&gt;&lt;span style=&quot;font-size:10pt;font-family:&#39;DM S",
+      "is_contract": false,
+      "is_fulltime": false,
+      "date_str": "2026-05-19T16:00:05+00:00",
+      "date_dt": "2026-05-19T16:00:05+00:00",
+      "is_very_fresh": false,
+      "score": 2
+    }
+  ]
+}

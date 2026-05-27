@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-05-20T08:00:22.456565+06:00",
+  "count": 29,
+  "top": [
+    {
+      "source": "RemoteOK",
+      "company": "HighLevel",
+      "role": "Staff Engineer Platform Engineering",
+      "url": "https://remoteOK.com/remote-jobs/remote-staff-engineer-platform-engineering-highlevel-1131588",
+      "budget": "$7",
+      "budget_num": 7,
+      "stack": [
+        "node.js"
+      ],
+      "description": "<p><strong>About HighLevel:</strong><br>HighLevel is an AI-powered business operating system that gives agencies, entrepreneurs and SMBs the infrastructure to build, automate and scale. Today, HighLev",
+      "is_contract": false,
+      "is_fulltime": false,
+      "date_str": "2026-05-14T00:02:15+00:00",
+      "date_dt": 

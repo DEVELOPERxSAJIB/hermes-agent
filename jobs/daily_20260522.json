@@ -1,0 +1,96 @@
+{
+  "timestamp": "2026-05-22T08:00:27.054408+06:00",
+  "count": 24,
+  "top": [
+    {
+      "source": "RemoteOK",
+      "company": "Copious",
+      "role": "Intern SD Engineer",
+      "url": "https://remoteOK.com/remote-jobs/remote-intern-sd-engineer-copious-1131629",
+      "budget": null,
+      "budget_num": 0,
+      "stack": [
+        "typescript",
+        "firebase"
+      ],
+      "description": "&lt;p dir=&quot;ltr&quot; style=&quot;line-height:1.38;text-align: justify;background-color:#ffffff;margin-top:0pt;margin-bottom:0pt;&quot;&gt;&lt;span style=&quot;font-size:10pt;font-family:&#39;DM S",
+      "is_contract": false,
+      "is_fulltime": false,
+      "date_str": "2026-05-19T16:00:05+00:00",
+      "date_dt": "2026-05-19T16:00:05+00:00",
+      "is_very_fresh": false,
+      "score": 2
+    },
+    {
+      "source": "RemoteOK",
+      "company": "Cloudlinux",
+      "role": "Senior Database Reliability Engineer",
+      "url": "https://remoteOK.com/remote-jobs/remote-senior-database-reliability-engineer-cloudlinux-1131613",
+      "budget": null,
+      "budget_num": 0,
+      "stack": [
+        "postgresql"
+      ],
+      "description": "<p>CloudLinux / TuxCare is a remote-first infrastructure and security company. More than 300 engineers build and operate products used by hosting providers, enterprises, and internal service teams wor",
+      "is_contract": false,
+      "is_fulltime": false,
+      "date_str": "2026-05-16T16:00:03+00:00",
+      "date_dt": "2026-05-16T16:00:03+00:00",
+      "is_very_fresh": false,
+      "score": 2
+    },
+    {
+      "source": "RemoteOK",
+      "company": "Paired",
+      "role": "Senior CRO Manager Growth Optimization Lead for US DTC Company",
+      "url": "https://remoteOK.com/remote-jobs/remote-senior-cro-manager-growth-optimization-lead-for-us-dtc-company-paired-1131608",
+      "budget": null,
+      "budget_num": 0,
+      "stack": [
+        "react",
+        "shopify"
+      ],
+      "description": "<p>Paired\u00c2\u00a0is a\u00c2\u00a0global staffing and recruiting agency\u00c2\u00a0that specializes in pairing remote work with top-tier talent!</p><p><br />We are\u00c2\u00a0dedicated\u00c2\u00a0to\u00c2\u00a0connecting talented individuals\u00c2\u00a0with\u00c2\u00a0remarkab",
+      "is_contract": false,
+      "is_fulltime": false,
+      "date_str": "2026-05-16T00:00:02+00:00",
+      "date_dt": "2026-05-16T00:00:02+00:00",
+      "is_very_fresh": false,
+      "score": 2
+    },
+    {
+      "source": "WeWorkRemotely",
+      "company": "ShiftForce LLC",
+      "role": "Full-Stack Developer \u2014 .NET + React + Azure \u2014 Remote (US)",
+      "url": "https://weworkremotely.com/remote-jobs/shiftforce-llc-full-stack-developer-net-react-azure-remote-us",
+      "budget": null,
+      "budget_num": 0,
+      "stack": [
+        "react"
+      ],
+      "description": "<img src=\"https://we-work-remotely.imgix.net/logos/0171/5210/logo.gif?ixlib=rails-4.0.0&w=50&h=50&dpr=2&fit=fill&auto=compress\" />\n\n<p>\n  <strong>Headquarters:</strong> Kansas City\n    <br /><strong>U",
+      "is_contract": false,
+      "is_fulltime": false,
+      "date_str": "Wed, 20 May 2026 14:08:40 +0000",
+      "date_dt": "2026-05-20T14:08:40+00:00",
+      "is_very_fresh": false,
+      "score": 2
+    },
+    {
+      "source": "WeWorkRemotely",
+      "company": "Figure 53",
+      "role": "Senior QLab Support Specialist (half time)",
+      "url": "https://weworkremotely.com/remote-jobs/figure-53-senior-qlab-support-specialist-half-time-1",
+      "budget": null,
+      "budget_num": 0,
+      "stack": [],
+      "description": "<img src=\"https://we-work-remotely.imgix.net/logos/0086/7680/logo.gif?ixlib=rails-4.0.0&w=50&h=50&dpr=2&fit=fill&auto=compress\" />\n\n<p>\n  <strong>Headquarters:</strong> Baltimore, MD\n    <br /><strong",
+      "is_contract": true,
+      "is_fulltime": false,
+      "date_str": "Mon, 18 May 2026 20:07:59 +0000",
+      "date_dt": "2026-05-18T20:07:59+00:00",
+      "is_very_fresh": false,
+      "score": 2
+    }
+  ]
+}
