@@ -40,5 +40,11 @@
     "change": "PROBLEM: Low qualification rate: 0/4 (0%)\nFIX: Tighten SCOUT domain generation \u2014 focus on city+niche patterns, skip generic prefixes like 'best', 'top'\nEXPECTED: Higher qualification rate, less wasted scraping",
     "result": "pending",
     "implemented": false
+  },
+  {
+    "date": "2026-05-30",
+    "change": "PROBLEM: Low qualification rate: 0/4 (0%)\nFIX: Tighten SCOUT domain generation \u2014 focus on city+niche patterns, skip generic prefixes like 'best', 'top'\nEXPECTED: Higher qualification rate, less wasted scraping",
+    "result": "pending",
+    "implemented": false
   }
 ]

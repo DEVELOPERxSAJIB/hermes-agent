@@ -1,0 +1,94 @@
+{
+  "timestamp": "2026-05-30T08:00:11.395726+06:00",
+  "count": 28,
+  "top": [
+    {
+      "source": "RemoteOK",
+      "company": "Kennedy Krieger Institute",
+      "role": "Research Assistant Neuroscience Research",
+      "url": "https://remoteOK.com/remote-jobs/remote-research-assistant-neuroscience-research-kennedy-krieger-institute-1132507",
+      "budget": null,
+      "budget_num": 0,
+      "stack": [],
+      "description": "<strong>Overview<br><br></strong>The <strong>Research Assistant I (Part-Time, Remote) </strong>in the Opendak Lab will provide dedicated data analysis support for ongoing research projects. This role ",
+      "is_contract": true,
+      "is_fulltime": false,
+      "date_str": "2026-05-29T01:11:39+00:00",
+      "date_dt": "2026-05-29T01:11:39+00:00",
+      "is_very_fresh": false,
+      "score": 2
+    },
+    {
+      "source": "RemoteOK",
+      "company": "RBC",
+      "role": "Site Reliability Engineer",
+      "url": "https://remoteOK.com/remote-jobs/remote-site-reliability-engineer-rbc-1132479",
+      "budget": null,
+      "budget_num": 0,
+      "stack": [
+        "react"
+      ],
+      "description": "<strong>Job Description<br><br></strong><strong>APPLICATION DEADLINE: JUNE 8TH, 2026<br><br></strong><em><strong>This role can be located the Caribbean Banking Market or in Canada where the successful",
+      "is_contract": false,
+      "is_fulltime": false,
+      "date_str": "2026-05-28T18:44:17+00:00",
+      "date_dt": "2026-05-28T18:44:17+00:00",
+      "is_very_fresh": false,
+      "score": 2
+    },
+    {
+      "source": "RemoteOK",
+      "company": "Bahamas Grid Company",
+      "role": "Grid Operator",
+      "url": "https://remoteOK.com/remote-jobs/remote-grid-operator-bahamas-grid-company-1132477",
+      "budget": null,
+      "budget_num": 0,
+      "stack": [
+        "react"
+      ],
+      "description": "<p><strong>Position Summary:</strong></p><p><br></p><p>The Grid Operator plays a critical role in the real time monitoring, operation, and control of the electrical distribution system for New Provide",
+      "is_contract": false,
+      "is_fulltime": false,
+      "date_str": "2026-05-28T16:16:47+00:00",
+      "date_dt": "2026-05-28T16:16:47+00:00",
+      "is_very_fresh": false,
+      "score": 2
+    },
+    {
+      "source": "RemoteOK",
+      "company": "Bluelight Consulting",
+      "role": "Bluelight Consulting Fullstack PHP developer . Latin America",
+      "url": "https://remoteOK.com/remote-jobs/remote-bluelight-consulting-fullstack-php-developer-latin-america-bluelight-consulting-1132450",
+      "budget": null,
+      "budget_num": 0,
+      "stack": [
+        "wordpress"
+      ],
+      "description": "Bluelight is a leading software consultancy dedicated to designing and developing innovative technology that enhances users' lives. With a steadfast commitment to delivering exceptional service to our",
+      "is_contract": false,
+      "is_fulltime": false,
+      "date_str": "2026-05-28T16:00:15+00:00",
+      "date_dt": "2026-05-28T16:00:15+00:00",
+      "is_very_fresh": false,
+      "score": 2
+    },
+    {
+      "source": "RemoteOK",
+      "company": "Royal Caribbean International",
+      "role": "Electrician Royal Beach Club",
+      "url": "https://remoteOK.com/remote-jobs/remote-electrician-royal-beach-club-royal-caribbean-international-1132478",
+      "budget": null,
+      "budget_num": 0,
+      "stack": [
+        "react"
+      ],
+      "description": "<p><strong>Position Summary:</strong></p><p>The Electrician specializes in the maintenance and safe operation of all electrical equipment on the Private Destination, this includes high voltage equipme",
+      "is_contract": false,
+      "is_fulltime": false,
+      "date_str": "2026-05-28T14:06:27+00:00",
+      "date_dt": "2026-05-28T14:06:27+00:00",
+      "is_very_fresh": false,
+      "score": 2
+    }
+  ]
+}
