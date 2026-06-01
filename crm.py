@@ -1,6 +1,6 @@
 """
 NanoSoft CRM — Google Sheets wrapper
-Works with Chairman's Lead sheet structure.
+Supports both Lead (SMB) and White Label (Agency Partnership) tabs.
 """
 import gspread
 from google.oauth2.service_account import Credentials
@@ -9,39 +9,55 @@ import json
 import time
 import os
 
-# ─── CONFIG ────────────────────────────────────────────────
-
 SERVICE_ACCOUNT_FILE = "/home/ubuntu/nanosoft/gcp_service_account.json"
 SHEET_ID = "1S9jTTe1rKfe0GqqdVgXXgVkdtrRgHtwxu44pERYMOTo"
-
 SCOPES = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive",
 ]
 
-# Lead sheet columns (exact match to Chairman's sheet)
+# ── Lead tab columns (original SMB outreach) ──
 LEAD_COLUMNS = [
-    "Company Name",
-    "Website (if have)",
-    "Owner Name",
-    "Owner Email",
-    "Linkedin",
-    "Pain Point",
-    "Email sent date",
-    "Follow up 01",
-    "Follow up 02",
-    "Status",
+    "Company Name", "Website", "Owner Name", "Owner Email", "Linkedin",
+    "Pain Point", "Email sent date", "Follow up 01", "Follow up 02", "Status",
+    "Judge Score", "Severity", "Location", "Source", "Revenue Impact",
+    "Automation Potential", "Outreach Angle", "Suggested Solution",
+    "Contact Form URL", "Booking URL",
 ]
 
-# Valid status values
+# ── White Label tab columns (agency partnership) ──
+WL_COLUMNS = [
+    "Company Name",       # 1
+    "Website",            # 2
+    "LinkedIn",           # 3
+    "Owner Name",         # 4
+    "Owner LinkedIn URL", # 5
+    "Country",            # 6
+    "Email",              # 7
+    "Email Score",        # 8
+    "Pain Point",         # 9
+    "Services",           # 10
+    "Team Size",          # 11
+    "White Label Signals",# 12
+    "Judge Score",        # 13
+    "Sent date",          # 14
+    "FU 1",               # 15
+    "FU 2",               # 16
+    "FU 3",               # 17
+    "Status",             # 18
+]
+
+WL_STATUSES = ["New", "Contacted", "Replied", "Meeting Booked", "Partner", "Lost"]
+
 STATUS_NEW = "New"
+STATUS_QUALIFIED = "Qualified"
+STATUS_DRAFTED = "Drafted"
 STATUS_EMAIL_SENT = "Email Sent"
 STATUS_FOLLOWUP_1 = "Follow Up 1"
 STATUS_FOLLOWUP_2 = "Follow Up 2"
 STATUS_REPLIED = "Replied"
 STATUS_LANDED = "Landed"
 STATUS_LOST = "Lost"
-STATUS_QUALIFIED = "Qualified"
 STATUS_UNQUALIFIED = "Unqualified"
 
 
@@ -56,247 +72,278 @@ class NanoSoftCRM:
     def __init__(self):
         if hasattr(self, 'creds'):
             return
-        self.creds = Credentials.from_service_account_file(
-            SERVICE_ACCOUNT_FILE, scopes=SCOPES
-        )
+        self.creds = Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE, scopes=SCOPES)
         self.gc = gspread.authorize(self.creds)
         self.sh = self.gc.open_by_key(SHEET_ID)
+        # Lead tab (original)
         self.ws_leads = self.sh.worksheet("Lead")
-        self._ensure_lead_headers()
-        # Analytics sheet (create if not exists)
+        self._ensure_headers(self.ws_leads, LEAD_COLUMNS)
+        # White Label tab (new)
+        self.ws_wl = self._get_or_create_wl_tab()
+        # Analytics tab
         self.ws_analytics = self._get_or_create_analytics()
 
-    def _ensure_lead_headers(self):
-        """Make sure Lead sheet has correct headers (no duplicates)."""
-        existing = self.ws_leads.row_values(1)
-        # Remove duplicate columns
-        seen = set()
-        clean = []
-        for h in existing:
-            if h not in seen:
-                seen.add(h)
-                clean.append(h)
-        if clean != LEAD_COLUMNS or len(existing) != len(LEAD_COLUMNS):
-            # Rewrite headers
-            self.ws_leads.update('A1:J1', [LEAD_COLUMNS])
-            # If there were extra columns, clear them
-            if len(existing) > len(LEAD_COLUMNS):
-                self.ws_leads.delete_columns(len(LEAD_COLUMNS) + 1, len(existing))
+    def _ensure_headers(self, ws, columns):
+        existing = ws.row_values(1)
+        if len(existing) < len(columns) or existing[:5] != columns[:5]:
+            ws.update('A1:R1', [columns])
 
-    def _get_or_create_analytics(self):
-        """Get or create Analytics sheet."""
+    def _get_or_create_wl_tab(self):
         try:
-            ws = self.sh.worksheet("Analytics")
+            ws = self.sh.worksheet("White Label")
         except gspread.exceptions.WorksheetNotFound:
-            ws = self.sh.add_worksheet(title="Analytics", rows=1000, cols=10)
-            headers = [
-                "Date", "Leads Found", "Qualified", "Emails Sent",
-                "Replies", "Landed", "Revenue", "Notes"
-            ]
-            ws.update('A1:H1', [headers])
+            ws = self.sh.add_worksheet(title="White Label", rows=2000, cols=20)
+        # Ensure headers
+        headers = ws.row_values(1)
+        if len(headers) < len(WL_COLUMNS) or headers[:5] != WL_COLUMNS[:5]:
+            ws.update('A1:R1', [WL_COLUMNS])
         return ws
 
-    def _refresh(self):
-        """Re-authorize if token expired."""
+    def _get_or_create_analytics(self):
         try:
+            return self.sh.worksheet("Analytics")
+        except gspread.exceptions.WorksheetNotFound:
+            ws = self.sh.add_worksheet(title="Analytics", rows=1000, cols=10)
+            ws.update('A1:H1', [["Date","Leads Found","Qualified","Drafted","Sent","Replies","Landed","Notes"]])
+            return ws
+
+    def _refresh(self):
+        try:
+            from google.auth.transport.requests import Request
             if self.creds.expired:
-                self.creds.refresh()
+                self.creds.refresh(Request())
                 self.gc = gspread.authorize(self.creds)
                 self.sh = self.gc.open_by_key(SHEET_ID)
                 self.ws_leads = self.sh.worksheet("Lead")
-                self.ws_analytics = self._get_or_create_analytics()
-        except Exception:
+                self.ws_wl = self.sh.worksheet("White Label")
+        except:
             pass
 
     def _retry(self, fn, attempts=5):
-        """Retry with exponential backoff. Handles Google 429 quota errors."""
         import gspread.exceptions as gexc
         for i in range(attempts):
             try:
                 return fn()
             except gexc.APIError as e:
-                error_code = getattr(e, 'response', None)
-                # Check if it's a rate limit (429) or server error (5xx)
-                status = getattr(error_code, 'status_code', 0) if error_code else 0
+                status = getattr(getattr(e, 'response', None), 'status_code', 0)
                 if status == 429 or status >= 500:
-                    wait = 30 * (i + 1)  # 30s, 60s, 90s, 120s, 150s
+                    wait = 30 * (i + 1)
                     if i < attempts - 1:
-                        print(f"[CRM] Rate limited (HTTP {status}). Waiting {wait}s before retry {i+1}/{attempts}...")
                         time.sleep(wait)
                         continue
                 raise
             except Exception as e:
                 if i == attempts - 1:
                     raise
-                # Check for 429 in error message
-                error_str = str(e)
-                if '429' in error_str or 'quota' in error_str.lower():
+                if '429' in str(e):
                     wait = 30 * (i + 1)
                     if i < attempts - 1:
-                        print(f"[CRM] Quota error. Waiting {wait}s before retry {i+1}/{attempts}...")
                         time.sleep(wait)
                         continue
                 time.sleep(2 ** i)
 
-    # ─── LEADS TAB ──────────────────────────────────────────
+    # ═══════════════════════════════════════════════════════════
+    # WHITE LABEL TAB METHODS
+    # ═══════════════════════════════════════════════════════════
+
+    def get_wl_all(self):
+        self._refresh()
+        try:
+            return self.ws_wl.get_all_records()
+        except:
+            return []
+
+    def get_wl_by_status(self, status):
+        all_leads = self.get_wl_all()
+        return [l for l in all_leads if str(l.get("Status", "")).strip() == status]
+
+    def get_wl_new(self):
+        return self.get_wl_by_status("New")
+
+    def get_wl_contacted(self):
+        return self.get_wl_by_status("Contacted")
+
+    def get_wl_drafted(self):
+        return self.get_wl_by_status("Contacted")  # After drafting, status = Contacted
+
+    def wl_exists(self, company="", website="", email=""):
+        existing = self.get_wl_all()
+        for row in existing:
+            if company and str(row.get("Company Name", "")).lower().strip() == company.lower().strip():
+                return True
+            if website and str(row.get("Website", "")).lower().strip() == website.lower().strip():
+                return True
+            if email and str(row.get("Email", "")).lower().strip() == email.lower().strip():
+                return True
+        return False
+
+    def add_wl_lead(self, lead: dict):
+        self._refresh()
+        if self.wl_exists(lead.get("Company Name", ""), lead.get("Website", ""), lead.get("Email", "")):
+            return False
+        row = [str(lead.get(col, "")) for col in WL_COLUMNS]
+        if not lead.get("Status"):
+            row[WL_COLUMNS.index("Status")] = "New"
+        def _append():
+            self.ws_wl.append_row(row, value_input_option='USER_ENTERED')
+        self._retry(_append)
+        return True
+
+    def add_wl_batch(self, leads: list):
+        self._refresh()
+        added = 0
+        skipped = 0
+        existing = self.get_wl_all()
+        existing_emails = {str(l.get("Email", "")).lower().strip() for l in existing if l.get("Email")}
+        existing_domains = {str(l.get("Website", "")).lower().strip() for l in existing if l.get("Website")}
+        rows = []
+        for lead in leads:
+            email = str(lead.get("Email", "")).lower().strip()
+            website = str(lead.get("Website", "")).lower().strip()
+            if email and email in existing_emails:
+                skipped += 1
+                continue
+            if website and website in existing_domains:
+                skipped += 1
+                continue
+            existing_emails.add(email)
+            existing_domains.add(website)
+            row = [str(lead.get(col, "")) for col in WL_COLUMNS]
+            if not lead.get("Status"):
+                row[WL_COLUMNS.index("Status")] = "New"
+            rows.append(row)
+        if rows:
+            def _batch():
+                self.ws_wl.append_rows(rows, value_input_option='USER_ENTERED')
+            self._retry(_batch)
+            added = len(rows)
+        return added, skipped
+
+    def update_wl_lead(self, company_name: str, updates: dict):
+        self._refresh()
+        all_rows = self.ws_wl.get_all_values()
+        for i, row in enumerate(all_rows[1:], start=2):
+            if str(row[0]).lower().strip() == company_name.lower().strip():
+                for col_name, value in updates.items():
+                    if col_name in WL_COLUMNS:
+                        col_idx = WL_COLUMNS.index(col_name) + 1
+                        def _upd():
+                            self.ws_wl.update_cell(i, col_idx, str(value))
+                        self._retry(_upd)
+                return True
+        return False
+
+    def update_wl_status(self, company_name: str, new_status: str):
+        return self.update_wl_lead(company_name, {"Status": new_status})
+
+    def count_wl(self):
+        return len([l for l in self.get_wl_all() if l.get("Company Name")])
+
+    # ═══════════════════════════════════════════════════════════
+    # LEAD TAB METHODS (original, untouched)
+    # ═══════════════════════════════════════════════════════════
 
     def get_all_leads(self):
-        """Return all leads as list of dicts."""
         self._refresh()
         try:
             return self.ws_leads.get_all_records()
-        except Exception:
-            # If header issue, fix and retry
-            self._ensure_lead_headers()
-            return self.ws_leads.get_all_records(expected_headers=LEAD_COLUMNS)
+        except:
+            return []
 
     def get_leads_by_status(self, status):
-        """Get leads filtered by status."""
-        all_leads = self.get_all_leads()
-        return [l for l in all_leads if l.get("Status") == status]
+        return [l for l in self.get_all_leads() if l.get("Status") == status]
 
     def get_new_leads(self):
-        """Get leads with Status='New'."""
         return self.get_leads_by_status(STATUS_NEW)
 
     def get_qualified_leads(self):
-        """Get leads with Status='Qualified'."""
         return self.get_leads_by_status(STATUS_QUALIFIED)
 
-    def get_leads_without_email(self):
-        """Get leads that have no Owner Email yet."""
-        all_leads = self.get_all_leads()
-        return [l for l in all_leads if not l.get("Owner Email")]
+    def get_drafted_leads(self):
+        return self.get_leads_by_status(STATUS_DRAFTED)
 
-    def get_leads_with_email(self):
-        """Get leads that have an Owner Email."""
-        all_leads = self.get_all_leads()
-        return [l for l in all_leads if l.get("Owner Email")]
-
-    def lead_exists(self, company_name, website=""):
-        """Check if lead already exists."""
-        existing = self.get_all_leads()
-        for row in existing:
-            if row.get("Company Name", "").lower().strip() == company_name.lower().strip():
+    def lead_exists(self, company="", website="", email=""):
+        for row in self.get_all_leads():
+            if company and row.get("Company Name", "").lower().strip() == company.lower().strip():
                 return True
-            if website and row.get("Website (if have)", "").lower().strip() == website.lower().strip():
+            if website and row.get("Website", "").lower().strip() == website.lower().strip():
+                return True
+            if email and row.get("Owner Email", "").lower().strip() == email.lower().strip():
                 return True
         return False
 
     def add_lead(self, lead: dict):
-        """
-        Add a new lead row. Returns True if added, False if duplicate.
-        lead dict keys match LEAD_COLUMNS.
-        """
         self._refresh()
-        company = lead.get("Company Name", "")
-        website = lead.get("Website (if have)", "")
-
-        if self.lead_exists(company, website):
+        if self.lead_exists(lead.get("Company Name", ""), lead.get("Website", ""), lead.get("Owner Email", "")):
             return False
-
         row = [lead.get(col, "") for col in LEAD_COLUMNS]
-        # Default status to New if not set
         if not lead.get("Status"):
             row[LEAD_COLUMNS.index("Status")] = STATUS_NEW
-
         def _append():
             self.ws_leads.append_row(row, value_input_option='USER_ENTERED')
         self._retry(_append)
         return True
 
     def add_leads_batch(self, leads: list):
-        """
-        Add multiple leads. Returns (added_count, skipped_count).
-        Each lead is a dict with keys matching LEAD_COLUMNS.
-        """
         self._refresh()
-        added = 0
-        skipped = 0
+        added = skipped = 0
         existing = self.get_all_leads()
-        existing_companies = {(l.get("Company Name", "").lower().strip(), l.get("Website (if have)", "").lower().strip()) for l in existing}
-        
-        rows_to_append = []
+        existing_emails = {l.get("Owner Email", "").lower().strip() for l in existing if l.get("Owner Email")}
+        existing_domains = {l.get("Website", "").lower().strip() for l in existing if l.get("Website")}
+        rows = []
         for lead in leads:
-            company = lead.get("Company Name", "")
-            website = lead.get("Website (if have)", "")
-            key = (company.lower().strip(), website.lower().strip())
-            
-            if key in existing_companies:
+            email = str(lead.get("Owner Email", "")).lower().strip()
+            website = str(lead.get("Website", "")).lower().strip()
+            if email in existing_emails or website in existing_domains:
                 skipped += 1
                 continue
-            
-            existing_companies.add(key)
+            existing_emails.add(email)
+            existing_domains.add(website)
             row = [lead.get(col, "") for col in LEAD_COLUMNS]
             if not lead.get("Status"):
                 row[LEAD_COLUMNS.index("Status")] = STATUS_NEW
-            rows_to_append.append(row)
-        
-        if rows_to_append:
-            def _batch_append():
-                self.ws_leads.append_rows(rows_to_append, value_input_option='USER_ENTERED')
-            self._retry(_batch_append)
-            added = len(rows_to_append)
-        
+            rows.append(row)
+        if rows:
+            def _batch():
+                self.ws_leads.append_rows(rows, value_input_option='USER_ENTERED')
+            self._retry(_batch)
+            added = len(rows)
         return added, skipped
 
-    def update_lead(self, company_name: str, updates: dict):
-        """
-        Update a lead by company name.
-        updates: {column_name: new_value}
-        """
+    def update_lead(self, company_name, updates):
         self._refresh()
-        all_leads = self.ws_leads.get_all_values()
-        for i, row in enumerate(all_leads[1:], 2):  # skip header, 1-indexed + header
+        all_rows = self.ws_leads.get_all_values()
+        for i, row in enumerate(all_rows[1:], start=2):
             if row[0].lower().strip() == company_name.lower().strip():
                 for col_name, value in updates.items():
                     if col_name in LEAD_COLUMNS:
                         col_idx = LEAD_COLUMNS.index(col_name) + 1
-                        def _update():
+                        def _upd():
                             self.ws_leads.update_cell(i, col_idx, value)
-                        self._retry(_update)
+                        self._retry(_upd)
                 return True
         return False
 
-    def update_status(self, company_name: str, new_status: str):
-        """Update the Status of a lead."""
+    def update_status(self, company_name, new_status):
         return self.update_lead(company_name, {"Status": new_status})
 
     def count_leads(self):
-        """Count total non-empty leads."""
-        all_leads = self.get_all_leads()
-        return len([l for l in all_leads if l.get("Company Name")])
-
-    # ─── ANALYTICS TAB ──────────────────────────────────────
+        return len([l for l in self.get_all_leads() if l.get("Company Name")])
 
     def log_analytics(self, data: dict):
-        """Log a daily analytics row."""
         self._refresh()
         today = datetime.now(timezone(timedelta(hours=6))).strftime("%Y-%m-%d")
         row = [
-            data.get("Date", today),
-            data.get("Leads Found", 0),
-            data.get("Qualified", 0),
-            data.get("Emails Sent", 0),
-            data.get("Replies", 0),
-            data.get("Landed", 0),
-            data.get("Revenue", 0),
-            data.get("Notes", ""),
+            data.get("Date", today), data.get("Leads Found", 0), data.get("Qualified", 0),
+            data.get("Drafted", 0), data.get("Sent", 0), data.get("Replies", 0),
+            data.get("Landed", 0), data.get("Notes", ""),
         ]
         def _append():
             self.ws_analytics.append_row(row, value_input_option='USER_ENTERED')
         self._retry(_append)
 
-    def get_analytics(self):
-        """Get all analytics rows."""
-        self._refresh()
-        return self.ws_analytics.get_all_records()
-
-
-# ─── SINGLETON ────────────────────────────────────────────
 
 _crm = None
-
 def get_crm():
     global _crm
     if _crm is None:

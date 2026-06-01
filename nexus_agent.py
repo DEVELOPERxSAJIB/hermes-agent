@@ -653,8 +653,31 @@ async def daily_email_summary_task():
 
     try:
         sys.path.insert(0, '/home/ubuntu/nanosoft')
-        from quill_v7 import format_discord_summary
-        summary = format_discord_summary()
+        # Inline the summary instead of importing from old quill_v7
+        import json
+        drafts = []
+        try:
+            with open("/home/ubuntu/nanosoft/email_drafts.jsonl") as f:
+                for line in f:
+                    line = line.strip()
+                    if line:
+                        drafts.append(json.loads(line))
+        except:
+            pass
+        qualified = 0
+        from crm import get_crm
+        try:
+            crm = get_crm()
+            qualified = len(crm.get_leads_by_status("Qualified"))
+        except:
+            pass
+        summary = "📧 **Daily Email Summary**\n"
+        summary += "Drafts ready: {}\n".format(len(drafts))
+        summary += "Qualified leads: {}\n".format(qualified)
+        if drafts:
+            summary += "\n**Latest drafts:**\n"
+            for d in drafts[-3:]:
+                summary += "• {} | {}\n".format(d.get('company','')[:25], d.get('subject','')[:30])
         await ch.send(summary)
         nexus_state["last_email_summary"] = today
         save_state(nexus_state)
@@ -869,7 +892,7 @@ async def _cmd_send(ctx, args: str):
         import threading
         def _run_send():
             import subprocess
-            cmd = ["python3", "/home/ubuntu/nanosoft/quill_v8.py", "send"]
+            cmd = ["python3", "/home/ubuntu/nanosoft/quill_v11.py", "send"]
             if args.strip().lower() != "all":
                 cmd.append(args.strip())
             subprocess.run(cmd, cwd="/home/ubuntu/nanosoft", timeout=3600)
@@ -883,25 +906,43 @@ async def _cmd_send(ctx, args: str):
 async def _cmd_emails(ctx):
     """Show email summary."""
     try:
-        import subprocess
-        result = subprocess.run(
-            ["python3", "/home/ubuntu/nanosoft/quill_v8.py", "summary"],
-            capture_output=True, text=True, timeout=30,
-            cwd="/home/ubuntu/nanosoft"
-        )
-        await ctx.send(result.stdout[:2000] if result.stdout else "No email data.")
+        import json, os
+        drafts = []
+        df = "/home/ubuntu/nanosoft/email_drafts.jsonl"
+        if os.path.exists(df):
+            with open(df) as f:
+                for line in f:
+                    line = line.strip()
+                    if line:
+                        drafts.append(json.loads(line))
+        sent = []
+        sf = "/home/ubuntu/nanosoft/emails_sent.jsonl"
+        if os.path.exists(sf):
+            with open(sf) as f:
+                for line in f:
+                    line = line.strip()
+                    if line:
+                        sent.append(json.loads(line))
+        msg = "📧 **Email Summary**\n"
+        msg += "Drafts ready: {}\n".format(len(drafts))
+        msg += "Sent: {}\n".format(len(sent))
+        if drafts:
+            msg += "\n**Latest drafts:**\n"
+            for d in drafts[-5:]:
+                msg += "• {} | {}\n".format(d.get('company','')[:25], d.get('subject','')[:30])
+        await ctx.send(msg[:2000])
     except Exception as e:
-        await ctx.send(f"Error loading email summary: {e}")
+        await ctx.send("Error loading email summary: {}".format(e))
 
 
 async def _cmd_draft(ctx):
-    """Draft all new leads."""
-    await ctx.send("✍️ QUILL is drafting emails for all new leads...")
+    """Draft all Qualified leads."""
+    await ctx.send("✍️ QUILL is drafting emails for all Qualified leads...")
     try:
         import subprocess
         result = subprocess.run(
-            ["python3", "/home/ubuntu/nanosoft/quill_v8.py", "draft"],
-            capture_output=True, text=True, timeout=120,
+            ["python3", "/home/ubuntu/nanosoft/quill_v11.py", "draft", "Qualified"],
+            capture_output=True, text=True, timeout=300,
             cwd="/home/ubuntu/nanosoft"
         )
         output = result.stdout[:2000] if result.stdout else "Drafting complete."
@@ -911,15 +952,29 @@ async def _cmd_draft(ctx):
 
 
 async def _cmd_drafts(ctx):
-    """Show all drafts summary."""
+    """Show all drafts."""
     try:
-        import subprocess
-        result = subprocess.run(
-            ["python3", "/home/ubuntu/nanosoft/quill_v8.py", "summary"],
-            capture_output=True, text=True, timeout=30,
-            cwd="/home/ubuntu/nanosoft"
-        )
-        await ctx.send(result.stdout[:2000] if result.stdout else "No drafts found.")
+        import json
+        drafts = []
+        with open("/home/ubuntu/nanosoft/email_drafts.jsonl") as f:
+            for line in f:
+                line = line.strip()
+                if line:
+                    drafts.append(json.loads(line))
+        if not drafts:
+            await ctx.send("📭 No drafts found.")
+            return
+        # Show summary + latest 5
+        msg = "📋 **{} drafts ready**\n\n".format(len(drafts))
+        for d in drafts[-5:]:
+            msg += "**{}** | {} | {}\n".format(
+                d.get('company','')[:25],
+                d.get('subject','')[:35],
+                d.get('to','')[:30]
+            )
+        if len(drafts) > 5:
+            msg += "\n...and {} more".format(len(drafts) - 5)
+        await ctx.send(msg[:2000])
     except Exception as e:
         await ctx.send(f"Error: {str(e)[:200]}")
 
