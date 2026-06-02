@@ -1,0 +1,93 @@
+{
+  "timestamp": "2026-06-01T08:00:13.018986+06:00",
+  "count": 37,
+  "top": [
+    {
+      "source": "RemoteOK",
+      "company": "APPLY",
+      "role": "Freelance Solutions Architect Braze &amp; Iterable Experience",
+      "url": "https://remoteOK.com/remote-jobs/remote-freelance-solutions-architect-braze-amp-iterable-experience-apply-1132557",
+      "budget": null,
+      "budget_num": 0,
+      "stack": [
+        "shopify",
+        "javascript"
+      ],
+      "description": "<p><strong style=\"font-size: 16px;\">ABOUT APPLY</strong></p>\n<p>&nbsp;</p>\n<p>APPLY is the Agentic Customer Experience (ACx) partner for the world's most ambitious consumer and entertainment brands. W",
+      "is_contract": true,
+      "is_fulltime": false,
+      "date_str": "2026-05-30T00:00:09+00:00",
+      "date_dt": "2026-05-30T00:00:09+00:00",
+      "is_very_fresh": false,
+      "score": 4
+    },
+    {
+      "source": "RemoteOK",
+      "company": "Thorne",
+      "role": "Designer",
+      "url": "https://remoteOK.com/remote-jobs/remote-designer-thorne-1132610",
+      "budget": "$75,000",
+      "budget_num": 75000,
+      "stack": [],
+      "description": "<strong>Department: </strong>Marketing<br><br><strong>Location: </strong>Remote<br><br><strong>Compensation: </strong>$75,000 - $80,000 / year<br><br><strong>Description<br><br></strong><strong>At Tho",
+      "is_contract": false,
+      "is_fulltime": false,
+      "date_str": "2026-05-29T21:23:42+00:00",
+      "date_dt": "2026-05-29T21:23:42+00:00",
+      "is_very_fresh": false,
+      "score": 4
+    },
+    {
+      "source": "RemoteOK",
+      "company": "Kennedy Krieger Institute",
+      "role": "Research Assistant Neuroscience Research",
+      "url": "https://remoteOK.com/remote-jobs/remote-research-assistant-neuroscience-research-kennedy-krieger-institute-1132507",
+      "budget": null,
+      "budget_num": 0,
+      "stack": [],
+      "description": "<strong>Overview<br><br></strong>The <strong>Research Assistant I (Part-Time, Remote) </strong>in the Opendak Lab will provide dedicated data analysis support for ongoing research projects. This role ",
+      "is_contract": true,
+      "is_fulltime": false,
+      "date_str": "2026-05-29T01:11:39+00:00",
+      "date_dt": "2026-05-29T01:11:39+00:00",
+      "is_very_fresh": false,
+      "score": 2
+    },
+    {
+      "source": "RemoteOK",
+      "company": "RBC",
+      "role": "Site Reliability Engineer",
+      "url": "https://remoteOK.com/remote-jobs/remote-site-reliability-engineer-rbc-1132479",
+      "budget": null,
+      "budget_num": 0,
+      "stack": [
+        "react"
+      ],
+      "description": "<strong>Job Description<br><br></strong><strong>APPLICATION DEADLINE: JUNE 8TH, 2026<br><br></strong><em><strong>This role can be located the Caribbean Banking Market or in Canada where the successful",
+      "is_contract": false,
+      "is_fulltime": false,
+      "date_str": "2026-05-28T18:44:17+00:00",
+      "date_dt": "2026-05-28T18:44:17+00:00",
+      "is_very_fresh": false,
+      "score": 2
+    },
+    {
+      "source": "RemoteOK",
+      "company": "Bahamas Grid Company",
+      "role": "Grid Operator",
+      "url": "https://remoteOK.com/remote-jobs/remote-grid-operator-bahamas-grid-company-1132477",
+      "budget": null,
+      "budget_num": 0,
+      "stack": [
+        "react"
+      ],
+      "description": "<p><strong>Position Summary:</strong></p><p><br></p><p>The Grid Operator plays a critical role in the real time monitoring, operation, and control of the electrical distribution system for New Provide",
+      "is_contract": false,
+      "is_fulltime": false,
+      "date_str": "2026-05-28T16:16:47+00:00",
+      "date_dt": "2026-05-28T16:16:47+00:00",
+      "is_very_fresh": false,
+      "score": 2
+    }
+  ]
+}

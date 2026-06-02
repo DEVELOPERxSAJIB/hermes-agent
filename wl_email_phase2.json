@@ -1,0 +1,45 @@
+{
+  "certain": {
+    "Simform": [
+      "hello@simform.com",
+      "info@simform.com",
+      "contact@simform.com",
+      "sales@simform.com",
+      "partnerships@simform.com",
+      "business@simform.com"
+    ],
+    "Kingsmen Digital Ventures": [
+      "hello@kingsmendv.com"
+    ],
+    "Geniusee": [
+      "info@geniusee.com",
+      "burns@geniusee.com",
+      "r.bray@geniusee.com"
+    ],
+    "Euristiq": [
+      "hello@euristiq.com",
+      "info@euristiq.com",
+      "contact@euristiq.com",
+      "sales@euristiq.com",
+      "partnerships@euristiq.com",
+      "business@euristiq.com"
+    ],
+    "BairesDev": [
+      "hello@bairesdev.com",
+      "info@bairesdev.com",
+      "contact@bairesdev.com",
+      "sales@bairesdev.com",
+      "partnerships@bairesdev.com",
+      "business@bairesdev.com"
+    ],
+    "Agency Partner Interactive LL": [
+      "hello@agencypartner.com",
+      "info@agencypartner.com",
+      "contact@agencypartner.com",
+      "sales@agencypartner.com",
+      "partnerships@agencypartner.com",
+      "business@agencypartner.com"
+    ]
+  },
+  "guessed": {}
+}

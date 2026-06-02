@@ -1,0 +1,199 @@
+[
+  {
+    "company": "Simform",
+    "website": "https://www.simform.com/",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "Orlando, FL"
+  },
+  {
+    "company": "Goji Labs",
+    "website": "https://gojilabs.com/",
+    "existing": "",
+    "found": [
+      "marketing@gojilabs.com",
+      "hello@gojilabs.com"
+    ],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "Los Angeles, CA"
+  },
+  {
+    "company": "Mercury Development",
+    "website": "https://mercurydevelopment.com/",
+    "existing": "",
+    "found": [
+      "sales@mercurydevelopment.com"
+    ],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "Aventura, FL"
+  },
+  {
+    "company": "Kingsmen Digital Ventures",
+    "website": "https://go.kingsmendv.com/",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "Irvine, CA"
+  },
+  {
+    "company": "Closeloop Technologies LLC",
+    "website": "https://closeloop.com/",
+    "existing": "",
+    "found": [
+      "sales@closeloop.com",
+      "hr@closeloop.com",
+      "info@closeloop.com"
+    ],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "Mountain View , CA. Sahibzada Ajit Singh Nagar , India. Jaipur , India"
+  },
+  {
+    "company": "Utility",
+    "existing": "dave@utility.agency",
+    "found": []
+  },
+  {
+    "company": "Geniusee",
+    "website": "https://geniusee.com/",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "Warszawa , Poland. Kyiv , Ukraine. L'viv , Ukraine"
+  },
+  {
+    "company": "Euristiq",
+    "website": "https://euristiq.com/",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "Toronto , Canada. L'viv , Ukraine. Warszawa , Poland"
+  },
+  {
+    "company": "BairesDev",
+    "website": "https://www.bairesdev.com/",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "San Francisco, CA"
+  },
+  {
+    "company": "Infinum",
+    "website": "https://infinum.com/",
+    "existing": "",
+    "found": [
+      "hello@infinum.com",
+      "sales@infinum.com"
+    ],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "New York, NY"
+  },
+  {
+    "company": "Itransition",
+    "website": "https://www.itransition.com/",
+    "existing": "",
+    "found": [
+      "info@itransition.com"
+    ],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "Decatur, GA"
+  },
+  {
+    "company": "Diffco",
+    "website": "https://diffco.us/",
+    "existing": "",
+    "found": [
+      "mail@diffco.us"
+    ],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "San Jose, CA"
+  },
+  {
+    "company": "Azumo",
+    "website": "https://azumo.com/",
+    "existing": "",
+    "found": [
+      "hello@azumo.co"
+    ],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "San Francisco, CA"
+  },
+  {
+    "company": "Agency Partner Interactive LL",
+    "website": "https://agencypartner.com/",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "Plano, TX"
+  },
+  {
+    "company": "Merixstudio",
+    "website": "https://www.merixstudio.com/",
+    "existing": "",
+    "found": [
+      "m.bien@merixstudio.com"
+    ],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "Pozna\u0144, Poland"
+  },
+  {
+    "company": "Cheesecake Labs",
+    "website": "https://cheesecakelabs.com/",
+    "existing": "",
+    "found": [
+      "info@cheesecakelabs.com"
+    ],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "San Francisco, CA"
+  },
+  {
+    "company": "Velvetech LLC",
+    "website": "https://velvetech.com/",
+    "existing": "",
+    "found": [
+      "info@velvetech.com",
+      "sales@velvetech.com"
+    ],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "Sunny Isles Beach, FL"
+  },
+  {
+    "company": "Fulcrum",
+    "website": "https://fulcrum.rocks/",
+    "existing": "",
+    "found": [
+      "hello@fulcrum.rocks"
+    ],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "Warszawa, Poland"
+  },
+  {
+    "company": "MOBIKASA",
+    "website": "https://www.mobikasa.com/",
+    "existing": "",
+    "found": [
+      "info@mobikasa.com",
+      "mk@mobikasa.com"
+    ],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "New York, NY"
+  }
+]
