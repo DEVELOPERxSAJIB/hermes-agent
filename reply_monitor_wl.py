@@ -105,6 +105,61 @@ def classify_reply(snippet):
         return 'Auto-Reply'
     return 'Other'
 
+def check_bounces(service):
+    """Check for bounced emails and mark them in CRM."""
+    try:
+        from crm import get_crm
+        crm = get_crm()
+        
+        results = service.users().messages().list(
+            userId='me',
+            q='from:mailer-daemon@googlemail.com OR subject:undeliverable after:2026/05/01',
+            maxResults=20
+        ).execute()
+        
+        msgs = results.get('messages', [])
+        if not msgs:
+            return 0
+        
+        import re as _re
+        bounced_count = 0
+        for m in msgs:
+            msg = service.users().messages().get(userId='me', id=m['id']).execute()
+            snippet = msg.get('snippet', '')
+            
+            # Extract bounced email from snippet
+            email_match = _re.search(r'(\S+@\S+\.\S+)', snippet)
+            if not email_match:
+                continue
+            
+            bounced_email = email_match.group(1).lower().strip()
+            # Clean up
+            bounced_email = _re.sub(r'[<>\'"]', '', bounced_email)
+            
+            if 'mailer-daemon' in bounced_email or 'googlemail' in bounced_email:
+                continue
+            
+            # Find this email in CRM and mark it
+            try:
+                wl = crm.get_wl_all()
+                for lead in wl:
+                    lead_email = lead.get('Email', '').lower().strip()
+                    if lead_email == bounced_email and lead.get('Status') != 'Bounced':
+                        crm.update_wl_lead(lead.get('Company Name', ''), {
+                            'Status': 'Bounced',
+                            'Reply Snippet': f'BOUNCED: {bounced_email}',
+                        })
+                        log(f"  BOUNCE: {lead.get('Company Name','?')} | {bounced_email}")
+                        bounced_count += 1
+                        break
+            except:
+                pass
+        
+        return bounced_count
+    except:
+        return 0
+
+
 def main():
     log("Starting reply check...")
 
@@ -122,6 +177,14 @@ def main():
         return
 
     log(f"Tracking {len(sent_map)} sent emails, {len(replied_set)} already replied")
+
+    # ── Check for bounces first ──
+    log("Checking for bounced emails...")
+    bounced = check_bounces(service)
+    if bounced:
+        log(f"  {bounced} bounced emails detected and marked in CRM")
+
+    # ── Check for replies ──
 
     # Search for replies in inbox from our sent-to addresses
     # Query: newer_than:14d (covers full sequence window)
