@@ -1,57 +1,28 @@
 [
   {
     "company": "Simform",
-    "website": "https://www.simform.com/",
-    "existing": "",
-    "found": [],
-    "owner_name": "",
-    "owner_linkedin": "",
-    "country": "Orlando, FL"
+    "existing": "hello@simform.com",
+    "found": []
   },
   {
     "company": "Goji Labs",
-    "website": "https://gojilabs.com/",
-    "existing": "",
-    "found": [
-      "marketing@gojilabs.com",
-      "hello@gojilabs.com"
-    ],
-    "owner_name": "",
-    "owner_linkedin": "",
-    "country": "Los Angeles, CA"
+    "existing": "marketing@gojilabs.com",
+    "found": []
   },
   {
     "company": "Mercury Development",
-    "website": "https://mercurydevelopment.com/",
-    "existing": "",
-    "found": [
-      "sales@mercurydevelopment.com"
-    ],
-    "owner_name": "",
-    "owner_linkedin": "",
-    "country": "Aventura, FL"
+    "existing": "sales@mercurydevelopment.com",
+    "found": []
   },
   {
     "company": "Kingsmen Digital Ventures",
-    "website": "https://go.kingsmendv.com/",
-    "existing": "",
-    "found": [],
-    "owner_name": "",
-    "owner_linkedin": "",
-    "country": "Irvine, CA"
+    "existing": "hello@kingsmendv.com",
+    "found": []
   },
   {
     "company": "Closeloop Technologies LLC",
-    "website": "https://closeloop.com/",
-    "existing": "",
-    "found": [
-      "sales@closeloop.com",
-      "hr@closeloop.com",
-      "info@closeloop.com"
-    ],
-    "owner_name": "",
-    "owner_linkedin": "",
-    "country": "Mountain View , CA. Sahibzada Ajit Singh Nagar , India. Jaipur , India"
+    "existing": "sales@closeloop.com",
+    "found": []
   },
   {
     "company": "Utility",
@@ -60,140 +31,296 @@
   },
   {
     "company": "Geniusee",
-    "website": "https://geniusee.com/",
-    "existing": "",
-    "found": [],
-    "owner_name": "",
-    "owner_linkedin": "",
-    "country": "Warszawa , Poland. Kyiv , Ukraine. L'viv , Ukraine"
+    "existing": "info@geniusee.com",
+    "found": []
   },
   {
     "company": "Euristiq",
-    "website": "https://euristiq.com/",
-    "existing": "",
-    "found": [],
-    "owner_name": "",
-    "owner_linkedin": "",
-    "country": "Toronto , Canada. L'viv , Ukraine. Warszawa , Poland"
+    "existing": "hello@euristiq.com",
+    "found": []
   },
   {
     "company": "BairesDev",
-    "website": "https://www.bairesdev.com/",
-    "existing": "",
-    "found": [],
-    "owner_name": "",
-    "owner_linkedin": "",
-    "country": "San Francisco, CA"
+    "existing": "hello@bairesdev.com",
+    "found": []
   },
   {
     "company": "Infinum",
-    "website": "https://infinum.com/",
-    "existing": "",
-    "found": [
-      "hello@infinum.com",
-      "sales@infinum.com"
-    ],
-    "owner_name": "",
-    "owner_linkedin": "",
-    "country": "New York, NY"
+    "existing": "hello@infinum.com",
+    "found": []
   },
   {
     "company": "Itransition",
-    "website": "https://www.itransition.com/",
-    "existing": "",
-    "found": [
-      "info@itransition.com"
-    ],
-    "owner_name": "",
-    "owner_linkedin": "",
-    "country": "Decatur, GA"
+    "existing": "info@itransition.com",
+    "found": []
   },
   {
     "company": "Diffco",
-    "website": "https://diffco.us/",
-    "existing": "",
-    "found": [
-      "mail@diffco.us"
-    ],
-    "owner_name": "",
-    "owner_linkedin": "",
-    "country": "San Jose, CA"
+    "existing": "mail@diffco.us",
+    "found": []
   },
   {
     "company": "Azumo",
-    "website": "https://azumo.com/",
-    "existing": "",
-    "found": [
-      "hello@azumo.co"
-    ],
-    "owner_name": "",
-    "owner_linkedin": "",
-    "country": "San Francisco, CA"
+    "existing": "hello@azumo.co",
+    "found": []
   },
   {
     "company": "Agency Partner Interactive LL",
-    "website": "https://agencypartner.com/",
+    "existing": "hello@agencypartner.com",
+    "found": []
+  },
+  {
+    "company": "Merixstudio",
+    "existing": "m.bien@merixstudio.com",
+    "found": []
+  },
+  {
+    "company": "Cheesecake Labs",
+    "existing": "info@cheesecakelabs.com",
+    "found": []
+  },
+  {
+    "company": "Velvetech LLC",
+    "existing": "info@velvetech.com",
+    "found": []
+  },
+  {
+    "company": "Fulcrum",
+    "existing": "hello@fulcrum.rocks",
+    "found": []
+  },
+  {
+    "company": "MOBIKASA",
+    "existing": "info@mobikasa.com",
+    "found": []
+  },
+  {
+    "company": "Ancient",
+    "website": "https://www.ancient.global/",
+    "existing": "",
+    "found": [
+      "info@ancient.global"
+    ],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "Ciudad de M\u00e9xico, Mexico\r"
+  },
+  {
+    "company": "Plavno",
+    "website": "https://plavno.io/",
+    "existing": "",
+    "found": [
+      "dmitry.tk@abiatec.com",
+      "sales@plavno.io"
+    ],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "Alexandria, VA"
+  },
+  {
+    "company": "Lumitech",
+    "website": "https://lumitech.co/",
+    "existing": "",
+    "found": [
+      "yevhen.synii@lumitech.co",
+      "sales@lumitech.co",
+      "careers@lumitech.co",
+      "denis.salatin@lumitech.co",
+      "info@lumitech.co",
+      "partners@lumitech.co"
+    ],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "Dubai, United Arab Emirates"
+  },
+  {
+    "company": "SPD Technology",
+    "website": "https://spd.tech/",
+    "existing": "",
+    "found": [
+      "sales-ops@spd.tech",
+      "support@spd.tech"
+    ],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "London, England"
+  },
+  {
+    "company": "Kindgeek",
+    "website": "https://www.kindgeek.com/",
+    "existing": "",
+    "found": [
+      "info@kindgeek.com",
+      "sales@kindgeek.com"
+    ],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "L'viv, Ukraine"
+  },
+  {
+    "company": "TRooTech Business Solutions",
+    "website": "https://www.trootech.com/",
+    "existing": "",
+    "found": [
+      "careers@trootech.com",
+      "sales@trootech.com"
+    ],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "Ahmedabad, India"
+  },
+  {
+    "company": "Flux IT",
+    "website": "https://www.fluxitsoft.com/",
+    "existing": "",
+    "found": [
+      "info@fluxitsoft.com"
+    ],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "Gonnet, Argentina"
+  },
+  {
+    "company": "deltAlyz Corp.",
+    "website": "https://deltalyz.com/",
     "existing": "",
     "found": [],
     "owner_name": "",
     "owner_linkedin": "",
-    "country": "Plano, TX"
+    "country": "Vancouver, Canada"
   },
   {
-    "company": "Merixstudio",
-    "website": "https://www.merixstudio.com/",
+    "company": "Activeone",
+    "website": "https://activeone.co/",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "edell\u00edn, Colombia"
+  },
+  {
+    "company": "DHDTech.io",
+    "website": "https://dhdtech.io/",
     "existing": "",
     "found": [
-      "m.bien@merixstudio.com"
+      "diogo@dhdtech.io"
     ],
     "owner_name": "",
     "owner_linkedin": "",
-    "country": "Pozna\u0144, Poland"
+    "country": ""
   },
   {
-    "company": "Cheesecake Labs",
-    "website": "https://cheesecakelabs.com/",
+    "company": "Future Processing",
+    "website": "https://www.future-processing.com/",
     "existing": "",
     "found": [
-      "info@cheesecakelabs.com"
+      "sales.se@future-processing.com",
+      "ternopil@future-processing.com",
+      "sales.uk@future-processing.com",
+      "contact.usa@future-processing.com",
+      "sales.de@future-processing.com",
+      "sales@future-processing.com"
+    ],
+    "owner_name": "https://www.linkedin.com/company/future-processing/",
+    "owner_linkedin": "",
+    "country": "Gliwice, Poland"
+  },
+  {
+    "company": "Techstack company",
+    "website": "https://tech-stack.com/",
+    "existing": "",
+    "found": [
+      "hello@tech-stack.com"
     ],
     "owner_name": "",
     "owner_linkedin": "",
-    "country": "San Francisco, CA"
+    "country": "Wroc\u0142aw, Poland"
   },
   {
-    "company": "Velvetech LLC",
-    "website": "https://velvetech.com/",
+    "company": "Scalefocus",
+    "website": "https://www.scalefocus.com/",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "Sofia, Bulgaria"
+  },
+  {
+    "company": "7EDGE",
+    "website": "https://pages.7edge.com/",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "Bengaluru, India"
+  },
+  {
+    "company": "Redlab agency",
+    "website": "https://redlab.bz/",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "Chernihiv, Ukraine"
+  },
+  {
+    "company": "WyeWorks",
+    "website": "https://www.wyeworks.com/",
     "existing": "",
     "found": [
-      "info@velvetech.com",
-      "sales@velvetech.com"
+      "hello@wyeworks.com"
     ],
     "owner_name": "",
     "owner_linkedin": "",
-    "country": "Sunny Isles Beach, FL"
+    "country": "Montevideo, Uruguay"
   },
   {
-    "company": "Fulcrum",
-    "website": "https://fulcrum.rocks/",
+    "company": "Darly Solutions",
+    "website": "https://www.darly.solutions/",
     "existing": "",
     "found": [
-      "hello@fulcrum.rocks"
+      "team@darly.solutions",
+      "hello@darly.solutions"
     ],
     "owner_name": "",
     "owner_linkedin": "",
-    "country": "Warszawa, Poland"
+    "country": "McKinney, TX"
   },
   {
-    "company": "MOBIKASA",
-    "website": "https://www.mobikasa.com/",
+    "company": "Civitta",
+    "website": "https://civitta.com/digital",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "Vilnius, Lithuania"
+  },
+  {
+    "company": "SapientPro",
+    "website": "https://sapient.pro/",
     "existing": "",
     "found": [
-      "info@mobikasa.com",
-      "mk@mobikasa.com"
+      "us@sapient.pro",
+      "ua@sapient.pro",
+      "ee@sapient.pro"
     ],
     "owner_name": "",
     "owner_linkedin": "",
-    "country": "New York, NY"
+    "country": "Luzern, Switzerland"
+  },
+  {
+    "company": "TVM Engineering Services",
+    "website": "https://tvm-engineering.com/",
+    "existing": "",
+    "found": [
+      "contact@tvm-engineering.com",
+      "a.shirinyan@tvm-engineering.com",
+      "t.minkov@tvm-engineering.com",
+      "d.minkov@tvm-engineering.com",
+      "h.iamandi@tvm-engineering.com"
+    ],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "Sofia, Bulgaria"
   }
 ]
