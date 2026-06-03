@@ -196,47 +196,52 @@ def subject_breakup(company):
 def make_email_t1(lead):
     """
     T1 — The Hook (Day 1)
-    ~65 words. Pure observation + question. No pitch. No links.
-    Sounds like it was written in 30 seconds.
-    NO HYPHENS. NO EM DASHES.
+    ~55 words max. Short. Simple. About them.
+    4th grade English. Sounds like a real human.
+    NO HYPHENS. NO EM DASHES. NO JARGEN.
     """
     company = lead.get("Company Name", "").strip()
     email = lead.get("Email", "").strip()
     services = parse_services(lead.get("Services", ""))
     pain = lead.get("Pain Point", "").strip()
     owner_name = lead.get("Owner Name", "").strip()
-    signals = get_wl_signals_list(lead.get("White Label Signals", ""))
 
     if not email or not company:
         return None
 
     first_name = get_first_name(owner_name)
-    greeting = f"Hey {first_name}" if first_name else f"Hey {company.split()[0]} team"
+    first_word = company.split()[0]
 
-    primary = get_primary_service(services)
-
-    # Observation sentence — about THEM not us
-    pain_lower = pain.lower()
-    kw = primary.split('/')[0].strip()  # AI/ML -> AI
-    if 'capacity' in pain_lower or 'overflow' in pain_lower:
-        observation = f"Noticed {company} does {kw} work. When the team is stacked and a new project lands, what happens"
-    elif 'growth' in pain_lower or 'scaling' in pain_lower:
-        observation = f"Looks like {company} is growing on the {kw} side. When your devs are booked and a new project shows up, where does it go"
-    elif 'mobile' in pain_lower:
-        observation = f"Noticed {company} takes on mobile-heavy builds. When your senior people are tied up, where does mobile overflow go"
-    elif 'staff' in pain_lower or 'hire' in pain_lower:
-        observation = f"Building out a {kw} team takes time. Between hiring and delivery, what happens when a project lands and nobody is free"
+    # Greeting
+    if first_name:
+        greeting = f"Hey {first_name}"
     else:
-        observation = f"Noticed {company} handles {kw} projects. When the team is at capacity and something new comes in, what is the plan"
+        greeting = f"Hey {first_word} team"
 
-    # NO credibility paragraph in T1. Just observation + question + light sign-off.
-    # Credibility goes in T2 only.
+    # Pick main service for personalization
+    primary = get_primary_service(services)
+    if '/' in primary:
+        primary = primary.split('/')[0].strip()
+
+    # Body varies by what we know about them
+    # Keep it SHORT. 3 sentences max. One question.
+    if services and primary:
+        # We know their services — personalize
+        line = f"Noticed {first_word} does {primary} work."
+        if pain:
+            line += f" When you are busy with {pain.split(',')[0].lower()}, what happens to new projects"
+        else:
+            line += f" When the team is full and a new project comes in, what do you do"
+    else:
+        # No service info — keep it general
+        line = f"Noticed {first_word} takes on development work. When your team is at capacity and a new project lands, where does it go"
+
     body = (
         f"{greeting},\n\n"
-        f"{observation}?\n\n"
-        f"Helping agencies say yes to projects they cannot staff right now. Under your brand, your rate, zero footprint.\n\n"
-        f"If that sounds useful, happy to hop on a quick call. If not, no hard feelings.\n\n"
-        f"{SIGNATURE}"
+        f"{line}?\n\n"
+        f"We help agencies take on more than their team can handle. Quiet delivery, under your name, your rate stays yours.\n\n"
+        f"Want to see if it fits?\n\n"
+        f"SaJib"
     )
 
     subject = subject_hook(company, services)

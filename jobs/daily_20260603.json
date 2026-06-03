@@ -1,0 +1,89 @@
+{
+  "timestamp": "2026-06-03T08:00:01.871886+06:00",
+  "count": 40,
+  "top": [
+    {
+      "source": "RemoteOK",
+      "company": "APPLY",
+      "role": "Freelance Solutions Architect Braze &amp; Iterable Experience",
+      "url": "https://remoteOK.com/remote-jobs/remote-freelance-solutions-architect-braze-amp-iterable-experience-apply-1132557",
+      "budget": null,
+      "budget_num": 0,
+      "stack": [
+        "shopify",
+        "javascript"
+      ],
+      "description": "<p><strong style=\"font-size: 16px;\">ABOUT APPLY</strong></p>\n<p>&nbsp;</p>\n<p>APPLY is the Agentic Customer Experience (ACx) partner for the world's most ambitious consumer and entertainment brands. W",
+      "is_contract": true,
+      "is_fulltime": false,
+      "date_str": "2026-05-30T00:00:09+00:00",
+      "date_dt": "2026-05-30T00:00:09+00:00",
+      "is_very_fresh": false,
+      "score": 4
+    },
+    {
+      "source": "RemoteOK",
+      "company": "Thorne",
+      "role": "Designer",
+      "url": "https://remoteOK.com/remote-jobs/remote-designer-thorne-1132610",
+      "budget": "$75,000",
+      "budget_num": 75000,
+      "stack": [],
+      "description": "<strong>Department: </strong>Marketing<br><br><strong>Location: </strong>Remote<br><br><strong>Compensation: </strong>$75,000 - $80,000 / year<br><br><strong>Description<br><br></strong><strong>At Tho",
+      "is_contract": false,
+      "is_fulltime": false,
+      "date_str": "2026-05-29T21:23:42+00:00",
+      "date_dt": "2026-05-29T21:23:42+00:00",
+      "is_very_fresh": false,
+      "score": 4
+    },
+    {
+      "source": "WeWorkRemotely",
+      "company": "LawnStarter",
+      "role": "Staff Software Engineer, Product",
+      "url": "https://weworkremotely.com/remote-jobs/lawnstarter-staff-software-engineer-product-3",
+      "budget": "$100",
+      "budget_num": 100,
+      "stack": [],
+      "description": "\n\n<p>\n  <strong>Headquarters:</strong> Campinas, State of S\u00e3o Paulo, Brazil\n    <br /><strong>URL:</strong> <a href=\"http://lawnstarter.com\">http://lawnstarter.com</a>\n</p>\n\n<p><strong>About LawnStart",
+      "is_contract": false,
+      "is_fulltime": false,
+      "date_str": "Mon, 01 Jun 2026 19:58:43 +0000",
+      "date_dt": "2026-06-01T19:58:43+00:00",
+      "is_very_fresh": false,
+      "score": 4
+    },
+    {
+      "source": "WeWorkRemotely",
+      "company": "LawnStarter",
+      "role": "Staff Software Engineer, Product",
+      "url": "https://weworkremotely.com/remote-jobs/lawnstarter-staff-software-engineer-product-2",
+      "budget": "$100",
+      "budget_num": 100,
+      "stack": [],
+      "description": "\n\n<p>\n  <strong>Headquarters:</strong> Belo Horizonte, State of Minas Gerais, Brazil\n    <br /><strong>URL:</strong> <a href=\"http://lawnstarter.com\">http://lawnstarter.com</a>\n</p>\n\n<p><strong>About ",
+      "is_contract": false,
+      "is_fulltime": false,
+      "date_str": "Mon, 01 Jun 2026 19:58:41 +0000",
+      "date_dt": "2026-06-01T19:58:41+00:00",
+      "is_very_fresh": false,
+      "score": 4
+    },
+    {
+      "source": "WeWorkRemotely",
+      "company": "LawnStarter",
+      "role": "Staff Software Engineer, Product",
+      "url": "https://weworkremotely.com/remote-jobs/lawnstarter-staff-software-engineer-product-1",
+      "budget": "$100",
+      "budget_num": 100,
+      "stack": [],
+      "description": "\n\n<p>\n  <strong>Headquarters:</strong> Florian\u00f3polis, State of Santa Catarina, Brazil\n    <br /><strong>URL:</strong> <a href=\"http://lawnstarter.com\">http://lawnstarter.com</a>\n</p>\n\n<p><strong>About",
+      "is_contract": false,
+      "is_fulltime": false,
+      "date_str": "Mon, 01 Jun 2026 19:58:38 +0000",
+      "date_dt": "2026-06-01T19:58:38+00:00",
+      "is_very_fresh": false,
+      "score": 4
+    }
+  ]
+}
