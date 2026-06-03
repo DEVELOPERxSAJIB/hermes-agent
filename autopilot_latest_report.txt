@@ -1,0 +1,35 @@
+NanoSoft Auto-Pilot Report
+Time: 2026-06-03 03:35 BD Time
+==================================================
+
+Current Pipeline:
+  T1 Sent: 43
+  Unqualified: 36
+Total sent: 48
+Replies: 0
+
+--- Step 2: Scouting ---
+Scraped: 0 | Emails: 0 | CRM added: 0
+
+--- Step 3: Enriching ---
+Enriched: 0
+
+--- Step 4: Judging ---
+Qualified: 0
+
+--- Step 5: Sending ---
+No new qualified leads.
+
+--- Step 6: Replies ---
+New replies: 0
+
+--- Step 7: Reply Handling ---
+No interested replies yet.
+
+==================================================
+CYCLE SUMMARY
+Duration: 360s
+Total WL leads: 79
+Total sent: 48
+Total replies: 0
+Next run: ~6 hours
