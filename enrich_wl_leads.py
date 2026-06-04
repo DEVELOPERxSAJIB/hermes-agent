@@ -177,9 +177,31 @@ def main():
     crm = get_crm()
     wl = crm.get_wl_all()
     
-    print(f"Enriching {len(wl)} White Label leads...\n")
+    # Only enrich leads that need it: empty services OR empty WL signals
+    # Skip leads that are already enriched or have been judged/sent
+    skip_statuses = {'T1 Sent', 'T2 Sent', 'T3 Sent', 'T4 Sent', 'Unqualified', 'Sent'}
+    to_enrich = []
+    skipped = 0
+    for lead in wl:
+        status = lead.get('Status', '').strip()
+        if status in skip_statuses:
+            skipped += 1
+            continue
+        existing_services = lead.get('Services', '').strip()
+        existing_wl = lead.get('White Label Signals', '').strip()
+        if not existing_services or not existing_wl:
+            to_enrich.append(lead)
+        else:
+            skipped += 1
     
-    for i, lead in enumerate(wl):
+    print(f"Enrichment: {len(to_enrich)} leads need enrichment, {skipped} skipped (already done or judged/sent)\n")
+    
+    if not to_enrich:
+        print("Nothing to enrich.")
+        return
+    
+    enriched = 0
+    for i, lead in enumerate(to_enrich):
         company = lead.get('Company Name', '').strip()
         website = lead.get('Website', '').strip()
         existing_services = lead.get('Services', '').strip()
@@ -187,12 +209,7 @@ def main():
         existing_wl = lead.get('White Label Signals', '').strip()
         existing_linkedin = lead.get('LinkedIn', '').strip()
         
-        # Skip if already fully enriched
-        if existing_services and existing_pain and existing_wl:
-            print(f"[{i+1}/{len(wl)}] SKIP {company} (already enriched)")
-            continue
-        
-        print(f"[{i+1}/{len(wl)}] {company} ({website})")
+        print(f"[{i+1}/{len(to_enrich)}] {company} ({website})")
         
         data = scrape_agency(website)
         
@@ -216,35 +233,17 @@ def main():
         if updates:
             try:
                 crm.update_wl_lead(company, updates)
-                print(f"    ✅ Updated: {list(updates.keys())}")
+                print(f"    Updated: {list(updates.keys())}")
+                enriched += 1
             except Exception as e:
-                print(f"    ❌ CRM error: {e}")
+                print(f"    CRM error: {e}")
         else:
             print(f"    (no new data)")
         
         print()
-        time.sleep(1)
+        time.sleep(0.5)
     
-    # Summary
-    print("=" * 60)
-    print("ENRICHMENT COMPLETE")
-    print("=" * 60)
-    
-    wl = crm.get_wl_all()
-    columns = list(wl[0].keys())
-    for col in columns:
-        filled = sum(1 for l in wl if l.get(col, '').strip())
-        print(f"  {col:25s}: {filled:2d}/19")
-    
-    # Show all enriched leads
-    print("\n=== ALL LEADS ===")
-    for l in wl:
-        print(f"\n{l.get('Company Name','')}:")
-        print(f"  Services: {l.get('Services','')}")
-        print(f"  WL Signals: {l.get('White Label Signals','')}")
-        print(f"  Pain Points: {l.get('Pain Point','')}")
-        print(f"  Email: {l.get('Email','')}")
-        print(f"  LinkedIn: {l.get('LinkedIn','')}")
+    print(f"DONE: {enriched}/{len(to_enrich)} leads enriched")
 
 
 if __name__ == "__main__":

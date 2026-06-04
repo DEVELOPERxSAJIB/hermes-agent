@@ -11,12 +11,11 @@ BD_TZ = timezone(timedelta(hours=6))
 NANOSOFT_DIR = "/home/ubuntu/nanosoft"
 
 QUERIES = [
+    # White label specific
     '"white label" web development agency usa',
     '"white label" software development partner uk',
     'agency "white label development"',
     '"white label" mobile app development agency',
-    '"staff augmentation" agency partner program',
-    'outsourced development partner agency uk',
     '"white label" saas development partner',
     'agency overflow development partner',
     'white label web design agency uk',
@@ -35,6 +34,45 @@ QUERIES = [
     '"white label" flutter agency',
     'agency white label mobile development',
     'white label software partner australia',
+    # Staff augmentation
+    '"staff augmentation" agency partner program usa',
+    '"staff augmentation" web development agency uk',
+    'dedicated development team agency partner',
+    'team extension agency partner program',
+    'nearshore development partner agency',
+    'offshore development partner agency',
+    # Outsourcing
+    'outsourced development agency partner program',
+    'software development outsourcing partner',
+    'IT outsourcing agency partner',
+    'development partner for agencies',
+    'agency development partner program',
+    # Reseller
+    'software reseller program agency',
+    'white label reseller development',
+    'agency reseller development partner',
+    # Specific tech
+    '"white label" python development agency',
+    '"white label" php development agency',
+    '"white label" ruby on rails agency',
+    'white label angular development agency',
+    'white label vue.js development agency',
+    # By country
+    'white label development agency canada',
+    'white label development agency australia',
+    'white label development agency india',
+    'white label development agency philippines',
+    'white label development agency vietnam',
+    'white label development agency brazil',
+    'white label development agency mexico',
+    'white label development agency colombia',
+    # Agency partnerships
+    'agency partnership program development',
+    'web development agency collaboration',
+    'software agency joint venture partner',
+    'development agency subcontractor',
+    'agency white label app development',
+    'mobile app white label agency partner',
 ]
 
 SKIP_DOMAINS = [
@@ -254,7 +292,7 @@ def main():
             'Judge Score': '',
             'Sent date': '',
             'FU 1': '', 'FU 2': '', 'FU 3': '',
-            'Status': 'New',
+            'Status': '',
             'Source': 'SCOUT-WL v4',
         })
         

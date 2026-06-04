@@ -1,22 +1,45 @@
 Company Name,Website,LinkedIn,Owner Name,Owner LinkedIn URL,Country,Email,Email Score,Services,White Label Signals,Pain Point,Team Size,Judge Score,Sent date,FU 1,FU 2,FU 3,Status,Source
-Xovakstudio,https://xovakstudio.com,https://www.linkedin.com/company/bestshopifyplusagency,,,USA,info@xovakstudio.com,scraped,"web development, mobile development, UI/UX design, eCommerce, custom software","white label, staff augmentation",,,,,,,,New,SCOUT-WL v4
-Co,https://iostudios.co.uk,https://www.linkedin.com/company/iostudios,,,,,,"web development, mobile development, eCommerce, custom software",,,,,,,,,New,SCOUT-WL v4
-Metroweb,https://metroweb.digital,,,,USA,metrowebstudio.office@gmail.com,scraped,"web development, UI/UX design, eCommerce","white label, partner program",,,,,,,,New,SCOUT-WL v4
-Johnnybytes,https://johnnybytes.com,https://www.linkedin.com/company/johnnybytes,,,,info@johnnybytes.com,scraped,"web development, mobile development",white label,,,,,,,,New,SCOUT-WL v4
-Bantechsolutions,https://bantechsolutions.com,https://www.linkedin.com/company/bantech-software-solutions,,,USA,info@bantechsolutions.com,scraped,"web development, mobile development, AI/ML, UI/UX design, cloud/DevOps","white label, outsourcing, reseller",,,,,,,,New,SCOUT-WL v4
-Unkoa,https://unkoa.com,,,,,jamie@example.com,scraped,,,,,,,,,,New,SCOUT-WL v4
-Syspree,https://syspree.com,https://www.linkedin.com/company/syspreedigital,,,USA,,,"web development, AI/ML, UI/UX design, eCommerce",outsourcing,,,,,,,,New,SCOUT-WL v4
-Getglow,https://getglow.io,https://www.linkedin.com/company/get-glow-app,,,,,,UI/UX design,"white label, reseller",,,,,,,,New,SCOUT-WL v4
-Eintelligenceweb,https://eintelligenceweb.com,https://www.linkedin.com/company/eintelligence,,,USA,,,"web development, AI/ML, UI/UX design, eCommerce","white label, partner program, staff augmentation",,,,,,,,New,SCOUT-WL v4
-Versatile,https://versatile.club,https://www.linkedin.com/company/versatile-club,,,USA,john@acme.com,scraped,web development,reseller,,,,,,,,New,SCOUT-WL v4
-Dev,https://dev.to,,,,,,,"web development, cloud/DevOps",,,,,,,,,New,SCOUT-WL v4
-Rankvisely,https://rankvisely.com,https://www.linkedin.com/company/rank-visely,,,,usama@rankvisely.com,scraped,"web development, UI/UX design, eCommerce",,,,,,,,,New,SCOUT-WL v4
-Anvileight,https://anvileight.com,https://www.linkedin.com/company/1710371,,,Ukraine,contact@anvileight.com,scraped,"web development, mobile development, cloud/DevOps","partner program, staff augmentation",,,,,,,,New,SCOUT-WL v4
-Servicenow,https://servicenow.com,,,,,,,,,,,,,,,,New,SCOUT-WL v4
-Nectarbits,https://nectarbits.ca,https://www.linkedin.com/company/nectarbits,,,USA,contact@nectarbits.ca,scraped,"web development, mobile development, AI/ML, UI/UX design, cloud/DevOps","white label, staff augmentation",,,,,,,,New,SCOUT-WL v4
-Engagebay,https://engagebay.com,https://www.linkedin.com/company/engagebay,,,,,,"mobile development, eCommerce",reseller,,,,,,,,New,SCOUT-WL v4
-Clickboxagency,https://clickboxagency.com,https://www.linkedin.com/company/clickbox-agency,,,USA,info@clickboxagency.com,scraped,"web development, mobile development, AI/ML, UI/UX design, eCommerce",,,,,,,,,New,SCOUT-WL v4
-Teamontime,https://teamontime.com,https://www.linkedin.com/company/team-on-time,,,USA,partners@teamontime.com,scraped,"web development, eCommerce","white label, partner program, staff augmentation, outsourcing",,,,,,,,New,SCOUT-WL v4
-Touchlane,https://touchlane.com,https://www.linkedin.com/company/touchlane,,,USA,enquiries.estonia@touchlane.com,scraped,"web development, mobile development, UI/UX design, cloud/DevOps, custom software","white label, staff augmentation",,,,,,,,New,SCOUT-WL v4
-Appmysite,https://appmysite.com,https://www.linkedin.com/company/app-my-site,,,,,,"mobile development, eCommerce",white label,,,,,,,,New,SCOUT-WL v4
-Scaleo,https://scaleo.io,https://www.linkedin.com/company/scaleo-affiliate-tracking/jobs/?viewAsMember=true,,,,john@example.com,scraped,"mobile development, eCommerce","white label, partner program, reseller",,,,,,,,New,SCOUT-WL v4
+Himmdesign,https://himmdesign.com,,,,,,,,,,,,,,,,,SCOUT-WL v4
+Co,https://meltdesign.co.uk,,,,UK,,,"web development, UI/UX design, eCommerce",white label,,,,,,,,,SCOUT-WL v4
+Unlimitedwp,https://unlimitedwp.com,https://www.linkedin.com/company/theunlimitedwp,,,USA,hello@unlimitedwp.com,scraped,"web development, eCommerce","white label, staff augmentation, outsourcing",,,,,,,,,SCOUT-WL v4
+Themindstudios,https://themindstudios.com,https://www.linkedin.com/company/mindstudios,,,Ukraine,hello@themindstudios.com,scraped,"web development, mobile development, UI/UX design, cloud/DevOps, custom software","staff augmentation, outsourcing",,,,,,,,,SCOUT-WL v4
+Hutko,https://hutko.dev,https://www.linkedin.com/company/dev-3,,,USA,,,"web development, mobile development, UI/UX design, cloud/DevOps, eCommerce","white label, staff augmentation, outsourcing",,,,,,,,,SCOUT-WL v4
+Trawex,https://trawex.com,https://www.linkedin.com/company/trawex-technologies,,,USA,contact@trawex.com,scraped,custom software,"white label, staff augmentation, outsourcing",,,,,,,,,SCOUT-WL v4
+Eleventuretech,https://eleventuretech.com,,,,,,,,,,,,,,,,,SCOUT-WL v4
+Fireart,https://fireart.studio,https://www.linkedin.com/company/2975640,,,USA,,,"web development, mobile development, UI/UX design, cloud/DevOps, eCommerce",staff augmentation,,,,,,,,,SCOUT-WL v4
+Investopedia,https://investopedia.com,,,,,,,,,,,,,,,,,SCOUT-WL v4
+Monocubed,https://monocubed.com,https://www.linkedin.com/company/monocubed,,,USA,,,"web development, AI/ML, UI/UX design, cloud/DevOps, eCommerce","white label, staff augmentation, outsourcing",,,,,,,,,SCOUT-WL v4
+Admitad,https://admitad.com,,,,,,,"mobile development, eCommerce",partner program,,,,,,,,,SCOUT-WL v4
+Freelancer,https://freelancer.com,https://www.linkedin.com/company/freelancer-com,,,Australia,,,"mobile development, AI/ML, UI/UX design, eCommerce",,,,,,,,,,SCOUT-WL v4
+Bestdigitalmarketing Agency,https://bestdigitalmarketing-agency.com,,,,Australia,,,"web development, AI/ML, UI/UX design, eCommerce","white label, outsourcing, reseller",,,,,,,,,SCOUT-WL v4
+Devsdata,https://devsdata.com,https://www.linkedin.com/company/devsdata,,,USA,london@devsdata.com,scraped,"web development, mobile development, AI/ML, UI/UX design, cloud/DevOps",reseller,,,,,,,,,SCOUT-WL v4
+E2Msolutions,https://e2msolutions.com,https://www.linkedin.com/company/e2m-solutions,,,USA,info@e2msolutions.com,scraped,"web development, UI/UX design, eCommerce","white label, partner program, staff augmentation, outsourcing",,,,,,,,,SCOUT-WL v4
+Gohighlevel,https://help.gohighlevel.com,,,,Canada,,,,white label,,,,,,,,,SCOUT-WL v4
+Mailmunch,https://mailmunch.com,https://www.linkedin.com/company/mailmunch,,,,info@mailmunch.com,scraped,eCommerce,white label,,,,,,,,,SCOUT-WL v4
+Wpwebinfotech,https://wpwebinfotech.com,https://www.linkedin.com/company/wpwebinfotech,,,USA,sales@wpwebinfotech.com,scraped,"web development, mobile development, UI/UX design, cloud/DevOps, eCommerce","staff augmentation, outsourcing",,,,,,,,,SCOUT-WL v4
+Co,https://vrinsoft.co.uk,,,,UK,,,"web development, mobile development, UI/UX design, cloud/DevOps, QA/Testing",,,,,,,,,,SCOUT-WL v4
+Shopifyacademy,https://shopifyacademy.com,,,,,,,"web development, eCommerce","partner program, reseller",,,,,,,,,SCOUT-WL v4
+Arc,https://arc.dev,https://www.linkedin.com/company/arcdotdev,,,USA,,,"web development, mobile development, AI/ML, UI/UX design, cloud/DevOps",,,,,,,,,,SCOUT-WL v4
+Maddevs,https://maddevs.io,,,,,,,,,,,,,,,,,SCOUT-WL v4
+Orientsoftware,https://orientsoftware.com,,,,,sales@orientsoftware.com,scraped,"web development, mobile development, AI/ML, UI/UX design, cloud/DevOps","partner program, staff augmentation, outsourcing",,,,,,,,,SCOUT-WL v4
+Timedoctor,https://timedoctor.com,https://www.linkedin.com/company/time-doctor,,,USA,,,"AI/ML, eCommerce","partner program, outsourcing",,,,,,,,,SCOUT-WL v4
+Trianglestacks,https://trianglestacks.com,,,,Canada,,,"web development, eCommerce","white label, partner program",,,,,,,,,SCOUT-WL v4
+Theugandanjobline,https://theugandanjobline.com,,,,,,,,,,,,,,,,,SCOUT-WL v4
+Dquip,https://dquip.com,,,,Australia,,,"web development, mobile development, UI/UX design, SaaS","white label, partner program, reseller",,,,,,,,,SCOUT-WL v4
+Appmesolutions,https://appmesolutions.com,https://www.linkedin.com/company/10com-web-development,,,USA,info@appmesolutions.com,scraped,"web development, mobile development, UI/UX design, cloud/DevOps, eCommerce","white label, reseller",,,,,,,,,SCOUT-WL v4
+Aamax,https://aamax.co,https://www.linkedin.com/company/aamaxdotco,,,USA,info@aamax.co,scraped,"web development, AI/ML, UI/UX design",,,,,,,,,,SCOUT-WL v4
+Iplus,https://developer.iplus.tech,,,,,name@email.com,scraped,,,,,,,,,,,SCOUT-WL v4
+Linktr,https://linktr.ee,,,,Canada,,,eCommerce,,,,,,,,,,SCOUT-WL v4
+Socialrails,https://socialrails.com,https://www.linkedin.com/company/socialrails,,,,contact@socialrails.com,scraped,,,,,,,,,,,SCOUT-WL v4
+Pitchpinemedia,https://pitchpinemedia.com,https://www.linkedin.com/company/pitch-pine-media,,,USA,info@pitchpinemedia.com,scraped,"web development, UI/UX design, eCommerce","white label, outsourcing, reseller",,,,,,,,,SCOUT-WL v4
+Risingstarinfotech,https://risingstarinfotech.com,https://www.linkedin.com/company/rising-star-ingotech,,,,info@risingstarinfotech.com,scraped,"web development, mobile development, UI/UX design, eCommerce, QA/Testing",staff augmentation,,,,,,,,,SCOUT-WL v4
+Thewhitelabelagency,https://thewhitelabelagency.com,https://www.linkedin.com/company/4991440,,,USA,,,web development,"white label, outsourcing, reseller",,,,,,,,,SCOUT-WL v4
+Softtrix,https://softtrix.com,,,,USA,,,"web development, UI/UX design, cloud/DevOps, eCommerce",,,,,,,,,,SCOUT-WL v4
+Publicbuysell,https://publicbuysell.com,,,,USA,,,"UI/UX design, eCommerce",,,,,,,,,,SCOUT-WL v4
+Dynamicdreamz,https://dynamicdreamz.com,https://www.linkedin.com/company/dynamic-dreamz-websolutions,,,USA,info@dynamicdreamz.com,scraped,"web development, mobile development, UI/UX design, eCommerce, QA/Testing",white label,,,,,,,,,SCOUT-WL v4
+Blockchainappfactory,https://blockchainappfactory.com,,,,,,,,,,,,,,,,,SCOUT-WL v4
+Flowout,https://flowout.com,https://www.linkedin.com/company/flowout,,,USA,,,"UI/UX design, eCommerce",,,,,,,,,,SCOUT-WL v4
+Heseven,https://heseven.com,https://www.linkedin.com/company/heseven,,,USA,dhiraj@heseven.com,scraped,"UI/UX design, cloud/DevOps, eCommerce",white label,,,,,,,,,SCOUT-WL v4
+Brandemic,https://brandemic.in,https://www.linkedin.com/company/brandemi-design,,,,,,"web development, eCommerce",,,,,,,,,,SCOUT-WL v4
+Appmachine,https://appmachine.com,https://www.linkedin.com/company/appmachine,,,,,,"mobile development, UI/UX design","white label, reseller",,,,,,,,,SCOUT-WL v4
+Median,https://median.co,https://www.linkedin.com/company/median-co,,,USA,info@domain.com,scraped,"mobile development, eCommerce","white label, outsourcing",,,,,,,,,SCOUT-WL v4

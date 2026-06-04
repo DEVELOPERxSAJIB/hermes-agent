@@ -1,0 +1,36 @@
+{
+  "daily_send_cap": 80,
+  "min_delay_seconds": 180,
+  "max_per_hour": 20,
+  "bounce_threshold_pct": 5,
+  "spam_keywords_banned": [
+    "free", "guarantee", "act now", "limited time", "click here",
+    "buy now", "order now", "special promotion", "great offer",
+    "discount", "save big", "no obligation", "risk free",
+    "congratulations", "you've been selected", "winner",
+    "cash bonus", "earn extra", "make money", "double your",
+    "earn $", "$$$", "100% free", "act immediately",
+    "call now", "order today", "supplies are limited"
+  ],
+  "subject_line_patterns": [
+    "overflow on [service] — quick q",
+    "[company] overflow question",
+    "quick question about [company]",
+    "capacity at [company]",
+    "[service] overflow",
+    "partner question for [company]",
+    "overflow help for [service]"
+  ],
+  "rules": [
+    "Never send more than 80 emails per day",
+    "Always wait 180 seconds between sends",
+    "If bounce rate exceeds 5%, pause all sends and alert CEO",
+    "Never include links in T1 emails",
+    "Never start email with I or We",
+    "Always include List-Unsubscribe header",
+    "Keep emails under 100 words",
+    "Use 4th grade English only",
+    "No hyphens, no em dashes, no en dashes",
+    "One email per lead per day maximum"
+  ]
+}

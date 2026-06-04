@@ -563,7 +563,7 @@ if __name__ == "__main__":
         # T3: Status = "T2 Sent"
         # T4: Status = "T3 Sent"
         STATUS_MAP = {
-            'T1': ['Qualified', 'New'],
+            'T1': ['Qualified'],
             'T2': ['T1 Sent', 'Sent'],
             'T3': ['T2 Sent'],
             'T4': ['T3 Sent'],

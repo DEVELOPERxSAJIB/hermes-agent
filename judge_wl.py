@@ -215,8 +215,8 @@ def main():
     crm = get_crm()
     wl = crm.get_wl_all()
 
-    # Only judge leads with empty status (new leads)
-    new_leads = [l for l in wl if not l.get('Status', '').strip()]
+    # Judge leads with empty status or "New" status (not yet judged)
+    new_leads = [l for l in wl if not l.get('Status', '').strip() or l.get('Status', '').strip() == 'New']
     if not new_leads:
         print("[JUDGE-WL] No new leads to judge.")
         sys.exit(0)

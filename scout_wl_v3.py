@@ -239,7 +239,7 @@ def main():
             'Judge Score': '',
             'Sent date': '',
             'FU 1': '', 'FU 2': '', 'FU 3': '',
-            'Status': 'New',
+            'Status': '',
             'Source': 'SCOUT-WL v3',
             'Scouted At': datetime.now(BD_TZ).strftime('%Y-%m-%d'),
         })

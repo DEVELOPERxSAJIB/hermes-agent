@@ -123,11 +123,15 @@ def main():
     log("STEP 2: Scouting new WL leads...")
     report_lines.append("\n--- Step 2: Scouting ---")
     
-    scout_script = os.path.join(NANOSOFT_DIR, "scout_wl_v3.py")
+    # Try v4 first (ddgs CLI), fallback to v3
+    scout_script = os.path.join(NANOSOFT_DIR, "scout_wl_v4.py")
+    if not os.path.exists(scout_script):
+        scout_script = os.path.join(NANOSOFT_DIR, "scout_wl_v3.py")
     if os.path.exists(scout_script):
+        scout_name = os.path.basename(scout_script)
         stdout, stderr, rc = run_cmd(
-            f"cd {NANOSOFT_DIR} && python3 -u scout_wl_v3.py",
-            timeout=600, desc="SCOUT-WL v3"
+            f"cd {NANOSOFT_DIR} && python3 -u {scout_name}",
+            timeout=600, desc=f"SCOUT ({scout_name})"
         )
         # Parse results from output
         scraped = 0
