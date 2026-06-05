@@ -124,9 +124,9 @@ def main():
     report_lines.append("\n--- Step 2: Scouting ---")
     
     # Try v4 first (ddgs CLI), fallback to v3
-    scout_script = os.path.join(NANOSOFT_DIR, "scout_wl_v4.py")
+    scout_script = os.path.join(NANOSOFT_DIR, "scout_wl_v5.py")
     if not os.path.exists(scout_script):
-        scout_script = os.path.join(NANOSOFT_DIR, "scout_wl_v3.py")
+        scout_script = os.path.join(NANOSOFT_DIR, "scout_wl_v4.py")
     if os.path.exists(scout_script):
         scout_name = os.path.basename(scout_script)
         stdout, stderr, rc = run_cmd(
