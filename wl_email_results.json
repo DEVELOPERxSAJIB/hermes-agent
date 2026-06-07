@@ -96,89 +96,38 @@
   },
   {
     "company": "Ancient",
-    "website": "https://www.ancient.global/",
-    "existing": "",
-    "found": [
-      "info@ancient.global"
-    ],
-    "owner_name": "",
-    "owner_linkedin": "",
-    "country": "Ciudad de M\u00e9xico, Mexico\r"
+    "existing": "info@ancient.global",
+    "found": []
   },
   {
     "company": "Plavno",
-    "website": "https://plavno.io/",
-    "existing": "",
-    "found": [
-      "dmitry.tk@abiatec.com",
-      "sales@plavno.io"
-    ],
-    "owner_name": "",
-    "owner_linkedin": "",
-    "country": "Alexandria, VA"
+    "existing": "sales@plavno.io",
+    "found": []
   },
   {
     "company": "Lumitech",
-    "website": "https://lumitech.co/",
-    "existing": "",
-    "found": [
-      "yevhen.synii@lumitech.co",
-      "sales@lumitech.co",
-      "careers@lumitech.co",
-      "denis.salatin@lumitech.co",
-      "info@lumitech.co",
-      "partners@lumitech.co"
-    ],
-    "owner_name": "",
-    "owner_linkedin": "",
-    "country": "Dubai, United Arab Emirates"
+    "existing": "yevhen.synii@lumitech.co",
+    "found": []
   },
   {
     "company": "SPD Technology",
-    "website": "https://spd.tech/",
-    "existing": "",
-    "found": [
-      "sales-ops@spd.tech",
-      "support@spd.tech"
-    ],
-    "owner_name": "",
-    "owner_linkedin": "",
-    "country": "London, England"
+    "existing": "sales-ops@spd.tech",
+    "found": []
   },
   {
     "company": "Kindgeek",
-    "website": "https://www.kindgeek.com/",
-    "existing": "",
-    "found": [
-      "info@kindgeek.com",
-      "sales@kindgeek.com"
-    ],
-    "owner_name": "",
-    "owner_linkedin": "",
-    "country": "L'viv, Ukraine"
+    "existing": "info@kindgeek.com",
+    "found": []
   },
   {
     "company": "TRooTech Business Solutions",
-    "website": "https://www.trootech.com/",
-    "existing": "",
-    "found": [
-      "careers@trootech.com",
-      "sales@trootech.com"
-    ],
-    "owner_name": "",
-    "owner_linkedin": "",
-    "country": "Ahmedabad, India"
+    "existing": "careers@trootech.com",
+    "found": []
   },
   {
     "company": "Flux IT",
-    "website": "https://www.fluxitsoft.com/",
-    "existing": "",
-    "found": [
-      "info@fluxitsoft.com"
-    ],
-    "owner_name": "",
-    "owner_linkedin": "",
-    "country": "Gonnet, Argentina"
+    "existing": "info@fluxitsoft.com",
+    "found": []
   },
   {
     "company": "deltAlyz Corp.",
@@ -191,50 +140,23 @@
   },
   {
     "company": "Activeone",
-    "website": "https://activeone.co/",
-    "existing": "",
-    "found": [],
-    "owner_name": "",
-    "owner_linkedin": "",
-    "country": "edell\u00edn, Colombia"
+    "existing": "commercial@activeone.co",
+    "found": []
   },
   {
     "company": "DHDTech.io",
-    "website": "https://dhdtech.io/",
-    "existing": "",
-    "found": [
-      "diogo@dhdtech.io"
-    ],
-    "owner_name": "",
-    "owner_linkedin": "",
-    "country": ""
+    "existing": "diogo@dhdtech.io",
+    "found": []
   },
   {
     "company": "Future Processing",
-    "website": "https://www.future-processing.com/",
-    "existing": "",
-    "found": [
-      "sales.se@future-processing.com",
-      "ternopil@future-processing.com",
-      "sales.uk@future-processing.com",
-      "contact.usa@future-processing.com",
-      "sales.de@future-processing.com",
-      "sales@future-processing.com"
-    ],
-    "owner_name": "https://www.linkedin.com/company/future-processing/",
-    "owner_linkedin": "",
-    "country": "Gliwice, Poland"
+    "existing": "sales@future-processing.com",
+    "found": []
   },
   {
     "company": "Techstack company",
-    "website": "https://tech-stack.com/",
-    "existing": "",
-    "found": [
-      "hello@tech-stack.com"
-    ],
-    "owner_name": "",
-    "owner_linkedin": "",
-    "country": "Wroc\u0142aw, Poland"
+    "existing": "hello@tech-stack.com",
+    "found": []
   },
   {
     "company": "Scalefocus",
@@ -256,35 +178,18 @@
   },
   {
     "company": "Redlab agency",
-    "website": "https://redlab.bz/",
-    "existing": "",
-    "found": [],
-    "owner_name": "",
-    "owner_linkedin": "",
-    "country": "Chernihiv, Ukraine"
+    "existing": "hello@redlab.bz",
+    "found": []
   },
   {
     "company": "WyeWorks",
-    "website": "https://www.wyeworks.com/",
-    "existing": "",
-    "found": [
-      "hello@wyeworks.com"
-    ],
-    "owner_name": "",
-    "owner_linkedin": "",
-    "country": "Montevideo, Uruguay"
+    "existing": "hello@wyeworks.com",
+    "found": []
   },
   {
     "company": "Darly Solutions",
-    "website": "https://www.darly.solutions/",
-    "existing": "",
-    "found": [
-      "team@darly.solutions",
-      "hello@darly.solutions"
-    ],
-    "owner_name": "",
-    "owner_linkedin": "",
-    "country": "McKinney, TX"
+    "existing": "hello@darly.solutions",
+    "found": []
   },
   {
     "company": "Civitta",
@@ -297,30 +202,2698 @@
   },
   {
     "company": "SapientPro",
-    "website": "https://sapient.pro/",
-    "existing": "",
-    "found": [
-      "us@sapient.pro",
-      "ua@sapient.pro",
-      "ee@sapient.pro"
-    ],
-    "owner_name": "",
-    "owner_linkedin": "",
-    "country": "Luzern, Switzerland"
+    "existing": "us@sapient.pro",
+    "found": []
   },
   {
     "company": "TVM Engineering Services",
-    "website": "https://tvm-engineering.com/",
+    "existing": "contact@tvm-engineering.com",
+    "found": []
+  },
+  {
+    "company": "Alwaysfresh",
+    "existing": "hello@alwaysfresh.io",
+    "found": []
+  },
+  {
+    "company": "Devsdata",
+    "existing": "london@devsdata.com",
+    "found": []
+  },
+  {
+    "company": "Mightynetworks",
+    "website": "https://mightynetworks.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Tcwglobal",
+    "existing": "hello@tcwglobal.com",
+    "found": []
+  },
+  {
+    "company": "Winwithweb",
+    "existing": "hello@tyler.com",
+    "found": []
+  },
+  {
+    "company": "Emailvendorselection",
+    "website": "https://emailvendorselection.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Kapa99",
+    "website": "https://kapa99.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Co",
+    "website": "https://anchorwebagency.co.uk",
     "existing": "",
     "found": [
-      "contact@tvm-engineering.com",
-      "a.shirinyan@tvm-engineering.com",
-      "t.minkov@tvm-engineering.com",
-      "d.minkov@tvm-engineering.com",
-      "h.iamandi@tvm-engineering.com"
+      "hello@anchorwebagency.co.uk"
     ],
     "owner_name": "",
     "owner_linkedin": "",
-    "country": "Sofia, Bulgaria"
+    "country": "UK"
+  },
+  {
+    "company": "Unlimitedwp",
+    "existing": "hello@unlimitedwp.com",
+    "found": []
+  },
+  {
+    "company": "Thethunderclap",
+    "existing": "contact@thethunderclap.com",
+    "found": []
+  },
+  {
+    "company": "Whitelabelpartner",
+    "website": "https://whitelabelpartner.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "USA"
+  },
+  {
+    "company": "Lowcode",
+    "existing": "janedoe@email.com",
+    "found": []
+  },
+  {
+    "company": "Whitelabeliq",
+    "existing": "hello@whitelabeliq.com",
+    "found": []
+  },
+  {
+    "company": "Megrioutreach",
+    "existing": "sales@megrisoft.com",
+    "found": []
+  },
+  {
+    "company": "Adznetworkmedia",
+    "website": "https://adznetworkmedia.om",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "75Way",
+    "existing": "info@75way.com",
+    "found": []
+  },
+  {
+    "company": "314Media",
+    "website": "https://314media.com",
+    "existing": "",
+    "found": [
+      "support@314media.com"
+    ],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "USA"
+  },
+  {
+    "company": "Ucraft",
+    "website": "https://ucraft.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Codersh",
+    "existing": "bdm.codersh@gmail.com",
+    "found": []
+  },
+  {
+    "company": "Touchlane",
+    "existing": "enquiries.estonia@touchlane.com",
+    "found": []
+  },
+  {
+    "company": "Whitelabelagency",
+    "website": "https://whitelabelagency.co",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Scaleo",
+    "existing": "john@example.com",
+    "found": []
+  },
+  {
+    "company": "Xovakstudio",
+    "existing": "info@xovakstudio.com",
+    "found": []
+  },
+  {
+    "company": "Metroweb",
+    "existing": "metrowebstudio.office@gmail.com",
+    "found": []
+  },
+  {
+    "company": "Johnnybytes",
+    "existing": "info@johnnybytes.com",
+    "found": []
+  },
+  {
+    "company": "Bantechsolutions",
+    "existing": "info@bantechsolutions.com",
+    "found": []
+  },
+  {
+    "company": "Unkoa",
+    "existing": "jamie@example.com",
+    "found": []
+  },
+  {
+    "company": "Syspree",
+    "website": "https://syspree.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "USA"
+  },
+  {
+    "company": "Getglow",
+    "website": "https://getglow.io",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Eintelligenceweb",
+    "website": "https://eintelligenceweb.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "USA"
+  },
+  {
+    "company": "Versatile",
+    "existing": "john@acme.com",
+    "found": []
+  },
+  {
+    "company": "Dev",
+    "website": "https://dev.to",
+    "existing": "",
+    "found": [
+      "support@dev.to"
+    ],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Rankvisely",
+    "existing": "usama@rankvisely.com",
+    "found": []
+  },
+  {
+    "company": "Anvileight",
+    "existing": "contact@anvileight.com",
+    "found": []
+  },
+  {
+    "company": "Servicenow",
+    "website": "https://servicenow.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Nectarbits",
+    "existing": "contact@nectarbits.ca",
+    "found": []
+  },
+  {
+    "company": "Engagebay",
+    "website": "https://engagebay.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Clickboxagency",
+    "existing": "info@clickboxagency.com",
+    "found": []
+  },
+  {
+    "company": "Teamontime",
+    "existing": "partners@teamontime.com",
+    "found": []
+  },
+  {
+    "company": "Appmysite",
+    "website": "https://appmysite.com",
+    "existing": "",
+    "found": [
+      "support@appmysite.com"
+    ],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Anigami Studio",
+    "existing": "contacto@anigami.studio",
+    "found": []
+  },
+  {
+    "company": "You are launched",
+    "existing": "i@urlaunched.com",
+    "found": []
+  },
+  {
+    "company": "unicrew",
+    "existing": "gsap@3.14.1",
+    "found": []
+  },
+  {
+    "company": "Scalo",
+    "existing": "lukasz.pol@scalosoft.com",
+    "found": []
+  },
+  {
+    "company": "Euvic",
+    "existing": "info@euvic.com",
+    "found": []
+  },
+  {
+    "company": "Apzumi",
+    "existing": "contact@apzumi.com",
+    "found": []
+  },
+  {
+    "company": "Software Mind S.A.",
+    "website": "https://softwaremind.com/",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "USA"
+  },
+  {
+    "company": "Riseapps",
+    "existing": "biz@riseapps.biz",
+    "found": []
+  },
+  {
+    "company": "Pell Software",
+    "existing": "contact@pellsoftware.com",
+    "found": []
+  },
+  {
+    "company": "Experion Technologies",
+    "website": "https://experionglobal.com/",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "DreamzTech Solutions",
+    "existing": "marketing@dreamztech.com",
+    "found": []
+  },
+  {
+    "company": "RichBrains",
+    "existing": "hello@richbrains.net",
+    "found": []
+  },
+  {
+    "company": "GOTOMA Software House",
+    "existing": "office@gotoma.pl",
+    "found": []
+  },
+  {
+    "company": "Mallow Technologies Private Limited",
+    "existing": "contact@mallow-tech.com",
+    "found": []
+  },
+  {
+    "company": "Railsware",
+    "website": "https://railsware.com/",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Goodface agency",
+    "existing": "hi@goodface.agency",
+    "found": []
+  },
+  {
+    "company": "Caxy Consulting",
+    "existing": "hello@caxy.com",
+    "found": []
+  },
+  {
+    "company": "HotShots Labs | IOS & Android | Flutter mobile app development",
+    "existing": "hello@hotshotslabs.com",
+    "found": []
+  },
+  {
+    "company": "ThinkPalm Technologies",
+    "existing": "letstalk@thinkpalm.com",
+    "found": []
+  },
+  {
+    "company": "Qualhon Informatics Pvt. Ltd",
+    "website": "https://qualhon.com/",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "Canada"
+  },
+  {
+    "company": "Flowrushtech",
+    "website": "https://flowrushtech.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Scalex360",
+    "website": "https://scalex360.com",
+    "existing": "",
+    "found": [
+      "support@scalex360.com"
+    ],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Wildnettechnologies",
+    "existing": "info@wildnettechnologies.com",
+    "found": []
+  },
+  {
+    "company": "Tripleminds",
+    "existing": "sales@tripleminds.co",
+    "found": []
+  },
+  {
+    "company": "Flexiple",
+    "existing": "suvansh.bansal@flexiple.com",
+    "found": []
+  },
+  {
+    "company": "Nimapinfotech",
+    "existing": "enquiry@nimapinfotech.com",
+    "found": []
+  },
+  {
+    "company": "Himmdesign",
+    "website": "https://himmdesign.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Weareyellowball",
+    "existing": "hello@weareyellowball.com",
+    "found": []
+  },
+  {
+    "company": "Qrolic",
+    "existing": "info@qrolic.com",
+    "found": []
+  },
+  {
+    "company": "Fireart",
+    "website": "https://fireart.studio",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "USA"
+  },
+  {
+    "company": "Instawork",
+    "website": "https://instawork.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "USA"
+  },
+  {
+    "company": "Wpwebelite",
+    "website": "https://wpwebelite.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "USA"
+  },
+  {
+    "company": "Nimbata",
+    "existing": "hello@nimbata.com",
+    "found": []
+  },
+  {
+    "company": "Bestdigitalmarketing Agency",
+    "website": "https://bestdigitalmarketing-agency.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "Australia"
+  },
+  {
+    "company": "E2Msolutions",
+    "existing": "info@e2msolutions.com",
+    "found": []
+  },
+  {
+    "company": "Gohighlevel",
+    "website": "https://help.gohighlevel.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "Canada"
+  },
+  {
+    "company": "Mailmunch",
+    "existing": "info@mailmunch.com",
+    "found": []
+  },
+  {
+    "company": "Themindstudios",
+    "existing": "hello@themindstudios.com",
+    "found": []
+  },
+  {
+    "company": "Hutko",
+    "website": "https://hutko.dev",
+    "existing": "",
+    "found": [
+      "hello@hutko.dev"
+    ],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "USA"
+  },
+  {
+    "company": "Trawex",
+    "existing": "contact@trawex.com",
+    "found": []
+  },
+  {
+    "company": "Eleventuretech",
+    "website": "https://eleventuretech.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Investopedia",
+    "website": "https://investopedia.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Monocubed",
+    "website": "https://monocubed.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "USA"
+  },
+  {
+    "company": "Admitad",
+    "website": "https://admitad.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Freelancer",
+    "website": "https://freelancer.com",
+    "existing": "",
+    "found": [
+      "press@freelancer.com",
+      "support@freelancer.com"
+    ],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "Australia"
+  },
+  {
+    "company": "Wpwebinfotech",
+    "existing": "sales@wpwebinfotech.com",
+    "found": []
+  },
+  {
+    "company": "Shopifyacademy",
+    "website": "https://shopifyacademy.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Arc",
+    "website": "https://arc.dev",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "USA"
+  },
+  {
+    "company": "Maddevs",
+    "website": "https://maddevs.io",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Orientsoftware",
+    "existing": "sales@orientsoftware.com",
+    "found": []
+  },
+  {
+    "company": "Timedoctor",
+    "website": "https://timedoctor.com",
+    "existing": "",
+    "found": [
+      "support@timedoctor.com"
+    ],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "USA"
+  },
+  {
+    "company": "Trianglestacks",
+    "website": "https://trianglestacks.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "Canada"
+  },
+  {
+    "company": "Theugandanjobline",
+    "website": "https://theugandanjobline.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Dquip",
+    "website": "https://dquip.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "Australia"
+  },
+  {
+    "company": "Appmesolutions",
+    "existing": "info@appmesolutions.com",
+    "found": []
+  },
+  {
+    "company": "Aamax",
+    "existing": "info@aamax.co",
+    "found": []
+  },
+  {
+    "company": "Iplus",
+    "existing": "name@email.com",
+    "found": []
+  },
+  {
+    "company": "Linktr",
+    "website": "https://linktr.ee",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "Canada"
+  },
+  {
+    "company": "Socialrails",
+    "existing": "contact@socialrails.com",
+    "found": []
+  },
+  {
+    "company": "Pitchpinemedia",
+    "existing": "info@pitchpinemedia.com",
+    "found": []
+  },
+  {
+    "company": "Risingstarinfotech",
+    "existing": "info@risingstarinfotech.com",
+    "found": []
+  },
+  {
+    "company": "Thewhitelabelagency",
+    "website": "https://thewhitelabelagency.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "USA"
+  },
+  {
+    "company": "Softtrix",
+    "website": "https://softtrix.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "USA"
+  },
+  {
+    "company": "Publicbuysell",
+    "website": "https://publicbuysell.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "USA"
+  },
+  {
+    "company": "Dynamicdreamz",
+    "existing": "info@dynamicdreamz.com",
+    "found": []
+  },
+  {
+    "company": "Blockchainappfactory",
+    "website": "https://blockchainappfactory.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Flowout",
+    "website": "https://flowout.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "USA"
+  },
+  {
+    "company": "Heseven",
+    "existing": "dhiraj@heseven.com",
+    "found": []
+  },
+  {
+    "company": "Brandemic",
+    "website": "https://brandemic.in",
+    "existing": "",
+    "found": [
+      "hr@brandemic.in",
+      "info@brandemic.in",
+      "careers@brandemic.in"
+    ],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Appmachine",
+    "website": "https://appmachine.com",
+    "existing": "",
+    "found": [
+      "support@appmachine.com"
+    ],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Median",
+    "existing": "info@domain.com",
+    "found": []
+  },
+  {
+    "company": "Sparkouttech",
+    "existing": "sales@sparkouttech.com",
+    "found": []
+  },
+  {
+    "company": "Acquaintsoft",
+    "existing": "sales@acquaintsoft.com",
+    "found": []
+  },
+  {
+    "company": "Zen9Marketing",
+    "existing": "info@zen9marketing.com",
+    "found": []
+  },
+  {
+    "company": "Turumburum",
+    "existing": "hello@turumburum.com",
+    "found": []
+  },
+  {
+    "company": "Ozosoft",
+    "website": "https://ozosoft.in",
+    "existing": "",
+    "found": [
+      "Support@ozosoft.in",
+      "Career@ozosoft.in",
+      "sales@ozosoft.in",
+      "support@ozosoft.in",
+      "career@ozosoft.in",
+      "dev@ozosoft.in",
+      "info@ozosoft.in",
+      "project@ozosoft.in",
+      "tdev@ozosoft.in",
+      "tsales@ozosoft.in"
+    ],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Uniqueclick",
+    "website": "https://uniqueclick.net",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Channelfutures",
+    "website": "https://channelfutures.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "1Center",
+    "website": "https://1center.co",
+    "existing": "",
+    "found": [
+      "support@1center.co"
+    ],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "USA"
+  },
+  {
+    "company": "Alcor",
+    "existing": "contact@alcor-bpo.com",
+    "found": []
+  },
+  {
+    "company": "Fullscale",
+    "existing": "info@fullscale.io",
+    "found": []
+  },
+  {
+    "company": "Coherentsolutions",
+    "existing": "webinforequest@coherentsolutions.com",
+    "found": []
+  },
+  {
+    "company": "Innowise",
+    "existing": "contact@innowise.com",
+    "found": []
+  },
+  {
+    "company": "Program Ace",
+    "existing": "rfp@program-ace.com",
+    "found": []
+  },
+  {
+    "company": "Weecom",
+    "website": "https://weecom.in",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Affise",
+    "website": "https://affise.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Sitespotresell",
+    "website": "https://sitespotresell.com",
+    "existing": "",
+    "found": [
+      "support@sitespotresell.com"
+    ],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Pearpixels",
+    "website": "https://pearpixels.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Getdevdone",
+    "existing": "service@getdevdone.com",
+    "found": []
+  },
+  {
+    "company": "Onenine",
+    "website": "https://onenine.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "USA"
+  },
+  {
+    "company": "Icorethink",
+    "existing": "info@icorethink.com",
+    "found": []
+  },
+  {
+    "company": "Webgentechnologies",
+    "website": "https://webgentechnologies.us",
+    "existing": "",
+    "found": [
+      "sales@webgentechnologies.us"
+    ],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "USA"
+  },
+  {
+    "company": "Dareum",
+    "website": "https://dareum.xyz",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "USA"
+  },
+  {
+    "company": "Chittlesoft",
+    "website": "https://chittlesoft.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Abraham",
+    "website": "https://abraham.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Afaqs",
+    "website": "https://afaqs.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Whitelabelwebdesign",
+    "existing": "hello@whitelabelwebdesign.co",
+    "found": []
+  },
+  {
+    "company": "Viralchilly",
+    "website": "https://viralchilly.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "Canada"
+  },
+  {
+    "company": "Spdload",
+    "existing": "info@spdload.com",
+    "found": []
+  },
+  {
+    "company": "Whitelabelfox",
+    "website": "https://whitelabelfox.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "USA"
+  },
+  {
+    "company": "Directus",
+    "website": "https://directus.io",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Ryansoftwares",
+    "existing": "hello@ryansoftwares.com",
+    "found": []
+  },
+  {
+    "company": "Cscodetech",
+    "website": "https://cscodetech.com",
+    "existing": "",
+    "found": [
+      "support@cscodetech.com"
+    ],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "USA"
+  },
+  {
+    "company": "Com",
+    "website": "https://cleverops.com.au",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Codeable",
+    "website": "https://codeable.io",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "UK"
+  },
+  {
+    "company": "Gpitechusa",
+    "existing": "hrteam@gpitechusa.com",
+    "found": []
+  },
+  {
+    "company": "Tmr Online",
+    "website": "https://tmr-online.es",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "USA"
+  },
+  {
+    "company": "Wpengine",
+    "website": "https://wpengine.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "USA"
+  },
+  {
+    "company": "Fatbit",
+    "website": "https://fatbit.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Vintfint",
+    "website": "https://vintfint.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Intent Solutions",
+    "existing": "Info@intent-solutions.com",
+    "found": []
+  },
+  {
+    "company": "Abbacustechnologies",
+    "existing": "contact@abbacustechnologies.com",
+    "found": []
+  },
+  {
+    "company": "Techissuestoday",
+    "website": "https://techissuestoday.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Nonstopwork",
+    "website": "https://nonstopwork.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Hustlemarketers",
+    "existing": "Info@hustlemarketers.com",
+    "found": []
+  },
+  {
+    "company": "Eighthats",
+    "existing": "team@eighthats.com",
+    "found": []
+  },
+  {
+    "company": "Plugmatter",
+    "website": "https://plugmatter.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Databox",
+    "existing": "hi@databox.com",
+    "found": []
+  },
+  {
+    "company": "Stormboard",
+    "website": "https://stormboard.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "USA"
+  },
+  {
+    "company": "Uplers",
+    "existing": "contact@mavlers.com",
+    "found": []
+  },
+  {
+    "company": "Pixelcrayons",
+    "existing": "sales@pixelcrayons.com",
+    "found": []
+  },
+  {
+    "company": "Business",
+    "website": "https://business.com",
+    "existing": "",
+    "found": [
+      "connect@business.com"
+    ],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Allusivedigital",
+    "existing": "info@allusivedigital.com",
+    "found": []
+  },
+  {
+    "company": "Objects",
+    "website": "https://objects.ws",
+    "existing": "",
+    "found": [
+      "contact@objects.ws"
+    ],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "USA"
+  },
+  {
+    "company": "Pitangent",
+    "existing": "sales@pitangent.com",
+    "found": []
+  },
+  {
+    "company": "Mokaru",
+    "website": "https://mokaru.ai",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Hirewithnear",
+    "existing": "hello@hirewithnear.com",
+    "found": []
+  },
+  {
+    "company": "Inoveys",
+    "existing": "info@inoveys.com",
+    "found": []
+  },
+  {
+    "company": "Cuelogic",
+    "website": "https://cuelogic.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Cookieyes",
+    "existing": "mail@domain.com",
+    "found": []
+  },
+  {
+    "company": "Bigscal",
+    "existing": "contact@bigscal.com",
+    "found": []
+  },
+  {
+    "company": "Vocal",
+    "website": "https://vocal.media",
+    "existing": "",
+    "found": [
+      "info@vocal.media"
+    ],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Devoqdesign",
+    "existing": "sales@devoqdesign.com",
+    "found": []
+  },
+  {
+    "company": "Wdi Demo",
+    "existing": "wdisanjay@gmail.com",
+    "found": []
+  },
+  {
+    "company": "Thebrandstrategylab",
+    "website": "https://thebrandstrategylab.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Bridgewaydigital",
+    "website": "https://bridgewaydigital.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "USA"
+  },
+  {
+    "company": "Hitechnectar",
+    "existing": "k.taylor@hitechnectar.com",
+    "found": []
+  },
+  {
+    "company": "Ginirex",
+    "existing": "info@ginirex.com",
+    "found": []
+  },
+  {
+    "company": "Slideshare",
+    "website": "https://slideshare.net",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Goforma",
+    "existing": "info@goforma.com",
+    "found": []
+  },
+  {
+    "company": "Dashbouquet Development",
+    "existing": "contact@dashbouquet.com",
+    "found": []
+  },
+  {
+    "company": "Simform",
+    "website": "https://www.simform.com/",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Elaniin",
+    "website": "https://www.elaniin.com/",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Empat",
+    "existing": "dkl@empat.tech",
+    "found": []
+  },
+  {
+    "company": "Atomic Object",
+    "existing": "contact@atomicobject.com",
+    "found": []
+  },
+  {
+    "company": "Cleveroad",
+    "existing": "sales@cleveroad.com",
+    "found": []
+  },
+  {
+    "company": "Geniusee",
+    "website": "https://geniusee.com/",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "AgileEngine",
+    "website": "https://agileengine.com/",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Vention",
+    "existing": "hello@ventionteams.com",
+    "found": []
+  },
+  {
+    "company": "Capital Numbers",
+    "existing": "info@capitalnumbers.com",
+    "found": []
+  },
+  {
+    "company": "The Software House",
+    "existing": "hello@tsh.io",
+    "found": []
+  },
+  {
+    "company": "Six Feet Up, Inc.",
+    "existing": "info@sixfeetup.com",
+    "found": []
+  },
+  {
+    "company": "eSparkBiz",
+    "existing": "sales@esparkinfo.com",
+    "found": []
+  },
+  {
+    "company": "Saritasa",
+    "existing": "info@saritasa.com",
+    "found": []
+  },
+  {
+    "company": "WeSoftYou",
+    "existing": "success@wesoftyou.com",
+    "found": []
+  },
+  {
+    "company": "Iron Forge Development",
+    "existing": "info@ironforge.co",
+    "found": []
+  },
+  {
+    "company": "selleo",
+    "existing": "hello@selleo.com",
+    "found": []
+  },
+  {
+    "company": "Digis, a Fiverr company (NYSE: FVRR)",
+    "existing": "sales@digiscorp.com",
+    "found": []
+  },
+  {
+    "company": "GeekyAnts",
+    "existing": "info@geekyants.com",
+    "found": []
+  },
+  {
+    "company": "Dreamix",
+    "website": "https://dreamix.eu/",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "UK"
+  },
+  {
+    "company": "Humaiwebs",
+    "existing": "info@humaiwebsitesukltd.co.uk",
+    "found": []
+  },
+  {
+    "company": "10Web",
+    "existing": "info@10web.io",
+    "found": []
+  },
+  {
+    "company": "Quick Works",
+    "existing": "sales@quick-works.com",
+    "found": []
+  },
+  {
+    "company": "Penninetechnolabs",
+    "existing": "biz@penninetechnolabs.com",
+    "found": []
+  },
+  {
+    "company": "Vrinsofts",
+    "existing": "sales@vrinsofts.com",
+    "found": []
+  },
+  {
+    "company": "Cyberelite",
+    "existing": "info@cyberelite.in",
+    "found": []
+  },
+  {
+    "company": "Brilworks",
+    "existing": "sales@brilworks.com",
+    "found": []
+  },
+  {
+    "company": "Apptunix",
+    "existing": "sales@apptunix.com",
+    "found": []
+  },
+  {
+    "company": "Shivlab",
+    "existing": "contact@shivlab.com",
+    "found": []
+  },
+  {
+    "company": "Leanware",
+    "existing": "info@leanware.co",
+    "found": []
+  },
+  {
+    "company": "Commonplaces",
+    "website": "https://commonplaces.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "USA"
+  },
+  {
+    "company": "Suitedash",
+    "existing": "help@suitedash.com",
+    "found": []
+  },
+  {
+    "company": "Botpenguin",
+    "website": "https://botpenguin.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Tisdigitech",
+    "existing": "info@tisindia.com",
+    "found": []
+  },
+  {
+    "company": "Redberry",
+    "existing": "hello@redberry.ge",
+    "found": []
+  },
+  {
+    "company": "Uistudioz",
+    "website": "https://uistudioz.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "USA"
+  },
+  {
+    "company": "Greenwiremedia",
+    "existing": "info@greenwiremedia.com",
+    "found": []
+  },
+  {
+    "company": "Everflow",
+    "website": "https://everflow.io",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Newdesignco",
+    "existing": "mark@newdesignco.agency",
+    "found": []
+  },
+  {
+    "company": "Vefogix",
+    "existing": "nova@vefogix.com",
+    "found": []
+  },
+  {
+    "company": "Valant",
+    "website": "https://valant.software",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "USA"
+  },
+  {
+    "company": "Quanrio",
+    "existing": "contact@quanrio.com",
+    "found": []
+  },
+  {
+    "company": "Brandingbeez",
+    "existing": "info@brandingbeez.co.uk",
+    "found": []
+  },
+  {
+    "company": "Saiqic",
+    "website": "https://saiqic.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "Poland"
+  },
+  {
+    "company": "Appinventiv",
+    "existing": "info@appinventiv.com",
+    "found": []
+  },
+  {
+    "company": "Krishangtechnolab",
+    "existing": "info@krishangtechnolab.com",
+    "found": []
+  },
+  {
+    "company": "Pnnsoft",
+    "existing": "info@pnnsoft.com",
+    "found": []
+  },
+  {
+    "company": "Netsolutions",
+    "website": "https://netsolutions.com",
+    "existing": "",
+    "found": [
+      "sales@netsolutions.com",
+      "info@netsolutions.com"
+    ],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "USA"
+  },
+  {
+    "company": "Replo",
+    "existing": "Replo@v2.1.0",
+    "found": []
+  },
+  {
+    "company": "Partnerprogrammer",
+    "website": "https://partnerprogrammer.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Sell Saas",
+    "existing": "email@company.com",
+    "found": []
+  },
+  {
+    "company": "Pixlogix",
+    "existing": "info@pixlogix.com",
+    "found": []
+  },
+  {
+    "company": "Assaptr",
+    "existing": "hello@assaptr.com",
+    "found": []
+  },
+  {
+    "company": "Artographertacts",
+    "existing": "artographertacts@gmail.com",
+    "found": []
+  },
+  {
+    "company": "Nicedigitals",
+    "existing": "partner@nicedigitals.com",
+    "found": []
+  },
+  {
+    "company": "Colorwhistle",
+    "existing": "hi@colorwhistle.com",
+    "found": []
+  },
+  {
+    "company": "Jungleworks",
+    "existing": "john.doe@gmail.com",
+    "found": []
+  },
+  {
+    "company": "Kaopiz",
+    "existing": "contact@kaopiz.com",
+    "found": []
+  },
+  {
+    "company": "Agileful",
+    "website": "https://agileful.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Storybox",
+    "website": "https://storybox.io",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Doodlemaker",
+    "existing": "support@doodlemaker.com",
+    "found": []
+  },
+  {
+    "company": "Geomotiv",
+    "existing": "info@geomotiv.com",
+    "found": []
+  },
+  {
+    "company": "Conceptinfoway",
+    "existing": "info@conceptinfoway.com",
+    "found": []
+  },
+  {
+    "company": "Outsourceaccess",
+    "existing": "contact@outsourceaccess.com",
+    "found": []
+  },
+  {
+    "company": "Buildfire",
+    "existing": "splide-extension-auto-scroll@0.5.3",
+    "found": []
+  },
+  {
+    "company": "Personyze",
+    "existing": "updates@tickethub.com",
+    "found": []
+  },
+  {
+    "company": "Ollits",
+    "existing": "contact@ollits.com",
+    "found": []
+  },
+  {
+    "company": "Riiventra",
+    "existing": "info@riiventra.com",
+    "found": []
+  },
+  {
+    "company": "Hahn",
+    "existing": "ask@hahn.agency",
+    "found": []
+  },
+  {
+    "company": "Tigerteamconsulting",
+    "existing": "info@tigerteamsonsulting.com",
+    "found": []
+  },
+  {
+    "company": "Sapphiresolutions",
+    "website": "https://sapphiresolutions.net",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "UK"
+  },
+  {
+    "company": "Travelopro",
+    "existing": "contact@travelopro.com",
+    "found": []
+  },
+  {
+    "company": "Awesomic",
+    "website": "https://awesomic.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "USA"
+  },
+  {
+    "company": "Codelibry",
+    "existing": "vitalii.o@codelibry.com",
+    "found": []
+  },
+  {
+    "company": "Manedigital",
+    "website": "https://manedigital.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Urolime",
+    "website": "https://urolime.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "USA"
+  },
+  {
+    "company": "Smart Dato",
+    "existing": "intl-segmenter@11.7.10",
+    "found": []
+  },
+  {
+    "company": "Dbbsoftware",
+    "existing": "in@dbbsoftware.com",
+    "found": []
+  },
+  {
+    "company": "Group107",
+    "website": "https://talents.group107.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Bluecollarmarketing",
+    "existing": "20office@bluecollarmarketing.ca",
+    "found": []
+  },
+  {
+    "company": "1Whitelabelagency",
+    "existing": "sales@1whitelabelagency.com",
+    "found": []
+  },
+  {
+    "company": "Tourbr",
+    "existing": "info@tourbr.com",
+    "found": []
+  },
+  {
+    "company": "Rvsiglobal",
+    "existing": "hello@rvsiglobal.co.uk",
+    "found": []
+  },
+  {
+    "company": "Adweek",
+    "existing": "subscriptions@adweek.com",
+    "found": []
+  },
+  {
+    "company": "Ewallsolutions",
+    "website": "https://ewallsolutions.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Websmithsolution",
+    "existing": "web@websmithsolution.com",
+    "found": []
+  },
+  {
+    "company": "Creativethinkdigital",
+    "existing": "info@creativethinkdigital.co.uk",
+    "found": []
+  },
+  {
+    "company": "Folderit",
+    "website": "https://folderit.net",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "USA"
+  },
+  {
+    "company": "Virtuenetz",
+    "existing": "shahzad@virtuenetz.com",
+    "found": []
+  },
+  {
+    "company": "Purevpn",
+    "existing": "enquiry@purevpn.com",
+    "found": []
+  },
+  {
+    "company": "Associative",
+    "existing": "info@associative.in",
+    "found": []
+  },
+  {
+    "company": "Brainstreamtechnolabs",
+    "existing": "info@brainstream.tech",
+    "found": []
+  },
+  {
+    "company": "Icoderzsolutions",
+    "existing": "info@icoderzsolutions.com",
+    "found": []
+  },
+  {
+    "company": "Hireinsouth",
+    "existing": "hello@hireinsouth.com",
+    "found": []
+  },
+  {
+    "company": "Eco N Tech",
+    "website": "https://eco-n-tech.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "UK"
+  },
+  {
+    "company": "Watercollaborativedelivery",
+    "existing": "Info@WaterCollaborativeDelivery.org",
+    "found": []
+  },
+  {
+    "company": "Headchannel",
+    "website": "https://headchannel.co.uk",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "USA"
+  },
+  {
+    "company": "Artisan",
+    "existing": "you@example.com",
+    "found": []
+  },
+  {
+    "company": "Wpwhitelabelagency",
+    "existing": "info@wpwhitelabelagency.com",
+    "found": []
+  },
+  {
+    "company": "Fullycoded",
+    "existing": "hello@fullycoded.com",
+    "found": []
+  },
+  {
+    "company": "Wpradar",
+    "existing": "matthew@chriscollinsinc.com",
+    "found": []
+  },
+  {
+    "company": "Lasoft",
+    "existing": "info@lasoft.org",
+    "found": []
+  },
+  {
+    "company": "Betternship",
+    "existing": "contact@betternship.com",
+    "found": []
+  },
+  {
+    "company": "Vendasta",
+    "existing": "marketing@vendasta.com",
+    "found": []
+  },
+  {
+    "company": "Rendream",
+    "website": "https://rendream.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Octet",
+    "website": "https://octet.design",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "USA"
+  },
+  {
+    "company": "Uroboro",
+    "website": "https://uroboro.ca",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "Canada"
+  },
+  {
+    "company": "Deploi",
+    "existing": "contact@deploi.ca",
+    "found": []
+  },
+  {
+    "company": "Softlinevp",
+    "existing": "info@softlinevp.com",
+    "found": []
+  },
+  {
+    "company": "Zestcode",
+    "existing": "partnerships@zestcode.digital",
+    "found": []
+  },
+  {
+    "company": "Rapidnative",
+    "existing": "support@rapidnative.com",
+    "found": []
+  },
+  {
+    "company": "Technoyuga",
+    "existing": "hello@technoyuga.com",
+    "found": []
+  },
+  {
+    "company": "Thoughtwin",
+    "existing": "info@thoughtwin.com",
+    "found": []
+  },
+  {
+    "company": "Coorva",
+    "existing": "Despegar@3x.webp",
+    "found": []
+  },
+  {
+    "company": "Valmax",
+    "existing": "hello@valmax.agency",
+    "found": []
+  },
+  {
+    "company": "Agencyanalytics",
+    "existing": "support@agencyanalytics.com",
+    "found": []
+  },
+  {
+    "company": "Doodlepress",
+    "website": "https://doodlepress.jp",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Kaspersky",
+    "website": "https://partners.kaspersky.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Connectpos",
+    "existing": "sales@connectpos.com",
+    "found": []
+  },
+  {
+    "company": "Selectedfirms",
+    "existing": "info@selectedfirms.co",
+    "found": []
+  },
+  {
+    "company": "Verticalhq",
+    "website": "https://verticalhq.ca",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "Canada"
+  },
+  {
+    "company": "Sonnet",
+    "website": "https://sonnet.digital",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "Australia"
+  },
+  {
+    "company": "Brandstory",
+    "existing": "info@brandstory.in",
+    "found": []
+  },
+  {
+    "company": "Insightpartners",
+    "website": "https://insightpartners.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Theworldmag",
+    "website": "https://theworldmag.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Simpleclick",
+    "website": "https://simpleclick.co.uk",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Borahlabs",
+    "existing": "hello@borahlabs.us",
+    "found": []
+  },
+  {
+    "company": "Sitefy",
+    "existing": "support@sitefy.co",
+    "found": []
+  },
+  {
+    "company": "Decode",
+    "website": "https://decode.agency",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Inexture",
+    "existing": "sales@inexture.com",
+    "found": []
+  },
+  {
+    "company": "Marketopia",
+    "existing": "growcommunity@marketopia.com",
+    "found": []
+  },
+  {
+    "company": "Planetxdevs",
+    "existing": "nathaniel@planetxdevs.com",
+    "found": []
+  },
+  {
+    "company": "Outsourceseo",
+    "existing": "sales@outsourceseo.com",
+    "found": []
+  },
+  {
+    "company": "Omnisend",
+    "website": "https://omnisend.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Firstfactory",
+    "website": "https://firstfactory.com",
+    "existing": "",
+    "found": [
+      "jobs@firstfactory.com"
+    ],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Site123",
+    "website": "https://678a2e7062f29.site123.me",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Mismo",
+    "existing": "help@mismo.team",
+    "found": []
+  },
+  {
+    "company": "Classicinformatics",
+    "existing": "hello@classicinformatics.com",
+    "found": []
+  },
+  {
+    "company": "Stanventures",
+    "existing": "contact@stanventures.com",
+    "found": []
+  },
+  {
+    "company": "Skynetindia",
+    "existing": "hello@skynetindia.info",
+    "found": []
+  },
+  {
+    "company": "Htmlbasket",
+    "existing": "info@htmlbasket.com",
+    "found": []
+  },
+  {
+    "company": "Tiktok",
+    "website": "https://tiktok.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Ibtimes",
+    "website": "https://ibtimes.co.uk",
+    "existing": "",
+    "found": [
+      "info@ibtimes.co.ukFill",
+      "corrections@ibtimes.co.uk",
+      "info@ibtimes.co.uk"
+    ],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "USA"
+  },
+  {
+    "company": "Zennaxx",
+    "existing": "sales@zennaxx.com",
+    "found": []
+  },
+  {
+    "company": "Deptagency",
+    "website": "https://deptagency.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "Australia"
+  },
+  {
+    "company": "Infineural",
+    "existing": "your@company.com",
+    "found": []
+  },
+  {
+    "company": "Webhelpagency",
+    "existing": "info@webhelpagency.com",
+    "found": []
+  },
+  {
+    "company": "Arena Offshore",
+    "existing": "arena@arena-offshore.com",
+    "found": []
+  },
+  {
+    "company": "Aimdigital",
+    "existing": "reachus@aimdigital.tech",
+    "found": []
+  },
+  {
+    "company": "Oohology",
+    "website": "https://oohology.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Effectivecooperation",
+    "existing": "select2@4.1.0-rc.0",
+    "found": []
+  },
+  {
+    "company": "Cloudways",
+    "website": "https://cloudways.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Ugynoksegkereso",
+    "existing": "hello@ugynoksegkereso.hu",
+    "found": []
+  },
+  {
+    "company": "Asiaone",
+    "website": "https://asiaone.com",
+    "existing": "",
+    "found": [
+      "sales@asiaone.com",
+      "advertising@asiaone.com",
+      "enquiries@asiaone.com",
+      "editor@asiaone.com"
+    ],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "USA"
+  },
+  {
+    "company": "Bebee",
+    "existing": "support@bebee.com",
+    "found": []
+  },
+  {
+    "company": "Rankmint",
+    "existing": "tarunkumar6406@gmail.com",
+    "found": []
+  },
+  {
+    "company": "Stellites",
+    "existing": "sales@stellites.com",
+    "found": []
+  },
+  {
+    "company": "Upstrategylab",
+    "existing": "contact@upstrategylab.com",
+    "found": []
+  },
+  {
+    "company": "Angrynerds",
+    "existing": "hello@angrynerds.co",
+    "found": []
+  },
+  {
+    "company": "Casamediahouse",
+    "existing": "info@casamediahouse.com",
+    "found": []
+  },
+  {
+    "company": "Thesiteslinger",
+    "website": "https://thesiteslinger.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Eleventhtech",
+    "existing": "contact@eleventhtech.co.uk",
+    "found": []
+  },
+  {
+    "company": "Dotit",
+    "existing": "hello@dotit.io",
+    "found": []
+  },
+  {
+    "company": "Lunover",
+    "existing": "hello@lunover.com",
+    "found": []
+  },
+  {
+    "company": "Clickx",
+    "website": "https://clickx.io",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "UK"
+  },
+  {
+    "company": "Pressable",
+    "existing": "sales@pressable.com",
+    "found": []
+  },
+  {
+    "company": "Syntiro",
+    "existing": "info@syntiro.support",
+    "found": []
+  },
+  {
+    "company": "Access",
+    "existing": "contact.us@access.dev",
+    "found": []
+  },
+  {
+    "company": "Uipath",
+    "existing": "sales@uipath.com",
+    "found": []
+  },
+  {
+    "company": "Invozone",
+    "existing": "sales@invozone.com",
+    "found": []
+  },
+  {
+    "company": "Altagency",
+    "existing": "hello@altagency.co.uk",
+    "found": []
+  },
+  {
+    "company": "Onpageranker",
+    "existing": "info@onpageranker.com",
+    "found": []
+  },
+  {
+    "company": "Gtsol360",
+    "existing": "Info@gtsol360.com",
+    "found": []
+  },
+  {
+    "company": "Epixelsoft",
+    "existing": "info@epixelsoft.com",
+    "found": []
+  },
+  {
+    "company": "Toptal",
+    "existing": "support@toptal.com",
+    "found": []
+  },
+  {
+    "company": "Hirebooth",
+    "existing": "email@example.com",
+    "found": []
+  },
+  {
+    "company": "Teachera",
+    "website": "https://teachera.org",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Pushdevelopers",
+    "website": "https://pushdevelopers.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "Australia"
+  },
+  {
+    "company": "N Ix",
+    "existing": "contact@n-ix.com",
+    "found": []
+  },
+  {
+    "company": "Ascezenglobal",
+    "existing": "info@ascezenglobal.com",
+    "found": []
+  },
+  {
+    "company": "Nethority",
+    "website": "https://nethority.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "USA"
+  },
+  {
+    "company": "Crossbeam",
+    "existing": "slick-carousel@1.8.1",
+    "found": []
+  },
+  {
+    "company": "Mozilla",
+    "website": "https://developer.mozilla.org",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Toaglobal",
+    "existing": "info@toaglobal.com",
+    "found": []
+  },
+  {
+    "company": "Softkraft",
+    "website": "https://softkraft.co",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "Poland"
+  },
+  {
+    "company": "Upsun",
+    "existing": "flags@2x-11151219817c4593cbfaede705cfcd30.webp",
+    "found": []
+  },
+  {
+    "company": "Playroll",
+    "existing": "support@playroll.com",
+    "found": []
+  },
+  {
+    "company": "Seahawkmedia",
+    "existing": "nest@seahawkmedia.com",
+    "found": []
+  },
+  {
+    "company": "Asanify",
+    "existing": "support@asanify.com",
+    "found": []
+  },
+  {
+    "company": "Newxel",
+    "website": "https://newxel.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "USA"
+  },
+  {
+    "company": "Uptech",
+    "existing": "hello@uptech.team",
+    "found": []
+  },
+  {
+    "company": "Unbench",
+    "website": "https://unbench.us",
+    "existing": "",
+    "found": [
+      "contact@unbench.us",
+      "alyona@unbench.us",
+      "marketing@unbench.us"
+    ],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "Ukraine"
+  },
+  {
+    "company": "Globant",
+    "existing": "hi@globant.com",
+    "found": []
+  },
+  {
+    "company": "Rootstack",
+    "existing": "name@example.com",
+    "found": []
+  },
+  {
+    "company": "Rankingslab",
+    "website": "https://rankingslab.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Cyrelnicolas",
+    "website": "https://cyrelnicolas.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Framer",
+    "existing": "default-utils.js@_0.45.L_pP91k9.mjs",
+    "found": []
+  },
+  {
+    "company": "Texttotdigital",
+    "existing": "contoso@example.com",
+    "found": []
+  },
+  {
+    "company": "Brainspate",
+    "existing": "sales@brainspate.com",
+    "found": []
+  },
+  {
+    "company": "Nextenvision",
+    "existing": "connect@nextenvision.com",
+    "found": []
+  },
+  {
+    "company": "F Secure",
+    "website": "https://f-secure.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "USA"
+  },
+  {
+    "company": "Technocrackers",
+    "website": "https://technocrackers.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "USA"
+  },
+  {
+    "company": "Up2Staff",
+    "website": "https://up2staff.com",
+    "existing": "",
+    "found": [
+      "admin@up2staff.com"
+    ],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Peiko",
+    "existing": "hello@peiko.space",
+    "found": []
+  },
+  {
+    "company": "Keydifferences",
+    "website": "https://keydifferences.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Valmind",
+    "existing": "contact@valmind.com",
+    "found": []
+  },
+  {
+    "company": "Triplewhale",
+    "website": "https://triplewhale.com",
+    "existing": "",
+    "found": [
+      "maggie_h@triplewhale.com"
+    ],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Cartcoders",
+    "existing": "contact@cartcoders.com",
+    "found": []
+  },
+  {
+    "company": "Valintry",
+    "existing": "info@valintry.com",
+    "found": []
+  },
+  {
+    "company": "Accelerance",
+    "existing": "info@accelerance.com",
+    "found": []
+  },
+  {
+    "company": "Polarsoft",
+    "website": "https://polarsoft.net",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Vnta",
+    "existing": "hello@vnta.agency",
+    "found": []
+  },
+  {
+    "company": "Onelittleweb",
+    "existing": "hello@onelittleweb.com",
+    "found": []
+  },
+  {
+    "company": "Wearewibble",
+    "existing": "defer.js@3.5.0",
+    "found": []
+  },
+  {
+    "company": "Elemental",
+    "existing": "hello@elemental.agency",
+    "found": []
+  },
+  {
+    "company": "Synergywholesale",
+    "website": "https://synergywholesale.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": "Australia"
+  },
+  {
+    "company": "Kinsta",
+    "existing": "contact@kinsta.com",
+    "found": []
+  },
+  {
+    "company": "Wearestar",
+    "website": "https://wearestar.com",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Localsearchpositioning",
+    "existing": "info@localsearchpositioning.com",
+    "found": []
+  },
+  {
+    "company": "Xenotixlabs",
+    "existing": "leadgeneration@xenotixlabs.com",
+    "found": []
+  },
+  {
+    "company": "Yeswelcome",
+    "website": "https://yeswelcome.ma",
+    "existing": "",
+    "found": [],
+    "owner_name": "",
+    "owner_linkedin": "",
+    "country": ""
+  },
+  {
+    "company": "Oxedent",
+    "existing": "hello@oxedent.com",
+    "found": []
+  },
+  {
+    "company": "Softsuave",
+    "existing": "contact@softsuave.com",
+    "found": []
+  },
+  {
+    "company": "Impact",
+    "existing": "impact-website@2026.05.27.1",
+    "found": []
   }
 ]

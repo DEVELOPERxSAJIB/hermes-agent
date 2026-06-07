@@ -45,6 +45,9 @@ WL_COLUMNS = [
     "FU 2",               # 16
     "FU 3",               # 17
     "Status",             # 18
+    "Reply Status",       # 19
+    "Reply Date",         # 20
+    "Reply Snippet",      # 21
 ]
 
 WL_STATUSES = ["New", "Contacted", "Replied", "Meeting Booked", "Partner", "Lost"]
@@ -96,7 +99,7 @@ class NanoSoftCRM:
         # Ensure headers
         headers = ws.row_values(1)
         if len(headers) < len(WL_COLUMNS) or headers[:5] != WL_COLUMNS[:5]:
-            ws.update('A1:R1', [WL_COLUMNS])
+            ws.update('A1:U1', [WL_COLUMNS])
         return ws
 
     def _get_or_create_analytics(self):

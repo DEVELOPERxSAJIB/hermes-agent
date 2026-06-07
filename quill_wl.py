@@ -163,32 +163,30 @@ def get_first_name(owner_name):
 
 # ── SUBJECT LINES ───────────────────────────────────────────
 def subject_hook(company, services):
-    """Short, no caps, no special chars, NO HYPHENS. Like internal email."""
+    """Subject that looks like a real person wrote it. References their ACTUAL work."""
     primary = get_primary_service(services)
     company_short = company.split()[0]
-    # Rotate subjects per company name hash for variety
+    # Vary by company hash — these read like natural 1:1 emails
     subjects = [
-        f"quick question about {company_short}",
-        f"{company_short} overflow question",
-        f"capacity at {company_short}",
-        f"{primary} overflow",
+        f"{company_short} project overflow",
+        f"scaling {company_short} delivery",
+        f"extra {primary} capacity",
+        f"partnering with {company_short}",
+        f"{company_short} team bandwidth",
     ]
-    valid = [s for s in subjects if len(s) <= MAX_SUBJECT]
-    # Pick based on company name length so same lead always gets same subject
+    valid = [s for s in subjects if len(s) <= MAX_SUBJECT and not any(c in s for c in ['-', '—', '–'])]
     idx = len(company) % len(valid)
     return valid[idx]
 
 
 def subject_followup(company):
-    return f"re: {company.split()[0]}"
-
+    return f"re: {company.split()[0]} partnership"
 
 def subject_reframe(company):
-    return f"one quick question for {company.split()[0]}"
-
+    return f"quick thought for {company.split()[0]}"
 
 def subject_breakup(company):
-    return f"closing the loop on {company.split()[0]}"
+    return f"touching base re {company.split()[0]}"
 
 
 # ── EMAIL TEMPLATES (from Chairman's originals) ─────────────
@@ -196,14 +194,15 @@ def subject_breakup(company):
 def make_email_t1(lead):
     """
     T1 — The Hook (Day 1)
-    ~55 words max. Short. Simple. About them.
-    4th grade English. Sounds like a real human.
-    NO HYPHENS. NO EM DASHES. NO JARGEN.
+    ~55 words max. Proves we looked. States their problem from their perspective.
+    Ultra low friction CTA — just permission to share more, not a meeting.
+    NO HYPHENS. NO EM DASHES. NO JARGON.
     """
     company = lead.get("Company Name", "").strip()
     email = lead.get("Email", "").strip()
     services = parse_services(lead.get("Services", ""))
     pain = lead.get("Pain Point", "").strip()
+    wl_signals = lead.get("White Label Signals", "").strip()
     owner_name = lead.get("Owner Name", "").strip()
 
     if not email or not company:
@@ -212,35 +211,68 @@ def make_email_t1(lead):
     first_name = get_first_name(owner_name)
     first_word = company.split()[0]
 
-    # Greeting
+    # Greeting — casual, not salesy
     if first_name:
         greeting = f"Hey {first_name}"
     else:
         greeting = f"Hey {first_word} team"
 
-    # Pick main service for personalization
+    # Pick service for personalization
     primary = get_primary_service(services)
     if '/' in primary:
         primary = primary.split('/')[0].strip()
 
-    # Body varies by what we know about them
-    # Keep it SHORT. 3 sentences max. One question.
-    if services and primary:
-        # We know their services — personalize
-        line = f"Noticed {first_word} does {primary} work."
-        if pain:
-            line += f" When you are busy with {pain.split(',')[0].lower()}, what happens to new projects"
-        else:
-            line += f" When the team is full and a new project comes in, what do you do"
+    # OBSERVATION LINE — prove we looked, not "Noticed X does Y"
+    # Vary by what we know: WL signals, services, pain
+    import random
+    random.seed(hash(company))  # Deterministic per company
+
+    if wl_signals and ('white label' in wl_signals.lower() or 'reseller' in wl_signals.lower()):
+        # They ALREADY do WL — pitch is about reliability/quality, not convincing
+        obs_options = [
+            f"Saw {first_word} offers white label delivery to partners",
+            f"Came across {first_word}'s partner delivery offering",
+            f"Noticed {first_word} handles partner delivery at scale",
+        ]
+        question = "Ever need more bandwidth on those partner projects without hiring"
+    elif wl_signals and ('staff augmentation' in wl_signals.lower() or 'outsourcing' in wl_signals.lower()):
+        # They augment teams — pitch is about a better model
+        obs_options = [
+            f"Saw {first_word} scales teams through staff augmentation",
+            f"Noticed {first_word} uses team extension for delivery",
+        ]
+        question = "What if you could scale per project without the ramp time"
+    elif services and primary:
+        # We know what they build
+        obs_options = [
+            f"Saw {first_word} ships {primary} projects",
+            f"Came across {first_word}'s {primary} work",
+            f"Noticed {first_word} builds for clients in {primary}",
+        ]
+        question = "When a big project hits and your team is booked, where does it go"
     else:
-        # No service info — keep it general
-        line = f"Noticed {first_word} takes on development work. When your team is at capacity and a new project lands, where does it go"
+        obs_options = [
+            f"Saw {first_word} takes on client development work",
+            f"Came across {first_word}'s agency work",
+        ]
+        question = "When your team is at full capacity and another project lands, what happens"
+
+    obs = random.choice(obs_options)
+
+    # CTA — ultra low friction. Not "Want to see if it fits?" (too big an ask)
+    cta_options = [
+        "Open to a quick chat about how that works",
+        "Worth a 10 minute call to see if useful",
+        "Sound like something worth exploring",
+        "Curious if that resonates with how you handle overflow",
+    ]
+    cta = random.choice(cta_options)
 
     body = (
         f"{greeting},\n\n"
-        f"{line}?\n\n"
-        f"We help agencies take on more than their team can handle. Quiet delivery, under your name, your rate stays yours.\n\n"
-        f"Want to see if it fits?\n\n"
+        f"{obs}. {question}?\n\n"
+        f"We plug in as a quiet extension of your team. Under your brand, your margin, your client never knows.\n\n"
+        f"{cta}?\n\n"
         f"SaJib"
     )
 
@@ -251,7 +283,8 @@ def make_email_t1(lead):
 def make_email_t2(lead):
     """
     T2 — Value Add (Day 4-5)
-    ~55 words. Share a real scenario. Zero pressure. No ask.
+    ~55 words. Credibility + specificity. Zero pressure ask.
+    Uses concrete details (project type, timeline, outcome) not vague stories.
     NO HYPHENS. NO EM DASHES.
     """
     company = lead.get("Company Name", "").strip()
@@ -263,31 +296,44 @@ def make_email_t2(lead):
         return None
 
     first_name = get_first_name(owner_name)
-    greeting = f"Hey {first_name}" if first_name else f"Hey {company.split()[0]} team"
+    first_word = company.split()[0]
+    greeting = f"Hey {first_name}" if first_name else f"Hey {first_word} team"
 
     primary = get_primary_service(services)
     kw = primary.split('/')[0].strip()
 
-    # Real scenario, anonymized. Varies by service.
+    # Real scenario with CONCRETE specifics — builds trust
+    import random
+    random.seed(hash(company) + 1)  # Different seed from T1
+
     if 'mobile' in primary.lower():
-        scenario = f"Stepped in when an agency's mobile lead went on leave mid-sprint. Three months of builds, under their name, at their rate. Client never asked a question."
+        scenarios = [
+            "Last month we covered a React Native build for an agency whose lead dev was out for 8 weeks. 14 screens, shipped on time, under their brand",
+            "An agency sent us their mobile overflow in March. 3 devs, 6 weeks, iOS + Android. Client gave them a 5 star review",
+        ]
     elif 'AI' in kw or 'ML' in kw:
-        scenario = f"Helped an agency deliver an AI project they could not staff. Model, pipeline, all of it. Their brand on the deliverable, their margin intact."
+        scenarios = [
+            "Recently helped an agency ship an ML pipeline they could not staff. 4 week sprint, their name on the repo, their client renewed",
+            "An agency partner sent us an AI feature build last quarter. Model + API, shipped in 3 weeks under their brand",
+        ]
     elif 'web' in primary.lower():
-        scenario = f"Covered a full product launch for an agency that was stretched too thin. Their team managed, we built, client saw one brand."
-    elif 'cloud' in primary.lower() or 'devops' in primary.lower():
-        scenario = f"Took over a cloud migration for an agency between projects. In and out quietly, their name on everything."
-    elif 'SaaS' in primary:
-        scenario = f"Helped a SaaS agency keep a client happy when their own team was fully booked. We delivered, they kept the relationship, everyone won."
+        scenarios = [
+            "An agency came to us at capacity on a platform rebuild. We took 2 modules, shipped in 3 sprints, their margin stayed intact",
+            "Last quarter we handled a full SaaS dashboard for an agency booked solid. Their client, their repo, their review",
+        ]
     else:
-        scenario = f"Helped an agency deliver a {kw} project they had to say yes to but could not staff. Under their brand, their rate, zero friction."
+        scenarios = [
+            "Recently plugged in on a {kw} build for an agency at capacity. 4 week sprint, under their brand, client never knew",
+            "An agency partner sent overflow work our way last month. Delivered under their name, on their timeline, no hiccups",
+        ]
+
+    scenario = random.choice(scenarios)
 
     body = (
         f"{greeting},\n\n"
-        f"Wanted to share something quick:\n\n"
-        f"We recently {scenario}\n\n"
-        f"If that kind of quiet backup ever helps, good to know it exists. If not, totally fine.\n\n"
-        f"{SIGNATURE}"
+        f"{scenario}.\n\n"
+        f"Heads up for whenever it is useful. Zero pressure either way.\n\n"
+        f"SaJib"
     )
 
     subject = subject_followup(company)
@@ -297,8 +343,8 @@ def make_email_t2(lead):
 def make_email_t3(lead):
     """
     T3 — Reframe (Day 9-10)
-    ~45 words. One genuine question. No pitch. No agenda.
-    Disarming. Sounds like curiosity not sales.
+    ~45 words. Disarming genuine question. No pitch.
+    Different angle from T1 — asks about their PROCESS, not their problem.
     NO HYPHENS. NO EM DASHES.
     """
     company = lead.get("Company Name", "").strip()
@@ -310,17 +356,27 @@ def make_email_t3(lead):
         return None
 
     first_name = get_first_name(owner_name)
-    greeting = f"Hey {first_name}" if first_name else f"Hey {company.split()[0]} team"
+    first_word = company.split()[0]
+    greeting = f"Hey {first_name}" if first_name else f"Hey {first_word} team"
 
     primary = get_primary_service(services)
     kw = primary.split('/')[0].strip()
 
+    import random
+    random.seed(hash(company) + 2)
+
+    questions = [
+        f"How does {first_word} usually handle {kw} overflow? Go to trusted partners or case by case",
+        f"Curious, do you have a go to when {kw} projects outpace your team? Or does it depend",
+        f"When {first_word} is at full capacity on {kw} work, what is your first move? Pass or push through",
+    ]
+    question = random.choice(questions)
+
     body = (
         f"{greeting},\n\n"
-        f"One question, nothing more:\n\n"
-        f"When {company} lands a {kw} project and the team is already full, how do you handle it? Go-to partners, or case by case?\n\n"
-        f"No pitch. Just trying to understand how agencies like yours deal with this.\n\n"
-        f"{SIGNATURE}"
+        f"{question}?\n\n"
+        f"No agenda. Just trying to learn how agencies like yours think about this.\n\n"
+        f"SaJib"
     )
 
     subject = subject_reframe(company)
@@ -330,7 +386,7 @@ def make_email_t3(lead):
 def make_email_t4(lead):
     """
     T4 — Breakup (Day 14-16)
-    ~42 words. Low stakes closure. One line pitch. Clean exit.
+    ~40 words. Respectful exit. One line for later. Leaves door open.
     NO HYPHENS. NO EM DASHES.
     """
     company = lead.get("Company Name", "").strip()
@@ -342,17 +398,18 @@ def make_email_t4(lead):
         return None
 
     first_name = get_first_name(owner_name)
-    greeting = f"Hey {first_name}" if first_name else f"Hey {company.split()[0]} team"
+    first_word = company.split()[0]
+    greeting = f"Hey {first_name}" if first_name else f"Hey {first_word} team"
 
     primary = get_primary_service(services)
     kw = primary.split('/')[0].strip()
 
     body = (
         f"{greeting},\n\n"
-        f"Going to leave it here. Timing does not always make sense and that is fine.\n\n"
-        f"One line in case it helps later: if {kw} overflow ever hits and you need quiet backup, we work under your brand at your rate. No strings.\n\n"
-        f"Good luck with everything at {company}.\n\n"
-        f"{SIGNATURE}"
+        f"Going to step back. Timing is everything and right now might not be it.\n\n"
+        f"If {kw} overflow ever comes up, we plug in quietly under your brand. Just keep us in mind.\n\n"
+        f"All the best with {first_word}.\n\n"
+        f"SaJib"
     )
 
     subject = subject_breakup(company)

@@ -48,6 +48,31 @@ def run_cmd(cmd, timeout=300, desc=""):
         log(f"ERROR: {desc}: {e}")
         return "", str(e), 1
 
+def run_detached(cmd, desc=""):
+    """
+    Run a command as a detached background process that survives parent death.
+    Uses nohup + subprocess.Popen with start_new_session=True.
+    Returns the PID of the background process.
+    """
+    if desc:
+        log(f"Launching detached: {desc}")
+    log_file = os.path.join(NANOSOFT_DIR, "quill_wl.log")
+    try:
+        proc = subprocess.Popen(
+            f"nohup python3 -u {cmd} >> {log_file} 2>&1",
+            shell=True,
+            cwd=NANOSOFT_DIR,
+            start_new_session=True,
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+        )
+        pid = proc.pid
+        log(f"Detached process PID: {pid}")
+        return pid
+    except Exception as e:
+        log(f"ERROR launching detached: {desc}: {e}")
+        return None
+
 def get_crm_stats():
     """Get current CRM statistics."""
     try:
@@ -194,19 +219,16 @@ def main():
     
     new_qualified = stats.get("by_status", {}).get("Qualified", 0)
     if new_qualified > 0:
-        log(f"{new_qualified} new qualified leads. Sending T1...")
-        stdout, stderr, rc = run_cmd(
-            f"cd {NANOSOFT_DIR} && python3 -u quill_wl.py send -t T1 --limit 10",
-            timeout=600, desc="QUILL-WL T1 send"
+        log(f"{new_qualified} new qualified leads. Launching detached T1 send...")
+        # Launch as detached process so it survives cron session ending
+        pid = run_detached(
+            "quill_wl.py send -t T1 --limit 100",
+            desc="QUILL-WL T1 send (detached)"
         )
-        sent = 0
-        failed = 0
-        for line in stdout.split('\n'):
-            if 'DONE:' in line:
-                sent = int(re.search(r'(\d+) sent', line).group(1)) if re.search(r'(\d+) sent', line) else 0
-                failed = int(re.search(r'(\d+) failed', line).group(1)) if re.search(r'(\d+) failed', line) else 0
-        log(f"T1 send result: {sent} sent, {failed} failed")
-        report_lines.append(f"T1 sent: {sent} | Failed: {failed}")
+        if pid:
+            report_lines.append(f"T1 send launched as PID {pid} ({new_qualified} qualified leads)")
+        else:
+            report_lines.append(f"T1 send failed to launch ({new_qualified} qualified leads)")
     else:
         log("No new qualified leads to send.")
         report_lines.append("No new qualified leads.")

@@ -129,3 +129,193 @@
 {"to": "info@brandingbeez.co.uk", "company": "Brandingbeez", "subject": "quick question about Brandingbeez", "sent_at": "2026-06-05T04:00:58.631507+06:00", "message_id": "19e94a7632521da4", "template": "T1"}
 {"to": "info@appinventiv.com", "company": "Appinventiv", "subject": "mobile development overflow", "sent_at": "2026-06-05T04:04:00.353520+06:00", "message_id": "19e94aa282f325d3", "template": "T1"}
 {"to": "info@krishangtechnolab.com", "company": "Krishangtechnolab", "subject": "mobile development overflow", "sent_at": "2026-06-05T04:07:01.876426+06:00", "message_id": "19e94aceee6ce2e1", "template": "T1"}
+{"to": "marketing@gojilabs.com", "company": "Goji Labs", "subject": "re: Goji", "sent_at": "2026-06-06T08:29:37.284403+06:00", "message_id": "19e9ac3b2bb380a6", "template": "T2"}
+{"to": "sales@mercurydevelopment.com", "company": "Mercury Development", "subject": "re: Mercury", "sent_at": "2026-06-06T08:32:38.852944+06:00", "message_id": "19e9ac676737e59a", "template": "T2"}
+{"to": "sales@closeloop.com", "company": "Closeloop Technologies LLC", "subject": "re: Closeloop", "sent_at": "2026-06-06T08:35:40.446729+06:00", "message_id": "19e9ac93ce893c01", "template": "T2"}
+{"to": "dave@utility.agency", "company": "Utility", "subject": "re: Utility", "sent_at": "2026-06-06T08:38:42.105972+06:00", "message_id": "19e9acc028d60bb2", "template": "T2"}
+{"to": "hello@infinum.com", "company": "Infinum", "subject": "re: Infinum", "sent_at": "2026-06-06T08:41:43.645325+06:00", "message_id": "19e9acec6486d50e", "template": "T2"}
+{"to": "info@itransition.com", "company": "Itransition", "subject": "re: Itransition", "sent_at": "2026-06-06T08:44:45.351939+06:00", "message_id": "19e9ad18dc79cbbe", "template": "T2"}
+{"to": "mail@diffco.us", "company": "Diffco", "subject": "re: Diffco", "sent_at": "2026-06-06T08:47:46.921757+06:00", "message_id": "19e9ad45292eb8e2", "template": "T2"}
+{"to": "hello@azumo.co", "company": "Azumo", "subject": "re: Azumo", "sent_at": "2026-06-06T08:50:48.681854+06:00", "message_id": "19e9ad7188bea30b", "template": "T2"}
+{"to": "m.bien@merixstudio.com", "company": "Merixstudio", "subject": "re: Merixstudio", "sent_at": "2026-06-06T08:53:50.573233+06:00", "message_id": "19e9ad9dfb4e7ae5", "template": "T2"}
+{"to": "info@cheesecakelabs.com", "company": "Cheesecake Labs", "subject": "re: Cheesecake", "sent_at": "2026-06-06T08:56:52.253968+06:00", "message_id": "19e9adca48d4bfbc", "template": "T2"}
+{"to": "hello@fulcrum.rocks", "company": "Fulcrum", "subject": "re: Fulcrum", "sent_at": "2026-06-06T08:59:54.107100+06:00", "message_id": "19e9adf6b98c0eeb", "template": "T2"}
+{"to": "info@mobikasa.com", "company": "MOBIKASA", "subject": "re: MOBIKASA", "sent_at": "2026-06-06T09:02:56.140871+06:00", "message_id": "19e9ae232a18360e", "template": "T2"}
+{"to": "info@ancient.global", "company": "Ancient", "subject": "re: Ancient", "sent_at": "2026-06-06T09:05:57.771976+06:00", "message_id": "19e9ae4f87564b46", "template": "T2"}
+{"to": "sales@plavno.io", "company": "Plavno", "subject": "re: Plavno", "sent_at": "2026-06-06T09:09:00.201643+06:00", "message_id": "19e9ae7c1ad42978", "template": "T2"}
+{"to": "yevhen.synii@lumitech.co", "company": "Lumitech", "subject": "re: Lumitech", "sent_at": "2026-06-06T09:12:01.821301+06:00", "message_id": "19e9aea87156473a", "template": "T2"}
+{"to": "sales-ops@spd.tech", "company": "SPD Technology", "subject": "re: SPD", "sent_at": "2026-06-06T09:15:03.568057+06:00", "message_id": "19e9aed4ca137016", "template": "T2"}
+{"to": "info@kindgeek.com", "company": "Kindgeek", "subject": "re: Kindgeek", "sent_at": "2026-06-06T09:18:05.354578+06:00", "message_id": "19e9af012144a97c", "template": "T2"}
+{"to": "careers@trootech.com", "company": "TRooTech Business Solutions", "subject": "re: TRooTech", "sent_at": "2026-06-06T09:21:07.175963+06:00", "message_id": "19e9af2d8fa4c0e9", "template": "T2"}
+{"to": "info@fluxitsoft.com", "company": "Flux IT", "subject": "re: Flux", "sent_at": "2026-06-06T09:24:09.166661+06:00", "message_id": "19e9af59f1429d78", "template": "T2"}
+{"to": "commercial@activeone.co", "company": "Activeone", "subject": "re: Activeone", "sent_at": "2026-06-06T09:27:10.974533+06:00", "message_id": "19e9af865c13a20d", "template": "T2"}
+{"to": "diogo@dhdtech.io", "company": "DHDTech.io", "subject": "re: DHDTech.io", "sent_at": "2026-06-06T09:30:14.240825+06:00", "message_id": "19e9afb31b10b399", "template": "T2"}
+{"to": "sales@future-processing.com", "company": "Future Processing", "subject": "re: Future", "sent_at": "2026-06-06T09:33:16.029466+06:00", "message_id": "19e9afdf6d71b85c", "template": "T2"}
+{"to": "hello@tech-stack.com", "company": "Techstack company", "subject": "re: Techstack", "sent_at": "2026-06-06T09:36:17.668032+06:00", "message_id": "19e9b00bc285e811", "template": "T2"}
+{"to": "hello@redlab.bz", "company": "Redlab agency", "subject": "re: Redlab", "sent_at": "2026-06-06T09:39:19.310254+06:00", "message_id": "19e9b038218ccf9a", "template": "T2"}
+{"to": "hello@wyeworks.com", "company": "WyeWorks", "subject": "re: WyeWorks", "sent_at": "2026-06-06T09:42:21.033136+06:00", "message_id": "19e9b06487ce4ba0", "template": "T2"}
+{"to": "hello@darly.solutions", "company": "Darly Solutions", "subject": "re: Darly", "sent_at": "2026-06-06T09:45:22.779623+06:00", "message_id": "19e9b090f86da298", "template": "T2"}
+{"to": "us@sapient.pro", "company": "SapientPro", "subject": "re: SapientPro", "sent_at": "2026-06-06T09:48:24.327581+06:00", "message_id": "19e9b0bd2fb26b2c", "template": "T2"}
+{"to": "contact@tvm-engineering.com", "company": "TVM Engineering Services", "subject": "re: TVM", "sent_at": "2026-06-06T09:51:26.629419+06:00", "message_id": "19e9b0e9a4bd15d3", "template": "T2"}
+{"to": "london@devsdata.com", "company": "Devsdata", "subject": "re: Devsdata", "sent_at": "2026-06-06T09:54:28.243955+06:00", "message_id": "19e9b116162b4371", "template": "T2"}
+{"to": "hello@unlimitedwp.com", "company": "Unlimitedwp", "subject": "re: Unlimitedwp", "sent_at": "2026-06-06T09:57:29.989209+06:00", "message_id": "19e9b1427fa99c32", "template": "T2"}
+{"to": "hello@whitelabeliq.com", "company": "Whitelabeliq", "subject": "re: Whitelabeliq", "sent_at": "2026-06-06T10:00:31.650600+06:00", "message_id": "19e9b16ec8861078", "template": "T2"}
+{"to": "sales@megrisoft.com", "company": "Megrioutreach", "subject": "re: Megrioutreach", "sent_at": "2026-06-06T10:03:33.509701+06:00", "message_id": "19e9b19b2b0ca56b", "template": "T2"}
+{"to": "info@75way.com", "company": "75Way", "subject": "re: 75Way", "sent_at": "2026-06-06T10:06:35.143787+06:00", "message_id": "19e9b1c799959352", "template": "T2"}
+{"to": "bdm.codersh@gmail.com", "company": "Codersh", "subject": "re: Codersh", "sent_at": "2026-06-06T10:09:36.857412+06:00", "message_id": "19e9b1f3e7af838e", "template": "T2"}
+{"to": "enquiries.estonia@touchlane.com", "company": "Touchlane", "subject": "re: Touchlane", "sent_at": "2026-06-06T10:12:38.484648+06:00", "message_id": "19e9b2203879a95e", "template": "T2"}
+{"to": "info@xovakstudio.com", "company": "Xovakstudio", "subject": "re: Xovakstudio", "sent_at": "2026-06-06T10:15:40.837411+06:00", "message_id": "19e9b24ccc4cab82", "template": "T2"}
+{"to": "metrowebstudio.office@gmail.com", "company": "Metroweb", "subject": "re: Metroweb", "sent_at": "2026-06-06T10:18:43.199573+06:00", "message_id": "19e9b279496be991", "template": "T2"}
+{"to": "info@bantechsolutions.com", "company": "Bantechsolutions", "subject": "re: Bantechsolutions", "sent_at": "2026-06-06T10:21:45.702083+06:00", "message_id": "19e9b2a5c4dc5aad", "template": "T2"}
+{"to": "contact@anvileight.com", "company": "Anvileight", "subject": "re: Anvileight", "sent_at": "2026-06-06T10:24:47.299734+06:00", "message_id": "19e9b2d2285dc3c7", "template": "T2"}
+{"to": "contact@nectarbits.ca", "company": "Nectarbits", "subject": "re: Nectarbits", "sent_at": "2026-06-06T10:27:50.634676+06:00", "message_id": "19e9b2fef5d9864f", "template": "T2"}
+{"to": "partners@teamontime.com", "company": "Teamontime", "subject": "re: Teamontime", "sent_at": "2026-06-06T10:30:52.304426+06:00", "message_id": "19e9b32b57902f89", "template": "T2"}
+{"to": "contacto@anigami.studio", "company": "Anigami Studio", "subject": "re: Anigami", "sent_at": "2026-06-06T10:33:54.055893+06:00", "message_id": "19e9b357bc930afe", "template": "T2"}
+{"to": "i@urlaunched.com", "company": "You are launched", "subject": "re: You", "sent_at": "2026-06-06T10:36:55.609682+06:00", "message_id": "19e9b383e4f43c46", "template": "T2"}
+{"to": "lukasz.pol@scalosoft.com", "company": "Scalo", "subject": "re: Scalo", "sent_at": "2026-06-06T10:39:57.217844+06:00", "message_id": "19e9b3b0559b342d", "template": "T2"}
+{"to": "info@euvic.com", "company": "Euvic", "subject": "re: Euvic", "sent_at": "2026-06-06T10:42:59.180391+06:00", "message_id": "19e9b3dcd96b67f1", "template": "T2"}
+{"to": "contact@apzumi.com", "company": "Apzumi", "subject": "re: Apzumi", "sent_at": "2026-06-06T10:46:01.173318+06:00", "message_id": "19e9b4093ca6d320", "template": "T2"}
+{"to": "biz@riseapps.biz", "company": "Riseapps", "subject": "re: Riseapps", "sent_at": "2026-06-06T10:49:02.705845+06:00", "message_id": "19e9b435907696ec", "template": "T2"}
+{"to": "contact@pellsoftware.com", "company": "Pell Software", "subject": "re: Pell", "sent_at": "2026-06-06T10:52:04.463784+06:00", "message_id": "19e9b461edddb097", "template": "T2"}
+{"to": "marketing@dreamztech.com", "company": "DreamzTech Solutions", "subject": "re: DreamzTech", "sent_at": "2026-06-06T10:55:06.075418+06:00", "message_id": "19e9b48e3f97a66b", "template": "T2"}
+{"to": "hello@richbrains.net", "company": "RichBrains", "subject": "re: RichBrains", "sent_at": "2026-06-06T10:58:07.889384+06:00", "message_id": "19e9b4ba9b114622", "template": "T2"}
+{"to": "office@gotoma.pl", "company": "GOTOMA Software House", "subject": "re: GOTOMA", "sent_at": "2026-06-06T11:01:09.499749+06:00", "message_id": "19e9b4e6eb2d47ba", "template": "T2"}
+{"to": "contact@mallow-tech.com", "company": "Mallow Technologies Private Limited", "subject": "re: Mallow", "sent_at": "2026-06-06T11:04:11.750031+06:00", "message_id": "19e9b51377535790", "template": "T2"}
+{"to": "hi@goodface.agency", "company": "Goodface agency", "subject": "re: Goodface", "sent_at": "2026-06-06T11:07:13.318911+06:00", "message_id": "19e9b53fc135eea4", "template": "T2"}
+{"to": "hello@caxy.com", "company": "Caxy Consulting", "subject": "re: Caxy", "sent_at": "2026-06-06T11:10:15.150614+06:00", "message_id": "19e9b56c38787ff0", "template": "T2"}
+{"to": "letstalk@thinkpalm.com", "company": "ThinkPalm Technologies", "subject": "re: ThinkPalm", "sent_at": "2026-06-06T11:13:16.807444+06:00", "message_id": "19e9b5989eb9555d", "template": "T2"}
+{"to": "info@wildnettechnologies.com", "company": "Wildnettechnologies", "subject": "re: Wildnettechnologies", "sent_at": "2026-06-06T11:16:19.357042+06:00", "message_id": "19e9b5c50ea18923", "template": "T2"}
+{"to": "sales@tripleminds.co", "company": "Tripleminds", "subject": "re: Tripleminds", "sent_at": "2026-06-06T11:19:20.939564+06:00", "message_id": "19e9b5f179007eb1", "template": "T2"}
+{"to": "suvansh.bansal@flexiple.com", "company": "Flexiple", "subject": "re: Flexiple", "sent_at": "2026-06-06T11:22:22.659513+06:00", "message_id": "19e9b61dddb1950b", "template": "T2"}
+{"to": "enquiry@nimapinfotech.com", "company": "Nimapinfotech", "subject": "re: Nimapinfotech", "sent_at": "2026-06-06T11:25:25.561797+06:00", "message_id": "19e9b64a7db154b8", "template": "T2"}
+{"to": "hello@weareyellowball.com", "company": "Weareyellowball", "subject": "re: Weareyellowball", "sent_at": "2026-06-06T11:28:27.973301+06:00", "message_id": "19e9b676fe41994d", "template": "T2"}
+{"to": "info@qrolic.com", "company": "Qrolic", "subject": "re: Qrolic", "sent_at": "2026-06-06T11:31:29.660842+06:00", "message_id": "19e9b6a344e771bb", "template": "T2"}
+{"to": "hello@nimbata.com", "company": "Nimbata", "subject": "re: Nimbata", "sent_at": "2026-06-06T11:34:31.293270+06:00", "message_id": "19e9b6cfb4d5ea0a", "template": "T2"}
+{"to": "info@e2msolutions.com", "company": "E2Msolutions", "subject": "re: E2Msolutions", "sent_at": "2026-06-06T11:37:32.939068+06:00", "message_id": "19e9b6fc0316f4dd", "template": "T2"}
+{"to": "info@mailmunch.com", "company": "Mailmunch", "subject": "re: Mailmunch", "sent_at": "2026-06-06T11:40:35.083989+06:00", "message_id": "19e9b728667343eb", "template": "T2"}
+{"to": "hello@themindstudios.com", "company": "Themindstudios", "subject": "re: Themindstudios", "sent_at": "2026-06-06T11:43:36.682997+06:00", "message_id": "19e9b754ca81e374", "template": "T2"}
+{"to": "info@pnnsoft.com", "company": "Pnnsoft", "subject": "mobile development overflow", "sent_at": "2026-06-06T11:44:50.240459+06:00", "message_id": "19e9b766cc5bc607", "template": "T1"}
+{"to": "contact@trawex.com", "company": "Trawex", "subject": "re: Trawex", "sent_at": "2026-06-06T11:46:38.304779+06:00", "message_id": "19e9b78121b46db1", "template": "T2"}
+{"to": "email@company.com", "company": "Sell Saas", "subject": "Sell overflow question", "sent_at": "2026-06-06T11:47:51.777270+06:00", "message_id": "19e9b793061276ab", "template": "T1"}
+{"to": "sales@wpwebinfotech.com", "company": "Wpwebinfotech", "subject": "re: Wpwebinfotech", "sent_at": "2026-06-06T11:49:39.921285+06:00", "message_id": "19e9b7ad79988813", "template": "T2"}
+{"to": "info@pixlogix.com", "company": "Pixlogix", "subject": "quick question about Pixlogix", "sent_at": "2026-06-06T11:50:54.148630+06:00", "message_id": "19e9b7bf9129dddb", "template": "T1"}
+{"to": "sales@orientsoftware.com", "company": "Orientsoftware", "subject": "re: Orientsoftware", "sent_at": "2026-06-06T11:52:41.632644+06:00", "message_id": "19e9b7d9caa86f63", "template": "T2"}
+{"to": "hello@assaptr.com", "company": "Assaptr", "subject": "mobile development overflow", "sent_at": "2026-06-06T11:53:55.828388+06:00", "message_id": "19e9b7ebe99cba40", "template": "T1"}
+{"to": "info@appmesolutions.com", "company": "Appmesolutions", "subject": "re: Appmesolutions", "sent_at": "2026-06-06T11:55:43.284130+06:00", "message_id": "19e9b8062d389d5b", "template": "T2"}
+{"to": "info@aamax.co", "company": "Aamax", "subject": "re: Aamax", "sent_at": "2026-06-06T11:58:44.910610+06:00", "message_id": "19e9b832953ca9b9", "template": "T2"}
+{"to": "info@pitchpinemedia.com", "company": "Pitchpinemedia", "subject": "re: Pitchpinemedia", "sent_at": "2026-06-06T12:01:46.491650+06:00", "message_id": "19e9b85ef6ca9575", "template": "T2"}
+{"to": "info@risingstarinfotech.com", "company": "Risingstarinfotech", "subject": "re: Risingstarinfotech", "sent_at": "2026-06-06T12:04:48.181987+06:00", "message_id": "19e9b88b25cdfdd0", "template": "T2"}
+{"to": "info@dynamicdreamz.com", "company": "Dynamicdreamz", "subject": "re: Dynamicdreamz", "sent_at": "2026-06-06T12:07:50.004626+06:00", "message_id": "19e9b8b7a30a63cd", "template": "T2"}
+{"to": "sales@sparkouttech.com", "company": "Sparkouttech", "subject": "re: Sparkouttech", "sent_at": "2026-06-06T12:10:51.724993+06:00", "message_id": "19e9b8e3feede614", "template": "T2"}
+{"to": "sales@acquaintsoft.com", "company": "Acquaintsoft", "subject": "re: Acquaintsoft", "sent_at": "2026-06-06T12:13:53.439438+06:00", "message_id": "19e9b9105e61e7ca", "template": "T2"}
+{"to": "hello@turumburum.com", "company": "Turumburum", "subject": "re: Turumburum", "sent_at": "2026-06-06T12:16:55.438888+06:00", "message_id": "19e9b93cc76b33ee", "template": "T2"}
+{"to": "contact@alcor-bpo.com", "company": "Alcor", "subject": "re: Alcor", "sent_at": "2026-06-06T12:19:57.112511+06:00", "message_id": "19e9b9692f29fee9", "template": "T2"}
+{"to": "info@fullscale.io", "company": "Fullscale", "subject": "re: Fullscale", "sent_at": "2026-06-06T12:23:00.277507+06:00", "message_id": "19e9b995d1fceae1", "template": "T2"}
+{"to": "webinforequest@coherentsolutions.com", "company": "Coherentsolutions", "subject": "re: Coherentsolutions", "sent_at": "2026-06-06T12:26:02.069080+06:00", "message_id": "19e9b9c2303e7b89", "template": "T2"}
+{"to": "contact@innowise.com", "company": "Innowise", "subject": "re: Innowise", "sent_at": "2026-06-06T12:29:04.592773+06:00", "message_id": "19e9b9eec8102730", "template": "T2"}
+{"to": "rfp@program-ace.com", "company": "Program Ace", "subject": "re: Program", "sent_at": "2026-06-06T12:32:06.386207+06:00", "message_id": "19e9ba1b27f17e12", "template": "T2"}
+{"to": "info@icorethink.com", "company": "Icorethink", "subject": "re: Icorethink", "sent_at": "2026-06-06T12:35:08.617942+06:00", "message_id": "19e9ba47a007a516", "template": "T2"}
+{"to": "info@spdload.com", "company": "Spdload", "subject": "re: Spdload", "sent_at": "2026-06-06T12:38:10.450016+06:00", "message_id": "19e9ba7416ed58e2", "template": "T2"}
+{"to": "Info@intent-solutions.com", "company": "Intent Solutions", "subject": "re: Intent", "sent_at": "2026-06-06T12:41:12.171550+06:00", "message_id": "19e9baa068a4e9cb", "template": "T2"}
+{"to": "contact@abbacustechnologies.com", "company": "Abbacustechnologies", "subject": "re: Abbacustechnologies", "sent_at": "2026-06-06T12:44:13.907726+06:00", "message_id": "19e9baccc1a99c71", "template": "T2"}
+{"to": "Info@hustlemarketers.com", "company": "Hustlemarketers", "subject": "re: Hustlemarketers", "sent_at": "2026-06-06T12:47:15.812131+06:00", "message_id": "19e9baf924d3afd0", "template": "T2"}
+{"to": "team@eighthats.com", "company": "Eighthats", "subject": "re: Eighthats", "sent_at": "2026-06-06T12:50:17.679811+06:00", "message_id": "19e9bb2597589159", "template": "T2"}
+{"to": "contact@mavlers.com", "company": "Uplers", "subject": "re: Uplers", "sent_at": "2026-06-06T12:53:19.328010+06:00", "message_id": "19e9bb51e593f214", "template": "T2"}
+{"to": "sales@pixelcrayons.com", "company": "Pixelcrayons", "subject": "re: Pixelcrayons", "sent_at": "2026-06-06T12:56:21.061669+06:00", "message_id": "19e9bb7e4955648f", "template": "T2"}
+{"to": "info@allusivedigital.com", "company": "Allusivedigital", "subject": "re: Allusivedigital", "sent_at": "2026-06-06T12:59:22.632823+06:00", "message_id": "19e9bbaab1e77f64", "template": "T2"}
+{"to": "sales@pitangent.com", "company": "Pitangent", "subject": "re: Pitangent", "sent_at": "2026-06-06T13:02:25.005235+06:00", "message_id": "19e9bbd7397ba24f", "template": "T2"}
+{"to": "hello@hirewithnear.com", "company": "Hirewithnear", "subject": "re: Hirewithnear", "sent_at": "2026-06-06T13:05:26.758620+06:00", "message_id": "19e9bc038ad3b7fe", "template": "T2"}
+{"to": "contact@bigscal.com", "company": "Bigscal", "subject": "re: Bigscal", "sent_at": "2026-06-06T13:08:28.456405+06:00", "message_id": "19e9bc2ffeeb2ace", "template": "T2"}
+{"to": "sales@devoqdesign.com", "company": "Devoqdesign", "subject": "re: Devoqdesign", "sent_at": "2026-06-06T13:11:30.096839+06:00", "message_id": "19e9bc5c4ac0954f", "template": "T2"}
+{"to": "wdisanjay@gmail.com", "company": "Wdi Demo", "subject": "re: Wdi", "sent_at": "2026-06-06T13:14:31.800496+06:00", "message_id": "19e9bc88b5a84755", "template": "T2"}
+{"to": "info@ginirex.com", "company": "Ginirex", "subject": "re: Ginirex", "sent_at": "2026-06-06T13:17:33.512051+06:00", "message_id": "19e9bcb4ee47c403", "template": "T2"}
+{"to": "info@goforma.com", "company": "Goforma", "subject": "re: Goforma", "sent_at": "2026-06-06T13:20:36.984490+06:00", "message_id": "19e9bce1d742d576", "template": "T2"}
+{"to": "contact@dashbouquet.com", "company": "Dashbouquet Development", "subject": "re: Dashbouquet", "sent_at": "2026-06-06T13:23:38.634300+06:00", "message_id": "19e9bd0e33879d60", "template": "T2"}
+{"to": "dkl@empat.tech", "company": "Empat", "subject": "re: Empat", "sent_at": "2026-06-06T13:26:40.224860+06:00", "message_id": "19e9bd3a707c1acc", "template": "T2"}
+{"to": "sales@cleveroad.com", "company": "Cleveroad", "subject": "re: Cleveroad", "sent_at": "2026-06-06T13:29:41.921622+06:00", "message_id": "19e9bd66d6f46f19", "template": "T2"}
+{"to": "hello@ventionteams.com", "company": "Vention", "subject": "re: Vention", "sent_at": "2026-06-06T13:32:44.345321+06:00", "message_id": "19e9bd93512a05de", "template": "T2"}
+{"to": "info@capitalnumbers.com", "company": "Capital Numbers", "subject": "re: Capital", "sent_at": "2026-06-06T13:35:46.228068+06:00", "message_id": "19e9bdbfdf935699", "template": "T2"}
+{"to": "hello@tsh.io", "company": "The Software House", "subject": "re: The", "sent_at": "2026-06-06T13:38:48.511002+06:00", "message_id": "19e9bdec5c1f2ba4", "template": "T2"}
+{"to": "sales@esparkinfo.com", "company": "eSparkBiz", "subject": "re: eSparkBiz", "sent_at": "2026-06-06T13:41:50.533706+06:00", "message_id": "19e9be18a483088c", "template": "T2"}
+{"to": "info@saritasa.com", "company": "Saritasa", "subject": "re: Saritasa", "sent_at": "2026-06-06T13:44:52.056969+06:00", "message_id": "19e9be450c2a1708", "template": "T2"}
+{"to": "success@wesoftyou.com", "company": "WeSoftYou", "subject": "re: WeSoftYou", "sent_at": "2026-06-06T13:47:53.719854+06:00", "message_id": "19e9be714c4db2ab", "template": "T2"}
+{"to": "hello@selleo.com", "company": "selleo", "subject": "re: selleo", "sent_at": "2026-06-06T13:50:55.394624+06:00", "message_id": "19e9be9da6776623", "template": "T2"}
+{"to": "sales@digiscorp.com", "company": "Digis, a Fiverr company (NYSE: FVRR)", "subject": "re: Digis,", "sent_at": "2026-06-06T13:53:57.074489+06:00", "message_id": "19e9beca1f41ae99", "template": "T2"}
+{"to": "info@geekyants.com", "company": "GeekyAnts", "subject": "re: GeekyAnts", "sent_at": "2026-06-06T13:56:58.768850+06:00", "message_id": "19e9bef675b2a325", "template": "T2"}
+{"to": "info@humaiwebsitesukltd.co.uk", "company": "Humaiwebs", "subject": "re: Humaiwebs", "sent_at": "2026-06-06T14:00:00.519411+06:00", "message_id": "19e9bf22c7f52601", "template": "T2"}
+{"to": "biz@penninetechnolabs.com", "company": "Penninetechnolabs", "subject": "re: Penninetechnolabs", "sent_at": "2026-06-06T14:03:02.182846+06:00", "message_id": "19e9bf4f201ebffe", "template": "T2"}
+{"to": "sales@vrinsofts.com", "company": "Vrinsofts", "subject": "re: Vrinsofts", "sent_at": "2026-06-06T14:06:03.741979+06:00", "message_id": "19e9bf7b7fa36c15", "template": "T2"}
+{"to": "info@cyberelite.in", "company": "Cyberelite", "subject": "re: Cyberelite", "sent_at": "2026-06-06T14:09:05.317105+06:00", "message_id": "19e9bfa7d65547c8", "template": "T2"}
+{"to": "sales@brilworks.com", "company": "Brilworks", "subject": "re: Brilworks", "sent_at": "2026-06-06T14:12:06.919994+06:00", "message_id": "19e9bfd432718939", "template": "T2"}
+{"to": "sales@apptunix.com", "company": "Apptunix", "subject": "re: Apptunix", "sent_at": "2026-06-06T14:15:08.802108+06:00", "message_id": "19e9c0009de7c52a", "template": "T2"}
+{"to": "contact@shivlab.com", "company": "Shivlab", "subject": "re: Shivlab", "sent_at": "2026-06-06T14:18:11.913436+06:00", "message_id": "19e9c02d46103bc0", "template": "T2"}
+{"to": "info@leanware.co", "company": "Leanware", "subject": "re: Leanware", "sent_at": "2026-06-06T14:21:13.635409+06:00", "message_id": "19e9c059b8b22d42", "template": "T2"}
+{"to": "hi@colorwhistle.com", "company": "Colorwhistle", "subject": "quick question about Colorwhistle", "sent_at": "2026-06-06T14:22:58.903814+06:00", "message_id": "19e9c0735c907fc1", "template": "T1"}
+{"to": "hello@redberry.ge", "company": "Redberry", "subject": "re: Redberry", "sent_at": "2026-06-06T14:24:15.203903+06:00", "message_id": "19e9c085f40ce0b1", "template": "T2"}
+{"to": "contact@quanrio.com", "company": "Quanrio", "subject": "re: Quanrio", "sent_at": "2026-06-06T14:27:16.762502+06:00", "message_id": "19e9c0b25d327d60", "template": "T2"}
+{"to": "info@brandingbeez.co.uk", "company": "Brandingbeez", "subject": "re: Brandingbeez", "sent_at": "2026-06-06T14:30:19.262262+06:00", "message_id": "19e9c0dedb09f3a4", "template": "T2"}
+{"to": "info@appinventiv.com", "company": "Appinventiv", "subject": "re: Appinventiv", "sent_at": "2026-06-06T14:33:20.964455+06:00", "message_id": "19e9c10b3647d5b1", "template": "T2"}
+{"to": "info@krishangtechnolab.com", "company": "Krishangtechnolab", "subject": "re: Krishangtechnolab", "sent_at": "2026-06-06T14:36:22.794423+06:00", "message_id": "19e9c1379ad76b45", "template": "T2"}
+{"to": "john.doe@gmail.com", "company": "Jungleworks", "subject": "eCommerce overflow", "sent_at": "2026-06-06T15:13:57.519847+06:00", "message_id": "19e9c35e19f694b4", "template": "T1"}
+{"to": "info@geomotiv.com", "company": "Geomotiv", "subject": "quick question about Geomotiv", "sent_at": "2026-06-06T15:17:07.886212+06:00", "message_id": "19e9c38c90747a22", "template": "T1"}
+{"to": "info@conceptinfoway.com", "company": "Conceptinfoway", "subject": "capacity at Conceptinfoway", "sent_at": "2026-06-06T15:20:10.000093+06:00", "message_id": "19e9c3b91bae3383", "template": "T1"}
+{"to": "splide-extension-auto-scroll@0.5.3", "company": "Buildfire", "subject": "Buildfire overflow question", "sent_at": "2026-06-06T15:23:11.907318+06:00", "message_id": "19e9c3e564b4d528", "template": "T1"}
+{"to": "info@riiventra.com", "company": "Riiventra", "subject": "Riiventra overflow question", "sent_at": "2026-06-06T15:26:13.534024+06:00", "message_id": "19e9c411ccb1705d", "template": "T1"}
+{"to": "info@tigerteamsonsulting.com", "company": "Tigerteamconsulting", "subject": "mobile development overflow", "sent_at": "2026-06-06T15:29:15.330181+06:00", "message_id": "19e9c43e3d9dcd12", "template": "T1"}
+{"to": "contact@travelopro.com", "company": "Travelopro", "subject": "capacity at Travelopro", "sent_at": "2026-06-06T15:32:17.446618+06:00", "message_id": "19e9c46a984fb549", "template": "T1"}
+{"to": "intl-segmenter@11.7.10", "company": "Smart Dato", "subject": "capacity at Smart", "sent_at": "2026-06-06T15:35:19.375417+06:00", "message_id": "19e9c4970377f7f2", "template": "T1"}
+{"to": "in@dbbsoftware.com", "company": "Dbbsoftware", "subject": "mobile development overflow", "sent_at": "2026-06-06T15:38:20.950095+06:00", "message_id": "19e9c4c35ae85cd0", "template": "T1"}
+{"to": "sales@1whitelabelagency.com", "company": "1Whitelabelagency", "subject": "web development overflow", "sent_at": "2026-06-06T15:41:23.351008+06:00", "message_id": "19e9c4eff886c7b1", "template": "T1"}
+{"to": "info@tourbr.com", "company": "Tourbr", "subject": "capacity at Tourbr", "sent_at": "2026-06-06T15:44:25.496765+06:00", "message_id": "19e9c51c570fed87", "template": "T1"}
+{"to": "web@websmithsolution.com", "company": "Websmithsolution", "subject": "capacity at Websmithsolution", "sent_at": "2026-06-06T15:47:27.823088+06:00", "message_id": "19e9c548c9fba46e", "template": "T1"}
+{"to": "shahzad@virtuenetz.com", "company": "Virtuenetz", "subject": "capacity at Virtuenetz", "sent_at": "2026-06-06T15:50:29.455654+06:00", "message_id": "19e9c5753eaca3a7", "template": "T1"}
+{"to": "info@brainstream.tech", "company": "Brainstreamtechnolabs", "subject": "mobile development overflow", "sent_at": "2026-06-06T15:53:31.136649+06:00", "message_id": "19e9c5a18b0997d3", "template": "T1"}
+{"to": "info@icoderzsolutions.com", "company": "Icoderzsolutions", "subject": "capacity at Icoderzsolutions", "sent_at": "2026-06-06T15:56:32.810581+06:00", "message_id": "19e9c5cde7398f1d", "template": "T1"}
+{"to": "you@example.com", "company": "Artisan", "subject": "web development overflow", "sent_at": "2026-06-06T15:59:34.562644+06:00", "message_id": "19e9c5fa55bab980", "template": "T1"}
+{"to": "hello@fullycoded.com", "company": "Fullycoded", "subject": "capacity at Fullycoded", "sent_at": "2026-06-06T16:02:36.186018+06:00", "message_id": "19e9c626a61a9378", "template": "T1"}
+{"to": "info@lasoft.org", "company": "Lasoft", "subject": "capacity at Lasoft", "sent_at": "2026-06-06T16:05:37.941387+06:00", "message_id": "19e9c6530ccd3510", "template": "T1"}
+{"to": "contact@betternship.com", "company": "Betternship", "subject": "mobile development overflow", "sent_at": "2026-06-06T16:08:39.727280+06:00", "message_id": "19e9c67f72e8ddcd", "template": "T1"}
+{"to": "contact@deploi.ca", "company": "Deploi", "subject": "capacity at Deploi", "sent_at": "2026-06-06T16:11:41.621883+06:00", "message_id": "19e9c6abc2e185a2", "template": "T1"}
+{"to": "support@rapidnative.com", "company": "Rapidnative", "subject": "scaling Rapidnative delivery", "sent_at": "2026-06-06T21:44:40.191240+06:00", "message_id": "19e9d9b976bcb526", "template": "T1"}
+{"to": "hello@technoyuga.com", "company": "Technoyuga", "subject": "Technoyuga project overflow", "sent_at": "2026-06-06T21:47:41.161909+06:00", "message_id": "19e9d9e59f3c9b19", "template": "T1"}
+{"to": "info@thoughtwin.com", "company": "Thoughtwin", "subject": "Thoughtwin project overflow", "sent_at": "2026-06-06T21:50:42.165352+06:00", "message_id": "19e9da11ad626410", "template": "T1"}
+{"to": "Despegar@3x.webp", "company": "Coorva", "subject": "scaling Coorva delivery", "sent_at": "2026-06-06T21:53:43.921204+06:00", "message_id": "19e9da3e1194c43d", "template": "T1"}
+{"to": "info@selectedfirms.co", "company": "Selectedfirms", "subject": "partnering with Selectedfirms", "sent_at": "2026-06-06T21:56:45.498846+06:00", "message_id": "19e9da6a67e65c0d", "template": "T1"}
+{"to": "info@brandstory.in", "company": "Brandstory", "subject": "Brandstory project overflow", "sent_at": "2026-06-06T21:59:47.255353+06:00", "message_id": "19e9da96ceaa2a57", "template": "T1"}
+{"to": "hello@borahlabs.us", "company": "Borahlabs", "subject": "Borahlabs team bandwidth", "sent_at": "2026-06-06T22:02:49.066404+06:00", "message_id": "19e9dac3269201bb", "template": "T1"}
+{"to": "support@sitefy.co", "company": "Sitefy", "subject": "scaling Sitefy delivery", "sent_at": "2026-06-06T22:05:50.717579+06:00", "message_id": "19e9daef8897933b", "template": "T1"}
+{"to": "sales@inexture.com", "company": "Inexture", "subject": "partnering with Inexture", "sent_at": "2026-06-06T22:08:52.541647+06:00", "message_id": "19e9db1bf4be92e2", "template": "T1"}
+{"to": "sales@outsourceseo.com", "company": "Outsourceseo", "subject": "extra web development capacity", "sent_at": "2026-06-06T22:11:54.142307+06:00", "message_id": "19e9db48540a1eec", "template": "T1"}
+{"to": "help@mismo.team", "company": "Mismo", "subject": "Mismo project overflow", "sent_at": "2026-06-06T22:14:55.920079+06:00", "message_id": "19e9db74b14d40c1", "template": "T1"}
+{"to": "hello@classicinformatics.com", "company": "Classicinformatics", "subject": "partnering with Classicinformatics", "sent_at": "2026-06-06T22:17:57.536088+06:00", "message_id": "19e9dba112a33739", "template": "T1"}
+{"to": "contact@stanventures.com", "company": "Stanventures", "subject": "extra eCommerce capacity", "sent_at": "2026-06-06T22:20:59.199689+06:00", "message_id": "19e9dbcd457fd59b", "template": "T1"}
+{"to": "hello@skynetindia.info", "company": "Skynetindia", "subject": "scaling Skynetindia delivery", "sent_at": "2026-06-06T22:24:00.716315+06:00", "message_id": "19e9dbf9a06cdf89", "template": "T1"}
+{"to": "sales@zennaxx.com", "company": "Zennaxx", "subject": "extra mobile development capacity", "sent_at": "2026-06-06T22:27:03.000607+06:00", "message_id": "19e9dc263cdb6bc1", "template": "T1"}
+{"to": "info@webhelpagency.com", "company": "Webhelpagency", "subject": "partnering with Webhelpagency", "sent_at": "2026-06-06T22:30:04.537466+06:00", "message_id": "19e9dc529db18dda", "template": "T1"}
+{"to": "reachus@aimdigital.tech", "company": "Aimdigital", "subject": "Aimdigital project overflow", "sent_at": "2026-06-06T22:33:06.906946+06:00", "message_id": "19e9dc7f0b9e1d05", "template": "T1"}
+{"to": "support@bebee.com", "company": "Bebee", "subject": "Bebee project overflow", "sent_at": "2026-06-06T22:36:08.514828+06:00", "message_id": "19e9dcab4aaba304", "template": "T1"}
+{"to": "sales@stellites.com", "company": "Stellites", "subject": "Stellites team bandwidth", "sent_at": "2026-06-06T22:39:10.005213+06:00", "message_id": "19e9dcd7bd402e36", "template": "T1"}
+{"to": "hello@angrynerds.co", "company": "Angrynerds", "subject": "Angrynerds project overflow", "sent_at": "2026-06-06T22:42:12.258344+06:00", "message_id": "19e9dd042676ad1e", "template": "T1"}
+{"to": "info@casamediahouse.com", "company": "Casamediahouse", "subject": "Casamediahouse team bandwidth", "sent_at": "2026-06-07T04:42:19.961059+06:00", "message_id": "19e9f19f6e78c1c6", "template": "T1"}
+{"to": "contact@eleventhtech.co.uk", "company": "Eleventhtech", "subject": "extra mobile development capacity", "sent_at": "2026-06-07T04:45:22.055347+06:00", "message_id": "19e9f1cbf702342c", "template": "T1"}
+{"to": "hello@dotit.io", "company": "Dotit", "subject": "Dotit project overflow", "sent_at": "2026-06-07T04:48:23.591021+06:00", "message_id": "19e9f1f8438db2df", "template": "T1"}
+{"to": "hello@lunover.com", "company": "Lunover", "subject": "extra web development capacity", "sent_at": "2026-06-07T04:51:25.161485+06:00", "message_id": "19e9f22496df8d30", "template": "T1"}
+{"to": "contact.us@access.dev", "company": "Access", "subject": "scaling Access delivery", "sent_at": "2026-06-07T04:54:27.578492+06:00", "message_id": "19e9f25139edff0b", "template": "T1"}
+{"to": "sales@uipath.com", "company": "Uipath", "subject": "scaling Uipath delivery", "sent_at": "2026-06-07T04:57:29.281223+06:00", "message_id": "19e9f27d65886096", "template": "T1"}
+{"to": "sales@invozone.com", "company": "Invozone", "subject": "partnering with Invozone", "sent_at": "2026-06-07T05:00:30.764476+06:00", "message_id": "19e9f2a9d621d727", "template": "T1"}
+{"to": "info@onpageranker.com", "company": "Onpageranker", "subject": "extra mobile development capacity", "sent_at": "2026-06-07T05:03:32.466136+06:00", "message_id": "19e9f2d6285567b1", "template": "T1"}
+{"to": "Info@gtsol360.com", "company": "Gtsol360", "subject": "partnering with Gtsol360", "sent_at": "2026-06-07T05:06:34.141559+06:00", "message_id": "19e9f30289c522bf", "template": "T1"}
+{"to": "info@epixelsoft.com", "company": "Epixelsoft", "subject": "Epixelsoft project overflow", "sent_at": "2026-06-07T05:09:36.350588+06:00", "message_id": "19e9f32ee9d5d332", "template": "T1"}
+{"to": "support@toptal.com", "company": "Toptal", "subject": "scaling Toptal delivery", "sent_at": "2026-06-07T05:12:37.946630+06:00", "message_id": "19e9f35b5cd45f44", "template": "T1"}
+{"to": "contact@n-ix.com", "company": "N Ix", "subject": "N team bandwidth", "sent_at": "2026-06-07T05:15:39.622041+06:00", "message_id": "19e9f387a8bde65c", "template": "T1"}
+{"to": "info@toaglobal.com", "company": "Toaglobal", "subject": "Toaglobal team bandwidth", "sent_at": "2026-06-07T05:18:41.157425+06:00", "message_id": "19e9f3b41010370e", "template": "T1"}
+{"to": "support@playroll.com", "company": "Playroll", "subject": "partnering with Playroll", "sent_at": "2026-06-07T05:21:43.394752+06:00", "message_id": "19e9f3e0900ce5d2", "template": "T1"}
+{"to": "support@asanify.com", "company": "Asanify", "subject": "extra web development capacity", "sent_at": "2026-06-07T05:24:44.976041+06:00", "message_id": "19e9f40cd2115f17", "template": "T1"}
+{"to": "hello@uptech.team", "company": "Uptech", "subject": "scaling Uptech delivery", "sent_at": "2026-06-07T05:27:46.698439+06:00", "message_id": "19e9f4393000533e", "template": "T1"}
+{"to": "hi@globant.com", "company": "Globant", "subject": "extra eCommerce capacity", "sent_at": "2026-06-07T05:30:48.282840+06:00", "message_id": "19e9f4658a7008b9", "template": "T1"}
+{"to": "connect@nextenvision.com", "company": "Nextenvision", "subject": "extra mobile development capacity", "sent_at": "2026-06-07T05:33:49.989595+06:00", "message_id": "19e9f491ef92fd79", "template": "T1"}
+{"to": "hello@peiko.space", "company": "Peiko", "subject": "Peiko project overflow", "sent_at": "2026-06-07T05:36:51.625008+06:00", "message_id": "19e9f4be3a0807c4", "template": "T1"}
+{"to": "contact@valmind.com", "company": "Valmind", "subject": "extra mobile development capacity", "sent_at": "2026-06-07T05:39:53.144723+06:00", "message_id": "19e9f4ea87fccfb7", "template": "T1"}
+{"to": "contact@cartcoders.com", "company": "Cartcoders", "subject": "Cartcoders project overflow", "sent_at": "2026-06-07T05:42:55.967026+06:00", "message_id": "19e9f5173360eaf6", "template": "T1"}
+{"to": "info@valintry.com", "company": "Valintry", "subject": "partnering with Valintry", "sent_at": "2026-06-07T05:45:58.147563+06:00", "message_id": "19e9f543be07827c", "template": "T1"}
+{"to": "info@accelerance.com", "company": "Accelerance", "subject": "scaling Accelerance delivery", "sent_at": "2026-06-07T05:48:59.707606+06:00", "message_id": "19e9f56ffccc895c", "template": "T1"}

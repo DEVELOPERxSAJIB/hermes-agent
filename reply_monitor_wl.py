@@ -1,10 +1,15 @@
 #!/usr/bin/env python3
 """
-NanoSoft QUILL-WL — Reply Monitor
+NanoSoft QUILL-WL — Reply Monitor v2
 Checks Gmail inbox for replies to sent outreach emails.
 Updates CRM: Reply Status, Reply Date, Reply Snippet.
 
-Run every 30-60 minutes via cron.
+FIXES vs v1:
+- Match replies by DOMAIN not exact email (canned.response@, noreply@, etc)
+- Better auto-reply detection (after-hours, canned, noreply, etc)
+- Better email extraction from From header
+- Dedup by company not just email
+- Handle OOOauto-replies with forwarding contacts (extract real person)
 """
 import json, os, re, sys, time
 from datetime import datetime, timezone, timedelta
@@ -49,37 +54,105 @@ def get_gmail_service():
 
     return build("gmail", "v1", credentials=creds)
 
-def get_sent_map():
-    """Build map of sender_email -> {company, template, subject, sent_at}"""
-    sent = {}
+def extract_email_from_header(from_header):
+    """Extract email address from From header like 'Name <email@domain.com>' or plain email."""
+    # Try angle brackets first
+    m = re.search(r'<([^>]+)>', from_header)
+    if m:
+        return m.group(1).lower().strip()
+    # Try plain email
+    m = re.search(r'[\w.+-]+@[\w-]+\.[\w.-]+', from_header)
+    if m:
+        return m.group(0).lower().strip()
+    return from_header.lower().strip()
+
+def extract_domain(email):
+    """Extract domain from email: hello+canned.response@fulcrum.rocks -> fulcrum.rocks"""
+    if '@' in email:
+        return email.split('@')[1].lower().strip()
+    return ''
+
+def build_sent_index():
+    """
+    Build multi-index for fast reply matching:
+    - by_email: exact email -> entry
+    - by_domain: domain -> [entries]  (for matching noreply@, canned.response@, etc)
+    - by_company: company name -> entry
+    """
+    by_email = {}
+    by_domain = {}
+    by_company = {}
     try:
         with open(SENT_LOG) as f:
             for line in f:
                 if line.strip():
                     entry = json.loads(line)
                     email = entry.get("to", "").lower().strip()
+                    company = entry.get("company", "").lower().strip()
                     if email:
-                        sent[email] = entry
+                        by_email[email] = entry
+                        domain = extract_domain(email)
+                        if domain:
+                            by_domain.setdefault(domain, []).append(entry)
+                    if company:
+                        by_company[company] = entry
     except:
         pass
-    return sent
+    return by_email, by_domain, by_company
 
-def get_replied_set():
-    """Get set of emails that already have replies logged."""
+def match_reply_to_sent(sender_email, subject, by_email, by_domain, by_company):
+    """
+    Match a reply to our sent email. Returns (sent_entry, match_method) or (None, None).
+    
+    Matching priority:
+    1. Exact email match (hello@fulcrum.rocks replied from hello@fulcrum.rocks)
+    2. Same domain match (hello+canned.response@fulcrum.rocks -> fulcrum.rocks)
+    3. Subject contains company name
+    """
+    # 1. Exact match
+    if sender_email in by_email:
+        return by_email[sender_email], "exact"
+    
+    # 2. Domain match
+    domain = extract_domain(sender_email)
+    if domain and domain in by_domain:
+        candidates = by_domain[domain]
+        if len(candidates) == 1:
+            return candidates[0], "domain"
+        # Multiple candidates — try to match by subject
+        for c in candidates:
+            company = c.get("company", "")
+            if company and company.lower() in subject.lower():
+                return c, "domain+subject"
+        # Return most recent
+        return candidates[-1], "domain-recent"
+    
+    # 3. Subject match — extract company from subject like "Re: quick question about Saritasa"
+    subject_company = re.search(r'(?:re:|fwd:)?\s*(?:quick question about|overflow question|capacity at)\s+(\w+)', subject, re.IGNORECASE)
+    if subject_company:
+        company_name = subject_company.group(1).lower()
+        if company_name in by_company:
+            return by_company[company_name], "subject"
+    
+    return None, None
+
+def get_replied_companies():
+    """Get set of companies that already have replies logged."""
     replied = set()
     try:
         with open(REPLY_LOG) as f:
             for line in f:
                 if line.strip():
                     entry = json.loads(line)
-                    replied.add(entry.get("from_email", "").lower().strip())
+                    company = entry.get("company", "").lower().strip()
+                    if company:
+                        replied.add(company)
     except:
         pass
     return replied
 
 def extract_snippet(body, max_chars=200):
     """Extract first meaningful line from reply body."""
-    # Remove quoted lines (starting with >)
     lines = body.split('\n')
     clean = []
     for line in lines:
@@ -92,17 +165,54 @@ def extract_snippet(body, max_chars=200):
     snippet = ' '.join(clean)[:max_chars]
     return snippet
 
-def classify_reply(snippet):
-    """Simple classification of reply intent."""
+def classify_reply(snippet, from_email='', subject=''):
+    """Classify reply intent. Uses snippet, from_email, and subject for better detection."""
     s = snippet.lower()
-    if any(w in s for w in ['not interested', 'no thanks', 'unsubscribe', 'remove me', 'stop', 'wrong person']):
-        return 'Not Interested'
-    if any(w in s for w in ['interested', 'tell me more', 'sounds good', 'let\'s talk', 'call me', 'schedule', 'book a', 'send me', 'proposal', 'pricing', 'cost', 'rate']):
-        return 'Interested'
-    if any(w in s for w in ['wrong person', 'not the right', 'who is', 'what is this', 'how did you']):
-        return 'Confused'
-    if any(w in s for w in ['out of office', 'ooo', 'on leave', 'auto-reply', 'automatic reply']):
+    subj = subject.lower()
+    email_lower = from_email.lower()
+    
+    # Auto-reply signals — STRONG indicators
+    auto_reply_words = [
+        'out of office', 'ooo', 'on leave', 'auto-reply', 'automatic reply',
+        'after-hours', 'after hours', 'canned response', 'canned.response',
+        'noreply', 'no-reply', 'notification only', 'do not respond',
+        'do not reply', 'this is an automated', 'automated message',
+        'team members will review', 'will get back to you shortly',
+        'has reached us outside', 'away on maternity', 'away on vacation',
+        'currently away', 'out of the office', 'on annual leave',
+        'will return on', 'returning on', 'back on',
+    ]
+    if any(w in s for w in auto_reply_words):
         return 'Auto-Reply'
+    if any(w in subj for w in ['out of office', 'ooo', 'auto-reply', 'automatic reply', 'after hours']):
+        return 'Auto-Reply'
+    if any(w in email_lower for w in ['noreply', 'no-reply', 'canned.response', '+canned', 'donotreply']):
+        return 'Auto-Reply'
+    
+    # Interested signals
+    interested_words = [
+        'interested', 'tell me more', 'sounds good', 'let\'s talk', 'call me',
+        'schedule', 'book a', 'send me', 'proposal', 'pricing', 'cost', 'rate',
+        'can we chat', 'let\'s set up', 'love to learn more', 'keen to',
+        'happy to discuss', 'open to', 'worth exploring',
+    ]
+    if any(w in s for w in interested_words):
+        return 'Interested'
+    
+    # Not interested signals
+    not_interested_words = [
+        'not interested', 'no thanks', 'unsubscribe', 'remove me',
+        'stop sending', 'wrong person', 'not for us', 'pass on this',
+        'declined', 'no need', 'not looking', 'already have',
+    ]
+    if any(w in s for w in not_interested_words):
+        return 'Not Interested'
+    
+    # Confused
+    confused_words = ['who is', 'what is this', 'how did you', 'not sure what', 'spam']
+    if any(w in s for w in confused_words):
+        return 'Confused'
+    
     return 'Other'
 
 def check_bounces(service):
@@ -114,44 +224,37 @@ def check_bounces(service):
         results = service.users().messages().list(
             userId='me',
             q='from:mailer-daemon@googlemail.com OR subject:undeliverable after:2026/05/01',
-            maxResults=20
+            maxResults=50
         ).execute()
         
         msgs = results.get('messages', [])
         if not msgs:
             return 0
         
-        import re as _re
         bounced_count = 0
         for m in msgs:
             msg = service.users().messages().get(userId='me', id=m['id']).execute()
             snippet = msg.get('snippet', '')
             
-            # Extract bounced email from snippet
-            email_match = _re.search(r'(\S+@\S+\.\S+)', snippet)
-            if not email_match:
-                continue
+            # Extract ALL emails from snippet, find the one that matches CRM
+            all_emails = re.findall(r'[\w.+-]+@[\w-]+\.[\w.-]+', snippet)
             
-            bounced_email = email_match.group(1).lower().strip()
-            # Clean up
-            bounced_email = _re.sub(r'[<>\'"]', '', bounced_email)
-            
-            if 'mailer-daemon' in bounced_email or 'googlemail' in bounced_email:
-                continue
-            
-            # Find this email in CRM and mark it
             try:
                 wl = crm.get_wl_all()
-                for lead in wl:
-                    lead_email = lead.get('Email', '').lower().strip()
-                    if lead_email == bounced_email and lead.get('Status') != 'Bounced':
-                        crm.update_wl_lead(lead.get('Company Name', ''), {
-                            'Status': 'Bounced',
-                            'Reply Snippet': f'BOUNCED: {bounced_email}',
-                        })
-                        log(f"  BOUNCE: {lead.get('Company Name','?')} | {bounced_email}")
-                        bounced_count += 1
-                        break
+                for bounced_email_raw in all_emails:
+                    bounced_email = bounced_email_raw.lower().strip().rstrip('.')
+                    if any(x in bounced_email for x in ['mailer-daemon', 'googlemail', 'noreply', 'postmaster']):
+                        continue
+                    
+                    for lead in wl:
+                        lead_email = lead.get('Email', '').lower().strip()
+                        if lead_email == bounced_email and lead.get('Status') not in ('Bounced', 'T1 Sent', 'T2 Sent', 'T3 Sent', 'T4 Sent'):
+                            crm.update_wl_lead(lead.get('Company Name', ''), {
+                                'Status': 'Bounced',
+                            })
+                            log(f"  BOUNCE: {lead.get('Company Name','?')} | {bounced_email}")
+                            bounced_count += 1
+                            break
             except:
                 pass
         
@@ -169,14 +272,16 @@ def main():
         log(f"Cannot connect to Gmail: {e}")
         return
 
-    sent_map = get_sent_map()
-    replied_set = get_replied_set()
+    by_email, by_domain, by_company = build_sent_index()
+    replied_companies = get_replied_companies()
 
-    if not sent_map:
+    total_sent = len(by_email)
+    total_domains = len(by_domain)
+    if not total_sent:
         log("No sent emails found. Nothing to check.")
         return
 
-    log(f"Tracking {len(sent_map)} sent emails, {len(replied_set)} already replied")
+    log(f"Tracking {total_sent} sent emails ({total_domains} domains), {len(replied_companies)} companies already replied")
 
     # ── Check for bounces first ──
     log("Checking for bounced emails...")
@@ -185,9 +290,7 @@ def main():
         log(f"  {bounced} bounced emails detected and marked in CRM")
 
     # ── Check for replies ──
-
-    # Search for replies in inbox from our sent-to addresses
-    # Query: newer_than:14d (covers full sequence window)
+    # Search inbox for recent messages
     try:
         results = service.users().messages().list(
             userId='me',
@@ -215,23 +318,25 @@ def main():
         headers = {h['name'].lower(): h['value'] for h in msg.get('payload', {}).get('headers', [])}
 
         from_header = headers.get('from', '')
-        # Extract email from "Name <email@domain.com>"
-        email_match = re.search(r'<([^>]+)>', from_header)
-        sender_email = email_match.group(1).lower() if email_match else from_header.lower().strip()
-
-        # Check if this sender is someone we emailed
-        if sender_email not in sent_map:
-            continue
-
-        # Skip if already logged
-        if sender_email in replied_set:
-            continue
-
-        sent_info = sent_map[sender_email]
+        sender_email = extract_email_from_header(from_header)
         subject = headers.get('subject', '')
         date_str = headers.get('date', '')
 
-        # Get snippet from body
+        # Match this reply to a sent email
+        sent_entry, match_method = match_reply_to_sent(
+            sender_email, subject, by_email, by_domain, by_company
+        )
+        
+        if not sent_entry:
+            continue  # Not related to our outreach
+
+        company = sent_entry.get('company', '')
+        
+        # Skip if this company already has a reply logged
+        if company.lower().strip() in replied_companies:
+            continue
+
+        # Get message body for classification
         try:
             full_msg = service.users().messages().get(
                 userId='me', id=msg_ref['id'], format='full'
@@ -251,18 +356,19 @@ def main():
             body_text = ''
 
         snippet = extract_snippet(body_text)
-        classification = classify_reply(snippet)
+        classification = classify_reply(snippet, sender_email, subject)
 
         reply_entry = {
             "from_email": sender_email,
             "from_name": from_header,
-            "company": sent_info.get("company", ""),
-            "template": sent_info.get("template", ""),
-            "original_subject": sent_info.get("subject", ""),
+            "company": company,
+            "template": sent_entry.get("template", ""),
+            "original_subject": sent_entry.get("subject", ""),
             "reply_subject": subject,
             "reply_date": date_str,
-            "snippet": snippet,
+            "snippet": snippet[:300] if snippet else msg.get('snippet', '')[:300],
             "classification": classification,
+            "match_method": match_method,
             "detected_at": datetime.now(BD_TZ).isoformat(),
             "message_id": msg_ref['id'],
         }
@@ -270,21 +376,21 @@ def main():
         with open(REPLY_LOG, 'a') as f:
             f.write(json.dumps(reply_entry) + "\n")
 
-        replied_set.add(sender_email)
+        replied_companies.add(company.lower().strip())
         new_replies += 1
 
-        log(f"  REPLY: {sent_info.get('company','?')} | {classification} | {snippet[:80]}")
+        log(f"  REPLY: {company} | {classification} | match={match_method} | {snippet[:80]}")
 
         # Update CRM
         try:
             from crm import get_crm
             crm = get_crm()
-            crm.update_wl_lead(sent_info.get('company', ''), {
+            crm.update_wl_lead(company, {
                 "Reply Status": classification,
                 "Reply Date": datetime.now(BD_TZ).strftime("%Y-%m-%d"),
-                "Reply Snippet": snippet[:150],
+                "Reply Snippet": snippet[:150] if snippet else '',
             })
-            log(f"    CRM updated: {sent_info.get('company','?')} -> {classification}")
+            log(f"    CRM updated: {company} -> {classification}")
         except Exception as e:
             log(f"    CRM update failed: {e}")
 
