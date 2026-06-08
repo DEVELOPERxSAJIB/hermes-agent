@@ -23,106 +23,51 @@ except:
     pass
 
 QUERIES = [
-    # Tier 1: Agencies with explicit WL/partner pages (highest intent)
+    # HIGH INTENT: Agencies with partner/WL pages
     'site:.com "white label" "web development" agency',
     'site:.com "partner program" web development agency',
     'site:.io "white label" development partner',
-    'site:.co "white label" software agency',
     'inurl:partners web development agency',
     'inurl:partnership software development agency',
     '"become a partner" web development agency',
-    '"partner with us" software development agency',
     '"referral partner" web development agency',
     '"reseller program" software development agency',
-    # Tier 2: Agencies showing capacity/staffing signals
+    # HIGH INTENT: Capacity/staffing signals
     '"we are hiring" web development agency',
-    '"join our team" software development agency',
     '"we are growing" web development agency',
-    '"scaling our team" software agency',
     '"new projects welcome" web development agency',
     '"accepting new clients" software development agency',
-    '"book a call" web development agency',
-    '"get a quote" software development agency',
-    '"free consultation" web development agency',
-    '"let\'s talk" software development agency',
-    # Tier 3: Agency directories and lists
+    # DIRECTORIES: Agency listings
     '"top web development agencies" 2025 2026',
     '"best software development agencies" usa uk',
     '"top mobile app development agencies"',
     '"top saas development agencies"',
-    '"top ecommerce development agencies"',
-    '"top wordpress development agencies"',
-    '"top shopify development agencies"',
-    '"top react development agencies"',
-    '"top nodejs development agencies"',
-    '"top python development agencies"',
-    # Tier 4: Specific tech + country combos
+    # GEO + TECH combos
     '"white label" react development agency usa',
     '"white label" node.js development agency uk',
     '"white label" python development agency canada',
     '"white label" shopify agency australia',
     '"white label" wordpress agency india',
-    '"white label" mobile app agency philippines',
     '"white label" saas development agency germany',
-    '"white label" web development agency netherlands',
-    '"white label" software agency sweden',
     '"white label" development agency poland',
-    # Tier 5: Staff augmentation / team extension
+    # STAFF AUGMENTATION
     '"staff augmentation" agency partner usa',
     '"dedicated team" agency partner uk',
     '"team extension" agency partner canada',
     '"nearshore development" agency partner',
-    '"offshore development" agency partner',
-    '"outsourced development" agency partner',
-    '"development partner" agency program',
-    '"technology partner" agency program',
     '"development partner" for agencies',
-    '"software partner" for agencies',
-    # Tier 6: Pain-point based (agencies that need help)
-    'agency "need more developers"',
+    # PAIN POINT
     'agency "hiring developers"',
     'agency "developer shortage"',
     'agency "capacity issues"',
-    'agency "overflow work"',
-    'agency "can\'t handle all projects"',
     'agency "looking for development partner"',
-    'agency "need coding help"',
-    'agency "need technical partner"',
     'agency "outsource development"',
-    # Tier 7: Clutch/GoodFirms profiles (agencies list themselves)
-    'site:clutch.co "web development" agency "contact"',
-    'site:goodfirms.co "software development" agency',
-    'site:designrush.com "web development" agency',
-    'site:sortlist.com "software development" agency',
-    '"clutch" "top developer" agency profile',
-    '"goodfirms" "top developer" agency',
-    # Tier 8: LinkedIn company pages
-    'site:linkedin.com/company "web development agency"',
-    'site:linkedin.com/company "software development agency"',
-    'site:linkedin.com/company "mobile app development"',
-    'site:linkedin.com/company "digital agency" "development"',
-    # Tier 9: Agency blogs/content (shows they're active)
-    '"web development blog" agency',
-    '"software development insights" agency',
-    '"tech blog" web development agency',
-    '"development tips" agency blog',
-    '"our work" web development agency case study',
-    '"case study" web development agency',
-    '"portfolio" web development agency',
-    '"recent projects" software development agency',
-    '"client testimonials" web development agency',
-    '"what we do" software development agency',
-    # Tier 10: Geographic expansion
+    # DIRECT GEO
     'web development agency "united states" "contact"',
     'web development agency "united kingdom" "contact"',
     'web development agency "canada" "contact"',
     'web development agency "australia" "contact"',
     'web development agency "germany" "contact"',
-    'web development agency "netherlands" "contact"',
-    'web development agency "sweden" "contact"',
-    'web development agency "poland" "contact"',
-    'web development agency "ukraine" "contact"',
-    'web development agency "india" "contact"',
 ]
 
 SKIP_DOMAINS = [
@@ -385,6 +330,16 @@ def _extract_linkedin(html):
     return ''
 
 def main():
+    import signal
+    
+    # Hard timeout: 15 minutes max
+    def timeout_handler(signum, frame):
+        log("SCOUT", "TIMEOUT: 15min limit reached, saving results so far")
+        raise SystemExit(0)
+    
+    signal.signal(signal.SIGALRM, timeout_handler)
+    signal.alarm(900)  # 15 minutes
+    
     log(f'SCOUT-WL v5 starting... (proxy: {"ON" if HAS_PROXY else "OFF"})')
 
     # Load existing CRM data for dedup
@@ -433,7 +388,7 @@ def main():
                 found_domains[domain] = company
                 log(f'  NEW: {company} ({domain})')
 
-        time.sleep(0.5)
+        time.sleep(0.3)
 
     log(f'Phase 1: {len(found_domains)} new unique domains (after CRM dedup)')
 

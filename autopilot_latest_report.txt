@@ -1,20 +1,20 @@
 NanoSoft Auto-Pilot Report
-Time: 2026-06-06 21:35 BD Time
+Time: 2026-06-07 22:05 BD Time
 ==================================================
 
 Current Pipeline:
   : 2
   Bounced: 2
-  New: 19
-  Qualified: 51
-  T1 Sent: 25
-  T2 Sent: 122
-  Unqualified: 203
-Total sent: 278
-Replies: 8
+  New: 58
+  Qualified: 20
+  T1 Sent: 66
+  T2 Sent: 121
+  Unqualified: 220
+Total sent: 321
+Replies: 12
 
 --- Step 2: Scouting ---
-Scraped: 7 | Emails: 5 | CRM added: 7
+Scraped: 0 | Emails: 0 | CRM added: 0
 
 --- Step 3: Enriching ---
 Enriched: 0
@@ -23,21 +23,18 @@ Enriched: 0
 Qualified: 0
 
 --- Step 5: Sending ---
-T1 send launched as PID 650228 (51 qualified leads)
+T1 send launched as PID 686210 (20 qualified leads)
 
 --- Step 6: Replies ---
 New replies: 0
 
 --- Step 7: Reply Handling ---
-
-⚠⚠⚠ INTERESTED LEADS: 1 ⚠⚠⚠
-  Aamax | info@aamax.co
-    Hello, Thank you for your interest in our blogs. We own and operate multiple websites where we offer
+No interested replies yet.
 
 ==================================================
 CYCLE SUMMARY
-Duration: 593s
-Total WL leads: 431
-Total sent: 279
-Total replies: 8
+Duration: 977s
+Total WL leads: 489
+Total sent: 321
+Total replies: 12
 Next run: ~6 hours
