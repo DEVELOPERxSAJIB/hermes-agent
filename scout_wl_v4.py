@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 NanoSoft SCOUT-WL v4 — Uses ddgs CLI for search (works on Oracle Cloud)
 """

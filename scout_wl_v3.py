@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 NanoSoft SCOUT-WL v3 — Uses Playwright to search Google/DuckDuckGo
 More reliable than urllib for search results.

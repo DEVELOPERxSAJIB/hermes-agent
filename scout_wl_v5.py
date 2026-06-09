@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 NanoSoft SCOUT-WL v5 — Fast, lean, single-request-per-domain scraper
 Fixes: combines all scraping into 1 HTTP call, better domain filtering,

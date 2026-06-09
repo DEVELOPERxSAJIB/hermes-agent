@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 NanoSoft SCOUT v13 — Local Business Lead Discovery
 Playwright email scraping with crash-proof error handling.

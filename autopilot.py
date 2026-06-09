@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 NanoSoft AUTO-PILOT v1 — 24/7 Lead Generation + Outreach Engine
 Runs continuously via cron every 6 hours:

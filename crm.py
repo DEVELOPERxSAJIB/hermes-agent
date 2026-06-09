@@ -77,14 +77,26 @@ class NanoSoftCRM:
             return
         self.creds = Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE, scopes=SCOPES)
         self.gc = gspread.authorize(self.creds)
-        self.sh = self.gc.open_by_key(SHEET_ID)
-        # Lead tab (original)
-        self.ws_leads = self.sh.worksheet("Lead")
-        self._ensure_headers(self.ws_leads, LEAD_COLUMNS)
-        # White Label tab (new)
-        self.ws_wl = self._get_or_create_wl_tab()
-        # Analytics tab
-        self.ws_analytics = self._get_or_create_analytics()
+        # Retry on init — Google Sheets API may rate-limit
+        self._init_with_retry()
+    
+    def _init_with_retry(self, attempts=5):
+        import random
+        for i in range(attempts):
+            try:
+                self.sh = self.gc.open_by_key(SHEET_ID)
+                self.ws_leads = self.sh.worksheet("Lead")
+                self._ensure_headers(self.ws_leads, LEAD_COLUMNS)
+                self.ws_wl = self._get_or_create_wl_tab()
+                self.ws_analytics = self._get_or_create_analytics()
+                return
+            except Exception as e:
+                if '429' in str(e) or 'Quota exceeded' in str(e):
+                    wait = (30 * (i + 1)) + random.uniform(1, 10)
+                    if i < attempts - 1:
+                        time.sleep(wait)
+                        continue
+                raise
 
     def _ensure_headers(self, ws, columns):
         existing = ws.row_values(1)

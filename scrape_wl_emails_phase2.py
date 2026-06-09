@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 Try harder for the 6 agencies without emails.
 1. Try common email patterns (hello@, info@, contact@, sales@, team@)

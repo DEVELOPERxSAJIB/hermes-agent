@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 NanoSoft ATLAS — Follow-Up & Reply Tracker Agent
 ==================================================

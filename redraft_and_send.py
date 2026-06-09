@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 Delete old Gmail drafts for leads that are still 'Drafted' in CRM.
 We will re-draft these with the new QUILL v12 template.

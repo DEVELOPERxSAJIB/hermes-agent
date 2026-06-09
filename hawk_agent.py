@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 NanoSoft HAWK — Job Hunter Agent v3
 - Daily 8 AM BD time (UTC+6) → max 5 qualified jobs → #quill

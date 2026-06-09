@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 import sys, re
 sys.path.insert(0, '/home/ubuntu/nanosoft')
 from crm import get_crm

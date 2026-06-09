@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 NanoSoft JUDGE v3 — Lead Qualification
 7-category scoring. Threshold 7+. Prefer 8+.

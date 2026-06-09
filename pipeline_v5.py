@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 NanoSoft Daily Pipeline v5 — FULL AUTO
 SCOUT → JUDGE → QUILL(draft to Gmail) → (Chairman reviews) → SEND

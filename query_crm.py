@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 import sys, json, os
 sys.path.insert(0, '/home/ubuntu/nanosoft')
 os.chdir('/home/ubuntu/nanosoft')

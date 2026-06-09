@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 Enrich White Label leads - crash proof version.
 Uses urllib first, Playwright as fallback only for sites that need JS.

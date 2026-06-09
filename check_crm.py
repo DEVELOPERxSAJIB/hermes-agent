@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 import json, sys, os
 
 crm_path = os.path.join(os.path.dirname(__file__), 'crm_wl.json')

@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 NanoSoft ENRICH + SEND v1 — For manually gathered leads
 Scrapes: email, services, country, LinkedIn, WL signals

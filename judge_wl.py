@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 NanoSoft JUDGE-WL v1 — White Label Agency Qualification
 Scores agency leads on partnership potential.

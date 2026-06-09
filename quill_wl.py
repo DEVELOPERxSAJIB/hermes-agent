@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 NanoSoft QUILL-WL v2 — White Label Agency Outreach
 4-email sequence: Hook → Value Add → Reframe → Breakup
@@ -400,6 +400,11 @@ def _finalize(to, subject, body, company, template_type):
     bad_patterns = [
         r'user@domain', r'example@', r'@whois\.', r'@sentry\.', r'@bytedance\.',
         r'vue@3\.', r'@scorebig\.', r'@afternic\.', r'john@doe\.', r'feedback@',
+        r'your@email\.', r'email@company\.', r'name@email\.', r'mail@domain\.',
+        r'john\.doe@', r'jane\.doe@', r'test@example\.', r'info@domain\.',
+        r'@sentry\.', r'@bytedance\.', r'@afternic\.', r'@scorebig\.',
+        r'intl-tel-input@', r'default-utils\.js@', r'gsap@', r'splide@',
+        r'@2x-', r'@3x\.', r'flags@', r'impact-website@',
     ]
     for pat in bad_patterns:
         if re.search(pat, to, re.IGNORECASE):
@@ -418,6 +423,53 @@ def _finalize(to, subject, body, company, template_type):
         "drafted_at": datetime.now(BD_TZ).isoformat(),
         "status": "drafted",
     }
+
+
+# ── GMAIL TOKEN CHECK ───────────────────────────────────────
+def check_gmail_token():
+    """Check if Gmail token is valid before attempting any API calls."""
+    token_file = os.path.join(NANOSOFT_DIR, "gmail_token.json")
+    dead_flag = os.path.join(NANOSOFT_DIR, "GMAIL_TOKEN_DEAD")
+    
+    # If dead flag exists, token is known to be dead
+    if os.path.exists(dead_flag):
+        return False
+    
+    # Try to load and validate token
+    try:
+        with open(token_file) as f:
+            token_data = json.load(f)
+        
+        if not token_data.get("refresh_token"):
+            return False
+            
+        # Try to refresh the token
+        from google.oauth2.credentials import Credentials
+        from google.auth.transport.requests import Request
+        
+        creds = Credentials(
+            token=token_data.get("token"),
+            refresh_token=token_data.get("refresh_token"),
+            token_uri=token_data.get("token_uri", "https://oauth2.googleapis.com/token"),
+            client_id=token_data.get("client_id"),
+            client_secret=token_data.get("client_secret"),
+            scopes=token_data.get("scopes"),
+        )
+        
+        if creds.expired:
+            creds.refresh(Request())
+            
+        return True
+    except Exception as e:
+        error_str = str(e)
+        if 'invalid_grant' in error_str:
+            # Token is dead — write flag file
+            try:
+                with open(dead_flag, 'w') as f:
+                    f.write(f"Token died at {datetime.now(BD_TZ).isoformat()}\nError: {error_str}")
+            except:
+                pass
+        return False
 
 
 # ── GMAIL DRAFT ─────────────────────────────────────────────
@@ -581,6 +633,12 @@ if __name__ == "__main__":
         log(f"DONE: {ok} drafted, {fail} failed, {skip} skipped")
 
     elif args.action == 'send':
+        # Check Gmail token first
+        if not check_gmail_token():
+            log("ERROR: Gmail token is dead. Cannot send emails.")
+            log("Run: cd /home/ubuntu/nanosoft && python3 gmail_auth.py")
+            sys.exit(1)
+        
         # Determine which leads need this template
         # T1: Status = "Qualified" (never sent)
         # T2: Status = "T1 Sent" (T1 done, T2 not yet)

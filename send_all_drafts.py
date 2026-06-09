@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 Send all Gmail drafts via Gmail API with configurable delay.
 Deletes draft after sending. Updates CRM status to 'Email Sent'.

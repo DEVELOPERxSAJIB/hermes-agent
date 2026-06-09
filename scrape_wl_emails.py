@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 Scrape emails from White Label agency websites.
 Visits each site's contact/about/team pages and extracts email addresses.

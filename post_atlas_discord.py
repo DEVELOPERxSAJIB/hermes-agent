@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """Post ATLAS report to Discord #nexus via bot API"""
 import urllib.request, json, os
 

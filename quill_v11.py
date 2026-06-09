@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 NanoSoft QUILL v11 — Cold Email Generator + Gmail Draft Creator
 Human tone. No hyphens. Conversational. Reply-focused.

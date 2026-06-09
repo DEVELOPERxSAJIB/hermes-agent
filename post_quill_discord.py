@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """Post QUILL draft results to Discord #nexus channel via discord.py."""
 import discord
 import asyncio

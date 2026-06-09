@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """Post a message to Discord channel via HTTP API."""
 import sys
 import json

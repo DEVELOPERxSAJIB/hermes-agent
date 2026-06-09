@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 Re-scrape all 20 manual leads with deeper scraping.
 Some emails were missed or marked low score incorrectly.

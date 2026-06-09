@@ -7,6 +7,11 @@ DIR="/home/ubuntu/nanosoft"
 LOG="$DIR/pipeline_logs"
 mkdir -p "$LOG"
 
+# Random delay 0-60s to spread out API calls (avoid Google Sheets 429)
+SLEEP=$((RANDOM % 60))
+echo "[$(date '+%Y-%m-%d %H:%M:%S')] Random delay: ${SLEEP}s" >> "$LOG/${STEP}.log"
+sleep $SLEEP
+
 echo "[$(date '+%Y-%m-%d %H:%M:%S')] Starting $STEP" >> "$LOG/${STEP}.log"
 
 case $STEP in
@@ -20,16 +25,32 @@ case $STEP in
     cd "$DIR" && timeout 120 python3 -u judge_wl.py >> "$LOG/judge.log" 2>&1
     ;;
   send-t1)
-    cd "$DIR" && timeout 1800 python3 -u quill_wl.py send -t T1 --limit 50 >> "$LOG/send_t1.log" 2>&1
+    if [ -f "$DIR/GMAIL_TOKEN_DEAD" ]; then
+      echo "[$(date '+%Y-%m-%d %H:%M:%S')] SKIP: Gmail token dead" >> "$LOG/send_t1.log"
+    else
+      cd "$DIR" && timeout 1800 python3 -u quill_wl.py send -t T1 --limit 50 >> "$LOG/send_t1.log" 2>&1
+    fi
     ;;
   send-t2)
-    cd "$DIR" && timeout 1800 python3 -u quill_wl.py send -t T2 --limit 50 >> "$LOG/send_t2.log" 2>&1
+    if [ -f "$DIR/GMAIL_TOKEN_DEAD" ]; then
+      echo "[$(date '+%Y-%m-%d %H:%M:%S')] SKIP: Gmail token dead" >> "$LOG/send_t2.log"
+    else
+      cd "$DIR" && timeout 1800 python3 -u quill_wl.py send -t T2 --limit 50 >> "$LOG/send_t2.log" 2>&1
+    fi
     ;;
   send-t3)
-    cd "$DIR" && timeout 1800 python3 -u quill_wl.py send -t T3 --limit 50 >> "$LOG/send_t3.log" 2>&1
+    if [ -f "$DIR/GMAIL_TOKEN_DEAD" ]; then
+      echo "[$(date '+%Y-%m-%d %H:%M:%S')] SKIP: Gmail token dead" >> "$LOG/send_t3.log"
+    else
+      cd "$DIR" && timeout 1800 python3 -u quill_wl.py send -t T3 --limit 50 >> "$LOG/send_t3.log" 2>&1
+    fi
     ;;
   send-t4)
-    cd "$DIR" && timeout 1800 python3 -u quill_wl.py send -t T4 --limit 50 >> "$LOG/send_t4.log" 2>&1
+    if [ -f "$DIR/GMAIL_TOKEN_DEAD" ]; then
+      echo "[$(date '+%Y-%m-%d %H:%M:%S')] SKIP: Gmail token dead" >> "$LOG/send_t4.log"
+    else
+      cd "$DIR" && timeout 1800 python3 -u quill_wl.py send -t T4 --limit 50 >> "$LOG/send_t4.log" 2>&1
+    fi
     ;;
   reply)
     cd "$DIR" && timeout 120 python3 -u reply_monitor_wl.py >> "$LOG/reply.log" 2>&1

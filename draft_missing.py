@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 Draft all 'Drafted' leads that don't already have Gmail drafts.
 Matches by domain to avoid duplicates.

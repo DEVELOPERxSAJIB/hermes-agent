@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 NanoSoft EMAIL-FINDER v1 — Pattern-based + SMTP verification
 For leads that don't have scraped emails, try common patterns:

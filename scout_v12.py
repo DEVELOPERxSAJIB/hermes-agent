@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 NanoSoft SCOUT v12 — Local Business Lead Discovery
 Uses Playwright for JS-rendered pages + deep email scraping.

@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """Post a message to a Discord channel using bot token from .env"""
 import os, sys, json, requests
 

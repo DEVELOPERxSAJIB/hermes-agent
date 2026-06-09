@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 NanoSoft QUILL v12 — Expert Cold Email Generator
 Based on 2025/2026 best practices from Woodpecker, Smartlead, Lemlist, Saleshandy, Mailshake.

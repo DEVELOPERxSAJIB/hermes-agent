@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 NanoSoft QUILL v9 — Cold Email Generator
 Generates personalized cold emails for Qualified leads.

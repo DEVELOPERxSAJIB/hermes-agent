@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 NanoSoft Daily Startup Script
 1. Wait for Google Places API quota reset (if needed)

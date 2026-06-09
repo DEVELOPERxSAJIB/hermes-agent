@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 QUILL Daily Drafting Agent
 Reads "Drafted" leads from CRM, re-drafts all emails with v8 strict rules,

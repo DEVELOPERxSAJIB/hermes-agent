@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 NanoSoft PIPELINE ORCHESTRATOR v2
 Independent cron jobs for each step. No LLM. No dependencies between steps.

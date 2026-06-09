@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 NEXUS — Chief Executive Agent for NanoSoft
 Persistent service: monitors, coordinates, and optimizes all agents.

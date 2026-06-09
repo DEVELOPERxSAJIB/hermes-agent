@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 Quick email re-finder for bounced leads.
 Tries multiple approaches:
