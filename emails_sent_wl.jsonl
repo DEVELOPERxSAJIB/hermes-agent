@@ -384,3 +384,124 @@
 {"to": "hello@sparkopportunities.com", "company": "Sparkopportunities", "subject": "Sparkopportunities question", "sent_at": "2026-06-09T04:58:02.291513+06:00", "message_id": "19ea9751107ad478", "template": "T1"}
 {"to": "info@magicinfomedia.in", "company": "Magicinfomedia", "subject": "Magicinfomedia team", "sent_at": "2026-06-09T05:01:04.400500+06:00", "message_id": "19ea977d93cf0ca3", "template": "T1"}
 {"to": "info@vqubetech.com", "company": "Vqubetech", "subject": "Vqubetech team", "sent_at": "2026-06-09T05:04:06.091278+06:00", "message_id": "19ea97a9d8ca0f53", "template": "T1"}
+{"to": "marketing@gojilabs.com", "company": "Goji Labs", "subject": "Goji process", "sent_at": "2026-06-09T15:51:40.837202+06:00", "message_id": "19eabcb7ea355a58", "template": "T3"}
+{"to": "sales@mercurydevelopment.com", "company": "Mercury Development", "subject": "Mercury process", "sent_at": "2026-06-09T15:52:48.984212+06:00", "message_id": "19eabcc8820853eb", "template": "T3"}
+{"to": "sales@closeloop.com", "company": "Closeloop Technologies LLC", "subject": "Closeloop process", "sent_at": "2026-06-09T15:55:49.713605+06:00", "message_id": "19eabcf4ba9441e2", "template": "T3"}
+{"to": "dave@utility.agency", "company": "Utility", "subject": "Utility process", "sent_at": "2026-06-09T15:58:50.429977+06:00", "message_id": "19eabd20dee7af4c", "template": "T3"}
+{"to": "hello@infinum.com", "company": "Infinum", "subject": "Infinum process", "sent_at": "2026-06-09T16:01:51.151844+06:00", "message_id": "19eabd4ce888d693", "template": "T3"}
+{"to": "info@itransition.com", "company": "Itransition", "subject": "Itransition process", "sent_at": "2026-06-09T16:04:51.851753+06:00", "message_id": "19eabd791ce1f8f0", "template": "T3"}
+{"to": "mail@diffco.us", "company": "Diffco", "subject": "Diffco process", "sent_at": "2026-06-09T16:07:52.567448+06:00", "message_id": "19eabda524ac17b0", "template": "T3"}
+{"to": "hello@azumo.co", "company": "Azumo", "subject": "Azumo process", "sent_at": "2026-06-09T16:10:53.321270+06:00", "message_id": "19eabdd151632445", "template": "T3"}
+{"to": "m.bien@merixstudio.com", "company": "Merixstudio", "subject": "Merixstudio process", "sent_at": "2026-06-09T16:13:54.075440+06:00", "message_id": "19eabdfd7418d6d0", "template": "T3"}
+{"to": "info@cheesecakelabs.com", "company": "Cheesecake Labs", "subject": "Cheesecake process", "sent_at": "2026-06-09T16:16:54.820213+06:00", "message_id": "19eabe2999047fef", "template": "T3"}
+{"to": "hello@fulcrum.rocks", "company": "Fulcrum", "subject": "Fulcrum process", "sent_at": "2026-06-09T16:19:55.569439+06:00", "message_id": "19eabe55bbb50bc5", "template": "T3"}
+{"to": "info@mobikasa.com", "company": "MOBIKASA", "subject": "MOBIKASA process", "sent_at": "2026-06-09T16:22:56.294776+06:00", "message_id": "19eabe81c26af1a6", "template": "T3"}
+{"to": "info@ancient.global", "company": "Ancient", "subject": "Ancient process", "sent_at": "2026-06-09T16:25:57.049343+06:00", "message_id": "19eabeadf94052c0", "template": "T3"}
+{"to": "sales@plavno.io", "company": "Plavno", "subject": "Plavno process", "sent_at": "2026-06-09T16:28:57.773132+06:00", "message_id": "19eabeda1fb700af", "template": "T3"}
+{"to": "yevhen.synii@lumitech.co", "company": "Lumitech", "subject": "Lumitech process", "sent_at": "2026-06-09T16:31:58.674106+06:00", "message_id": "19eabf062df0c040", "template": "T3"}
+{"to": "sales-ops@spd.tech", "company": "SPD Technology", "subject": "SPD process", "sent_at": "2026-06-09T16:34:59.382372+06:00", "message_id": "19eabf324684b362", "template": "T3"}
+{"to": "info@kindgeek.com", "company": "Kindgeek", "subject": "Kindgeek process", "sent_at": "2026-06-09T16:38:00.133841+06:00", "message_id": "19eabf5e79df20e2", "template": "T3"}
+{"to": "careers@trootech.com", "company": "TRooTech Business Solutions", "subject": "TRooTech process", "sent_at": "2026-06-09T16:41:00.849457+06:00", "message_id": "19eabf8a82384d00", "template": "T3"}
+{"to": "info@fluxitsoft.com", "company": "Flux IT", "subject": "Flux process", "sent_at": "2026-06-09T16:44:01.569624+06:00", "message_id": "19eabfb6abcc069d", "template": "T3"}
+{"to": "commercial@activeone.co", "company": "Activeone", "subject": "Activeone process", "sent_at": "2026-06-09T16:47:02.291362+06:00", "message_id": "19eabfe2c69f7540", "template": "T3"}
+{"to": "diogo@dhdtech.io", "company": "DHDTech.io", "subject": "DHDTech.io process", "sent_at": "2026-06-09T16:50:03.002746+06:00", "message_id": "19eac00eece66cae", "template": "T3"}
+{"to": "sales@future-processing.com", "company": "Future Processing", "subject": "Future process", "sent_at": "2026-06-09T16:53:03.724552+06:00", "message_id": "19eac03b14f9b9fd", "template": "T3"}
+{"to": "hello@tech-stack.com", "company": "Techstack company", "subject": "Techstack process", "sent_at": "2026-06-09T16:56:04.450358+06:00", "message_id": "19eac0673e33501b", "template": "T3"}
+{"to": "hello@redlab.bz", "company": "Redlab agency", "subject": "Redlab process", "sent_at": "2026-06-09T16:59:05.153616+06:00", "message_id": "19eac09352afde6b", "template": "T3"}
+{"to": "hello@wyeworks.com", "company": "WyeWorks", "subject": "WyeWorks process", "sent_at": "2026-06-09T17:02:05.919688+06:00", "message_id": "19eac0bf7b3518ca", "template": "T3"}
+{"to": "hello@darly.solutions", "company": "Darly Solutions", "subject": "Darly process", "sent_at": "2026-06-09T17:05:06.659361+06:00", "message_id": "19eac0eb9191ed56", "template": "T3"}
+{"to": "us@sapient.pro", "company": "SapientPro", "subject": "SapientPro process", "sent_at": "2026-06-09T17:08:07.420526+06:00", "message_id": "19eac117a61f9f19", "template": "T3"}
+{"to": "contact@tvm-engineering.com", "company": "TVM Engineering Services", "subject": "TVM process", "sent_at": "2026-06-09T17:11:08.161263+06:00", "message_id": "19eac143d24aa5a8", "template": "T3"}
+{"to": "london@devsdata.com", "company": "Devsdata", "subject": "Devsdata process", "sent_at": "2026-06-09T17:14:08.901366+06:00", "message_id": "19eac16ff01809f6", "template": "T3"}
+{"to": "hello@unlimitedwp.com", "company": "Unlimitedwp", "subject": "Unlimitedwp process", "sent_at": "2026-06-09T17:17:09.628251+06:00", "message_id": "19eac19c1052181f", "template": "T3"}
+{"to": "hello@whitelabeliq.com", "company": "Whitelabeliq", "subject": "Whitelabeliq process", "sent_at": "2026-06-09T17:20:10.912868+06:00", "message_id": "19eac1c859b15375", "template": "T3"}
+{"to": "sales@megrisoft.com", "company": "Megrioutreach", "subject": "Megrioutreach process", "sent_at": "2026-06-09T17:23:11.615686+06:00", "message_id": "19eac1f46de95a53", "template": "T3"}
+{"to": "info@75way.com", "company": "75Way", "subject": "75Way process", "sent_at": "2026-06-09T17:26:12.351609+06:00", "message_id": "19eac220860dff8d", "template": "T3"}
+{"to": "bdm.codersh@gmail.com", "company": "Codersh", "subject": "Codersh process", "sent_at": "2026-06-09T17:29:13.091751+06:00", "message_id": "19eac24caca7fb17", "template": "T3"}
+{"to": "enquiries.estonia@touchlane.com", "company": "Touchlane", "subject": "Touchlane process", "sent_at": "2026-06-09T17:32:14.296702+06:00", "message_id": "19eac278fbf1380e", "template": "T3"}
+{"to": "info@xovakstudio.com", "company": "Xovakstudio", "subject": "Xovakstudio process", "sent_at": "2026-06-09T17:35:15.047475+06:00", "message_id": "19eac2a504799492", "template": "T3"}
+{"to": "metrowebstudio.office@gmail.com", "company": "Metroweb", "subject": "Metroweb process", "sent_at": "2026-06-09T17:38:15.792658+06:00", "message_id": "19eac2d1207ff1c3", "template": "T3"}
+{"to": "info@bantechsolutions.com", "company": "Bantechsolutions", "subject": "Bantechsolutions process", "sent_at": "2026-06-09T17:41:16.522373+06:00", "message_id": "19eac2fd5db2665d", "template": "T3"}
+{"to": "contact@anvileight.com", "company": "Anvileight", "subject": "Anvileight process", "sent_at": "2026-06-09T17:44:17.310334+06:00", "message_id": "19eac3296c1b3d29", "template": "T3"}
+{"to": "contact@nectarbits.ca", "company": "Nectarbits", "subject": "Nectarbits process", "sent_at": "2026-06-09T17:47:18.008425+06:00", "message_id": "19eac35593055d69", "template": "T3"}
+{"to": "partners@teamontime.com", "company": "Teamontime", "subject": "Teamontime process", "sent_at": "2026-06-09T17:50:18.806500+06:00", "message_id": "19eac381a3ce9647", "template": "T3"}
+{"to": "contacto@anigami.studio", "company": "Anigami Studio", "subject": "Anigami process", "sent_at": "2026-06-09T17:53:19.541077+06:00", "message_id": "19eac3add535eda0", "template": "T3"}
+{"to": "i@urlaunched.com", "company": "You are launched", "subject": "You process", "sent_at": "2026-06-09T17:56:20.278059+06:00", "message_id": "19eac3d9ee5ce4c0", "template": "T3"}
+{"to": "lukasz.pol@scalosoft.com", "company": "Scalo", "subject": "Scalo process", "sent_at": "2026-06-09T17:59:20.995606+06:00", "message_id": "19eac40602cbf3a9", "template": "T3"}
+{"to": "info@euvic.com", "company": "Euvic", "subject": "Euvic process", "sent_at": "2026-06-09T18:02:21.899744+06:00", "message_id": "19eac4323337ce6f", "template": "T3"}
+{"to": "contact@apzumi.com", "company": "Apzumi", "subject": "Apzumi process", "sent_at": "2026-06-09T18:05:22.604596+06:00", "message_id": "19eac45e49f07b23", "template": "T3"}
+{"to": "biz@riseapps.biz", "company": "Riseapps", "subject": "Riseapps process", "sent_at": "2026-06-09T18:08:23.320493+06:00", "message_id": "19eac48a71683953", "template": "T3"}
+{"to": "contact@pellsoftware.com", "company": "Pell Software", "subject": "Pell process", "sent_at": "2026-06-09T18:11:24.039287+06:00", "message_id": "19eac4b69165812b", "template": "T3"}
+{"to": "marketing@dreamztech.com", "company": "DreamzTech Solutions", "subject": "DreamzTech process", "sent_at": "2026-06-09T18:14:24.801707+06:00", "message_id": "19eac4e2aee9304d", "template": "T3"}
+{"to": "hello@richbrains.net", "company": "RichBrains", "subject": "RichBrains process", "sent_at": "2026-06-09T18:17:25.513386+06:00", "message_id": "19eac50edcea033a", "template": "T3"}
+{"to": "office@gotoma.pl", "company": "GOTOMA Software House", "subject": "GOTOMA process", "sent_at": "2026-06-09T18:20:26.243824+06:00", "message_id": "19eac53ae7d21661", "template": "T3"}
+{"to": "contact@mallow-tech.com", "company": "Mallow Technologies Private Limited", "subject": "Mallow process", "sent_at": "2026-06-09T18:23:26.956744+06:00", "message_id": "19eac56707f07b78", "template": "T3"}
+{"to": "hi@goodface.agency", "company": "Goodface agency", "subject": "Goodface process", "sent_at": "2026-06-09T18:26:27.689357+06:00", "message_id": "19eac5933984ce8d", "template": "T3"}
+{"to": "hello@caxy.com", "company": "Caxy Consulting", "subject": "Caxy process", "sent_at": "2026-06-09T18:29:28.401576+06:00", "message_id": "19eac5bf436c31f1", "template": "T3"}
+{"to": "letstalk@thinkpalm.com", "company": "ThinkPalm Technologies", "subject": "ThinkPalm process", "sent_at": "2026-06-09T18:32:29.116616+06:00", "message_id": "19eac5eb7c673d54", "template": "T3"}
+{"to": "info@wildnettechnologies.com", "company": "Wildnettechnologies", "subject": "Wildnettechnologies process", "sent_at": "2026-06-09T18:35:29.886829+06:00", "message_id": "19eac617957885c5", "template": "T3"}
+{"to": "sales@tripleminds.co", "company": "Tripleminds", "subject": "Tripleminds process", "sent_at": "2026-06-09T18:38:30.590594+06:00", "message_id": "19eac643bcd9ab05", "template": "T3"}
+{"to": "suvansh.bansal@flexiple.com", "company": "Flexiple", "subject": "Flexiple process", "sent_at": "2026-06-09T18:41:31.307775+06:00", "message_id": "19eac66fcc28a04a", "template": "T3"}
+{"to": "enquiry@nimapinfotech.com", "company": "Nimapinfotech", "subject": "Nimapinfotech process", "sent_at": "2026-06-09T18:44:32.103911+06:00", "message_id": "19eac69bfc7048f8", "template": "T3"}
+{"to": "hello@weareyellowball.com", "company": "Weareyellowball", "subject": "Weareyellowball process", "sent_at": "2026-06-09T18:47:32.852467+06:00", "message_id": "19eac6c8134bc546", "template": "T3"}
+{"to": "info@qrolic.com", "company": "Qrolic", "subject": "Qrolic process", "sent_at": "2026-06-09T18:50:33.626258+06:00", "message_id": "19eac6f43fca3f48", "template": "T3"}
+{"to": "hello@nimbata.com", "company": "Nimbata", "subject": "Nimbata process", "sent_at": "2026-06-09T18:53:34.842204+06:00", "message_id": "19eac72070a48404", "template": "T3"}
+{"to": "info@e2msolutions.com", "company": "E2Msolutions", "subject": "E2Msolutions process", "sent_at": "2026-06-09T18:56:35.598120+06:00", "message_id": "19eac74c971fc08f", "template": "T3"}
+{"to": "info@mailmunch.com", "company": "Mailmunch", "subject": "Mailmunch process", "sent_at": "2026-06-09T18:59:36.830620+06:00", "message_id": "19eac778c43cf269", "template": "T3"}
+{"to": "hello@themindstudios.com", "company": "Themindstudios", "subject": "Themindstudios process", "sent_at": "2026-06-09T19:02:37.563911+06:00", "message_id": "19eac7a4e0f2bb47", "template": "T3"}
+{"to": "contact@trawex.com", "company": "Trawex", "subject": "Trawex process", "sent_at": "2026-06-09T19:05:38.292297+06:00", "message_id": "19eac7d100e8fdb3", "template": "T3"}
+{"to": "sales@wpwebinfotech.com", "company": "Wpwebinfotech", "subject": "Wpwebinfotech process", "sent_at": "2026-06-09T19:08:39.043948+06:00", "message_id": "19eac7fd243c45cb", "template": "T3"}
+{"to": "sales@orientsoftware.com", "company": "Orientsoftware", "subject": "Orientsoftware process", "sent_at": "2026-06-09T19:11:40.321230+06:00", "message_id": "19eac829708dfc00", "template": "T3"}
+{"to": "info@appmesolutions.com", "company": "Appmesolutions", "subject": "Appmesolutions process", "sent_at": "2026-06-09T19:14:41.045320+06:00", "message_id": "19eac8559f22415d", "template": "T3"}
+{"to": "info@pitchpinemedia.com", "company": "Pitchpinemedia", "subject": "Pitchpinemedia process", "sent_at": "2026-06-09T19:17:41.764607+06:00", "message_id": "19eac881ba51a429", "template": "T3"}
+{"to": "info@risingstarinfotech.com", "company": "Risingstarinfotech", "subject": "Risingstarinfotech process", "sent_at": "2026-06-09T19:20:42.505801+06:00", "message_id": "19eac8adc60e2849", "template": "T3"}
+{"to": "info@dynamicdreamz.com", "company": "Dynamicdreamz", "subject": "Dynamicdreamz process", "sent_at": "2026-06-09T19:23:43.239349+06:00", "message_id": "19eac8d9f9c939dd", "template": "T3"}
+{"to": "sales@sparkouttech.com", "company": "Sparkouttech", "subject": "Sparkouttech process", "sent_at": "2026-06-09T19:26:44.024459+06:00", "message_id": "19eac90616f5a598", "template": "T3"}
+{"to": "sales@acquaintsoft.com", "company": "Acquaintsoft", "subject": "Acquaintsoft process", "sent_at": "2026-06-09T19:29:44.721680+06:00", "message_id": "19eac9323b177798", "template": "T3"}
+{"to": "hello@turumburum.com", "company": "Turumburum", "subject": "Turumburum process", "sent_at": "2026-06-09T19:32:45.442668+06:00", "message_id": "19eac95e5ef974c1", "template": "T3"}
+{"to": "contact@alcor-bpo.com", "company": "Alcor", "subject": "Alcor process", "sent_at": "2026-06-09T19:35:46.168516+06:00", "message_id": "19eac98a7874a669", "template": "T3"}
+{"to": "info@fullscale.io", "company": "Fullscale", "subject": "Fullscale process", "sent_at": "2026-06-09T19:38:46.876996+06:00", "message_id": "19eac9b68822b71b", "template": "T3"}
+{"to": "webinforequest@coherentsolutions.com", "company": "Coherentsolutions", "subject": "Coherentsolutions process", "sent_at": "2026-06-09T19:41:47.592287+06:00", "message_id": "19eac9e2b50d38a7", "template": "T3"}
+{"to": "contact@innowise.com", "company": "Innowise", "subject": "Innowise process", "sent_at": "2026-06-09T19:44:48.312559+06:00", "message_id": "19eaca0edd4bca9d", "template": "T3"}
+{"to": "rfp@program-ace.com", "company": "Program Ace", "subject": "Program process", "sent_at": "2026-06-09T19:47:49.042123+06:00", "message_id": "19eaca3ae1e6d1ae", "template": "T3"}
+{"to": "info@icorethink.com", "company": "Icorethink", "subject": "Icorethink process", "sent_at": "2026-06-09T19:50:49.770586+06:00", "message_id": "19eaca670e647e5f", "template": "T3"}
+{"to": "info@spdload.com", "company": "Spdload", "subject": "Spdload process", "sent_at": "2026-06-09T19:53:50.483919+06:00", "message_id": "19eaca9336f50644", "template": "T3"}
+{"to": "Info@intent-solutions.com", "company": "Intent Solutions", "subject": "Intent process", "sent_at": "2026-06-09T19:56:51.214965+06:00", "message_id": "19eacabf5a8826a5", "template": "T3"}
+{"to": "contact@abbacustechnologies.com", "company": "Abbacustechnologies", "subject": "Abbacustechnologies process", "sent_at": "2026-06-09T19:59:51.920407+06:00", "message_id": "19eacaeb7e3c62cf", "template": "T3"}
+{"to": "Info@hustlemarketers.com", "company": "Hustlemarketers", "subject": "Hustlemarketers process", "sent_at": "2026-06-09T20:02:52.711176+06:00", "message_id": "19eacb1787837ec9", "template": "T3"}
+{"to": "team@eighthats.com", "company": "Eighthats", "subject": "Eighthats process", "sent_at": "2026-06-09T20:05:53.450721+06:00", "message_id": "19eacb43b7932ebb", "template": "T3"}
+{"to": "contact@mavlers.com", "company": "Uplers", "subject": "Uplers process", "sent_at": "2026-06-09T20:08:54.183604+06:00", "message_id": "19eacb6fcc818837", "template": "T3"}
+{"to": "sales@pixelcrayons.com", "company": "Pixelcrayons", "subject": "Pixelcrayons process", "sent_at": "2026-06-09T20:11:54.901424+06:00", "message_id": "19eacb9bf0275978", "template": "T3"}
+{"to": "info@allusivedigital.com", "company": "Allusivedigital", "subject": "Allusivedigital process", "sent_at": "2026-06-09T20:14:55.605636+06:00", "message_id": "19eacbc8026db65c", "template": "T3"}
+{"to": "sales@pitangent.com", "company": "Pitangent", "subject": "Pitangent process", "sent_at": "2026-06-09T20:17:56.331319+06:00", "message_id": "19eacbf433f538ae", "template": "T3"}
+{"to": "hello@hirewithnear.com", "company": "Hirewithnear", "subject": "Hirewithnear process", "sent_at": "2026-06-09T20:20:57.065537+06:00", "message_id": "19eacc205907578d", "template": "T3"}
+{"to": "contact@bigscal.com", "company": "Bigscal", "subject": "Bigscal process", "sent_at": "2026-06-09T20:23:57.807741+06:00", "message_id": "19eacc4c79a5edb9", "template": "T3"}
+{"to": "sales@devoqdesign.com", "company": "Devoqdesign", "subject": "Devoqdesign process", "sent_at": "2026-06-09T20:26:58.535588+06:00", "message_id": "19eacc788b13be07", "template": "T3"}
+{"to": "wdisanjay@gmail.com", "company": "Wdi Demo", "subject": "Wdi process", "sent_at": "2026-06-09T20:29:59.265207+06:00", "message_id": "19eacca4a226dd8f", "template": "T3"}
+{"to": "info@ginirex.com", "company": "Ginirex", "subject": "Ginirex process", "sent_at": "2026-06-09T20:33:00.020001+06:00", "message_id": "19eaccd0d4421d9e", "template": "T3"}
+{"to": "info@goforma.com", "company": "Goforma", "subject": "Goforma process", "sent_at": "2026-06-09T20:36:00.755914+06:00", "message_id": "19eaccfcf331d32b", "template": "T3"}
+{"to": "contact@dashbouquet.com", "company": "Dashbouquet Development", "subject": "Dashbouquet process", "sent_at": "2026-06-09T20:39:01.518927+06:00", "message_id": "19eacd2919f30905", "template": "T3"}
+{"to": "dkl@empat.tech", "company": "Empat", "subject": "Empat process", "sent_at": "2026-06-09T20:42:02.258995+06:00", "message_id": "19eacd553dd2c374", "template": "T3"}
+{"to": "sales@cleveroad.com", "company": "Cleveroad", "subject": "Cleveroad process", "sent_at": "2026-06-09T20:45:02.971081+06:00", "message_id": "19eacd815933f359", "template": "T3"}
+{"to": "hello@ventionteams.com", "company": "Vention", "subject": "Vention process", "sent_at": "2026-06-09T20:48:03.720160+06:00", "message_id": "19eacdad6eaa55b6", "template": "T3"}
+{"to": "info@capitalnumbers.com", "company": "Capital Numbers", "subject": "Capital process", "sent_at": "2026-06-09T20:51:04.555605+06:00", "message_id": "19eacdd990c5300d", "template": "T3"}
+{"to": "hello@tsh.io", "company": "The Software House", "subject": "The process", "sent_at": "2026-06-09T20:54:05.294825+06:00", "message_id": "19eace05a1d7ab40", "template": "T3"}
+{"to": "sales@esparkinfo.com", "company": "eSparkBiz", "subject": "eSparkBiz process", "sent_at": "2026-06-09T20:57:06.019557+06:00", "message_id": "19eace31d0647d4e", "template": "T3"}
+{"to": "info@saritasa.com", "company": "Saritasa", "subject": "Saritasa process", "sent_at": "2026-06-09T21:00:06.735134+06:00", "message_id": "19eace5df8c5c747", "template": "T3"}
+{"to": "success@wesoftyou.com", "company": "WeSoftYou", "subject": "WeSoftYou process", "sent_at": "2026-06-09T21:03:07.447260+06:00", "message_id": "19eace8a0e073bf6", "template": "T3"}
+{"to": "hello@selleo.com", "company": "selleo", "subject": "selleo process", "sent_at": "2026-06-09T21:06:08.218279+06:00", "message_id": "19eaceb6389defd7", "template": "T3"}
+{"to": "sales@digiscorp.com", "company": "Digis, a Fiverr company (NYSE: FVRR)", "subject": "Digis, process", "sent_at": "2026-06-09T21:09:08.964427+06:00", "message_id": "19eacee24e0a0d37", "template": "T3"}
+{"to": "info@geekyants.com", "company": "GeekyAnts", "subject": "GeekyAnts process", "sent_at": "2026-06-09T21:12:09.689414+06:00", "message_id": "19eacf0e668a7cf8", "template": "T3"}
+{"to": "info@humaiwebsitesukltd.co.uk", "company": "Humaiwebs", "subject": "Humaiwebs process", "sent_at": "2026-06-09T21:15:10.486279+06:00", "message_id": "19eacf3a9aa237d8", "template": "T3"}
+{"to": "biz@penninetechnolabs.com", "company": "Penninetechnolabs", "subject": "Penninetechnolabs process", "sent_at": "2026-06-09T21:18:11.290812+06:00", "message_id": "19eacf66b13359e3", "template": "T3"}
+{"to": "sales@vrinsofts.com", "company": "Vrinsofts", "subject": "Vrinsofts process", "sent_at": "2026-06-09T21:21:12.011702+06:00", "message_id": "19eacf92decbaf95", "template": "T3"}
+{"to": "info@cyberelite.in", "company": "Cyberelite", "subject": "Cyberelite process", "sent_at": "2026-06-09T21:24:12.752619+06:00", "message_id": "19eacfbefa3ca8b3", "template": "T3"}
+{"to": "sales@brilworks.com", "company": "Brilworks", "subject": "Brilworks process", "sent_at": "2026-06-09T21:27:13.527403+06:00", "message_id": "19eacfeb0f45d572", "template": "T3"}
+{"to": "sales@apptunix.com", "company": "Apptunix", "subject": "Apptunix process", "sent_at": "2026-06-09T21:30:14.302312+06:00", "message_id": "19ead0173df0ddb8", "template": "T3"}
+{"to": "contact@shivlab.com", "company": "Shivlab", "subject": "Shivlab process", "sent_at": "2026-06-09T21:33:15.030587+06:00", "message_id": "19ead04355427e5e", "template": "T3"}
+{"to": "info@leanware.co", "company": "Leanware", "subject": "Leanware process", "sent_at": "2026-06-09T21:36:15.795933+06:00", "message_id": "19ead06f68f1584c", "template": "T3"}
+{"to": "hello@redberry.ge", "company": "Redberry", "subject": "Redberry process", "sent_at": "2026-06-09T21:39:16.525369+06:00", "message_id": "19ead09b83c753f3", "template": "T3"}
+{"to": "contact@quanrio.com", "company": "Quanrio", "subject": "Quanrio process", "sent_at": "2026-06-09T21:42:17.253526+06:00", "message_id": "19ead0c7ba730a6d", "template": "T3"}
+{"to": "info@brandingbeez.co.uk", "company": "Brandingbeez", "subject": "Brandingbeez process", "sent_at": "2026-06-09T21:45:17.964334+06:00", "message_id": "19ead0f3c340573b", "template": "T3"}
+{"to": "info@appinventiv.com", "company": "Appinventiv", "subject": "Appinventiv process", "sent_at": "2026-06-09T21:48:18.709908+06:00", "message_id": "19ead11fe5697b57", "template": "T3"}
+{"to": "info@krishangtechnolab.com", "company": "Krishangtechnolab", "subject": "Krishangtechnolab process", "sent_at": "2026-06-09T21:51:19.475206+06:00", "message_id": "19ead14c17f60625", "template": "T3"}

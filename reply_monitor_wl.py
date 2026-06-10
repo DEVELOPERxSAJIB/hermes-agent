@@ -221,7 +221,6 @@ def classify_reply(snippet, from_email='', subject=''):
 def check_bounces(service):
     """Check for bounced emails and mark them in CRM."""
     try:
-        from crm import get_crm
         crm = get_crm()
         
         results = service.users().messages().list(
@@ -404,7 +403,10 @@ def main():
 
         # Update CRM
         try:
-            from crm import get_crm
+            try:
+                from crm_cache import get_crm
+            except ImportError:
+                from crm import get_crm
             crm = get_crm()
             crm.update_wl_lead(company, {
                 "Reply Status": classification,

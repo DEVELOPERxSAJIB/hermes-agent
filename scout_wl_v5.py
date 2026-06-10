@@ -348,7 +348,6 @@ def main():
     existing_emails = set()
     existing_domains = set()
     try:
-        from crm import get_crm
         crm = get_crm()
         existing = crm.get_wl_all()
         for l in existing:
@@ -445,7 +444,6 @@ def main():
 
     # Push to CRM
     try:
-        from crm import get_crm
         crm = get_crm()
         added = skipped = 0
         for lead in leads:

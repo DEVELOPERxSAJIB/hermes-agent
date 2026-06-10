@@ -10,7 +10,11 @@ BD_TZ = timezone(timedelta(hours=6))
 NANOSOFT_DIR = "/home/ubuntu/nanosoft"
 
 sys.path.insert(0, NANOSOFT_DIR)
-from crm import get_crm
+
+try:
+    from crm_cache import get_crm
+except ImportError:
+    from crm import get_crm
 
 SERVICE_KEYWORDS = {
     'web development': ['web development', 'web dev', 'website development', 'web app', 'web application', 'frontend', 'front-end', 'backend', 'back-end', 'full-stack', 'fullstack', 'react', 'angular', 'vue', 'node.js', 'django', 'laravel', 'ruby on rails'],
@@ -88,22 +92,17 @@ def fetch_site_playwright(url):
 def scrape_agency(website):
     """Scrape agency website for services, pain points, WL signals, LinkedIn."""
     base = website.rstrip('/')
-    
-    # Pages to check
     paths = ['', '/services', '/about', '/what-we-do', '/capabilities', '/expertise', '/solutions', '/offerings']
-    
     all_text = ''
     linkedin_found = ''
-    
+
     for path in paths:
         url = base + path
         text = fetch_url(url)
         if text:
             all_text += ' ' + text
-        
         time.sleep(0.5)
-    
-    # If we got very little text, try Playwright
+
     if len(all_text) < 500:
         print("    Trying Playwright for JS content...")
         for path in ['', '/services', '/about']:
@@ -111,32 +110,27 @@ def scrape_agency(website):
             if text:
                 all_text += ' ' + text
             time.sleep(1)
-    
+
     text_lower = all_text.lower()
-    
-    # Extract services
+
     services = []
     for service, keywords in SERVICE_KEYWORDS.items():
-        # Check keyword density, not just presence
         count = sum(1 for kw in keywords if kw in text_lower)
         if count > 0:
             services.append(service)
-    
-    # Extract WL signals
+
     wl_found = []
     for signal in WL_SIGNALS:
         if signal in text_lower:
             if not any(signal in s or s in signal for s in wl_found):
                 wl_found.append(signal)
-    
-    # Extract LinkedIn company URL
+
     li_match = re.search(r'(?:https?://)?(?:www\.)?linkedin\.com/company/([a-zA-Z0-9_-]+)', all_text)
     if li_match:
         linkedin_found = f"https://www.linkedin.com/company/{li_match.group(1)}"
-    
-    # Infer pain points
+
     pain_points = infer_pain_points(text_lower, services, wl_found)
-    
+
     return {
         'services': ', '.join(services) if services else '',
         'wl_signals': ', '.join(wl_found) if wl_found else '',
@@ -149,36 +143,30 @@ def infer_pain_points(text, services_list, wl_signals):
     """Infer pain points for dev agencies."""
     points = []
     services_lower = ', '.join(services_list).lower() if services_list else ''
-    
-    # Based on white label signals
+
     if any(s in ' '.join(wl_signals).lower() for s in ['partner', 'white label', 'reseller', 'agency']):
         points.append('actively seeking development partners for overflow')
     elif any(s in ' '.join(wl_signals).lower() for s in ['staff augmentation', 'outsourcing', 'offshore', 'nearshore', 'dedicated team']):
         points.append('capacity constraints during peak demand')
-    
-    # Based on services offered
+
     if 'mobile development' in services_lower and 'web development' not in services_lower:
         points.append('likely has web expertise gaps requiring partner support')
     elif 'web development' in services_lower and 'mobile development' not in services_lower:
         points.append('likely has mobile expertise gaps requiring partner support')
-    
-    # Based on hiring signals in text
+
     if 'hiring' in text or 'we are looking' in text or 'careers' in text or 'join our team' in text:
         points.append('scaling fast, likely needs reliable dev capacity')
-    
-    # Default
+
     if not points:
         points.append('standard dev agency capacity and expertise gaps')
-    
+
     return ', '.join(points[:2])
 
 
 def main():
     crm = get_crm()
     wl = crm.get_wl_all()
-    
-    # Only enrich leads that need it: empty services OR empty WL signals
-    # Skip leads that are already enriched or have been judged/sent
+
     skip_statuses = {'T1 Sent', 'T2 Sent', 'T3 Sent', 'T4 Sent', 'Unqualified', 'Sent'}
     to_enrich = []
     skipped = 0
@@ -193,13 +181,13 @@ def main():
             to_enrich.append(lead)
         else:
             skipped += 1
-    
-    print(f"Enrichment: {len(to_enrich)} leads need enrichment, {skipped} skipped (already done or judged/sent)\n")
-    
+
+    print(f"Enrichment: {len(to_enrich)} leads need enrichment, {skipped} skipped\n")
+
     if not to_enrich:
         print("Nothing to enrich.")
         return
-    
+
     enriched = 0
     for i, lead in enumerate(to_enrich):
         company = lead.get('Company Name', '').strip()
@@ -208,28 +196,25 @@ def main():
         existing_pain = lead.get('Pain Point', '').strip()
         existing_wl = lead.get('White Label Signals', '').strip()
         existing_linkedin = lead.get('LinkedIn', '').strip()
-        
+
         print(f"[{i+1}/{len(to_enrich)}] {company} ({website})")
-        
+
         data = scrape_agency(website)
-        
+
         updates = {}
         if data['services'] and not existing_services:
             updates['Services'] = data['services']
             print(f"    Services: {data['services']}")
-        
         if data['wl_signals'] and not existing_wl:
             updates['White Label Signals'] = data['wl_signals']
             print(f"    WL Signals: {data['wl_signals']}")
-        
         if data['pain_points'] and not existing_pain:
             updates['Pain Point'] = data['pain_points']
             print(f"    Pain Points: {data['pain_points']}")
-        
         if data['linkedin'] and not existing_linkedin:
             updates['LinkedIn'] = data['linkedin']
             print(f"    LinkedIn: {data['linkedin']}")
-        
+
         if updates:
             try:
                 crm.update_wl_lead(company, updates)
@@ -239,10 +224,10 @@ def main():
                 print(f"    CRM error: {e}")
         else:
             print(f"    (no new data)")
-        
+
         print()
         time.sleep(0.5)
-    
+
     print(f"DONE: {enriched}/{len(to_enrich)} leads enriched")
 
 

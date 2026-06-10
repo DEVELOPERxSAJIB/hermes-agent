@@ -211,7 +211,13 @@ def judge_wl_lead(lead):
 
 
 def main():
-    from crm import get_crm
+    try:
+        from crm_cache import get_crm
+    except ImportError:
+        try:
+            from crm_cache import get_crm
+        except ImportError:
+            from crm import get_crm
     crm = get_crm()
     wl = crm.get_wl_all()
 

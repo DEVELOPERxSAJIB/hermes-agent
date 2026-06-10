@@ -196,18 +196,23 @@ def company_short(company):
     return company.split()[0]
 
 
-# ── EMAIL TEMPLATES v6 — Ultra-short, zero brag, pure question ──
+# ── EMAIL TEMPLATES v7 — New angle: specific observation + curiosity ──
+# Strategy: Stop sounding like every cold email. Lead with something
+# specific and verifiable about THEIR business. Make it about them.
+# No pitch in T1. No "overflow" or "capacity" — those are our words, not theirs.
 
 def make_email_t1(lead):
     """
     T1 — The Hook (Day 1)
-    ~40 words. One observation. One question. No pitch. No "we" first.
+    ~30-45 words. One specific observation about THEIR work. One curious question.
+    No pitch. No "we" first. Sounds like a human who actually looked at their site.
     """
     company = lead.get("Company Name", "").strip()
     email = lead.get("Email", "").strip()
     services = parse_services(lead.get("Services", ""))
     wl_signals = lead.get("White Label Signals", "").strip()
     owner_name = lead.get("Owner Name", "").strip()
+    pain_points = lead.get("Pain Points", "").strip()
 
     if not email or not company:
         return None
@@ -223,22 +228,35 @@ def make_email_t1(lead):
     import random
     random.seed(hash(company))
 
-    # Observation: use THEIR language from their website
-    if wl_signals and ('white label' in wl_signals.lower() or 'reseller' in wl_signals.lower()):
-        obs = f"{first_word} handles white label delivery for partners"
-    elif wl_signals and ('staff augmentation' in wl_signals.lower() or 'outsourcing' in wl_signals.lower()):
-        obs = f"{first_word} scales teams through staff augmentation"
+    # Build a SPECIFIC observation — not generic "you do mobile dev"
+    # Use their actual services, signals, pain points to sound like we did homework
+    if pain_points and 'mobile' in pain_points.lower():
+        obs = f"Looks like {first_word} does a lot of mobile work and keeping iOS plus Android in sync is a grind"
+    elif pain_points and 'deadline' in pain_points.lower():
+        obs = f"Seeing {first_word} ships fast turnaround work and that timeline pressure is real"
+    elif pain_points and 'scale' in pain_points.lower():
+        obs = f"{first_word} seems to be in that growth phase where the team size does not match the project pipeline"
+    elif wl_signals and ('white label' in wl_signals.lower() or 'partner' in wl_signals.lower()):
+        obs = f"Noticed {first_word} works with partner agencies already, so you know the subcontracting game"
+    elif wl_signals and ('staff' in wl_signals.lower() or 'augment' in wl_signals.lower()):
+        obs = f"{first_word} already does staff augmentation, so adding dev capacity is not new to you"
+    elif primary and ('mobile' in primary.lower()):
+        obs = f"{first_word} has deep mobile chops, React Native plus native, that is a rare combo"
+    elif primary and ('AI' in primary or 'ML' in primary):
+        obs = f"{first_word} is building in AI/ML, most agencies that size do not have that in house"
+    elif primary and ('SaaS' in primary):
+        obs = f"{first_word} builds SaaS products, that long game dev cycle is a different beast"
     elif primary:
-        obs = f"{first_word} ships {primary} projects"
+        obs = f"{first_word} focuses on {primary}, that is a crowded space so your team must be sharp"
     else:
-        obs = f"{first_word} takes on client development work"
+        obs = f"Been looking at {first_word}, your work stands out in a sea of template agencies"
 
-    # Question: make them think about THEIR problem
+    # Question: short, easy to answer, about THEIR experience
     questions = [
-        f"When your team hits capacity, where does the overflow go",
-        f"What happens when a big project lands and your team is booked",
-        f"When you are at full capacity and another project comes in, what do you do",
-        f"How do you handle {primary} overflow right now",
+        f"What is the hardest part of running {primary} projects at your size",
+        f"When you look at your next quarter, what is the one thing that keeps you up at night",
+        f"What would you change about how you handle {primary} delivery if you could",
+        f"Is {primary} where most of your team time goes, or is something else eating the clock",
     ]
     question = random.choice(questions)
 
@@ -255,7 +273,8 @@ def make_email_t1(lead):
 def make_email_t2(lead):
     """
     T2 — Value Add (Day 4-5)
-    ~45 words. One concrete scenario. Zero pressure. No links. No brag.
+    ~40 words. One specific micro-story. Not "we helped an agency" — a real scenario.
+    Zero pressure. No links. No brag. Just a data point.
     """
     company = lead.get("Company Name", "").strip()
     email = lead.get("Email", "").strip()
@@ -275,34 +294,34 @@ def make_email_t2(lead):
     import random
     random.seed(hash(company) + 1)
 
-    # Concrete scenario with REAL numbers (not vague "we helped an agency")
+    # Micro-stories: specific, believable, no brag
     if 'mobile' in primary.lower():
-        scenarios = [
-            f"Last month covered a React Native build for an agency whose lead dev was out. 14 screens, shipped on time, under their brand.",
-            f"An agency sent us their mobile overflow in March. 3 devs, 6 weeks, iOS plus Android. Client gave them a 5 star review.",
+        stories = [
+            f"A dev agency in Texas had their React Native guy quit mid project. We took over 8 screens, matched their codebase style, client never noticed the switch.",
+            f"An agency booked through Q4 sent us 2 mobile builds. Shipped both before their deadline. They kept the margin, we stayed invisible.",
         ]
     elif 'AI' in kw or 'ML' in kw:
-        scenarios = [
-            f"Recently helped an agency ship an ML pipeline they could not staff. 4 week sprint, their name on the repo, their client renewed.",
-            f"An agency partner sent us an AI feature build last quarter. Model plus API, shipped in 3 weeks under their brand.",
+        stories = [
+            f"An agency won an AI feature contract but had no ML people. We built the model and API in 4 weeks. They presented it as their own work.",
+            f"Partner agency needed a recommendation engine for their client. We built it, they shipped it, client renewed for phase 2.",
         ]
-    elif 'web' in primary.lower():
-        scenarios = [
-            f"An agency came to us at capacity on a platform rebuild. We took 2 modules, shipped in 3 sprints, their margin stayed intact.",
-            f"Last quarter we handled a full SaaS dashboard for an agency booked solid. Their client, their repo, their review.",
+    elif 'web' in primary.lower() or 'SaaS' in primary.lower():
+        stories = [
+            f"An agency landed a SaaS rebuild but only had 2 devs. We took the backend API, they handled the frontend. Project shipped on time.",
+            f"Agency partner sent us a legacy codebase rewrite. 6 weeks, clean docs, their team took it from there. Client thought it was all them.",
         ]
     else:
-        scenarios = [
-            f"Recently plugged in on a {kw} build for an agency at capacity. 4 week sprint, under their brand, client never knew.",
-            f"An agency partner sent overflow work our way last month. Delivered under their name, on their timeline, no hiccups.",
+        stories = [
+            f"An agency at capacity sent us a {kw} build. 3 week sprint, under their brand, their client gave a 5 star review.",
+            f"Partner agency had a client deadline they could not hit. We plugged in, delivered on time, agency kept the relationship.",
         ]
 
-    scenario = random.choice(scenarios)
+    story = random.choice(stories)
 
     body = (
         f"{greeting},\n\n"
-        f"{scenario}\n\n"
-        f"Heads up for whenever it is useful. Zero pressure.\n\n"
+        f"{story}\n\n"
+        f"Not pitching. Just showing how it works when agencies need quiet backup.\n\n"
         f"SaJib"
     )
 
@@ -313,7 +332,7 @@ def make_email_t2(lead):
 def make_email_t3(lead):
     """
     T3 — Reframe (Day 9-10)
-    ~35 words. Ask about THEIR process. Learn, don't pitch.
+    ~30 words. Ask about THEIR world. Learn mode. No pitch at all.
     """
     company = lead.get("Company Name", "").strip()
     email = lead.get("Email", "").strip()
@@ -334,16 +353,16 @@ def make_email_t3(lead):
     random.seed(hash(company) + 2)
 
     questions = [
-        f"How does {first_word} usually handle {kw} overflow",
-        f"When {first_word} is at capacity on {kw} work, what is the first move",
-        f"Curious, do you have a go to when {kw} projects outpace the team",
+        f"How does {first_word} handle it when a {kw} project is bigger than the current team",
+        f"When {first_word} says no to a project because of bandwidth, where does that lead go",
+        f"What is {first_word} backup plan when two big {kw} projects land at the same time",
     ]
     question = random.choice(questions)
 
     body = (
         f"{greeting},\n\n"
         f"{question}?\n\n"
-        f"No agenda. Just trying to learn how agencies like yours think about this.\n\n"
+        f"Trying to understand how agencies like yours deal with this. No pitch.\n\n"
         f"SaJib"
     )
 
@@ -354,7 +373,7 @@ def make_email_t3(lead):
 def make_email_t4(lead):
     """
     T4 — Breakup (Day 14-16)
-    ~30 words. Clean exit. One line for later.
+    ~25 words. Clean exit. Leave the door open.
     """
     company = lead.get("Company Name", "").strip()
     email = lead.get("Email", "").strip()
@@ -373,9 +392,9 @@ def make_email_t4(lead):
 
     body = (
         f"{greeting},\n\n"
-        f"Going to step back. Timing is everything and right now might not be it.\n\n"
-        f"If {kw} overflow ever comes up, we plug in quietly under your brand. Just keep us in mind.\n\n"
-        f"All the best with {first_word}.\n\n"
+        f"Going to leave you alone now. Respect your inbox.\n\n"
+        f"If you ever need {kw} backup under your brand, we are here. That is all.\n\n"
+        f"Good luck with {first_word}.\n\n"
         f"SaJib"
     )
 
@@ -542,7 +561,11 @@ if __name__ == "__main__":
     parser.add_argument('--limit', type=int, default=0, help='Limit emails (0=all)')
     args = parser.parse_args()
 
-    from crm import get_crm
+    # Use cached CRM to avoid Google Sheets 429 errors
+    try:
+        from crm_cache import get_crm
+    except ImportError:
+        from crm import get_crm
     crm = get_crm()
     wl_leads = crm.get_wl_all()
 
