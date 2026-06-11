@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """NanoSoft Daily Progress Report - Cron version"""
 import sys
 sys.path.insert(0, '/home/ubuntu/nanosoft')
