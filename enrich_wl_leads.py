@@ -34,6 +34,18 @@ SERVICE_KEYWORDS = {
 
 WL_SIGNALS = ['white label', 'white-label', 'whitelabel', 'partner', 'partnership', 'reseller', 'agency partner', 'staff augmentation', 'team extension', 'dedicated team', 'outsourcing', 'offshore', 'nearshore', 'staffing', 'extended team', 'development partner', 'technology partner']
 
+HIRING_KEYWORDS = [
+    'we are hiring', "we're hiring", 'join our team', 'careers', 'open positions',
+    'job openings', 'work with us', 'we are looking for', 'hiring now',
+    'talent wanted', 'join us', 'open roles', 'vacancies',
+]
+
+JOB_TITLE_PATTERNS = [
+    r'(?:senior|mid|junior|lead|principal)\s+(?:react|angular|vue|node|python|java|ios|android|flutter|full[\s-]stack|frontend|backend|devops|qa|ui/ux)\s+(?:developer|engineer|designer)',
+    r'(?:react native|flutter|swift|kotlin)\s+(?:developer|engineer)',
+    r'(?:hiring|seeking|looking for)\s+(?:a\s+)?(?:senior|mid|junior|lead)?\s*(?:developer|engineer|designer)',
+]
+
 
 def fetch_url(url):
     """Fetch URL with urllib."""
@@ -131,11 +143,25 @@ def scrape_agency(website):
 
     pain_points = infer_pain_points(text_lower, services, wl_found)
 
+    # Detect hiring signals
+    hiring_signals = []
+    for kw in HIRING_KEYWORDS:
+        if kw in text_lower:
+            if kw not in hiring_signals:
+                hiring_signals.append(kw)
+    for pattern in JOB_TITLE_PATTERNS:
+        matches = re.findall(pattern, text_lower)
+        for m in matches:
+            role = m.strip() if isinstance(m, str) else ' '.join(m).strip()
+            if role and role not in hiring_signals:
+                hiring_signals.append(role)
+
     return {
         'services': ', '.join(services) if services else '',
         'wl_signals': ', '.join(wl_found) if wl_found else '',
         'pain_points': pain_points,
         'linkedin': linkedin_found,
+        'hiring_signals': ', '.join(hiring_signals[:5]) if hiring_signals else '',
     }
 
 
@@ -214,6 +240,9 @@ def main():
         if data['linkedin'] and not existing_linkedin:
             updates['LinkedIn'] = data['linkedin']
             print(f"    LinkedIn: {data['linkedin']}")
+        if data.get('hiring_signals'):
+            updates['Hiring Signals'] = data['hiring_signals']
+            print(f"    Hiring Signals: {data['hiring_signals']}")
 
         if updates:
             try:

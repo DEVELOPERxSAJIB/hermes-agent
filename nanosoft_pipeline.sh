@@ -59,22 +59,22 @@ case $STEP in
     ;;
   send-t1)
     if check_gmail; then
-      run_step "quill_wl.py" 1800 "send --template T1 --limit 50"
+      run_step "quill_wl.py" 1800 "send --template T1"
     fi
     ;;
   send-t2)
     if check_gmail; then
-      run_step "quill_wl.py" 1800 "send --template T2 --limit 50"
+      run_step "quill_wl.py" 1800 "send --template T2"
     fi
     ;;
   send-t3)
     if check_gmail; then
-      run_step "quill_wl.py" 1800 "send --template T3 --limit 50"
+      run_step "quill_wl.py" 1800 "send --template T3"
     fi
     ;;
   send-t4)
     if check_gmail; then
-      run_step "quill_wl.py" 1800 "send --template T4 --limit 50"
+      run_step "quill_wl.py" 1800 "send --template T4"
     fi
     ;;
   reply)
@@ -83,6 +83,10 @@ case $STEP in
   status)
     # Quick status check: count leads, replies, last send
     run_step "daily_report_cron.py" 60
+    ;;
+  daily-20)
+    # Judge unjudged leads, mark top 20 as Qualified, send T1 to them
+    run_step "daily_20_pipeline.py" 3600
     ;;
   full)
     echo "[$(date '+%Y-%m-%d %H:%M:%S')] FULL PIPELINE START" >> "$LOGFILE"

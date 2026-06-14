@@ -33,7 +33,7 @@ SENT_LOG = os.path.join(NANOSOFT_DIR, "emails_sent_wl.jsonl")
 sys.path.insert(0, NANOSOFT_DIR)
 
 # ── RULES ───────────────────────────────────────────────────
-MAX_WORDS = 100
+MAX_WORDS = 110
 MAX_SUBJECT = 35
 
 BANNED_WORDS = [
@@ -196,16 +196,42 @@ def company_short(company):
     return company.split()[0]
 
 
-# ── EMAIL TEMPLATES v7 — New angle: specific observation + curiosity ──
-# Strategy: Stop sounding like every cold email. Lead with something
-# specific and verifiable about THEIR business. Make it about them.
-# No pitch in T1. No "overflow" or "capacity" — those are our words, not theirs.
+# ── EMAIL TEMPLATES v8 — Hiring Signal Angle + Observation Angle ──
+# Two tracks:
+#   1. HIRING: Lead has "Hiring Signals" → "Noticed you're hiring. Agency vs in-house?"
+#   2. STANDARD: No hiring signals → specific observation + curious question
+# Chairman's exact hiring angle preserved word-for-word.
+
+def _has_hiring_signal(lead):
+    """Check if lead has active hiring signals."""
+    hiring = str(lead.get("Hiring Signals", "")).strip()
+    if hiring and len(hiring) > 3 and hiring not in ('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10'):
+        return True
+    # Also check website text for hiring keywords
+    website_text = lead.get("Website Text", "").lower()
+    hiring_keywords = ["we are hiring", "join our team", "careers", "open positions",
+                       "we're hiring", "job openings", "work with us"]
+    return any(kw in website_text for kw in hiring_keywords)
+
+
+def _get_hiring_ref(lead, first_word):
+    """Build a specific hiring reference for the email."""
+    hiring_signals = str(lead.get("Hiring Signals", "")).strip()
+    if hiring_signals and len(hiring_signals) > 3:
+        # Use the specific role they're hiring for
+        role = hiring_signals.split(",")[0].strip()
+        if len(role) > 60:
+            role = role[:60]
+        return f"Noticed you are hiring for {role}"
+    return f"Saw {first_word} is hiring right now"
+
 
 def make_email_t1(lead):
     """
     T1 — The Hook (Day 1)
-    ~30-45 words. One specific observation about THEIR work. One curious question.
-    No pitch. No "we" first. Sounds like a human who actually looked at their site.
+    Two angles:
+    - HIRING: Reference their job posting, ask agency vs in-house
+    - STANDARD: Specific observation + curious question
     """
     company = lead.get("Company Name", "").strip()
     email = lead.get("Email", "").strip()
@@ -228,53 +254,74 @@ def make_email_t1(lead):
     import random
     random.seed(hash(company))
 
-    # Build a SPECIFIC observation — not generic "you do mobile dev"
-    # Use their actual services, signals, pain points to sound like we did homework
-    if pain_points and 'mobile' in pain_points.lower():
-        obs = f"Looks like {first_word} does a lot of mobile work and keeping iOS plus Android in sync is a grind"
-    elif pain_points and 'deadline' in pain_points.lower():
-        obs = f"Seeing {first_word} ships fast turnaround work and that timeline pressure is real"
-    elif pain_points and 'scale' in pain_points.lower():
-        obs = f"{first_word} seems to be in that growth phase where the team size does not match the project pipeline"
-    elif wl_signals and ('white label' in wl_signals.lower() or 'partner' in wl_signals.lower()):
-        obs = f"Noticed {first_word} works with partner agencies already, so you know the subcontracting game"
-    elif wl_signals and ('staff' in wl_signals.lower() or 'augment' in wl_signals.lower()):
-        obs = f"{first_word} already does staff augmentation, so adding dev capacity is not new to you"
-    elif primary and ('mobile' in primary.lower()):
-        obs = f"{first_word} has deep mobile chops, React Native plus native, that is a rare combo"
-    elif primary and ('AI' in primary or 'ML' in primary):
-        obs = f"{first_word} is building in AI/ML, most agencies that size do not have that in house"
-    elif primary and ('SaaS' in primary):
-        obs = f"{first_word} builds SaaS products, that long game dev cycle is a different beast"
-    elif primary:
-        obs = f"{first_word} focuses on {primary}, that is a crowded space so your team must be sharp"
-    else:
-        obs = f"Been looking at {first_word}, your work stands out in a sea of template agencies"
+    # ── HIRING ANGLE ──
+    if _has_hiring_signal(lead):
+        hiring_ref = _get_hiring_ref(lead, first_word)
+        body = (
+            f"{greeting},\n\n"
+            f"{hiring_ref}. Are you building the team in-house or have you considered working with an agency?\n\n"
+            f"Hiring the wrong person is costly. If a hire does not work out, you let them go, "
+            f"start recruiting again, conduct more interviews, handle onboarding, payroll, "
+            f"and repeat the process.\n\n"
+            f"An agency is not just one person. It gives you access to multiple experts "
+            f"with different skill sets. In many cases, an agency provides better experience, "
+            f"stronger results, greater flexibility, and a more cost-effective solution than hiring.\n\n"
+            f"Worth a conversation?\n\n"
+            f"SaJib"
+        )
+        subject = f"{first_word} hiring"
+        return _finalize(email, subject, body, company, "T1-HIRING")
 
-    # Question: short, easy to answer, about THEIR experience
-    questions = [
-        f"What is the hardest part of running {primary} projects at your size",
-        f"When you look at your next quarter, what is the one thing that keeps you up at night",
-        f"What would you change about how you handle {primary} delivery if you could",
-        f"Is {primary} where most of your team time goes, or is something else eating the clock",
-    ]
-    question = random.choice(questions)
+    # ── STANDARD ANGLE (non-hiring) ──
+    # Same agency-vs-in-house body, but first line is about THEIR business
+    # Build a specific opening line based on their profile
+    if wl_signals and ('white label' in wl_signals.lower() or 'white-label' in wl_signals.lower()):
+        opening = f"{first_word} already works with partners and agencies know the value of having backup"
+    elif wl_signals and ('staff augmentation' in wl_signals.lower() or 'outsourcing' in wl_signals.lower() or 'offshore' in wl_signals.lower()):
+        opening = f"{first_word} already outsources some work, so you know one person is not always the answer"
+    elif wl_signals and ('partner' in wl_signals.lower()):
+        opening = f"{first_word} already partners with other agencies, so you know how subcontracting works"
+    elif pain_points and 'mobile' in pain_points.lower():
+        opening = f"Looks like {first_word} does serious mobile work and those projects need more than one or two devs"
+    elif pain_points and 'capacity' in pain_points.lower():
+        opening = f"{first_word} is growing and at some point the team cannot handle everything alone"
+    elif pain_points and 'scaling' in pain_points.lower():
+        opening = f"{first_word} is scaling and the team size does not always match the project pipeline"
+    elif primary and ('mobile' in primary.lower()):
+        opening = f"{first_word} has deep mobile skills and those projects need wide expertise"
+    elif primary and ('AI' in primary or 'ML' in primary):
+        opening = f"{first_word} builds in AI/ML and that kind of work needs specialists, not just one hire"
+    elif primary and ('SaaS' in primary):
+        opening = f"{first_word} builds SaaS products and long dev cycles need flexible teams"
+    elif primary and ('cloud' in primary.lower() or 'devops' in primary.lower()):
+        opening = f"{first_word} works in cloud and DevOps and that field moves too fast for one person"
+    elif primary:
+        opening = f"{first_word} focuses on {primary} and projects in that space need more than internal hires"
+    else:
+        opening = f"Been looking at {first_word} and your team does solid work in a competitive space"
 
     body = (
         f"{greeting},\n\n"
-        f"{obs}. {question}?\n\n"
+        f"{opening}. Have you considered working with an agency instead of only hiring in-house?\n\n"
+        f"Hiring the wrong person is costly. If a hire does not work out, you let them go, "
+        f"start recruiting again, conduct more interviews, handle onboarding, payroll, "
+        f"and repeat the process.\n\n"
+        f"An agency is not just one person. It gives you access to multiple experts "
+        f"with different skill sets. In many cases, an agency provides better experience, "
+        f"stronger results, greater flexibility, and a more cost-effective solution than hiring.\n\n"
+        f"Worth a conversation?\n\n"
         f"SaJib"
     )
 
-    subject = subject_hook(company, services)
+    subject = f"{first_word} question"
     return _finalize(email, subject, body, company, "T1")
 
 
 def make_email_t2(lead):
     """
     T2 — Value Add (Day 4-5)
-    ~40 words. One specific micro-story. Not "we helped an agency" — a real scenario.
-    Zero pressure. No links. No brag. Just a data point.
+    Hiring: Agency vs hiring cost scenario
+    Standard: Micro-story about agency partnership
     """
     company = lead.get("Company Name", "").strip()
     email = lead.get("Email", "").strip()
@@ -294,26 +341,53 @@ def make_email_t2(lead):
     import random
     random.seed(hash(company) + 1)
 
-    # Micro-stories: specific, believable, no brag
+    # ── HIRING ANGLE ──
+    if _has_hiring_signal(lead):
+        scenarios = [
+            f"A dev agency in Texas was hiring for 3 React roles. Took 4 months, 2 bad hires, "
+            f"forty thousand plus wasted. They switched to an agency model. Got 5 experts in 2 weeks, "
+            f"project shipped on time, sixty percent cheaper than payroll.",
+
+            f"A dev shop in Europe needed 2 senior devs for a 6-month project. Hiring would take 3 months "
+            f"and cost twenty-five thousand plus in recruiting alone. They used an agency team instead. "
+            f"Started in 1 week, delivered in 5 months, no payroll overhead.",
+        ]
+        scenario = random.choice(scenarios)
+        body = (
+            f"{greeting},\n\n"
+            f"{scenario}\n\n"
+            f"If {first_word} is hiring for {kw} roles, this might be worth thinking about.\n\n"
+            f"SaJib"
+        )
+        subject = f"re: {first_word} hiring"
+        return _finalize(email, subject, body, company, "T2-HIRING")
+
+    # ── STANDARD ANGLE ──
+    # Same agency-vs-in-house framing but as a story/example
     if 'mobile' in primary.lower():
         stories = [
-            f"A dev agency in Texas had their React Native guy quit mid project. We took over 8 screens, matched their codebase style, client never noticed the switch.",
-            f"An agency booked through Q4 sent us 2 mobile builds. Shipped both before their deadline. They kept the margin, we stayed invisible.",
+            f"A mobile agency in the US was about to hire 3React Native devs. Took one look at the recruiting cost, timeline and risk, they used an agency instead. Got 3 matching devs in one week, project shipped, zero payroll headache.",
+            f"An agency had a 4-month mobile deadline and losing their leadReact developer. Posting a job ad, running interviews, would take months, they brought in an agency team. Shipped on time, client gave them a repeat order.",
         ]
     elif 'AI' in kw or 'ML' in kw:
         stories = [
-            f"An agency won an AI feature contract but had no ML people. We built the model and API in 4 weeks. They presented it as their own work.",
-            f"Partner agency needed a recommendation engine for their client. We built it, they shipped it, client renewed for phase 2.",
+            f"An agency won an AI feature contract. Hiring ML engineers would take 3 months minimum, they partnered with an agency that had the specialists ready. Delivered in 6 weeks, client never knew the difference.",
+            f"A dev shop needed a recommendation engine built. No way to hire that talent fast enough, they used an agency team. Built, shipped, client renewed for phase two.",
         ]
     elif 'web' in primary.lower() or 'SaaS' in primary.lower():
         stories = [
-            f"An agency landed a SaaS rebuild but only had 2 devs. We took the backend API, they handled the frontend. Project shipped on time.",
-            f"Agency partner sent us a legacy codebase rewrite. 6 weeks, clean docs, their team took it from there. Client thought it was all them.",
+            f"A SaaS agency landed a big rebuild but only had3 developers. Hiring more would blow the budget and timeline, they brought in an agency to handle the backend. Shipped on time, kept the margin.",
+            f"An agency had a legacy codebase rewrite. Could not justify a full-time hire for a6-month project. Used an agency team instead, got clean docs, their client was happy.",
+        ]
+    elif 'cloud' in kw or 'devops' in kw:
+        stories = [
+            f"An agency won a cloud migration project but had no DevOps people. Hiring would take months, they used an agency with the right skills. Migration done in 8 weeks, client signed a retainer.",
+            f"A dev shop needed AWS specialists for a 4-month contract. No point hiring full-time, they partnered with an agency. Got 2 cloud engineers Monday morning, project delivered on schedule.",
         ]
     else:
         stories = [
-            f"An agency at capacity sent us a {kw} build. 3 week sprint, under their brand, their client gave a 5 star review.",
-            f"Partner agency had a client deadline they could not hit. We plugged in, delivered on time, agency kept the relationship.",
+            f"An agency was about to post job ads for {kw} roles. Recruiting cost alone was twenty thousand plus, timeline was 3 months minimum. They used an agency instead, got experts in one week.",
+            f"A dev shop had a client deadline they could not hit with their current team. Hiring was too slow, they brought in an agency. Delivered on time, agency kept the relationship.",
         ]
 
     story = random.choice(stories)
@@ -321,18 +395,19 @@ def make_email_t2(lead):
     body = (
         f"{greeting},\n\n"
         f"{story}\n\n"
-        f"Not pitching. Just showing how it works when agencies need quiet backup.\n\n"
+        f"If {first_word} ever faces a gap between team size and project load, this is worth thinking about.\n\n"
         f"SaJib"
     )
 
-    subject = subject_followup(company)
+    subject = f"re: {first_word} question"
     return _finalize(email, subject, body, company, "T2")
 
 
 def make_email_t3(lead):
     """
     T3 — Reframe (Day 9-10)
-    ~30 words. Ask about THEIR world. Learn mode. No pitch at all.
+    Hiring: Ask about hiring timeline
+    Standard: Learn mode question about their world
     """
     company = lead.get("Company Name", "").strip()
     email = lead.get("Email", "").strip()
@@ -352,28 +427,49 @@ def make_email_t3(lead):
     import random
     random.seed(hash(company) + 2)
 
+    # ── HIRING ANGLE ──
+    if _has_hiring_signal(lead):
+        questions = [
+            f"Quick question. What is {first_word} hiring timeline for the {kw} roles? "
+            f"If you need people faster than recruiting allows, we can help.",
+
+            f"Curious. How many roles is {first_word} looking to fill this quarter? "
+            f"If the timeline is tight, an agency team might be worth considering.",
+        ]
+        question = random.choice(questions)
+        body = (
+            f"{greeting},\n\n"
+            f"{question}\n\n"
+            f"No pitch. Just trying to understand if there is a fit.\n\n"
+            f"SaJib"
+        )
+        subject = f"{first_word} timeline"
+        return _finalize(email, subject, body, company, "T3-HIRING")
+
+    # ── STANDARD ANGLE ──
+    # Ask about their growth/hiring plans — keeps the agency-vs-in-house thread
     questions = [
-        f"How does {first_word} handle it when a {kw} project is bigger than the current team",
-        f"When {first_word} says no to a project because of bandwidth, where does that lead go",
-        f"What is {first_word} backup plan when two big {kw} projects land at the same time",
+        f"Quick question. When {first_word} lands a {kw} project that is too big for the current team, what is the usual move, hire or bring in a partner",
+        f"Curious. If {first_word} had to scale the team up by 3 or 4 devs next month, would you hire or consider an agency",
+        f"When {first_word} looks at the next quarter, is hiring new devs part of the plan or do you prefer flexible capacity",
     ]
     question = random.choice(questions)
 
     body = (
         f"{greeting},\n\n"
         f"{question}?\n\n"
-        f"Trying to understand how agencies like yours deal with this. No pitch.\n\n"
+        f"No pitch. Just trying to understand how agencies like yours handle growth.\n\n"
         f"SaJib"
     )
 
-    subject = subject_reframe(company)
+    subject = f"{first_word} growth"
     return _finalize(email, subject, body, company, "T3")
 
 
 def make_email_t4(lead):
     """
     T4 — Breakup (Day 14-16)
-    ~25 words. Clean exit. Leave the door open.
+    Clean exit for both tracks.
     """
     company = lead.get("Company Name", "").strip()
     email = lead.get("Email", "").strip()
@@ -558,6 +654,8 @@ if __name__ == "__main__":
     parser.add_argument('action', choices=['preview', 'draft', 'send', 'test', 'validate'],
                         help='Action: preview, draft, send, test, validate')
     parser.add_argument('--template', '-t', choices=['T1', 'T2', 'T3', 'T4'], default='T1')
+    parser.add_argument('--hiring-only', action='store_true', help='Only send to leads with hiring signals')
+    parser.add_argument('--standard-only', action='store_true', help='Only send to leads without hiring signals')
     parser.add_argument('--limit', type=int, default=0, help='Limit emails (0=all)')
     args = parser.parse_args()
 
@@ -570,10 +668,19 @@ if __name__ == "__main__":
     wl_leads = crm.get_wl_all()
 
     qualified = [l for l in wl_leads if l.get("Status") == "Qualified"]
+
+    # Filter by hiring signal if requested
+    if args.hiring_only:
+        qualified = [l for l in qualified if _has_hiring_signal(l)]
+        log(f"[QUILL-WL v8] Hiring filter: {len(qualified)} leads with hiring signals")
+    elif args.standard_only:
+        qualified = [l for l in qualified if not _has_hiring_signal(l)]
+        log(f"[QUILL-WL v8] Standard filter: {len(qualified)} leads without hiring signals")
+
     if args.limit > 0:
         qualified = qualified[:args.limit]
 
-    log(f"[QUILL-WL v2] {len(qualified)} Qualified WL leads loaded")
+    log(f"[QUILL-WL v8] {len(qualified)} Qualified WL leads loaded")
 
     make_fn = {
         'T1': make_email_t1,

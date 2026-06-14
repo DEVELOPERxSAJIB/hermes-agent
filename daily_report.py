@@ -1,14 +1,11 @@
 from crm import get_crm
 from datetime import datetime, timezone, timedelta
-
 BD_TZ = timezone(timedelta(hours=6))
 crm = get_crm()
 leads = crm.get_wl_all()
-
 from collections import Counter
 status_counts = Counter(l.get('Status','') for l in leads)
 total = len(leads)
-
 sent_log = '/home/ubuntu/nanosoft/emails_sent_wl.jsonl'
 total_sent = 0
 try:
@@ -16,7 +13,6 @@ try:
         total_sent = sum(1 for line in f if line.strip())
 except:
     pass
-
 now = datetime.now(BD_TZ).strftime('%Y-%m-%d %H:%M')
 print(f'NanoSoft Daily Report - {now} BD')
 print(f'Total leads: {total}')
