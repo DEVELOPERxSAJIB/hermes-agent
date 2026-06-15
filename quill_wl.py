@@ -228,10 +228,11 @@ def _get_hiring_ref(lead, first_word):
 
 def make_email_t1(lead):
     """
-    T1 — The Hook (Day 1)
+    T1: The Hook (Day 1)
+    Human tone. Attention-seeking. Forces a reply.
     Two angles:
-    - HIRING: Reference their job posting, ask agency vs in-house
-    - STANDARD: Specific observation + curious question
+    - HIRING: Reference their job posting, paint the pain, ask what they will do
+    - STANDARD: Open with something specific about their business, same pain point
     """
     company = lead.get("Company Name", "").strip()
     email = lead.get("Email", "").strip()
@@ -248,73 +249,74 @@ def make_email_t1(lead):
     greeting = f"Hey {first_name}" if first_name else f"Hey {first_word} team"
 
     primary = get_primary_service(services)
-    if '/' in primary:
-        primary = primary.split('/')[0].strip()
+    if "/" in primary:
+        primary = primary.split("/")[0].strip()
 
     import random
     random.seed(hash(company))
 
     # ── HIRING ANGLE ──
     if _has_hiring_signal(lead):
-        hiring_ref = _get_hiring_ref(lead, first_word)
+        role = str(lead.get("Hiring Signals", "")).strip().split(",")[0].strip()
+        if len(role) > 50:
+            role = role[:50]
+
+        hooks = [
+            f"hey, saw your {role} listing",
+            f"saw {first_word} is hiring for {role}",
+            f"hey, you are looking for {role}, right",
+        ]
+        hook = random.choice(hooks)
+
+        questions = [
+            f"real question. if that hire takes 3 months and then does not work out, what is the backup plan",
+            f"quick one. what happens if recruiting takes too long and the project starts piling up",
+            f"been there myself. bad hire sets you back 6 months easy. do you have a plan b",
+        ]
+        question = random.choice(questions)
+
         body = (
             f"{greeting},\n\n"
-            f"{hiring_ref}. Are you building the team in-house or have you considered working with an agency?\n\n"
-            f"Hiring the wrong person is costly. If a hire does not work out, you let them go, "
-            f"start recruiting again, conduct more interviews, handle onboarding, payroll, "
-            f"and repeat the process.\n\n"
-            f"An agency is not just one person. It gives you access to multiple experts "
-            f"with different skill sets. In many cases, an agency provides better experience, "
-            f"stronger results, greater flexibility, and a more cost-effective solution than hiring.\n\n"
-            f"Worth a conversation?\n\n"
+            f"{hook}. {question}?\n\n"
+            f"asking because agencies keep calling us exactly at that moment, their hire quit or recruiting is too slow. we plug in, they ship.\n\n"
+            f"no pitch. just curious how {first_word} handles that risk.\n\n"
             f"SaJib"
         )
-        subject = f"{first_word} hiring"
-        return _finalize(email, subject, body, company, "T1-HIRING")
+        return _finalize(email, f"{first_word} hiring", body, company, "T1-HIRING")
 
-    # ── STANDARD ANGLE (non-hiring) ──
-    # Same agency-vs-in-house body, but first line is about THEIR business
-    # Build a specific opening line based on their profile
-    if wl_signals and ('white label' in wl_signals.lower() or 'white-label' in wl_signals.lower()):
-        opening = f"{first_word} already works with partners and agencies know the value of having backup"
-    elif wl_signals and ('staff augmentation' in wl_signals.lower() or 'outsourcing' in wl_signals.lower() or 'offshore' in wl_signals.lower()):
-        opening = f"{first_word} already outsources some work, so you know one person is not always the answer"
-    elif wl_signals and ('partner' in wl_signals.lower()):
-        opening = f"{first_word} already partners with other agencies, so you know how subcontracting works"
-    elif pain_points and 'mobile' in pain_points.lower():
-        opening = f"Looks like {first_word} does serious mobile work and those projects need more than one or two devs"
-    elif pain_points and 'capacity' in pain_points.lower():
-        opening = f"{first_word} is growing and at some point the team cannot handle everything alone"
-    elif pain_points and 'scaling' in pain_points.lower():
-        opening = f"{first_word} is scaling and the team size does not always match the project pipeline"
-    elif primary and ('mobile' in primary.lower()):
-        opening = f"{first_word} has deep mobile skills and those projects need wide expertise"
-    elif primary and ('AI' in primary or 'ML' in primary):
-        opening = f"{first_word} builds in AI/ML and that kind of work needs specialists, not just one hire"
-    elif primary and ('SaaS' in primary):
-        opening = f"{first_word} builds SaaS products and long dev cycles need flexible teams"
-    elif primary and ('cloud' in primary.lower() or 'devops' in primary.lower()):
-        opening = f"{first_word} works in cloud and DevOps and that field moves too fast for one person"
+    # ── STANDARD ANGLE (not hiring) ──
+    # Hook is specific to their business. Body stays human and reply-forcing.
+    if wl_signals and ("white label" in wl_signals.lower() or "white-label" in wl_signals.lower()):
+        hook = f"{first_word} already works with partners, so you know how this goes"
+    elif wl_signals and ("staff augmentation" in wl_signals.lower() or "outsourcing" in wl_signals.lower() or "offshore" in wl_signals.lower()):
+        hook = f"looks like {first_word} already sends some work offshore"
+    elif wl_signals and "partner" in wl_signals.lower():
+        hook = f"noticed {first_word} works with a lot of partner agencies"
+    elif pain_points and "mobile" in pain_points.lower():
+        hook = f"mobile projects are brutal to staff. one guy quits, whole timeline falls apart"
+    elif pain_points and ("capacity" in pain_points.lower() or "scale" in pain_points.lower()):
+        hook = f"when the project pipeline grows faster than the team, things get stressful"
+    elif primary and ("AI" in primary or "ML" in primary):
+        hook = f"AI work needs real specialists. hard to find, harder to hire full time"
+    elif primary and "mobile" in primary.lower():
+        hook = f"mobile dev is a different beast, react native, native, keeping both in sync"
+    elif primary and ("cloud" in primary.lower() or "devops" in primary.lower()):
+        hook = f"cloud projects move too fast to wait 3 months for a new hire"
     elif primary:
-        opening = f"{first_word} focuses on {primary} and projects in that space need more than internal hires"
+        hook = f"keep hearing the same thing from {primary} agencies"
     else:
-        opening = f"Been looking at {first_word} and your team does solid work in a competitive space"
+        hook = f"quick question and i am genuinely curious"
 
     body = (
         f"{greeting},\n\n"
-        f"{opening}. Have you considered working with an agency instead of only hiring in-house?\n\n"
-        f"Hiring the wrong person is costly. If a hire does not work out, you let them go, "
-        f"start recruiting again, conduct more interviews, handle onboarding, payroll, "
-        f"and repeat the process.\n\n"
-        f"An agency is not just one person. It gives you access to multiple experts "
-        f"with different skill sets. In many cases, an agency provides better experience, "
-        f"stronger results, greater flexibility, and a more cost-effective solution than hiring.\n\n"
-        f"Worth a conversation?\n\n"
+        f"{hook}.\n\n"
+        f"when {first_word} lands a project that is too big for the current team, what is the move. hire in-house and wait 3 months, or bring in people who can start next week?\n\n"
+        f"seriously asking, that is the exact problem we solve. agencies call us when a key dev quits mid project or recruiting is moving too slow.\n\n"
+        f"if that ever happens, would you rather post another job ad or just make a call\n\n"
         f"SaJib"
     )
 
-    subject = f"{first_word} question"
-    return _finalize(email, subject, body, company, "T1")
+    return _finalize(email, f"{first_word} question", body, company, "T1")
 
 
 def make_email_t2(lead):
