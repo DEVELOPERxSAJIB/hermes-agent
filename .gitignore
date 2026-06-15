@@ -25,3 +25,12 @@ node_modules/
 # OS
 .DS_Store
 Thumbs.db
+
+# Runtime data
+emails_sent_wl.jsonl
+crm_cache.json
+new_wl_leads_v5.csv
+judge_daily_20.log
+t1_send_19.log
+send_t1_19.py
+judge_daily_20.py
