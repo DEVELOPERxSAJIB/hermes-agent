@@ -3,11 +3,16 @@ Returns dict with 'subject' and 'body' keys."""
 import re
 
 def _clean(text):
-    """Remove em dashes and en dashes only. Keep hyphens."""
+    """Remove em dashes and en dashes. Keep hyphens. Preserve paragraph breaks (double newlines)."""
     if not text:
         return ""
     text = text.replace("\u2014", " ").replace("\u2013", " ")
-    text = re.sub(r'\s+', ' ', text)
+    # Collapse multiple blank lines into exactly one blank line
+    text = re.sub(r'\n{3,}', '\n\n', text)
+    # Remove trailing spaces on each line, collapse intra-line whitespace
+    lines = [re.sub(r'[ \t]+', ' ', line).strip() for line in text.split('\n')]
+    # Rejoin preserving single/blank lines
+    text = '\n'.join(lines)
     return text.strip()
 
 def _first_name(contact_name):
