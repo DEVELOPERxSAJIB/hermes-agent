@@ -1,0 +1,29 @@
+{"email": "john@example.com", "reason": "The domain name example.com does not accept email.", "source": "pre-send", "detected_at": "2026-06-16T13:36:37.233567+06:00"}
+{"email": "jamie@example.com", "reason": "The domain name example.com does not accept email.", "source": "pre-send", "detected_at": "2026-06-16T13:36:39.723821+06:00"}
+{"email": "john@acme.com", "reason": "No MX records for acme.com", "source": "pre-send", "detected_at": "2026-06-16T13:36:42.242790+06:00"}
+{"email": "gsap@3.14.1", "reason": "The part after the @-sign is not valid. It is not within a valid top-level domain.", "source": "pre-send", "detected_at": "2026-06-16T13:36:45.427242+06:00"}
+{"email": "replo@v2.1.0", "reason": "The part after the @-sign is not valid. It is not within a valid top-level domain.", "source": "pre-send", "detected_at": "2026-06-16T13:37:08.166840+06:00"}
+{"email": "email@company.com", "reason": "No MX records for company.com", "source": "pre-send", "detected_at": "2026-06-16T13:37:09.957487+06:00"}
+{"email": "splide-extension-auto-scroll@0.5.3", "reason": "The part after the @-sign is not valid. It is not within a valid top-level domain.", "source": "pre-send", "detected_at": "2026-06-16T13:37:13.418182+06:00"}
+{"email": "updates@tickethub.com", "reason": "The domain name tickethub.com does not accept email.", "source": "pre-send", "detected_at": "2026-06-16T13:37:15.179254+06:00"}
+{"email": "info@tigerteamsonsulting.com", "reason": "The domain name tigerteamsonsulting.com does not exist.", "source": "pre-send", "detected_at": "2026-06-16T13:37:17.517610+06:00"}
+{"email": "intl-segmenter@11.7.10", "reason": "The part after the @-sign is not valid. It is not within a valid top-level domain.", "source": "pre-send", "detected_at": "2026-06-16T13:37:19.458266+06:00"}
+{"email": "info@tourbr.com", "reason": "No MX records for tourbr.com", "source": "pre-send", "detected_at": "2026-06-16T13:37:22.734512+06:00"}
+{"email": "you@example.com", "reason": "The domain name example.com does not accept email.", "source": "pre-send", "detected_at": "2026-06-16T13:37:26.101384+06:00"}
+{"email": "despegar@3x.webp", "reason": "The domain name 3x.webp does not exist.", "source": "pre-send", "detected_at": "2026-06-16T13:37:29.617984+06:00"}
+{"email": "info@ibtimes.co.ukfill", "reason": "The domain name ibtimes.co.ukfill does not exist.", "source": "pre-send", "detected_at": "2026-06-16T13:37:34.367688+06:00"}
+{"email": "your@company.com", "reason": "No MX records for company.com", "source": "pre-send", "detected_at": "2026-06-16T13:37:36.100710+06:00"}
+{"email": "select2@4.1.0-rc.0", "reason": "The part after the @-sign is not valid. It is not within a valid top-level domain.", "source": "pre-send", "detected_at": "2026-06-16T13:37:38.759851+06:00"}
+{"email": "email@example.com", "reason": "The domain name example.com does not accept email.", "source": "pre-send", "detected_at": "2026-06-16T13:37:44.000809+06:00"}
+{"email": "slick-carousel@1.8.1", "reason": "The part after the @-sign is not valid. It is not within a valid top-level domain.", "source": "pre-send", "detected_at": "2026-06-16T13:37:46.325073+06:00"}
+{"email": "flags@2x-11151219817c4593cbfaede705cfcd30.webp", "reason": "The domain name 2x-11151219817c4593cbfaede705cfcd30.webp does not exist.", "source": "pre-send", "detected_at": "2026-06-16T13:37:48.193982+06:00"}
+{"email": "name@example.com", "reason": "The domain name example.com does not accept email.", "source": "pre-send", "detected_at": "2026-06-16T13:37:50.574491+06:00"}
+{"email": "default-utils.js@_0.45.l_pp91k9.mjs", "reason": "The part after the @-sign contains invalid characters: '_'.", "source": "pre-send", "detected_at": "2026-06-16T13:37:52.144594+06:00"}
+{"email": "contoso@example.com", "reason": "The domain name example.com does not accept email.", "source": "pre-send", "detected_at": "2026-06-16T13:37:53.659240+06:00"}
+{"email": "defer.js@3.5.0", "reason": "The part after the @-sign is not valid. It is not within a valid top-level domain.", "source": "pre-send", "detected_at": "2026-06-16T13:37:57.317838+06:00"}
+{"email": "info@localsearchpositioning.com", "reason": "No MX records for localsearchpositioning.com", "source": "pre-send", "detected_at": "2026-06-16T13:37:59.601427+06:00"}
+{"email": "impact-website@2026.05.27.1", "reason": "The part after the @-sign is not valid. It is not within a valid top-level domain.", "source": "pre-send", "detected_at": "2026-06-16T13:38:01.682729+06:00"}
+{"email": "default-utils.js@_0.45.bc0xlcek.mjs", "reason": "The part after the @-sign contains invalid characters: '_'.", "source": "pre-send", "detected_at": "2026-06-16T13:38:09.203899+06:00"}
+{"email": "intl-tel-input@23.0.11", "reason": "The part after the @-sign is not valid. It is not within a valid top-level domain.", "source": "pre-send", "detected_at": "2026-06-16T13:38:17.562495+06:00"}
+{"email": "logo-@america-300x148.webp", "reason": "The domain name america-300x148.webp does not exist.", "source": "pre-send", "detected_at": "2026-06-16T13:38:20.814689+06:00"}
+{"email": "markdown-it@14.1.0", "reason": "The part after the @-sign is not valid. It is not within a valid top-level domain.", "source": "pre-send", "detected_at": "2026-06-16T13:38:22.543906+06:00"}

@@ -59,6 +59,16 @@ def send_smtp(to_email, subject, body):
                 return False, err
     return False, "Max retries reached"
 
+# ─── Email verification ─────────────────────────────────────
+def verify_email(email):
+    """Verify email syntax + MX records before sending."""
+    from email_validator import validate_email, EmailNotValidError
+    try:
+        result = validate_email(email, check_deliverability=True)
+        return True, result.normalized
+    except EmailNotValidError as ex:
+        return False, str(ex)
+
 # ─── Gmail API sender (WL pipeline) ─────────────────────────
 def send_gmail(to_email, subject, body):
     import base64
@@ -150,6 +160,7 @@ def run_wl():
     all_leads = crm.get_wl_all()
     sent_log = load_sent_log(SENT_LOG_WL)
     results = {"sent": 0, "skipped": 0, "errors": []}
+    processed_emails = set()  # track leads already processed in this run
 
     # Process: follow-ups first, then new T1
     for template in ["T4", "T3", "T2", "T1"]:
@@ -161,7 +172,10 @@ def run_wl():
             email = str(lead.get("Email", "")).strip().lower()
             if not email or "@" not in email:
                 continue
-            if email in sent_log.get(f"{email}|{template}", {}):
+            if email in processed_emails:
+                continue
+            key = f"{email}|{template}"
+            if key in sent_log:
                 continue
             needs.append(lead)
 
@@ -184,16 +198,31 @@ def run_wl():
                 results["skipped"] += 1
                 continue
 
-            success, error = send_smtp(d['to'], d['subject'], d['body'])
+            # Verify email before sending
+            email_to = d['to']
+            is_valid, verify_detail = verify_email(email_to)
+            if not is_valid:
+                log(f"    SKIP [{i+1}] {company}: invalid email {email_to} - {verify_detail}")
+                results["skipped"] += 1
+                crm.update_wl_lead(company, {"Status": "Bounced", "Email": f"BOUNCED_{email}"})
+                continue
+
+            success, error = send_smtp(email_to, d['subject'], d['body'])
             if success:
                 append_sent_log(SENT_LOG_WL, email, company, d['subject'], template)
                 updates = {"Status": next_status[template], date_col[template]: datetime.now(BD_TZ).strftime("%Y-%m-%d")}
                 crm.update_wl_lead(company, updates)
+                processed_emails.add(email)
                 results["sent"] += 1
                 log(f"    [{i+1}/{len(needs)}] SENT {template} -> {email}")
             else:
-                results["errors"].append(f"{template} {email}: {error[:100]}")
-                log(f"    [{i+1}/{len(needs)}] FAIL {template} -> {email}: {error[:100]}")
+                # Check if it's a permanent bounce
+                if any(kw in error.lower() for kw in ['user unknown', 'mailbox not found', 'recipient rejected', 'invalid', 'does not exist', '550', '551', '552', '553']):
+                    crm.update_wl_lead(company, {"Status": "Bounced", "Email": f"BOUNCED_{email}"})
+                    log(f"    [{i+1}/{len(needs)}] BOUNCE {template} -> {email}: {error[:100]}")
+                else:
+                    results["errors"].append(f"{template} {email}: {error[:100]}")
+                    log(f"    [{i+1}/{len(needs)}] FAIL {template} -> {email}: {error[:100]}")
 
             if i < len(needs) - 1:
                 time.sleep(EMAIL_GAP)
@@ -213,6 +242,7 @@ def run_re():
     leads = get_leads()
     sent_log = load_sent_log(SENT_LOG_RE)
     results = {"sent": 0, "bounced": 0, "skipped": 0, "errors": []}
+    processed_emails = set()  # track leads already processed in this run
 
     # RE status flow: New → T1 → Contacted → T2 → Followed-Up → T3 → T3 Sent → T4
     status_map = {"T1": ["New"], "T2": ["Contacted"], "T3": ["Followed-Up"], "T4": ["T3 Sent"]}
@@ -226,6 +256,8 @@ def run_re():
                 continue
             email = str(lead.get("Email", "")).strip()
             if not email or "@" not in email:
+                continue
+            if email.lower() in processed_emails:
                 continue
             key = f"{email.lower()}|{template}"
             if key in sent_log:
@@ -249,6 +281,16 @@ def run_re():
             lead_id = lead.get("Lead_ID")
 
             tmpl = get_template(angle, int(template[1]), brokerage, "", city)
+
+            # Verify email before sending
+            is_valid, verify_detail = verify_email(email)
+            if not is_valid:
+                log(f"    SKIP [{i+1}] {brokerage}: invalid email {email} - {verify_detail}")
+                if lead_id:
+                    update_status(lead_id, "Bounced")
+                results["skipped"] += 1
+                continue
+
             success, error = send_smtp(email, tmpl["subject"], tmpl["body"])
 
             if success:
@@ -256,13 +298,14 @@ def run_re():
                 if lead_id:
                     update_status(lead_id, next_status[template])
                     update_touch_date(lead_id, int(template[1]))
+                processed_emails.add(email.lower())
                 results["sent"] += 1
                 log(f"    [{i+1}/{len(needs)}] SENT {template} -> {email}")
-            elif "bounce" in error.lower() or "refused" in error.lower():
+            elif any(kw in error.lower() for kw in ['user unknown', 'mailbox not found', 'recipient rejected', 'invalid', 'does not exist', '550', '551', '552', '553', 'bounce', 'refused']):
                 if lead_id:
                     update_status(lead_id, "Bounced")
                 results["bounced"] += 1
-                log(f"    [{i+1}/{len(needs)}] BOUNCE -> {email}")
+                log(f"    [{i+1}/{len(needs)}] BOUNCE -> {email}: {error[:100]}")
             else:
                 results["errors"].append(f"{template} {email}: {error[:100]}")
                 log(f"    [{i+1}/{len(needs)}] FAIL -> {email}: {error[:100]}")
@@ -282,9 +325,29 @@ def main():
     wl = run_wl()
     re = run_re()
 
+    # Post-send: check inbox for bounce-backs
+    log("Checking inbox for bounce-backs...")
+    try:
+        sys.path.insert(0, NANOSOFT_DIR)
+        from gmail_utils import fetch_recent_bounces
+        bounces = fetch_recent_bounces(hours=24)
+        if bounces:
+            log(f"Found {len(bounces)} bounced emails in inbox")
+            from email_tracker import append_bounce_log, mark_wl_bounced, mark_re_bounced
+            for bounced_email in bounces:
+                append_bounce_log(bounced_email, "inbox-detected", "inbox")
+                mark_wl_bounced(bounced_email, "inbox bounce")
+                mark_re_bounced(bounced_email, "inbox bounce")
+        else:
+            log("No bounce-backs found in inbox")
+    except Exception as e:
+        log(f"Bounce check error: {e}")
+
     total = wl["sent"] + re["sent"]
     log("=" * 60)
     log(f"FINAL: WL sent={wl['sent']} | RE sent={re['sent']} | TOTAL={total}")
+    log(f"WL: skipped={wl['skipped']} errors={len(wl['errors'])}")
+    log(f"RE: skipped={re.get('skipped',0)} bounced={re['bounced']} errors={len(re['errors'])}")
     log("=" * 60)
 
     return {"wl": wl, "re": re, "total": total}
