@@ -1,7 +1,14 @@
-"""Lead sourcing via OpenStreetMap (Overpass API) — free, no API key needed"""
+"""
+Lead sourcing via OpenStreetMap (Overpass API) — free, no API key needed
+Enrichment: deep email scraping from websites
+"""
 import re
 import json
+import time
+import socket
 import requests
+from urllib.parse import urljoin, urlparse
+
 from config import US_CITIES, GCC_CITIES, FRANCHISES
 
 # US city coordinates (lat, lon)
@@ -30,36 +37,62 @@ GCC_COORDS = {
 
 ALL_COORDS = {**US_COORDS, **GCC_COORDS}
 
+EMAIL_RE = re.compile(r'[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}')
+
+GENERIC_EMAILS = {
+    'user@domain.com', 'info@example.com', 'test@test.com', 'admin@localhost',
+    'john@example.com', 'jane@example.com', 'email@example.com', 'name@example.com',
+    'yourname@example.com', 'info@domain.com', 'contact@domain.com',
+    'timdoylefl@gmail.com',
+}
+
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.5",
+}
+
+CONTACT_PATHS = [
+    "/contact", "/contact-us", "/about", "/about-us",
+    "/team", "/agents", "/staff", "/people",
+]
+
+MAX_EMAIL_PER_SITE = 5
+PAGE_TIMEOUT = 6
+CONNECT_TIMEOUT = 4
+WAIT_BETWEEN_PAGES = 0.2
+
+
 def is_franchise(name):
-    """Check if brokerage is a known franchise chain."""
     name_lower = name.lower()
     for f in FRANCHISES:
         if f.lower() in name_lower:
             return True
     return False
 
+
 def _overpass_query(query):
-    """Execute an Overpass API query. Returns list of elements."""
     try:
         resp = requests.post(
             "https://overpass-api.de/api/interpreter",
             data={"data": query},
             timeout=30,
-            headers={"User-Agent": "RE-Pipeline/1.0"}
+            headers={"User-Agent": "RE-Pipeline/1.0"},
         )
+        if resp.status_code == 429:
+            print("  [RATE LIMIT] Waiting 30s...")
+            time.sleep(30)
+            return _overpass_query(query)
         if resp.status_code != 200:
-            print(f"Overpass HTTP {resp.status_code}: {resp.text[:200]}")
+            print(f"  Overpass HTTP {resp.status_code}: {resp.text[:200]}")
             return []
         return resp.json().get("elements", [])
     except Exception as e:
-        print(f"Overpass error: {e}")
+        print(f"  Overpass error: {e}")
         return []
 
+
 def search_osm_city(city, radius_meters=15000):
-    """
-    Search OSM for real estate agencies in a city.
-    Uses office=estate_agent and shop=estate_agent tags.
-    """
     coords = ALL_COORDS.get(city)
     if not coords:
         return []
@@ -110,38 +143,139 @@ def search_osm_city(city, radius_meters=15000):
 
     return results
 
+
+def _fetch_page(url, timeout=PAGE_TIMEOUT):
+    """Fetch a page. Returns HTML text or None."""
+    try:
+        resp = requests.get(url, timeout=(CONNECT_TIMEOUT, timeout), headers=HEADERS, allow_redirects=True)
+        if resp.status_code == 200 and resp.text and len(resp.text) > 100:
+            return resp.text
+    except Exception:
+        pass
+    return None
+
+
+def _decode_html_entities(text):
+    """Decode common HTML entities in email addresses."""
+    import html
+    return html.unescape(text)
+
+
+def _extract_emails_from_text(text):
+    """Extract all email addresses from raw text, including HTML."""
+    if not text:
+        return []
+    from urllib.parse import unquote
+    # Decode HTML entities first (&#64; = @, &#46; = .)
+    text = _decode_html_entities(text)
+    # Decode URL-encoded characters (%20 = space, etc.)
+    text = unquote(text)
+    found = EMAIL_RE.findall(text)
+    valid = []
+    for e in found:
+        e = e.lower().strip().rstrip('.')
+        if e in GENERIC_EMAILS:
+            continue
+        if e.endswith(('.png', '.jpg', '.gif', '.svg', '.ico', '.css', '.js', '.woff', '.ttf')):
+            continue
+        local = e.split('@')[0]
+        if len(local) < 2:
+            continue
+        valid.append(e)
+    return list(set(valid))
+
+
+def _extract_mailto_emails(html):
+    """Extract emails from mailto: links."""
+    if not html:
+        return []
+    from urllib.parse import unquote
+    mailtos = re.findall(r'mailto:([^"\'>\s<]+)', html, re.IGNORECASE)
+    cleaned = []
+    for m in mailtos:
+        m = unquote(m)
+        # Strip query strings (?subject=...) and fragments
+        m = m.split('?')[0].split('#')[0]
+        m = _decode_html_entities(m).lower().strip().rstrip('\\').rstrip('/')
+        if '@' in m and len(m) > 5:
+            cleaned.append(m)
+    return cleaned
+
+
+def _dns_fallback_emails(domain):
+    """Try to find common email patterns via DNS/nothing — just return empty.
+    Placeholder for future: could use Clearbit, Hunter.io, etc."""
+    return []
+
+
+def _find_contact_links(html, base_url):
+    """Find contact/about page links in the HTML."""
+    if not html:
+        return []
+    links = []
+    for match in re.finditer(r'href=["\']([^"\'#]+)["\']', html, re.IGNORECASE):
+        href = match.group(1)
+        href_lower = href.lower()
+        if any(kw in href_lower for kw in ['contact', 'about', 'team', 'agent', 'staff', 'people']):
+            full = urljoin(base_url, href)
+            # Only same-domain links
+            if urlparse(full).netloc == urlparse(base_url).netloc:
+                links.append(full)
+    return list(set(links))[:6]
+
+
 def scrape_website_emails(url):
-    """Scrape website for email addresses."""
+    """Deep email scraping. Multiple layers, fast timeouts."""
     if not url or not url.startswith("http"):
         return []
-    try:
-        contact_urls = [
-            url.rstrip("/"),
-            url.rstrip("/") + "/contact",
-            url.rstrip("/") + "/contact-us",
-            url.rstrip("/") + "/about",
-        ]
-        emails = set()
-        for u in contact_urls:
-            try:
-                resp = requests.get(u, timeout=10, headers={
-                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
-                })
-                if resp.status_code == 200:
-                    found = re.findall(r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}', resp.text)
-                    for e in found:
-                        if not e.endswith(('.png', '.jpg', '.gif', '.svg', '.ico')):
-                            emails.add(e.lower())
-            except Exception:
-                continue
-        return list(emails)[:5]
-    except Exception:
+
+    base_url = url.rstrip('/')
+    all_emails = set()
+
+    # LAYER 1: Homepage
+    home_html = _fetch_page(base_url)
+    if not home_html:
         return []
+
+    # mailto links (most reliable)
+    mailto_emails = _extract_mailto_emails(home_html)
+    all_emails.update(mailto_emails)
+
+    # Plain text emails from homepage
+    text_emails = _extract_emails_from_text(home_html)
+    all_emails.update(text_emails)
+
+    # data-email attributes
+    data_emails = re.findall(r'data-email=["\']([^"\'>]+)', home_html, re.IGNORECASE)
+    all_emails.update(e.lower() for e in data_emails if '@' in e and len(e) > 5)
+
+    # Obfuscated: user [at] domain [dot] com
+    obfuscated = re.findall(r'([\w.+\-]+)\s*\[at\]\s*([\w.\-]+)\s*\[dot\]\s*(\w{2,})', home_html, re.IGNORECASE)
+    for ob in obfuscated:
+        all_emails.add(f"{ob[0]}@{ob[1]}.{ob[2]}".lower())
+
+    # LAYER 2: Contact pages (only if we haven't found enough)
+    if len(all_emails) < MAX_EMAIL_PER_SITE:
+        contact_links = _find_contact_links(home_html, base_url)
+        for link in contact_links[:4]:
+            html = _fetch_page(link)
+            if html:
+                all_emails.update(_extract_mailto_emails(html))
+                all_emails.update(_extract_emails_from_text(html))
+            if len(all_emails) >= MAX_EMAIL_PER_SITE:
+                break
+            time.sleep(WAIT_BETWEEN_PAGES)
+
+    # Filter generic
+    filtered = [e for e in all_emails if e not in GENERIC_EMAILS]
+    return filtered[:MAX_EMAIL_PER_SITE]
+
 
 def guess_email(first_name, domain):
     if not first_name or not domain:
         return ""
     return f"{first_name.lower().strip()}@{domain.lower().strip()}"
+
 
 def verify_email_mx(email):
     try:
@@ -151,6 +285,7 @@ def verify_email_mx(email):
         return len(records) > 0
     except Exception:
         return False
+
 
 def check_instagram(username):
     if not username:
@@ -162,28 +297,22 @@ def check_instagram(username):
             return {
                 "exists": True,
                 "username": resp.json().get("author_name", username),
-                "profile_url": f"https://www.instagram.com/{username}/"
+                "profile_url": f"https://www.instagram.com/{username}/",
             }
     except Exception:
         pass
     return {"exists": False, "username": username, "profile_url": f"https://www.instagram.com/{username}/"}
 
+
 def enrich_lead(lead, fast=True):
     """Enrich lead with emails and Instagram check.
-    fast=True skips MX verification and Instagram check for speed."""
+    fast=True skips MX verify and Instagram check for speed."""
     if lead.get("Website"):
         emails = scrape_website_emails(lead["Website"])
         if emails:
             lead["Email"] = emails[0]
-
-    if not lead.get("Email") and lead.get("Website"):
-        domain = lead["Website"].replace("https://", "").replace("http://", "").split("/")[0]
-        contact = lead.get("Contact_Name", "")
-        if contact:
-            guessed = guess_email(contact.split()[0] if " " in contact else contact, domain)
-            if guessed:
-                if fast or verify_email_mx(guessed):
-                    lead["Email"] = guessed
+            if len(emails) > 1:
+                lead["All_Emails"] = emails
 
     if not fast:
         name_slug = lead["Brokerage_Name"].lower().replace(" ", "").replace(".", "")
@@ -192,6 +321,7 @@ def enrich_lead(lead, fast=True):
             lead["Instagram_URL"] = ig["profile_url"]
 
     return lead
+
 
 def scout_single_city(city, max_results=10):
     """Scout a single city and return enriched leads."""

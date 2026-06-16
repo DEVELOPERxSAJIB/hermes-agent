@@ -11,34 +11,53 @@ from sheets import append_lead, get_next_lead_id, update_status, update_touch_da
 from smtp_sender import send_email
 from templates import get_template
 
-LOG_FILE = "/home/ubuntu/nanosoft/re_pipeline/enrich_send.log"
+LOG_FILE = "/tmp/enrich_send.log"
 
 def log(msg):
     line = f"[{time.strftime('%H:%M:%S')}] {msg}"
-    print(line, flush=True)
     with open(LOG_FILE, "a") as f:
         f.write(line + "\n")
 
+def pick_best_email(lead):
+    """Pick the best email from All_Emails — prefer contact/hello/info over generic."""
+    emails = lead.get("All_Emails", [])
+    if not emails:
+        lead.pop("All_Emails", None)
+        return
+    priority = ['contact', 'hello', 'info', 'sales', 'support', 'team', 'agent']
+    for kw in priority:
+        for e in emails:
+            if kw in e.split('@')[0]:
+                lead["Email"] = e
+                return
+    lead["Email"] = emails[0]
+
+
 def main():
+    # Clear log
+    with open(LOG_FILE, "w") as f:
+        f.write("")
+
     # Load raw leads
     with open("/home/ubuntu/nanosoft/re_pipeline/raw_leads.json") as f:
         raw_leads = json.load(f)
 
     log(f"Raw leads: {len(raw_leads)}")
 
-    # Phase 1: Enrich with emails (fast mode — skip MX verify for speed)
+    # Phase 1: Enrich with emails (fast mode)
     log("--- ENRICHING WITH EMAILS ---")
     enriched = []
     for i, lead in enumerate(raw_leads):
         try:
             e = enrich_lead(lead, fast=True)
+            pick_best_email(e)
             enriched.append(e)
             has_email = "YES" if e.get("Email") else "NO"
             log(f"  [{i+1}/{len(raw_leads)}] {lead['Brokerage_Name'][:30]} | Email: {has_email}")
         except Exception as ex:
             log(f"  [{i+1}/{len(raw_leads)}] ERROR: {ex}")
             enriched.append(lead)
-        time.sleep(0.3)
+        time.sleep(0.2)
 
     with_email = [l for l in enriched if l.get("Email")]
     log(f"Leads with email: {len(with_email)} / {len(enriched)}")
@@ -56,7 +75,6 @@ def main():
 
     for i, lead in enumerate(with_email):
         try:
-            # Audit
             ig_url = lead.get("Instagram_URL", "")
             ig_user = ig_url.rstrip("/").split("/")[-1] if ig_url else None
             audit = run_audit(lead.get("Brokerage_Name", ""), ig_user)
@@ -69,7 +87,6 @@ def main():
             else:
                 angle_b += 1
 
-            # Add to sheet
             lead["Lead_ID"] = get_next_lead_id()
             append_lead(lead)
             added += 1
@@ -117,7 +134,7 @@ def main():
         except Exception as ex:
             failed += 1
             log(f"  ERROR: {ex}")
-        time.sleep(1.5)  # Rate limit
+        time.sleep(1.5)
 
     log(f"{'=' * 60}")
     log("FINAL RESULTS")
@@ -129,6 +146,11 @@ def main():
     log(f"Bounced: {bounced}")
     log(f"Failed: {failed}")
     log(f"Angle A: {angle_a} | Angle B: {angle_b}")
+
+    # Print summary to stdout too
+    print(f"\nFINAL RESULTS")
+    print(f"Raw: {len(raw_leads)} | With email: {len(with_email)} | Sent: {sent} | Bounced: {bounced} | Failed: {failed}")
+
 
 if __name__ == "__main__":
     main()

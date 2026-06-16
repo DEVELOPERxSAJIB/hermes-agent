@@ -419,7 +419,12 @@
     "Address": "4600 Samuell Boulevard Dallas",
     "Lead_Source": "OpenStreetMap",
     "OSM_ID": 13270463554,
-    "Email": "info@impressionhomes.net"
+    "Email": "info@impressionhomes.net",
+    "All_Emails": [
+      "askih@impressionhomes.net",
+      "dejaw@impressionhomes.net",
+      "info@impressionhomes.net"
+    ]
   },
   {
     "Brokerage_Name": "Lucid Private Offices - Uptown Dallas / Central Expressway",
@@ -475,7 +480,14 @@
     "Address": "6537 East Exeter Boulevard Scottsdale",
     "Lead_Source": "OpenStreetMap",
     "OSM_ID": 3128734244,
-    "Email": "az.broker@exprealty.net"
+    "Email": "fscottc21@movephoenix.com",
+    "All_Emails": [
+      "fscottc21@movephoenix.com",
+      "bret.lamberson@russlyon.com",
+      "sunnysellsre@gmail.com",
+      "wenz@kw.com",
+      "travis@homeladder.com"
+    ]
   },
   {
     "Brokerage_Name": "Israel, Finley & Ramos REALTORS",
@@ -486,7 +498,8 @@
     "Phone": "+1-623-435-8181",
     "Address": "7149 North 45th Avenue Glendale",
     "Lead_Source": "OpenStreetMap",
-    "OSM_ID": 4529757153
+    "OSM_ID": 4529757153,
+    "Email": "israel@ifrhomes.com"
   },
   {
     "Brokerage_Name": "Hewson Properties",
@@ -519,7 +532,8 @@
     "Phone": "+1-800-252-3366",
     "Address": "4343 East Outlier Boulevard Phoenix",
     "Lead_Source": "OpenStreetMap",
-    "OSM_ID": 10249199302
+    "OSM_ID": 10249199302,
+    "Email": "communications@realtyexecutives.com"
   },
   {
     "Brokerage_Name": "Summit Real Estate Investment",
@@ -564,7 +578,11 @@
     "Address": "645 East Missouri Avenue Phoenix",
     "Lead_Source": "OpenStreetMap",
     "OSM_ID": 10303781142,
-    "Email": "to@ostermanrealestate.com"
+    "Email": "to@ostermanrealestate.com",
+    "All_Emails": [
+      "to@ostermanrealestate.com",
+      "mailtoto@ostermanrealestate.com"
+    ]
   },
   {
     "Brokerage_Name": "Hubster",
@@ -773,8 +791,7 @@
     "Phone": "+1-407-907-6442",
     "Address": "37 North Orange Avenue Orlando",
     "Lead_Source": "OpenStreetMap",
-    "OSM_ID": 5521982890,
-    "Email": "%20timdoylefl@gmail.com"
+    "OSM_ID": 5521982890
   },
   {
     "Brokerage_Name": "Buyers Broker of Florida",
@@ -952,7 +969,14 @@
     "Address": "115-B East Park Avenue Charlotte",
     "Lead_Source": "OpenStreetMap",
     "OSM_ID": 13569328954,
-    "Email": "info@apartmentinsiders.com"
+    "Email": "info@apartmentinsiders.com",
+    "All_Emails": [
+      "info@apartmentinsiders.com",
+      "kaylab@apartmentinsiders.com",
+      "arir@apartmentinsiders.com",
+      "zachb@apartmentinsiders.com",
+      "ariz@apartmentinsiders.com"
+    ]
   },
   {
     "Brokerage_Name": "Lantower Brandon Crossroads Leasing Office",
@@ -1383,7 +1407,14 @@
     "Address": "Al Mustaqbal Street \u062f\u0628\u064a",
     "Lead_Source": "OpenStreetMap",
     "OSM_ID": 9805223338,
-    "Email": "rjolink@jolinkwallace.com"
+    "Email": "poonam.mhatre@brookfieldproperties.com",
+    "All_Emails": [
+      "poonam.mhatre@brookfieldproperties.com",
+      "kbrice@holtlunsford.com",
+      "chris.roeder@am.jll.com",
+      "christopher.milkie@ggp.com",
+      "rex.conyers-silverthorn@brookfieldproperties.com"
+    ]
   },
   {
     "Brokerage_Name": "12Cheques",
@@ -1485,7 +1516,14 @@
     "Address": "Marasi Drive Dubai",
     "Lead_Source": "OpenStreetMap",
     "OSM_ID": 12725254208,
-    "Email": "asad.qadeer@citiway.com"
+    "Email": "info@citiway.com",
+    "All_Emails": [
+      "fayez@citiway.com",
+      "sales@yourwebsite.com",
+      "carla@citiway.com",
+      "asad.qadeer@citiway.com",
+      "info@citiway.com"
+    ]
   },
   {
     "Brokerage_Name": "Nujom Al Mouwafak Real Estate",
@@ -1574,7 +1612,11 @@
     "Address": "Abu Dhabi",
     "Lead_Source": "OpenStreetMap",
     "OSM_ID": 4745324438,
-    "Email": "alsaqer@alsaqergroup.com"
+    "Email": "alsaqer@alsaqergroup.com",
+    "All_Emails": [
+      "alsaqer@alsaqergroup.com",
+      "saqer@alsaqergroup.com"
+    ]
   },
   {
     "Brokerage_Name": "ADCP",
@@ -1630,7 +1672,11 @@
     "Address": "Abu Dhabi",
     "Lead_Source": "OpenStreetMap",
     "OSM_ID": 11271044056,
-    "Email": "alsaqer@alsaqergroup.com"
+    "Email": "alsaqer@alsaqergroup.com",
+    "All_Emails": [
+      "alsaqer@alsaqergroup.com",
+      "saqer@alsaqergroup.com"
+    ]
   },
   {
     "Brokerage_Name": "Inner City Development & Realtors",
@@ -1731,7 +1777,7 @@
     "Address": "945 McKinney Street Houston",
     "Lead_Source": "OpenStreetMap",
     "OSM_ID": 9944103925,
-    "Email": "user@domain.com"
+    "Email": "martin@woodlineacres.com"
   },
   {
     "Brokerage_Name": "My Castle Realty",
@@ -1765,7 +1811,7 @@
     "Address": "3800 Garrott Street Houston",
     "Lead_Source": "OpenStreetMap",
     "OSM_ID": 13932167202,
-    "Email": "sochi@fatproperty.com"
+    "Email": "leasing@fatproperty.com"
   },
   {
     "Brokerage_Name": "GWG Enterprises LLC",
@@ -1832,7 +1878,11 @@
     "Address": "1700 Atlanta",
     "Lead_Source": "OpenStreetMap",
     "OSM_ID": 11664861979,
-    "Email": "offers@directlandinvestors.com"
+    "Email": "hello@superchargedoffers.com",
+    "All_Emails": [
+      "hello@superchargedoffers.com",
+      "offers@directlandinvestors.com"
+    ]
   },
   {
     "Brokerage_Name": "Reflection",
@@ -1854,7 +1904,8 @@
     "Phone": "+1 678-705-7668",
     "Address": "928 Ponce de Leon Avenue Northeast Atlanta",
     "Lead_Source": "OpenStreetMap",
-    "OSM_ID": 12078801992
+    "OSM_ID": 12078801992,
+    "Email": "info@thomasprestonrealestate.com"
   },
   {
     "Brokerage_Name": "Berry Real Estate",
@@ -2185,7 +2236,8 @@
     "Phone": "+974 3311 8588",
     "Address": "Doha",
     "Lead_Source": "OpenStreetMap",
-    "OSM_ID": 8523515313
+    "OSM_ID": 8523515313,
+    "Email": "office@25spaces.com"
   },
   {
     "Brokerage_Name": "Coreo",
@@ -2298,7 +2350,12 @@
     "Address": "\u0634\u0627\u0631\u0639 \u0639\u0628\u062f \u0627\u0644\u0644\u0647 \u0645\u0637\u0644\u0642 \u0627\u0644\u0645\u0633\u064a\u0644\u0645 \u062c\u0644\u064a\u0628 \u0627\u0644\u0634\u064a\u0648\u062e - \u0642\u0637\u0639\u0629 1",
     "Lead_Source": "OpenStreetMap",
     "OSM_ID": 5370939907,
-    "Email": "info@alqalaa.com.kw"
+    "Email": "info@digitaldesignkw.com",
+    "All_Emails": [
+      "marketing@aldallaal.com",
+      "info@digitaldesignkw.com",
+      "info@alqalaa.com.kw"
+    ]
   },
   {
     "Brokerage_Name": "\u0634\u0631\u0643\u0629 \u0639\u0628\u062f\u0627\u0644\u0644\u0647 \u0627\u0644\u0633\u0639\u062f",
@@ -2354,7 +2411,11 @@
     "Address": "1363 E 170 S #301 St George",
     "Lead_Source": "OpenStreetMap",
     "OSM_ID": 4956958349,
-    "Email": "support@sshomes.info"
+    "Email": "support@sshomes.info?subject=contact from website",
+    "All_Emails": [
+      "support@sshomes.info?subject=contact from website",
+      "support@sshomes.info"
+    ]
   },
   {
     "Brokerage_Name": "Real Estate Group",
