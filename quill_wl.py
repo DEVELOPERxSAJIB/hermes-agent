@@ -508,12 +508,24 @@ def _finalize(to, subject, body, company, template_type):
     word_count = len(body.split())
 
     if word_count > MAX_WORDS:
-        lines = body.split('\n\n')
-        if len(lines) >= 4:
-            lines = [lines[0], ' '.join(lines[1:3]), lines[-2], lines[-1]]
-            body = '\n\n'.join(lines)
+        # Trim by removing paragraph breaks, keeping sentences intact
+        paragraphs = body.split('\n\n')
+        # Join all paragraphs with single space, then re-split into sentences
+        flat = ' '.join(p.strip() for p in paragraphs if p.strip())
+        # Take sentences up to ~90 words (leave room for CTA)
+        words = flat.split()
+        if len(words) > 90:
+            words = words[:90]
+            # Find the last sentence end
+            text = ' '.join(words)
+            # Ensure it ends cleanly
+            if not text.endswith(('.', '?', '!')):
+                last_period = max(text.rfind('. '), text.rfind('? '), text.rfind('! '))
+                if last_period > len(text) * 0.7:
+                    text = text[:last_period + 1]
+            body = text
             word_count = len(body.split())
-            violations.append("trimmed_for_length")
+        violations.append("trimmed_for_length")
 
     is_valid = len([v for v in violations if not v.startswith("trimmed")]) == 0
 
@@ -525,6 +537,7 @@ def _finalize(to, subject, body, company, template_type):
         r'@sentry\.', r'@bytedance\.', r'@afternic\.', r'@scorebig\.',
         r'intl-tel-input@', r'default-utils\.js@', r'gsap@', r'splide@',
         r'@2x-', r'@3x\.', r'flags@', r'impact-website@',
+        r'%20',  # URL-encoded space = garbage email
     ]
     for pat in bad_patterns:
         if re.search(pat, to, re.IGNORECASE):
@@ -792,10 +805,10 @@ if __name__ == "__main__":
             'T4': 'T4 Sent',
         }
         DATE_COL = {
-            'T1': 'T1 Date',
-            'T2': 'T2 Date',
-            'T3': 'T3 Date',
-            'T4': 'T4 Date',
+            'T1': 'Sent date',
+            'T2': 'FU 1',
+            'T3': 'FU 2',
+            'T4': 'FU 3',
         }
 
         valid_statuses = STATUS_MAP.get(args.template, ['Qualified'])

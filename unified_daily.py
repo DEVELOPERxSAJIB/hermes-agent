@@ -61,13 +61,35 @@ def send_smtp(to_email, subject, body):
 
 # ─── Email verification ─────────────────────────────────────
 def verify_email(email):
-    """Verify email syntax + MX records before sending."""
+    """Verify syntax, block fake domains, check MX records."""
     from email_validator import validate_email, EmailNotValidError
     try:
-        result = validate_email(email, check_deliverability=True)
-        return True, result.normalized
+        result = validate_email(email, check_deliverability=False)
+        normalized = result.normalized
     except EmailNotValidError as ex:
         return False, str(ex)
+
+    domain = normalized.split('@')[1].lower()
+
+    # Block known fake/test domains
+    fake_domains = ['example.com', 'test.com', 'email.com', 'domain.com', 'company.com']
+    if domain in fake_domains:
+        return False, f"Fake domain: {domain}"
+
+    # Block URL-encoded garbage
+    if '%20' in email or '%' in email:
+        return False, f"URL-encoded email"
+
+    # MX check
+    try:
+        import dns.resolver
+        answers = dns.resolver.resolve(domain, 'MX', lifetime=5)
+        if not answers:
+            return False, f"No MX for {domain}"
+    except:
+        return False, f"No MX for {domain}"
+
+    return True, normalized
 
 # ─── Gmail API sender (WL pipeline) ─────────────────────────
 def send_gmail(to_email, subject, body):
@@ -155,7 +177,7 @@ def run_wl():
     make_fn = {"T1": make_email_t1, "T2": make_email_t2, "T3": make_email_t3, "T4": make_email_t4}
     status_map = {"T1": ["New", "Unqualified"], "T2": ["T1 Sent", "Contacted"], "T3": ["T2 Sent"], "T4": ["T3 Sent"]}
     next_status = {"T1": "T1 Sent", "T2": "T2 Sent", "T3": "T3 Sent", "T4": "T4 Sent"}
-    date_col = {"T1": "T1 Date", "T2": "T2 Date", "T3": "T3 Date", "T4": "T4 Date"}
+    date_col = {"T1": "Sent date", "T2": "FU 1", "T3": "FU 2", "T4": "FU 3"}
 
     all_leads = crm.get_wl_all()
     sent_log = load_sent_log(SENT_LOG_WL)
@@ -210,6 +232,7 @@ def run_wl():
             success, error = send_smtp(email_to, d['subject'], d['body'])
             if success:
                 append_sent_log(SENT_LOG_WL, email, company, d['subject'], template)
+                sent_log[f"{email}|{template}"] = {"to": email, "template": template}
                 updates = {"Status": next_status[template], date_col[template]: datetime.now(BD_TZ).strftime("%Y-%m-%d")}
                 crm.update_wl_lead(company, updates)
                 processed_emails.add(email)
@@ -295,6 +318,7 @@ def run_re():
 
             if success:
                 append_sent_log(SENT_LOG_RE, email, brokerage, tmpl["subject"], template)
+                sent_log[f"{email.lower()}|{template}"] = {"to": email, "template": template}
                 if lead_id:
                     update_status(lead_id, next_status[template])
                     update_touch_date(lead_id, int(template[1]))

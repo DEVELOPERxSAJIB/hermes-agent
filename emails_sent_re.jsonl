@@ -1,112 +1,109 @@
-{"to": "michael@sunshinerealtygroup.com", "company": "Sunshine Realty Group", "subject": "", "template": "T2", "sent_at": "2026-06-16T13:10:27.855392+06:00"}
-{"to": "sarah@desertedgeproperties.com", "company": "Desert Edge Properties", "subject": "", "template": "T2", "sent_at": "2026-06-16T13:13:35.543966+06:00"}
-{"to": "david@gulfcoastre.com", "company": "Gulf Coast Real Estate", "subject": "", "template": "T2", "sent_at": "2026-06-16T13:16:44.260009+06:00"}
-{"to": "ahmed@almajidproperties.ae", "company": "Al Majid Properties", "subject": "", "template": "T2", "sent_at": "2026-06-16T13:19:52.695815+06:00"}
-{"to": "fatima@riyadhhomebrokers.sa", "company": "Riyadh Home Brokers", "subject": "", "template": "T2", "sent_at": "2026-06-16T13:23:00.576094+06:00"}
-{"to": "service@primelandbuyers.com", "company": "Prime Land Buyers", "subject": "", "template": "T2", "sent_at": "2026-06-16T13:26:09.157444+06:00"}
-{"to": "bill@billclarksonrealestate.com", "company": "Bill Clarkson - Richardson, TX Luxury Real Estate Expert", "subject": "", "template": "T2", "sent_at": "2026-06-16T13:29:17.147678+06:00"}
-{"to": "team@txhomebuyingpros.com", "company": "Tx Home Buying Pros", "subject": "", "template": "T2", "sent_at": "2026-06-16T13:32:24.823914+06:00"}
-{"to": "dejaw@impressionhomes.net", "company": "Sereno Oaks at Buckner Terrace by Impression Homes", "subject": "", "template": "T2", "sent_at": "2026-06-16T13:35:32.362619+06:00"}
-{"to": "michael@sunshinerealtygroup.com", "company": "Sunshine Realty Group", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T15:19:57.902323+06:00"}
-{"to": "david@gulfcoastre.com", "company": "Gulf Coast Real Estate", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T15:23:05.553076+06:00"}
-{"to": "service@primelandbuyers.com", "company": "Prime Land Buyers", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T15:26:13.252082+06:00"}
-{"to": "bill@billclarksonrealestate.com", "company": "Bill Clarkson - Richardson, TX Luxury Real Estate Expert", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T15:29:21.597678+06:00"}
-{"to": "team@txhomebuyingpros.com", "company": "Tx Home Buying Pros", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T15:32:29.289512+06:00"}
-{"to": "michael@sunshinerealtygroup.com", "company": "Sunshine Realty Group", "subject": "Closing the loop", "template": "T4", "sent_at": "2026-06-16T15:33:09.618221+06:00"}
-{"to": "dejaw@impressionhomes.net", "company": "Sereno Oaks at Buckner Terrace by Impression Homes", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T15:35:37.111819+06:00"}
-{"to": "az.broker@exprealty.net", "company": "Amy Koch", "subject": "", "template": "T2", "sent_at": "2026-06-16T15:35:44.860473+06:00"}
-{"to": "david@gulfcoastre.com", "company": "Gulf Coast Real Estate", "subject": "Closing the loop", "template": "T4", "sent_at": "2026-06-16T15:36:16.973361+06:00"}
-{"to": "mailtoto@ostermanrealestate.com", "company": "Thomas Osterman", "subject": "", "template": "T2", "sent_at": "2026-06-16T15:38:52.250163+06:00"}
-{"to": "service@primelandbuyers.com", "company": "Prime Land Buyers", "subject": "Closing the loop", "template": "T4", "sent_at": "2026-06-16T15:39:25.299131+06:00"}
-{"to": "timdoylefl@gmail.com", "company": "DC Capital Group USA", "subject": "", "template": "T2", "sent_at": "2026-06-16T15:42:00.283776+06:00"}
-{"to": "bill@billclarksonrealestate.com", "company": "Bill Clarkson - Richardson, TX Luxury Real Estate Expert", "subject": "Closing the loop", "template": "T4", "sent_at": "2026-06-16T15:42:33.129341+06:00"}
-{"to": "sales@stockworth.com", "company": "Stockworth Realty Group", "subject": "", "template": "T2", "sent_at": "2026-06-16T15:45:08.419115+06:00"}
-{"to": "team@txhomebuyingpros.com", "company": "Tx Home Buying Pros", "subject": "Closing the loop", "template": "T4", "sent_at": "2026-06-16T15:45:41.175574+06:00"}
-{"to": "dejaw@impressionhomes.net", "company": "Sereno Oaks at Buckner Terrace by Impression Homes", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T15:45:49.179969+06:00"}
-{"to": "az.broker@exprealty.net", "company": "Amy Koch", "subject": "", "template": "T2", "sent_at": "2026-06-16T15:45:56.786136+06:00"}
-{"to": "info@apartmentinsiders.com", "company": "Apartment Insiders - Charlotte Apartment Finders & Locators", "subject": "", "template": "T2", "sent_at": "2026-06-16T15:48:16.637332+06:00"}
-{"to": "mailtoto@ostermanrealestate.com", "company": "Thomas Osterman", "subject": "", "template": "T2", "sent_at": "2026-06-16T15:49:04.737893+06:00"}
-{"to": "customercare@alhabtoorrealestate.com", "company": "Al Habtoor Real Estate", "subject": "", "template": "T2", "sent_at": "2026-06-16T15:51:26.456435+06:00"}
-{"to": "timdoylefl@gmail.com", "company": "DC Capital Group USA", "subject": "", "template": "T2", "sent_at": "2026-06-16T15:52:11.972026+06:00"}
-{"to": "claire.smith@brookfieldproperties.com", "company": "Brookfield Properties", "subject": "", "template": "T2", "sent_at": "2026-06-16T15:54:34.304447+06:00"}
-{"to": "sales@stockworth.com", "company": "Stockworth Realty Group", "subject": "", "template": "T2", "sent_at": "2026-06-16T15:55:19.680390+06:00"}
-{"to": "contact@superhost.ae", "company": "SuperHost Vacation Homes Rental", "subject": "", "template": "T2", "sent_at": "2026-06-16T15:57:42.111829+06:00"}
-{"to": "info@apartmentinsiders.com", "company": "Apartment Insiders - Charlotte Apartment Finders & Locators", "subject": "", "template": "T2", "sent_at": "2026-06-16T15:58:27.708723+06:00"}
-{"to": "info@tekce.com", "company": "Tekce Real Estate", "subject": "", "template": "T2", "sent_at": "2026-06-16T16:00:49.806254+06:00"}
-{"to": "customercare@alhabtoorrealestate.com", "company": "Al Habtoor Real Estate", "subject": "", "template": "T2", "sent_at": "2026-06-16T16:01:34.881838+06:00"}
-{"to": "info@citiway.com", "company": "Citiway Real Estate Brokerage L.L.C.", "subject": "", "template": "T2", "sent_at": "2026-06-16T16:03:58.088604+06:00"}
-{"to": "claire.smith@brookfieldproperties.com", "company": "Brookfield Properties", "subject": "", "template": "T2", "sent_at": "2026-06-16T16:04:42.943309+06:00"}
-{"to": "alsaqer@alsaqergroup.com", "company": "Al Saqer Property Management", "subject": "", "template": "T2", "sent_at": "2026-06-16T16:07:05.867636+06:00"}
-{"to": "contact@superhost.ae", "company": "SuperHost Vacation Homes Rental", "subject": "", "template": "T2", "sent_at": "2026-06-16T16:07:50.129102+06:00"}
-{"to": "alsaqer@alsaqergroup.com", "company": "Al Saqer Property Management LLC - Head Office", "subject": "", "template": "T2", "sent_at": "2026-06-16T16:10:13.885357+06:00"}
-{"to": "info@tekce.com", "company": "Tekce Real Estate", "subject": "", "template": "T2", "sent_at": "2026-06-16T16:10:58.311528+06:00"}
-{"to": "info@napllp.com", "company": "National Appraisal Partners LLP", "subject": "", "template": "T2", "sent_at": "2026-06-16T16:13:21.887358+06:00"}
-{"to": "info@citiway.com", "company": "Citiway Real Estate Brokerage L.L.C.", "subject": "", "template": "T2", "sent_at": "2026-06-16T16:14:06.275873+06:00"}
-{"to": "martin@woodlineacres.com", "company": "Woodline Acres, LLC", "subject": "", "template": "T2", "sent_at": "2026-06-16T16:16:29.686091+06:00"}
-{"to": "alsaqer@alsaqergroup.com", "company": "Al Saqer Property Management", "subject": "", "template": "T2", "sent_at": "2026-06-16T16:17:14.055106+06:00"}
-{"to": "deals@fatproperty.com", "company": "Fat Property", "subject": "", "template": "T2", "sent_at": "2026-06-16T16:19:37.844376+06:00"}
-{"to": "alsaqer@alsaqergroup.com", "company": "Al Saqer Property Management LLC - Head Office", "subject": "", "template": "T2", "sent_at": "2026-06-16T16:20:21.158390+06:00"}
-{"to": "offers@directlandinvestors.com", "company": "Direct Land Investors LLC", "subject": "", "template": "T2", "sent_at": "2026-06-16T16:22:45.611550+06:00"}
-{"to": "info@napllp.com", "company": "National Appraisal Partners LLP", "subject": "", "template": "T2", "sent_at": "2026-06-16T16:23:28.953890+06:00"}
-{"to": "atlantahomes@live.com", "company": "Cross Creek Realty", "subject": "", "template": "T2", "sent_at": "2026-06-16T16:25:53.097897+06:00"}
-{"to": "martin@woodlineacres.com", "company": "Woodline Acres, LLC", "subject": "", "template": "T2", "sent_at": "2026-06-16T16:26:36.774313+06:00"}
-{"to": "info@mycoreo.com", "company": "Coreo", "subject": "", "template": "T2", "sent_at": "2026-06-16T16:29:00.878333+06:00"}
-{"to": "deals@fatproperty.com", "company": "Fat Property", "subject": "", "template": "T2", "sent_at": "2026-06-16T16:29:43.954365+06:00"}
-{"to": "info@retaj.com", "company": "Retaj Real Estate", "subject": "", "template": "T2", "sent_at": "2026-06-16T16:32:09.112882+06:00"}
-{"to": "offers@directlandinvestors.com", "company": "Direct Land Investors LLC", "subject": "", "template": "T2", "sent_at": "2026-06-16T16:32:51.952130+06:00"}
-{"to": "marketing@aldallaal.com", "company": "\u0645\u0643\u062a\u0628 \u0627\u0644\u062f\u0644\u0627\u0644 \u0627\u0644\u0639\u0642\u0627\u0631\u064a", "subject": "", "template": "T2", "sent_at": "2026-06-16T16:35:17.700546+06:00"}
-{"to": "atlantahomes@live.com", "company": "Cross Creek Realty", "subject": "", "template": "T2", "sent_at": "2026-06-16T16:35:59.003397+06:00"}
-{"to": "support@sshomes.info", "company": "S & S Homes", "subject": "", "template": "T2", "sent_at": "2026-06-16T16:38:25.248817+06:00"}
-{"to": "info@mycoreo.com", "company": "Coreo", "subject": "", "template": "T2", "sent_at": "2026-06-16T16:39:06.347680+06:00"}
-{"to": "info@impressionhomes.net", "company": "Sereno Oaks at Buckner Terrace by Impression Homes", "subject": "", "template": "T2", "sent_at": "2026-06-16T16:41:32.971108+06:00"}
-{"to": "info@retaj.com", "company": "Retaj Real Estate", "subject": "", "template": "T2", "sent_at": "2026-06-16T16:42:14.355919+06:00"}
-{"to": "az.broker@exprealty.net", "company": "Amy Koch", "subject": "", "template": "T2", "sent_at": "2026-06-16T16:44:40.506097+06:00"}
-{"to": "marketing@aldallaal.com", "company": "\u0645\u0643\u062a\u0628 \u0627\u0644\u062f\u0644\u0627\u0644 \u0627\u0644\u0639\u0642\u0627\u0631\u064a", "subject": "", "template": "T2", "sent_at": "2026-06-16T16:45:22.290411+06:00"}
-{"to": "to@ostermanrealestate.com", "company": "Thomas Osterman", "subject": "", "template": "T2", "sent_at": "2026-06-16T16:47:48.660932+06:00"}
-{"to": "support@sshomes.info", "company": "S & S Homes", "subject": "", "template": "T2", "sent_at": "2026-06-16T16:48:29.424767+06:00"}
-{"to": "%20timdoylefl@gmail.com", "company": "DC Capital Group USA", "subject": "", "template": "T2", "sent_at": "2026-06-16T16:50:56.622449+06:00"}
-{"to": "info@impressionhomes.net", "company": "Sereno Oaks at Buckner Terrace by Impression Homes", "subject": "", "template": "T2", "sent_at": "2026-06-16T16:51:37.238998+06:00"}
-{"to": "sales@stockworth.com", "company": "Stockworth Realty Group", "subject": "", "template": "T2", "sent_at": "2026-06-16T16:54:05.034813+06:00"}
-{"to": "az.broker@exprealty.net", "company": "Amy Koch", "subject": "", "template": "T2", "sent_at": "2026-06-16T16:54:44.611289+06:00"}
-{"to": "info@apartmentinsiders.com", "company": "Apartment Insiders - Charlotte Apartment Finders & Locators", "subject": "", "template": "T2", "sent_at": "2026-06-16T16:57:13.177107+06:00"}
-{"to": "to@ostermanrealestate.com", "company": "Thomas Osterman", "subject": "", "template": "T2", "sent_at": "2026-06-16T16:57:51.966999+06:00"}
-{"to": "customercare@alhabtoorrealestate.com", "company": "Al Habtoor Real Estate", "subject": "", "template": "T2", "sent_at": "2026-06-16T17:00:20.658380+06:00"}
-{"to": "%20timdoylefl@gmail.com", "company": "DC Capital Group USA", "subject": "", "template": "T2", "sent_at": "2026-06-16T17:00:59.767504+06:00"}
-{"to": "rjolink@jolinkwallace.com", "company": "Brookfield Properties", "subject": "", "template": "T2", "sent_at": "2026-06-16T17:03:28.421433+06:00"}
-{"to": "sales@stockworth.com", "company": "Stockworth Realty Group", "subject": "", "template": "T2", "sent_at": "2026-06-16T17:04:07.657224+06:00"}
-{"to": "contact@superhost.ae", "company": "SuperHost Vacation Homes Rental", "subject": "", "template": "T2", "sent_at": "2026-06-16T17:06:36.012039+06:00"}
-{"to": "info@apartmentinsiders.com", "company": "Apartment Insiders - Charlotte Apartment Finders & Locators", "subject": "", "template": "T2", "sent_at": "2026-06-16T17:07:15.273876+06:00"}
-{"to": "info@tekce.com", "company": "Tekce Real Estate", "subject": "", "template": "T2", "sent_at": "2026-06-16T17:09:43.579601+06:00"}
-{"to": "customercare@alhabtoorrealestate.com", "company": "Al Habtoor Real Estate", "subject": "", "template": "T2", "sent_at": "2026-06-16T17:10:22.380740+06:00"}
-{"to": "asad.qadeer@citiway.com", "company": "Citiway Real Estate Brokerage L.L.C.", "subject": "", "template": "T2", "sent_at": "2026-06-16T17:12:51.327469+06:00"}
-{"to": "rjolink@jolinkwallace.com", "company": "Brookfield Properties", "subject": "", "template": "T2", "sent_at": "2026-06-16T17:13:29.717266+06:00"}
-{"to": "alsaqer@alsaqergroup.com", "company": "Al Saqer Property Management", "subject": "", "template": "T2", "sent_at": "2026-06-16T17:16:00.185317+06:00"}
-{"to": "contact@superhost.ae", "company": "SuperHost Vacation Homes Rental", "subject": "", "template": "T2", "sent_at": "2026-06-16T17:16:37.701647+06:00"}
-{"to": "alsaqer@alsaqergroup.com", "company": "Al Saqer Property Management LLC - Head Office", "subject": "", "template": "T2", "sent_at": "2026-06-16T17:19:08.089017+06:00"}
-{"to": "info@tekce.com", "company": "Tekce Real Estate", "subject": "", "template": "T2", "sent_at": "2026-06-16T17:19:45.000277+06:00"}
-{"to": "info@napllp.com", "company": "National Appraisal Partners LLP", "subject": "", "template": "T2", "sent_at": "2026-06-16T17:22:16.119014+06:00"}
-{"to": "asad.qadeer@citiway.com", "company": "Citiway Real Estate Brokerage L.L.C.", "subject": "", "template": "T2", "sent_at": "2026-06-16T17:22:53.057877+06:00"}
-{"to": "user@domain.com", "company": "Woodline Acres, LLC", "subject": "", "template": "T2", "sent_at": "2026-06-16T17:25:23.659048+06:00"}
-{"to": "alsaqer@alsaqergroup.com", "company": "Al Saqer Property Management", "subject": "", "template": "T2", "sent_at": "2026-06-16T17:26:01.047160+06:00"}
-{"to": "sochi@fatproperty.com", "company": "Fat Property", "subject": "", "template": "T2", "sent_at": "2026-06-16T17:28:31.870227+06:00"}
-{"to": "alsaqer@alsaqergroup.com", "company": "Al Saqer Property Management LLC - Head Office", "subject": "", "template": "T2", "sent_at": "2026-06-16T17:29:08.183208+06:00"}
-{"to": "offers@directlandinvestors.com", "company": "Direct Land Investors LLC", "subject": "", "template": "T2", "sent_at": "2026-06-16T17:31:40.178230+06:00"}
-{"to": "info@napllp.com", "company": "National Appraisal Partners LLP", "subject": "", "template": "T2", "sent_at": "2026-06-16T17:32:15.402659+06:00"}
-{"to": "atlantahomes@live.com", "company": "Cross Creek Realty", "subject": "", "template": "T2", "sent_at": "2026-06-16T17:34:48.479699+06:00"}
-{"to": "user@domain.com", "company": "Woodline Acres, LLC", "subject": "", "template": "T2", "sent_at": "2026-06-16T17:35:23.720419+06:00"}
-{"to": "info@mycoreo.com", "company": "Coreo", "subject": "", "template": "T2", "sent_at": "2026-06-16T17:37:56.415939+06:00"}
-{"to": "sochi@fatproperty.com", "company": "Fat Property", "subject": "", "template": "T2", "sent_at": "2026-06-16T17:38:31.992992+06:00"}
-{"to": "info@retaj.com", "company": "Retaj Real Estate", "subject": "", "template": "T2", "sent_at": "2026-06-16T17:41:05.156439+06:00"}
-{"to": "offers@directlandinvestors.com", "company": "Direct Land Investors LLC", "subject": "", "template": "T2", "sent_at": "2026-06-16T17:41:39.465394+06:00"}
-{"to": "info@alqalaa.com.kw", "company": "\u0645\u0643\u062a\u0628 \u0627\u0644\u062f\u0644\u0627\u0644 \u0627\u0644\u0639\u0642\u0627\u0631\u064a", "subject": "", "template": "T2", "sent_at": "2026-06-16T17:44:13.164446+06:00"}
-{"to": "atlantahomes@live.com", "company": "Cross Creek Realty", "subject": "", "template": "T2", "sent_at": "2026-06-16T17:44:46.896436+06:00"}
-{"to": "support@sshomes.info", "company": "S & S Homes", "subject": "", "template": "T2", "sent_at": "2026-06-16T17:47:21.276700+06:00"}
-{"to": "info@mycoreo.com", "company": "Coreo", "subject": "", "template": "T2", "sent_at": "2026-06-16T17:47:55.523174+06:00"}
-{"to": "info@impressionhomes.net", "company": "Sereno Oaks at Buckner Terrace by Impression Homes", "subject": "", "template": "T2", "sent_at": "2026-06-16T17:50:28.939885+06:00"}
-{"to": "info@retaj.com", "company": "Retaj Real Estate", "subject": "", "template": "T2", "sent_at": "2026-06-16T17:51:02.746075+06:00"}
-{"to": "fscottc21@movephoenix.com", "company": "Amy Koch", "subject": "", "template": "T2", "sent_at": "2026-06-16T17:53:36.362395+06:00"}
-{"to": "info@alqalaa.com.kw", "company": "\u0645\u0643\u062a\u0628 \u0627\u0644\u062f\u0644\u0627\u0644 \u0627\u0644\u0639\u0642\u0627\u0631\u064a", "subject": "", "template": "T2", "sent_at": "2026-06-16T17:54:10.692466+06:00"}
-{"to": "israel@ifrhomes.com", "company": "Israel, Finley & Ramos REALTORS", "subject": "", "template": "T2", "sent_at": "2026-06-16T17:56:45.048237+06:00"}
-{"to": "support@sshomes.info", "company": "S & S Homes", "subject": "", "template": "T2", "sent_at": "2026-06-16T17:57:18.591384+06:00"}
-{"to": "communications@realtyexecutives.com", "company": "Realty Executives International", "subject": "", "template": "T2", "sent_at": "2026-06-16T17:59:53.125425+06:00"}
-{"to": "info@impressionhomes.net", "company": "Sereno Oaks at Buckner Terrace by Impression Homes", "subject": "", "template": "T2", "sent_at": "2026-06-16T18:00:26.939502+06:00"}
+{"to": "dejaw@impressionhomes.net", "company": "Sereno Oaks at Buckner Terrace by Impression Homes", "subject": "Closing the loop", "template": "T4", "sent_at": "2026-06-16T21:11:53.588706+06:00"}
+{"to": "az.broker@exprealty.net", "company": "Amy Koch", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T21:12:02.243058+06:00"}
+{"to": "az.broker@exprealty.net", "company": "Amy Koch", "subject": "Closing the loop", "template": "T4", "sent_at": "2026-06-16T21:15:03.734480+06:00"}
+{"to": "mailtoto@ostermanrealestate.com", "company": "Thomas Osterman", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T21:15:10.970539+06:00"}
+{"to": "mailtoto@ostermanrealestate.com", "company": "Thomas Osterman", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T21:15:11.561708+06:00"}
+{"to": "timdoylefl@gmail.com", "company": "DC Capital Group USA", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T21:18:19.214180+06:00"}
+{"to": "timdoylefl@gmail.com", "company": "DC Capital Group USA", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T21:18:20.049358+06:00"}
+{"to": "sales@stockworth.com", "company": "Stockworth Realty Group", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T21:21:27.579105+06:00"}
+{"to": "sales@stockworth.com", "company": "Stockworth Realty Group", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T21:21:28.080336+06:00"}
+{"to": "info@apartmentinsiders.com", "company": "Apartment Insiders - Charlotte Apartment Finders & Locators", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T21:24:36.031055+06:00"}
+{"to": "info@apartmentinsiders.com", "company": "Apartment Insiders - Charlotte Apartment Finders & Locators", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T21:24:36.614587+06:00"}
+{"to": "customercare@alhabtoorrealestate.com", "company": "Al Habtoor Real Estate", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T21:27:44.558327+06:00"}
+{"to": "customercare@alhabtoorrealestate.com", "company": "Al Habtoor Real Estate", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T21:27:45.234932+06:00"}
+{"to": "claire.smith@brookfieldproperties.com", "company": "Brookfield Properties", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T21:30:54.138916+06:00"}
+{"to": "claire.smith@brookfieldproperties.com", "company": "Brookfield Properties", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T21:30:54.285916+06:00"}
+{"to": "contact@superhost.ae", "company": "SuperHost Vacation Homes Rental", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T21:34:02.452342+06:00"}
+{"to": "contact@superhost.ae", "company": "SuperHost Vacation Homes Rental", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T21:34:02.988312+06:00"}
+{"to": "info@tekce.com", "company": "Tekce Real Estate", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T21:37:10.558241+06:00"}
+{"to": "info@tekce.com", "company": "Tekce Real Estate", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T21:37:11.022245+06:00"}
+{"to": "info@citiway.com", "company": "Citiway Real Estate Brokerage L.L.C.", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T21:40:18.847278+06:00"}
+{"to": "info@citiway.com", "company": "Citiway Real Estate Brokerage L.L.C.", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T21:40:19.089263+06:00"}
+{"to": "alsaqer@alsaqergroup.com", "company": "Al Saqer Property Management", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T21:43:27.279480+06:00"}
+{"to": "alsaqer@alsaqergroup.com", "company": "Al Saqer Property Management", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T21:43:27.568169+06:00"}
+{"to": "alsaqer@alsaqergroup.com", "company": "Al Saqer Property Management LLC - Head Office", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T21:46:35.665420+06:00"}
+{"to": "alsaqer@alsaqergroup.com", "company": "Al Saqer Property Management LLC - Head Office", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T21:46:36.154093+06:00"}
+{"to": "info@napllp.com", "company": "National Appraisal Partners LLP", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T21:49:44.154763+06:00"}
+{"to": "info@napllp.com", "company": "National Appraisal Partners LLP", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T21:49:44.773313+06:00"}
+{"to": "martin@woodlineacres.com", "company": "Woodline Acres, LLC", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T21:52:52.784837+06:00"}
+{"to": "martin@woodlineacres.com", "company": "Woodline Acres, LLC", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T21:52:53.290400+06:00"}
+{"to": "deals@fatproperty.com", "company": "Fat Property", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T21:56:00.602366+06:00"}
+{"to": "deals@fatproperty.com", "company": "Fat Property", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T21:56:01.651631+06:00"}
+{"to": "offers@directlandinvestors.com", "company": "Direct Land Investors LLC", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T21:59:08.685633+06:00"}
+{"to": "offers@directlandinvestors.com", "company": "Direct Land Investors LLC", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T21:59:09.622225+06:00"}
+{"to": "atlantahomes@live.com", "company": "Cross Creek Realty", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T22:02:17.327128+06:00"}
+{"to": "atlantahomes@live.com", "company": "Cross Creek Realty", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T22:02:17.999339+06:00"}
+{"to": "info@mycoreo.com", "company": "Coreo", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T22:05:25.617022+06:00"}
+{"to": "info@mycoreo.com", "company": "Coreo", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T22:05:25.910283+06:00"}
+{"to": "info@retaj.com", "company": "Retaj Real Estate", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T22:08:33.796476+06:00"}
+{"to": "info@retaj.com", "company": "Retaj Real Estate", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T22:08:34.446176+06:00"}
+{"to": "marketing@aldallaal.com", "company": "\u0645\u0643\u062a\u0628 \u0627\u0644\u062f\u0644\u0627\u0644 \u0627\u0644\u0639\u0642\u0627\u0631\u064a", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T22:11:42.223765+06:00"}
+{"to": "marketing@aldallaal.com", "company": "\u0645\u0643\u062a\u0628 \u0627\u0644\u062f\u0644\u0627\u0644 \u0627\u0644\u0639\u0642\u0627\u0631\u064a", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T22:11:42.838236+06:00"}
+{"to": "support@sshomes.info", "company": "S & S Homes", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T22:14:50.724839+06:00"}
+{"to": "support@sshomes.info", "company": "S & S Homes", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T22:14:51.179536+06:00"}
+{"to": "info@impressionhomes.net", "company": "Sereno Oaks at Buckner Terrace by Impression Homes", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T22:17:58.816288+06:00"}
+{"to": "info@impressionhomes.net", "company": "Sereno Oaks at Buckner Terrace by Impression Homes", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T22:17:59.057053+06:00"}
+{"to": "to@ostermanrealestate.com", "company": "Thomas Osterman", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T22:21:06.763627+06:00"}
+{"to": "az.broker@exprealty.net", "company": "Amy Koch", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T22:21:07.153110+06:00"}
+{"to": "to@ostermanrealestate.com", "company": "Thomas Osterman", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T22:24:15.552595+06:00"}
+{"to": "sales@stockworth.com", "company": "Stockworth Realty Group", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T22:24:17.348005+06:00"}
+{"to": "sales@stockworth.com", "company": "Stockworth Realty Group", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T22:27:25.797380+06:00"}
+{"to": "info@apartmentinsiders.com", "company": "Apartment Insiders - Charlotte Apartment Finders & Locators", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T22:27:25.909094+06:00"}
+{"to": "customercare@alhabtoorrealestate.com", "company": "Al Habtoor Real Estate", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T22:30:34.093021+06:00"}
+{"to": "info@apartmentinsiders.com", "company": "Apartment Insiders - Charlotte Apartment Finders & Locators", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T22:30:34.310052+06:00"}
+{"to": "rjolink@jolinkwallace.com", "company": "Brookfield Properties", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T22:33:42.043536+06:00"}
+{"to": "customercare@alhabtoorrealestate.com", "company": "Al Habtoor Real Estate", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T22:33:42.719292+06:00"}
+{"to": "contact@superhost.ae", "company": "SuperHost Vacation Homes Rental", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T22:36:49.875861+06:00"}
+{"to": "rjolink@jolinkwallace.com", "company": "Brookfield Properties", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T22:36:51.016951+06:00"}
+{"to": "info@tekce.com", "company": "Tekce Real Estate", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T22:39:58.117048+06:00"}
+{"to": "contact@superhost.ae", "company": "SuperHost Vacation Homes Rental", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T22:39:59.512100+06:00"}
+{"to": "asad.qadeer@citiway.com", "company": "Citiway Real Estate Brokerage L.L.C.", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T22:43:06.722563+06:00"}
+{"to": "info@tekce.com", "company": "Tekce Real Estate", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T22:43:07.996991+06:00"}
+{"to": "alsaqer@alsaqergroup.com", "company": "Al Saqer Property Management", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T22:46:15.205102+06:00"}
+{"to": "asad.qadeer@citiway.com", "company": "Citiway Real Estate Brokerage L.L.C.", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T22:46:15.455834+06:00"}
+{"to": "alsaqer@alsaqergroup.com", "company": "Al Saqer Property Management", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T22:49:23.112959+06:00"}
+{"to": "alsaqer@alsaqergroup.com", "company": "Al Saqer Property Management LLC - Head Office", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T22:49:24.173221+06:00"}
+{"to": "alsaqer@alsaqergroup.com", "company": "Al Saqer Property Management LLC - Head Office", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T22:52:31.225641+06:00"}
+{"to": "info@napllp.com", "company": "National Appraisal Partners LLP", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T22:52:31.805957+06:00"}
+{"to": "info@napllp.com", "company": "National Appraisal Partners LLP", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T22:55:39.418787+06:00"}
+{"to": "sochi@fatproperty.com", "company": "Fat Property", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T22:55:42.019414+06:00"}
+{"to": "offers@directlandinvestors.com", "company": "Direct Land Investors LLC", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T22:58:49.475554+06:00"}
+{"to": "sochi@fatproperty.com", "company": "Fat Property", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T22:58:50.174269+06:00"}
+{"to": "atlantahomes@live.com", "company": "Cross Creek Realty", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T23:01:57.752487+06:00"}
+{"to": "offers@directlandinvestors.com", "company": "Direct Land Investors LLC", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T23:01:58.293165+06:00"}
+{"to": "atlantahomes@live.com", "company": "Cross Creek Realty", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T23:05:05.963589+06:00"}
+{"to": "info@mycoreo.com", "company": "Coreo", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T23:05:06.139497+06:00"}
+{"to": "info@retaj.com", "company": "Retaj Real Estate", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T23:08:13.984657+06:00"}
+{"to": "info@mycoreo.com", "company": "Coreo", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T23:08:14.824299+06:00"}
+{"to": "info@alqalaa.com.kw", "company": "\u0645\u0643\u062a\u0628 \u0627\u0644\u062f\u0644\u0627\u0644 \u0627\u0644\u0639\u0642\u0627\u0631\u064a", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T23:11:23.128233+06:00"}
+{"to": "info@retaj.com", "company": "Retaj Real Estate", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T23:11:23.587916+06:00"}
+{"to": "support@sshomes.info", "company": "S & S Homes", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T23:14:30.581788+06:00"}
+{"to": "info@alqalaa.com.kw", "company": "\u0645\u0643\u062a\u0628 \u0627\u0644\u062f\u0644\u0627\u0644 \u0627\u0644\u0639\u0642\u0627\u0631\u064a", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T23:14:31.886312+06:00"}
+{"to": "info@impressionhomes.net", "company": "Sereno Oaks at Buckner Terrace by Impression Homes", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T23:17:38.317847+06:00"}
+{"to": "support@sshomes.info", "company": "S & S Homes", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T23:17:39.901051+06:00"}
+{"to": "fscottc21@movephoenix.com", "company": "Amy Koch", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T23:20:45.948999+06:00"}
+{"to": "info@impressionhomes.net", "company": "Sereno Oaks at Buckner Terrace by Impression Homes", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T23:20:47.186567+06:00"}
+{"to": "israel@ifrhomes.com", "company": "Israel, Finley & Ramos REALTORS", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T23:23:54.333099+06:00"}
+{"to": "fscottc21@movephoenix.com", "company": "Amy Koch", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T23:23:54.844529+06:00"}
+{"to": "communications@realtyexecutives.com", "company": "Realty Executives International", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T23:27:02.076818+06:00"}
+{"to": "israel@ifrhomes.com", "company": "Israel, Finley & Ramos REALTORS", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T23:27:02.775096+06:00"}
+{"to": "to@ostermanrealestate.com", "company": "Thomas Osterman", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T23:30:09.886198+06:00"}
+{"to": "communications@realtyexecutives.com", "company": "Realty Executives International", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T23:30:11.079559+06:00"}
+{"to": "sales@stockworth.com", "company": "Stockworth Realty Group", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T23:33:17.506220+06:00"}
+{"to": "to@ostermanrealestate.com", "company": "Thomas Osterman", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T23:33:18.959815+06:00"}
+{"to": "info@apartmentinsiders.com", "company": "Apartment Insiders - Charlotte Apartment Finders & Locators", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T23:36:25.286745+06:00"}
+{"to": "sales@stockworth.com", "company": "Stockworth Realty Group", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T23:36:26.922604+06:00"}
+{"to": "info@apartmentinsiders.com", "company": "Apartment Insiders - Charlotte Apartment Finders & Locators", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T23:39:34.320418+06:00"}
+{"to": "customercare@alhabtoorrealestate.com", "company": "Al Habtoor Real Estate", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T23:39:34.880238+06:00"}
+{"to": "customercare@alhabtoorrealestate.com", "company": "Al Habtoor Real Estate", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T23:42:42.344335+06:00"}
+{"to": "poonam.mhatre@brookfieldproperties.com", "company": "Brookfield Properties", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T23:42:43.471179+06:00"}
+{"to": "poonam.mhatre@brookfieldproperties.com", "company": "Brookfield Properties", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T23:45:50.435198+06:00"}
+{"to": "contact@superhost.ae", "company": "SuperHost Vacation Homes Rental", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T23:45:51.522081+06:00"}
+{"to": "contact@superhost.ae", "company": "SuperHost Vacation Homes Rental", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T23:48:58.762042+06:00"}
+{"to": "info@tekce.com", "company": "Tekce Real Estate", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T23:49:00.318650+06:00"}
+{"to": "info@tekce.com", "company": "Tekce Real Estate", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T23:52:07.025871+06:00"}
+{"to": "info@citiway.com", "company": "Citiway Real Estate Brokerage L.L.C.", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T23:52:10.697183+06:00"}
+{"to": "info@citiway.com", "company": "Citiway Real Estate Brokerage L.L.C.", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T23:55:14.623255+06:00"}
+{"to": "alsaqer@alsaqergroup.com", "company": "Al Saqer Property Management", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T23:55:18.112081+06:00"}
+{"to": "alsaqer@alsaqergroup.com", "company": "Al Saqer Property Management", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T23:58:22.632050+06:00"}
+{"to": "alsaqer@alsaqergroup.com", "company": "Al Saqer Property Management LLC - Head Office", "subject": "Want to see an example?", "template": "T3", "sent_at": "2026-06-16T23:58:26.335032+06:00"}

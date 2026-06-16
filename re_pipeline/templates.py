@@ -49,15 +49,22 @@ NanoSoft | nanosoft.agency""")
     return {"subject": subject, "body": body}
 
 def angle_a_touch_2(brokerage_name, contact_name):
-    """Day 3: LinkedIn DM"""
+    """Day 3: Follow-up Email"""
     first = _first_name(contact_name)
-    return {"subject": "", "body": _clean(f"""Hi {first},
+    subject = f"Following up about {brokerage_name}'s social media"
+    body = _clean(f"""Hi {first},
 
-Sent you an email a couple of days ago. Wanted to connect here too.
+Sent you an email a couple of days ago about social media management for {brokerage_name}. Wanted to follow up here too.
 
-We handle social media content and management for small brokerages. Fully done-for-you, no work needed from your team.
+We handle done-for-you social media content and management specifically for real estate brokerages. Your team does nothing. The page stays active and professional.
 
-Open to a quick chat?""")}
+Most brokerages your size see a noticeable uptick in engagement within the first 30 days.
+
+Open to a quick 15-minute chat this week?
+
+SaJib Shikder
+NanoSoft | nanosoft.agency""")
+    return {"subject": subject, "body": body}
 
 def angle_a_touch_3(brokerage_name, contact_name):
     """Day 7: Email Follow-up"""
@@ -115,15 +122,22 @@ NanoSoft | nanosoft.agency""")
     return {"subject": subject, "body": body}
 
 def angle_b_touch_2(brokerage_name, contact_name):
-    """Day 3: LinkedIn DM"""
+    """Day 3: Follow-up Email"""
     first = _first_name(contact_name)
-    return {"subject": "", "body": _clean(f"""Hi {first},
+    subject = f"Following up: {brokerage_name} lead automation"
+    body = _clean(f"""Hi {first},
 
-Emailed you a couple of days ago about lead automation.
+Emailed you a couple of days ago about lead follow-up automation for {brokerage_name}. Wanted to follow up here.
 
 Short version: the leads your agents are manually following up on. We automate that entirely. Response goes out in under 5 minutes, around the clock.
 
-Open to a quick chat?""")}
+Studies show 78% of leads go with the first agent who responds. If your follow-up is not instant, you are handing deals to competitors.
+
+Open to a quick 15-minute chat this week?
+
+SaJib Shikder
+NanoSoft | nanosoft.agency""")
+    return {"subject": subject, "body": body}
 
 def angle_b_touch_3(brokerage_name, contact_name):
     """Day 7: Email Follow-up"""
