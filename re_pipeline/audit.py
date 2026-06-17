@@ -53,9 +53,10 @@ def audit_linkedin(company_name):
 def assign_angle(ig_score, li_score):
     """
     Assign pitch angle based on audit results.
-    Default is ANGLE A. Only ANGLE B if BOTH are STRONG.
+    Angle B (AI Automation) if either channel is STRONG — they're already investing in marketing.
+    Angle A (Social Media Management) if both are WEAK — they need help with presence.
     """
-    if ig_score == "STRONG" and li_score == "STRONG":
+    if ig_score == "STRONG" or li_score == "STRONG":
         return "B"
     return "A"
 
