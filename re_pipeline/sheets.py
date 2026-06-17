@@ -55,7 +55,14 @@ def get_next_lead_id():
     return f"RE-{max_num + 1:03d}"
 
 def append_lead(lead_dict):
-    """Append a new lead row to the sheet."""
+    """Append a new lead row to the sheet. Skips if email already exists."""
+    email = lead_dict.get("Email", "").lower().strip()
+    if email:
+        # Check for duplicate email
+        existing = get_leads()
+        for l in existing:
+            if l.get("Email", "").lower().strip() == email:
+                return False  # skip duplicate
     svc = _service()
     row = [""] * 20
     for key, idx in COL.items():
@@ -68,6 +75,7 @@ def append_lead(lead_dict):
         insertDataOption="INSERT_ROWS",
         body={"values": [row]}
     ).execute()
+    return True
 
 def update_lead(lead_id, updates):
     """Update specific columns for a lead by Lead_ID. updates = {col_name: value}"""

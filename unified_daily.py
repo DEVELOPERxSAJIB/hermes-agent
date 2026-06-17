@@ -163,6 +163,30 @@ def append_sent_log(path, to_email, company, subject, template):
             "sent_at": datetime.now(BD_TZ).isoformat(),
         }) + "\n")
 
+# ─── File lock to prevent overlapping runs ────────────────────
+def acquire_lock():
+    """Acquire a file lock. Returns True if lock acquired, False if another run is active."""
+    import fcntl
+    lock_path = os.path.join(NANOSOFT_DIR, ".pipeline.lock")
+    try:
+        fd = open(lock_path, "w")
+        fcntl.flock(fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        fd.write(str(os.getpid()))
+        fd.flush()
+        return fd  # caller must keep reference
+    except (IOError, OSError):
+        return None
+
+def release_lock(fd):
+    import fcntl
+    if fd:
+        fcntl.flock(fd, fcntl.LOCK_UN)
+        fd.close()
+        try:
+            os.remove(os.path.join(NANOSOFT_DIR, ".pipeline.lock"))
+        except:
+            pass
+
 # ─── WHITE LABEL ─────────────────────────────────────────────
 def run_wl():
     log("=" * 50)
@@ -202,7 +226,15 @@ def run_wl():
             needs.append(lead)
 
         if template == "T1":
-            needs = needs[:MAX_DAILY_WL]
+            # Only email leads with score >= 7 (quality filter)
+            qualified_needs = []
+            for lead in needs:
+                score = str(lead.get("Judge Score", ""))
+                if score and score.isdigit() and int(score) >= 7:
+                    qualified_needs.append(lead)
+                else:
+                    log(f"    SKIP low score: {lead.get('Company Name','')} score={score}")
+            needs = qualified_needs[:MAX_DAILY_WL]
 
         if not needs:
             log(f"  {template}: no leads need this")
@@ -227,6 +259,13 @@ def run_wl():
                 log(f"    SKIP [{i+1}] {company}: invalid email {email_to} - {verify_detail}")
                 results["skipped"] += 1
                 crm.update_wl_lead(company, {"Status": "Bounced", "Email": f"BOUNCED_{email}"})
+                continue
+
+            # Re-check sent log right before sending (prevent dupes from parallel runs)
+            fresh_sent = load_sent_log(SENT_LOG_WL)
+            if f"{email_to.lower()}|{template}" in fresh_sent:
+                log(f"    SKIP [{i+1}] {company}: already sent (detected pre-send)")
+                results["skipped"] += 1
                 continue
 
             success, error = send_smtp(email_to, d['subject'], d['body'])
@@ -290,6 +329,18 @@ def run_re():
         if template == "T1":
             needs = needs[:MAX_DAILY_RE]
 
+        # Dedup by email within this batch (keep first occurrence)
+        seen_emails = set()
+        deduped_needs = []
+        for lead in needs:
+            email = str(lead.get("Email", "")).strip().lower()
+            if email not in seen_emails:
+                seen_emails.add(email)
+                deduped_needs.append(lead)
+            else:
+                log(f"    DEDUP SKIP: {lead.get('Brokerage_Name','')} ({email})")
+        needs = deduped_needs
+
         if not needs:
             log(f"  {template}: no leads need this")
             continue
@@ -311,6 +362,13 @@ def run_re():
                 log(f"    SKIP [{i+1}] {brokerage}: invalid email {email} - {verify_detail}")
                 if lead_id:
                     update_status(lead_id, "Bounced")
+                results["skipped"] += 1
+                continue
+
+            # Re-check sent log right before sending (prevent dupes from parallel runs)
+            fresh_sent = load_sent_log(SENT_LOG_RE)
+            if f"{email.lower()}|{template}" in fresh_sent:
+                log(f"    SKIP [{i+1}] {brokerage}: already sent (detected pre-send)")
                 results["skipped"] += 1
                 continue
 
@@ -342,6 +400,12 @@ def run_re():
 
 # ─── MAIN ────────────────────────────────────────────────────
 def main():
+    # Prevent overlapping runs
+    lock_fd = acquire_lock()
+    if lock_fd is None:
+        log("ANOTHER PIPELINE RUN IS ACTIVE. Exiting.")
+        sys.exit(0)
+
     log("=" * 60)
     log("UNIFIED DAILY PIPELINE START")
     log("=" * 60)
@@ -374,6 +438,7 @@ def main():
     log(f"RE: skipped={re.get('skipped',0)} bounced={re['bounced']} errors={len(re['errors'])}")
     log("=" * 60)
 
+    release_lock(lock_fd)
     return {"wl": wl, "re": re, "total": total}
 
 if __name__ == "__main__":

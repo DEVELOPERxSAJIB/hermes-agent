@@ -27,3 +27,48 @@
 {"email": "intl-tel-input@23.0.11", "reason": "The part after the @-sign is not valid. It is not within a valid top-level domain.", "source": "pre-send", "detected_at": "2026-06-16T13:38:17.562495+06:00"}
 {"email": "logo-@america-300x148.webp", "reason": "The domain name america-300x148.webp does not exist.", "source": "pre-send", "detected_at": "2026-06-16T13:38:20.814689+06:00"}
 {"email": "markdown-it@14.1.0", "reason": "The part after the @-sign is not valid. It is not within a valid top-level domain.", "source": "pre-send", "detected_at": "2026-06-16T13:38:22.543906+06:00"}
+{"email": "mailtoto@ostermanrealestate.com", "reason": "inbox-detected", "source": "inbox", "detected_at": "2026-06-17T00:38:24.065014+06:00"}
+{"email": "hello@agencypartner.com", "reason": "inbox-detected", "source": "inbox", "detected_at": "2026-06-17T00:38:29.223820+06:00"}
+{"email": "michael@sunshinerealtygroup.com", "reason": "inbox-detected", "source": "inbox", "detected_at": "2026-06-17T00:38:32.251707+06:00"}
+{"email": "claire.smith@brookfieldproperties.com", "reason": "inbox-detected", "source": "inbox", "detected_at": "2026-06-17T00:38:36.134479+06:00"}
+{"email": "sales@webgentechnologies.us", "reason": "inbox-detected", "source": "inbox", "detected_at": "2026-06-17T00:38:39.748350+06:00"}
+{"email": "jamie@example.com", "reason": "inbox-detected", "source": "inbox", "detected_at": "2026-06-17T00:38:41.877122+06:00"}
+{"email": "20timdoylefl@gmail.com", "reason": "inbox-detected", "source": "inbox", "detected_at": "2026-06-17T00:38:42.995210+06:00"}
+{"email": "janedoe@email.com", "reason": "inbox-detected", "source": "inbox", "detected_at": "2026-06-17T00:38:44.132574+06:00"}
+{"email": "fatima@riyadhhomebrokers.sa", "reason": "inbox-detected", "source": "inbox", "detected_at": "2026-06-17T00:38:45.287755+06:00"}
+{"email": "hrteam@gpitechusa.com", "reason": "inbox-detected", "source": "inbox", "detected_at": "2026-06-17T00:38:49.152245+06:00"}
+{"email": "john@example.com", "reason": "inbox-detected", "source": "inbox", "detected_at": "2026-06-17T00:38:51.270603+06:00"}
+{"email": "marketing@aldallaal.com", "reason": "inbox-detected", "source": "inbox", "detected_at": "2026-06-17T00:38:52.733291+06:00"}
+{"email": "ahmed@almajidproperties.ae", "reason": "inbox-detected", "source": "inbox", "detected_at": "2026-06-17T00:38:56.229684+06:00"}
+{"email": "david@gulfcoastre.com", "reason": "inbox-detected", "source": "inbox", "detected_at": "2026-06-17T00:38:59.796462+06:00"}
+{"email": "john@acme.com", "reason": "inbox-detected", "source": "inbox", "detected_at": "2026-06-17T00:39:03.383938+06:00"}
+{"email": "ahmed@almajidproperties.ae", "reason": "inbox-detected", "source": "inbox", "detected_at": "2026-06-17T00:41:18.899105+06:00"}
+{"email": "janedoe@email.com", "reason": "inbox-detected", "source": "inbox", "detected_at": "2026-06-17T00:41:24.103265+06:00"}
+{"email": "john@example.com", "reason": "inbox-detected", "source": "inbox", "detected_at": "2026-06-17T00:41:25.348949+06:00"}
+{"email": "jamie@example.com", "reason": "inbox-detected", "source": "inbox", "detected_at": "2026-06-17T00:41:26.566107+06:00"}
+{"email": "david@gulfcoastre.com", "reason": "inbox-detected", "source": "inbox", "detected_at": "2026-06-17T00:41:27.781388+06:00"}
+{"email": "sales@webgentechnologies.us", "reason": "inbox-detected", "source": "inbox", "detected_at": "2026-06-17T00:41:31.465944+06:00"}
+{"email": "20timdoylefl@gmail.com", "reason": "inbox-detected", "source": "inbox", "detected_at": "2026-06-17T00:41:32.638309+06:00"}
+{"email": "fatima@riyadhhomebrokers.sa", "reason": "inbox-detected", "source": "inbox", "detected_at": "2026-06-17T00:41:33.910356+06:00"}
+{"email": "michael@sunshinerealtygroup.com", "reason": "inbox-detected", "source": "inbox", "detected_at": "2026-06-17T00:41:37.577131+06:00"}
+{"email": "claire.smith@brookfieldproperties.com", "reason": "inbox-detected", "source": "inbox", "detected_at": "2026-06-17T00:41:41.159596+06:00"}
+{"email": "john@acme.com", "reason": "inbox-detected", "source": "inbox", "detected_at": "2026-06-17T00:41:45.101276+06:00"}
+{"email": "mailtoto@ostermanrealestate.com", "reason": "inbox-detected", "source": "inbox", "detected_at": "2026-06-17T00:41:46.260186+06:00"}
+{"email": "hrteam@gpitechusa.com", "reason": "inbox-detected", "source": "inbox", "detected_at": "2026-06-17T00:41:49.856635+06:00"}
+{"email": "marketing@aldallaal.com", "reason": "inbox-detected", "source": "inbox", "detected_at": "2026-06-17T00:41:51.071461+06:00"}
+{"email": "hello@agencypartner.com", "reason": "inbox-detected", "source": "inbox", "detected_at": "2026-06-17T00:41:54.602097+06:00"}
+{"email": "claire.smith@brookfieldproperties.com", "reason": "inbox-detected bounce", "source": "inbox", "detected_at": "2026-06-17T04:01:14.783843+06:00"}
+{"email": "david@gulfcoastre.com", "reason": "inbox-detected bounce", "source": "inbox", "detected_at": "2026-06-17T04:01:18.611540+06:00"}
+{"email": "hello@agencypartner.com", "reason": "inbox-detected bounce", "source": "inbox", "detected_at": "2026-06-17T04:01:19.833251+06:00"}
+{"email": "john@acme.com", "reason": "inbox-detected bounce", "source": "inbox", "detected_at": "2026-06-17T04:01:21.045272+06:00"}
+{"email": "marketing@aldallaal.com", "reason": "inbox-detected bounce", "source": "inbox", "detected_at": "2026-06-17T04:01:24.882261+06:00"}
+{"email": "janedoe@email.com", "reason": "inbox-detected bounce", "source": "inbox", "detected_at": "2026-06-17T04:01:26.096796+06:00"}
+{"email": "sales@webgentechnologies.us", "reason": "inbox-detected bounce", "source": "inbox", "detected_at": "2026-06-17T04:01:27.308861+06:00"}
+{"email": "20timdoylefl@gmail.com", "reason": "inbox-detected bounce", "source": "inbox", "detected_at": "2026-06-17T04:01:28.563604+06:00"}
+{"email": "michael@sunshinerealtygroup.com", "reason": "inbox-detected bounce", "source": "inbox", "detected_at": "2026-06-17T04:01:32.849453+06:00"}
+{"email": "ahmed@almajidproperties.ae", "reason": "inbox-detected bounce", "source": "inbox", "detected_at": "2026-06-17T04:01:36.584044+06:00"}
+{"email": "john@example.com", "reason": "inbox-detected bounce", "source": "inbox", "detected_at": "2026-06-17T04:01:37.865220+06:00"}
+{"email": "hrteam@gpitechusa.com", "reason": "inbox-detected bounce", "source": "inbox", "detected_at": "2026-06-17T04:01:39.080013+06:00"}
+{"email": "fatima@riyadhhomebrokers.sa", "reason": "inbox-detected bounce", "source": "inbox", "detected_at": "2026-06-17T04:01:43.507769+06:00"}
+{"email": "mailtoto@ostermanrealestate.com", "reason": "inbox-detected bounce", "source": "inbox", "detected_at": "2026-06-17T04:01:47.885012+06:00"}
+{"email": "jamie@example.com", "reason": "inbox-detected bounce", "source": "inbox", "detected_at": "2026-06-17T04:01:49.161448+06:00"}
