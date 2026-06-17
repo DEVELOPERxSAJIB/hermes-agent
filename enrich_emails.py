@@ -36,14 +36,17 @@ def scrape_emails(url):
     
     # mailto links
     for m in re.findall(r'mailto:([^\s"<>]+)', html):
-        email = unquote(m).strip().rstrip('\\')
+        email = unquote(m).strip().rstrip('\\').lower()
         if '@' in email and not any(g in email for g in GENERIC_EMAILS):
-            emails.add(email.lower())
+            # Reject image filenames and garbage
+            if _is_valid_email(email):
+                emails.add(email)
     
     # Plain text emails
     for m in EMAIL_RE.findall(html):
-        if not any(g in m for g in GENERIC_EMAILS):
-            emails.add(m.lower())
+        m = m.lower()
+        if m not in GENERIC_EMAILS and _is_valid_email(m):
+            emails.add(m)
     
     # Try contact page
     if len(emails) < 2:
@@ -55,17 +58,38 @@ def scrape_emails(url):
             if ch:
                 ch = unescape(ch)
                 for m in re.findall(r'mailto:([^\s"<>]+)', ch):
-                    email = unquote(m).strip().rstrip('\\')
+                    email = unquote(m).strip().rstrip('\\').lower()
                     if '@' in email and not any(g in email for g in GENERIC_EMAILS):
-                        emails.add(email.lower())
+                        if _is_valid_email(email):
+                            emails.add(email)
                 for m in EMAIL_RE.findall(ch):
-                    if not any(g in m for g in GENERIC_EMAILS):
-                        emails.add(m.lower())
+                    m = m.lower()
+                    if m not in GENERIC_EMAILS and _is_valid_email(m):
+                        emails.add(m)
             if len(emails) >= 2:
                 break
             time.sleep(2)
     
     return emails
+
+
+def _is_valid_email(email):
+    """Validate email isn't garbage from HTML scraping."""
+    local = email.split('@')[0]
+    domain = email.split('@')[1] if '@' in email else ''
+    # Reject image/media extensions
+    if email.endswith(('.png', '.jpg', '.gif', '.svg', '.ico', '.css', '.js', '.woff', '.ttf', '.webp', '.bmp', '.tiff')):
+        return False
+    # Reject hex/hash strings
+    if len(local) > 20 and all(c in '0123456789abcdef.' for c in local):
+        return False
+    # Reject very long local parts
+    if len(local) > 30:
+        return False
+    # Must have valid domain
+    if not domain or '.' not in domain:
+        return False
+    return True
 
 crm = get_crm()
 wl = crm.get_wl_all()

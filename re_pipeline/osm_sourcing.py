@@ -166,9 +166,7 @@ def _extract_emails_from_text(text):
     if not text:
         return []
     from urllib.parse import unquote
-    # Decode HTML entities first (&#64; = @, &#46; = .)
     text = _decode_html_entities(text)
-    # Decode URL-encoded characters (%20 = space, etc.)
     text = unquote(text)
     found = EMAIL_RE.findall(text)
     valid = []
@@ -176,10 +174,23 @@ def _extract_emails_from_text(text):
         e = e.lower().strip().rstrip('.')
         if e in GENERIC_EMAILS:
             continue
-        if e.endswith(('.png', '.jpg', '.gif', '.svg', '.ico', '.css', '.js', '.woff', '.ttf')):
+        # Reject image/media file extensions
+        if e.endswith(('.png', '.jpg', '.gif', '.svg', '.ico', '.css', '.js', '.woff', '.ttf', '.webp', '.bmp', '.tiff')):
             continue
+        # Reject hex/hash strings (like bcb8c4703eae71d5d05c0a6eec1f7daa.flags@2x.png)
         local = e.split('@')[0]
-        if len(local) < 2:
+        if len(local) > 20 and all(c in '0123456789abcdef.' for c in local):
+            continue
+        # Reject very long local parts (likely garbage)
+        if len(local) > 30:
+            continue
+        # Must have a valid-looking domain
+        domain = e.split('@')[1] if '@' in e else ''
+        if not domain or '.' not in domain:
+            continue
+        # Reject domains that are just numbers or hex
+        domain_parts = domain.split('.')
+        if all(p.isdigit() for p in domain_parts if p):
             continue
         valid.append(e)
     return list(set(valid))
@@ -304,15 +315,35 @@ def check_instagram(username):
     return {"exists": False, "username": username, "profile_url": f"https://www.instagram.com/{username}/"}
 
 
+def guess_domain_emails(website):
+    """Guess common email patterns from website domain."""
+    if not website:
+        return []
+    from urllib.parse import urlparse
+    domain = urlparse(website).netloc.replace("www.", "").strip()
+    if not domain:
+        return []
+    prefixes = ["info", "hello", "contact", "sales", "team", "admin", "office", "enquiries"]
+    return [f"{p}@{domain}" for p in prefixes]
+
+
 def enrich_lead(lead, fast=True):
     """Enrich lead with emails and Instagram check.
-    fast=True skips MX verify and Instagram check for speed."""
+    fast=True skips MX verify and Instagram check for speed.
+    Falls back to domain guessing if website scraping finds nothing."""
     if lead.get("Website"):
         emails = scrape_website_emails(lead["Website"])
         if emails:
             lead["Email"] = emails[0]
             if len(emails) > 1:
                 lead["All_Emails"] = emails
+        else:
+            # Fallback: guess emails from domain
+            guessed = guess_domain_emails(lead["Website"])
+            if guessed:
+                lead["Email"] = guessed[0]
+                lead["All_Emails"] = guessed
+                lead["Email_Guessed"] = True  # flag for bounce tracking
 
     if not fast:
         name_slug = lead["Brokerage_Name"].lower().replace(" ", "").replace(".", "")

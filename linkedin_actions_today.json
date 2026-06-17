@@ -1,142 +1,162 @@
 [
   {
+    "company": "Goji Labs",
+    "linkedin_url": "https://www.linkedin.com/in/davidbarlev",
+    "name": "Davidbarlev",
+    "connection_msg": "Hi Davidbarlev — noticed Goji Labs does solid work. Quick question about how you handle overflow projects. Open to connect?",
+    "followup_msg": "Thanks for connecting. Quick one — when Goji Labs has more projects than your team can handle, what happens to the overflow? We help agencies keep those clients in-house. Worth a 10-min chat sometime?",
+    "status": "Pending"
+  },
+  {
+    "company": "Mercury Development",
+    "linkedin_url": "https://www.linkedin.com/in/joshuagreenman/",
+    "name": "Joshuagreenman",
+    "connection_msg": "Hi Joshuagreenman — noticed Mercury Development does solid work. Quick question about how you handle overflow projects. Open to connect?",
+    "followup_msg": "Thanks for connecting. Quick one — when Mercury Development has more projects than your team can handle, what happens to the overflow? We help agencies keep those clients in-house. Worth a 10-min chat sometime?",
+    "status": "Pending"
+  },
+  {
+    "company": "Closeloop Technologies LLC",
+    "linkedin_url": "https://www.linkedin.com/in/assimgupta",
+    "name": "Assimgupta",
+    "connection_msg": "Hi Assimgupta — noticed Closeloop Technologies LLC does solid work. Quick question about how you handle overflow projects. Open to connect?",
+    "followup_msg": "Thanks for connecting. Quick one — when Closeloop Technologies LLC has more projects than your team can handle, what happens to the overflow? We help agencies keep those clients in-house. Worth a 10-min chat sometime?",
+    "status": "Pending"
+  },
+  {
     "company": "Utility",
-    "linkedin_url": "https://www.linkedin.com/company/utility-agency",
-    "connection_msg": "Hi \u2014 noticed Utility does solid work. Quick question about how you handle overflow projects. Open to connect?",
-    "followup_msg": "Thanks for connecting. Quick one \u2014 when Utility has more projects than your team can handle, what happens to the overflow? We help agencies keep those clients in-house. Worth a 10-min chat sometime?",
-    "status": "T2 Sent"
+    "linkedin_url": "https://www.linkedin.com/in/davidlcohen",
+    "name": "Davidlcohen",
+    "connection_msg": "Hi Davidlcohen — noticed Utility does solid work. Quick question about how you handle overflow projects. Open to connect?",
+    "followup_msg": "Thanks for connecting. Quick one — when Utility has more projects than your team can handle, what happens to the overflow? We help agencies keep those clients in-house. Worth a 10-min chat sometime?",
+    "status": "Pending"
   },
   {
     "company": "Infinum",
-    "linkedin_url": "linkedin.com/company/infinum",
-    "connection_msg": "Hey \u2014 Infinum caught my eye. Curious how you manage capacity during peak months. Would love to connect.",
-    "followup_msg": "Thanks for connecting. Quick one \u2014 when Infinum has more projects than your team can handle, what happens to the overflow? We help agencies keep those clients in-house. Worth a 10-min chat sometime?",
-    "status": "T2 Sent"
+    "linkedin_url": "https://www.linkedin.com/in/nikolakapraljevic/",
+    "name": "Nikolakapraljevic",
+    "connection_msg": "Hi Nikolakapraljevic — noticed Infinum does solid work. Quick question about how you handle overflow projects. Open to connect?",
+    "followup_msg": "Thanks for connecting. Quick one — when Infinum has more projects than your team can handle, what happens to the overflow? We help agencies keep those clients in-house. Worth a 10-min chat sometime?",
+    "status": "Pending"
   },
   {
     "company": "Itransition",
-    "linkedin_url": "https://www.linkedin.com/company/itransition/",
-    "connection_msg": "Hi \u2014 saw Itransition's work. Quick thought on white label capacity. Mind if I connect?",
-    "followup_msg": "Thanks for connecting. Quick one \u2014 when Itransition has more projects than your team can handle, what happens to the overflow? We help agencies keep those clients in-house. Worth a 10-min chat sometime?",
-    "status": "T2 Sent"
+    "linkedin_url": "https://www.linkedin.com/in/sergey-gvardeitsev-58b07912",
+    "name": "Sergey",
+    "connection_msg": "Hi Sergey — noticed Itransition does solid work. Quick question about how you handle overflow projects. Open to connect?",
+    "followup_msg": "Thanks for connecting. Quick one — when Itransition has more projects than your team can handle, what happens to the overflow? We help agencies keep those clients in-house. Worth a 10-min chat sometime?",
+    "status": "Pending"
   },
   {
     "company": "Diffco",
-    "linkedin_url": "https://www.linkedin.com/company/diffco/",
-    "connection_msg": "Hi \u2014 noticed Diffco does solid work. Quick question about how you handle overflow projects. Open to connect?",
-    "followup_msg": "Thanks for connecting. Quick one \u2014 when Diffco has more projects than your team can handle, what happens to the overflow? We help agencies keep those clients in-house. Worth a 10-min chat sometime?",
-    "status": "T2 Sent"
+    "linkedin_url": "https://www.linkedin.com/in/vadimpeskov",
+    "name": "Vadimpeskov",
+    "connection_msg": "Hi Vadimpeskov — noticed Diffco does solid work. Quick question about how you handle overflow projects. Open to connect?",
+    "followup_msg": "Thanks for connecting. Quick one — when Diffco has more projects than your team can handle, what happens to the overflow? We help agencies keep those clients in-house. Worth a 10-min chat sometime?",
+    "status": "Pending"
   },
   {
     "company": "Azumo",
-    "linkedin_url": "https://www.linkedin.com/company/azumo-llc/",
-    "connection_msg": "Hi \u2014 noticed Azumo does solid work. Quick question about how you handle overflow projects. Open to connect?",
-    "followup_msg": "Thanks for connecting. Quick one \u2014 when Azumo has more projects than your team can handle, what happens to the overflow? We help agencies keep those clients in-house. Worth a 10-min chat sometime?",
-    "status": "T2 Sent"
+    "linkedin_url": "https://www.linkedin.com/in/chike-agbai-azumo",
+    "name": "Chike",
+    "connection_msg": "Hi Chike — noticed Azumo does solid work. Quick question about how you handle overflow projects. Open to connect?",
+    "followup_msg": "Thanks for connecting. Quick one — when Azumo has more projects than your team can handle, what happens to the overflow? We help agencies keep those clients in-house. Worth a 10-min chat sometime?",
+    "status": "Pending"
   },
   {
     "company": "Merixstudio",
-    "linkedin_url": "https://www.linkedin.com/company/merixstudio/",
-    "connection_msg": "Hey \u2014 Merixstudio caught my eye. Curious how you manage capacity during peak months. Would love to connect.",
-    "followup_msg": "Thanks for connecting. Quick one \u2014 when Merixstudio has more projects than your team can handle, what happens to the overflow? We help agencies keep those clients in-house. Worth a 10-min chat sometime?",
-    "status": "T2 Sent"
+    "linkedin_url": "https://www.linkedin.com/in/michalbien/",
+    "name": "Michalbien",
+    "connection_msg": "Hi Michalbien — noticed Merixstudio does solid work. Quick question about how you handle overflow projects. Open to connect?",
+    "followup_msg": "Thanks for connecting. Quick one — when Merixstudio has more projects than your team can handle, what happens to the overflow? We help agencies keep those clients in-house. Worth a 10-min chat sometime?",
+    "status": "Pending"
   },
   {
     "company": "Cheesecake Labs",
-    "linkedin_url": "linkedin.com/company/cheesecake-labs",
-    "connection_msg": "Hi \u2014 noticed Cheesecake Labs does solid work. Quick question about how you handle overflow projects. Open to connect?",
-    "followup_msg": "Thanks for connecting. Quick one \u2014 when Cheesecake Labs has more projects than your team can handle, what happens to the overflow? We help agencies keep those clients in-house. Worth a 10-min chat sometime?",
-    "status": "T2 Sent"
+    "linkedin_url": "https://www.linkedin.com/in/gracietti",
+    "name": "Gracietti",
+    "connection_msg": "Hi Gracietti — noticed Cheesecake Labs does solid work. Quick question about how you handle overflow projects. Open to connect?",
+    "followup_msg": "Thanks for connecting. Quick one — when Cheesecake Labs has more projects than your team can handle, what happens to the overflow? We help agencies keep those clients in-house. Worth a 10-min chat sometime?",
+    "status": "Pending"
   },
   {
     "company": "Fulcrum",
-    "linkedin_url": "https://www.linkedin.com/company/fulcrum-product/",
-    "connection_msg": "Hi \u2014 noticed Fulcrum does solid work. Quick question about how you handle overflow projects. Open to connect?",
-    "followup_msg": "Thanks for connecting. Quick one \u2014 when Fulcrum has more projects than your team can handle, what happens to the overflow? We help agencies keep those clients in-house. Worth a 10-min chat sometime?",
-    "status": "T2 Sent"
+    "linkedin_url": "https://www.linkedin.com/in/yusunnyhan",
+    "name": "Yusunnyhan",
+    "connection_msg": "Hi Yusunnyhan — noticed Fulcrum does solid work. Quick question about how you handle overflow projects. Open to connect?",
+    "followup_msg": "Thanks for connecting. Quick one — when Fulcrum has more projects than your team can handle, what happens to the overflow? We help agencies keep those clients in-house. Worth a 10-min chat sometime?",
+    "status": "Pending"
   },
   {
     "company": "MOBIKASA",
-    "linkedin_url": "https://www.linkedin.com/company/mobikasa/",
-    "connection_msg": "Hey \u2014 MOBIKASA caught my eye. Curious how you manage capacity during peak months. Would love to connect.",
-    "followup_msg": "Thanks for connecting. Quick one \u2014 when MOBIKASA has more projects than your team can handle, what happens to the overflow? We help agencies keep those clients in-house. Worth a 10-min chat sometime?",
-    "status": "T2 Sent"
+    "linkedin_url": "https://www.linkedin.com/in/tusharrmehta",
+    "name": "Tusharrmehta",
+    "connection_msg": "Hi Tusharrmehta — noticed MOBIKASA does solid work. Quick question about how you handle overflow projects. Open to connect?",
+    "followup_msg": "Thanks for connecting. Quick one — when MOBIKASA has more projects than your team can handle, what happens to the overflow? We help agencies keep those clients in-house. Worth a 10-min chat sometime?",
+    "status": "Pending"
   },
   {
     "company": "Ancient",
-    "linkedin_url": "https://www.linkedin.com/company/46607799/",
-    "connection_msg": "Hi \u2014 saw Ancient's work. Quick thought on white label capacity. Mind if I connect?",
-    "followup_msg": "Thanks for connecting. Quick one \u2014 when Ancient has more projects than your team can handle, what happens to the overflow? We help agencies keep those clients in-house. Worth a 10-min chat sometime?",
-    "status": "T2 Sent"
+    "linkedin_url": "https://www.linkedin.com/in/sethancientcrunch",
+    "name": "Sethancientcrunch",
+    "connection_msg": "Hi Sethancientcrunch — noticed Ancient does solid work. Quick question about how you handle overflow projects. Open to connect?",
+    "followup_msg": "Thanks for connecting. Quick one — when Ancient has more projects than your team can handle, what happens to the overflow? We help agencies keep those clients in-house. Worth a 10-min chat sometime?",
+    "status": "Pending"
   },
   {
     "company": "Plavno",
-    "linkedin_url": "https://www.linkedin.com/company/plavno/",
-    "connection_msg": "Hi \u2014 noticed Plavno does solid work. Quick question about how you handle overflow projects. Open to connect?",
-    "followup_msg": "Thanks for connecting. Quick one \u2014 when Plavno has more projects than your team can handle, what happens to the overflow? We help agencies keep those clients in-house. Worth a 10-min chat sometime?",
-    "status": "T2 Sent"
+    "linkedin_url": "https://by.linkedin.com/in/dmitry-kunakov",
+    "name": "Dmitry",
+    "connection_msg": "Hi Dmitry — noticed Plavno does solid work. Quick question about how you handle overflow projects. Open to connect?",
+    "followup_msg": "Thanks for connecting. Quick one — when Plavno has more projects than your team can handle, what happens to the overflow? We help agencies keep those clients in-house. Worth a 10-min chat sometime?",
+    "status": "Pending"
   },
   {
     "company": "Lumitech",
-    "linkedin_url": "linkedin.com/company/lumitech-fzco",
-    "connection_msg": "Hi \u2014 saw Lumitech's work. Quick thought on white label capacity. Mind if I connect?",
-    "followup_msg": "Thanks for connecting. Quick one \u2014 when Lumitech has more projects than your team can handle, what happens to the overflow? We help agencies keep those clients in-house. Worth a 10-min chat sometime?",
-    "status": "T2 Sent"
+    "linkedin_url": "https://pl.linkedin.com/in/yevhen-synii",
+    "name": "Yevhen",
+    "connection_msg": "Hi Yevhen — noticed Lumitech does solid work. Quick question about how you handle overflow projects. Open to connect?",
+    "followup_msg": "Thanks for connecting. Quick one — when Lumitech has more projects than your team can handle, what happens to the overflow? We help agencies keep those clients in-house. Worth a 10-min chat sometime?",
+    "status": "Pending"
   },
   {
     "company": "SPD Technology",
-    "linkedin_url": "https://www.linkedin.com/company/spdtechnology/",
-    "connection_msg": "Hi \u2014 noticed SPD Technology does solid work. Quick question about how you handle overflow projects. Open to connect?",
-    "followup_msg": "Thanks for connecting. Quick one \u2014 when SPD Technology has more projects than your team can handle, what happens to the overflow? We help agencies keep those clients in-house. Worth a 10-min chat sometime?",
-    "status": "T2 Sent"
+    "linkedin_url": "https://www.linkedin.com/in/max-freireich",
+    "name": "Max",
+    "connection_msg": "Hi Max — noticed SPD Technology does solid work. Quick question about how you handle overflow projects. Open to connect?",
+    "followup_msg": "Thanks for connecting. Quick one — when SPD Technology has more projects than your team can handle, what happens to the overflow? We help agencies keep those clients in-house. Worth a 10-min chat sometime?",
+    "status": "Pending"
   },
   {
     "company": "Kindgeek",
-    "linkedin_url": "https://www.linkedin.com/company/kindgeek/",
-    "connection_msg": "Hey \u2014 Kindgeek caught my eye. Curious how you manage capacity during peak months. Would love to connect.",
-    "followup_msg": "Thanks for connecting. Quick one \u2014 when Kindgeek has more projects than your team can handle, what happens to the overflow? We help agencies keep those clients in-house. Worth a 10-min chat sometime?",
-    "status": "T2 Sent"
+    "linkedin_url": "https://www.linkedin.com/in/max-gladysh-516872101",
+    "name": "Max",
+    "connection_msg": "Hi Max — noticed Kindgeek does solid work. Quick question about how you handle overflow projects. Open to connect?",
+    "followup_msg": "Thanks for connecting. Quick one — when Kindgeek has more projects than your team can handle, what happens to the overflow? We help agencies keep those clients in-house. Worth a 10-min chat sometime?",
+    "status": "Pending"
   },
   {
     "company": "TRooTech Business Solutions",
-    "linkedin_url": "https://www.linkedin.com/company/trootech/",
-    "connection_msg": "Hi \u2014 noticed TRooTech Business Solutions does solid work. Quick question about how you handle overflow projects. Open to connect?",
-    "followup_msg": "Thanks for connecting. Quick one \u2014 when TRooTech Business Solutions has more projects than your team can handle, what happens to the overflow? We help agencies keep those clients in-house. Worth a 10-min chat sometime?",
-    "status": "T2 Sent"
+    "linkedin_url": "https://in.linkedin.com/in/vishalnakum93",
+    "name": "Vishalnakum93",
+    "connection_msg": "Hi Vishalnakum93 — noticed TRooTech Business Solutions does solid work. Quick question about how you handle overflow projects. Open to connect?",
+    "followup_msg": "Thanks for connecting. Quick one — when TRooTech Business Solutions has more projects than your team can handle, what happens to the overflow? We help agencies keep those clients in-house. Worth a 10-min chat sometime?",
+    "status": "Pending"
   },
   {
     "company": "Flux IT",
-    "linkedin_url": "https://www.linkedin.com/company/fluxit/",
-    "connection_msg": "Hi \u2014 noticed Flux IT does solid work. Quick question about how you handle overflow projects. Open to connect?",
-    "followup_msg": "Thanks for connecting. Quick one \u2014 when Flux IT has more projects than your team can handle, what happens to the overflow? We help agencies keep those clients in-house. Worth a 10-min chat sometime?",
-    "status": "T2 Sent"
+    "linkedin_url": "https://www.linkedin.com/in/matthias-wagner-5220b047",
+    "name": "Matthias",
+    "connection_msg": "Hi Matthias — noticed Flux IT does solid work. Quick question about how you handle overflow projects. Open to connect?",
+    "followup_msg": "Thanks for connecting. Quick one — when Flux IT has more projects than your team can handle, what happens to the overflow? We help agencies keep those clients in-house. Worth a 10-min chat sometime?",
+    "status": "Pending"
   },
   {
     "company": "Activeone",
-    "linkedin_url": "linkedin.com/company/activeone",
-    "connection_msg": "Hi \u2014 saw Activeone's work. Quick thought on white label capacity. Mind if I connect?",
-    "followup_msg": "Thanks for connecting. Quick one \u2014 when Activeone has more projects than your team can handle, what happens to the overflow? We help agencies keep those clients in-house. Worth a 10-min chat sometime?",
-    "status": "T2 Sent"
-  },
-  {
-    "company": "DHDTech.io",
-    "linkedin_url": "https://www.linkedin.com/in/diogohudsondias/",
-    "connection_msg": "Hi \u2014 saw DHDTech.io's work. Quick thought on white label capacity. Mind if I connect?",
-    "followup_msg": "Thanks for connecting. Quick one \u2014 when DHDTech.io has more projects than your team can handle, what happens to the overflow? We help agencies keep those clients in-house. Worth a 10-min chat sometime?",
-    "status": "T2 Sent"
-  },
-  {
-    "company": "Techstack company",
-    "linkedin_url": "https://www.linkedin.com/company/techstack-limited",
-    "connection_msg": "Hi \u2014 saw Techstack company's work. Quick thought on white label capacity. Mind if I connect?",
-    "followup_msg": "Thanks for connecting. Quick one \u2014 when Techstack company has more projects than your team can handle, what happens to the overflow? We help agencies keep those clients in-house. Worth a 10-min chat sometime?",
-    "status": "T2 Sent"
-  },
-  {
-    "company": "Redlab agency",
-    "linkedin_url": "https://www.linkedin.com/company/redlab-bz",
-    "connection_msg": "Hi \u2014 saw Redlab agency's work. Quick thought on white label capacity. Mind if I connect?",
-    "followup_msg": "Thanks for connecting. Quick one \u2014 when Redlab agency has more projects than your team can handle, what happens to the overflow? We help agencies keep those clients in-house. Worth a 10-min chat sometime?",
-    "status": "T2 Sent"
+    "linkedin_url": "https://www.linkedin.com/in/akwon47",
+    "name": "Akwon47",
+    "connection_msg": "Hi Akwon47 — noticed Activeone does solid work. Quick question about how you handle overflow projects. Open to connect?",
+    "followup_msg": "Thanks for connecting. Quick one — when Activeone has more projects than your team can handle, what happens to the overflow? We help agencies keep those clients in-house. Worth a 10-min chat sometime?",
+    "status": "Pending"
   }
 ]
