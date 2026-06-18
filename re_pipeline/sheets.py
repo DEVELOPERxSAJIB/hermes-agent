@@ -3,7 +3,7 @@ import json, os, sys
 from datetime import datetime
 from google.oauth2.credentials import Credentials
 from googleapiclient.discovery import build
-from .config import TOKEN_PATH, SHEET_ID, SHEET_NAME, COL
+from config import TOKEN_PATH, SHEET_ID, SHEET_NAME, COL
 
 def _creds():
     with open(TOKEN_PATH) as f:
