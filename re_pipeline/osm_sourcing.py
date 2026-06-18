@@ -9,7 +9,7 @@ import socket
 import requests
 from urllib.parse import urljoin, urlparse
 
-from config import US_CITIES, GCC_CITIES, FRANCHISES
+from .config import US_CITIES, GCC_CITIES, FRANCHISES
 
 # US city coordinates (lat, lon)
 US_COORDS = {

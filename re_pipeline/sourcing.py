@@ -2,7 +2,7 @@
 import re
 import json
 import requests
-from config import US_CITIES, GCC_CITIES, FRANCHISES
+from .config import US_CITIES, GCC_CITIES, FRANCHISES
 
 def is_franchise(name):
     """Check if brokerage is a known franchise chain."""

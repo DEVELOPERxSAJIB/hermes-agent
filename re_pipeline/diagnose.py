@@ -1,8 +1,8 @@
 """Pipeline status checker — diagnose what needs attention"""
 import json
 from datetime import datetime, timedelta
-from sheets import get_leads, update_status, update_touch_date, update_lead
-from config import COL
+from .sheets import get_leads, update_status, update_touch_date, update_lead
+from .config import COL
 
 def diagnose():
     """Check pipeline health and identify issues."""

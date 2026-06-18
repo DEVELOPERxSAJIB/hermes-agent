@@ -3,7 +3,7 @@ import json, os, sys
 from datetime import datetime
 from google.oauth2.credentials import Credentials
 from googleapiclient.discovery import build
-from config import TOKEN_PATH, SHEET_ID, SHEET_NAME, COL
+from .config import TOKEN_PATH, SHEET_ID, SHEET_NAME, COL
 
 def _creds():
     with open(TOKEN_PATH) as f:
@@ -104,3 +104,6 @@ def update_status(lead_id, status):
 def update_touch_date(lead_id, touch_num):
     today = datetime.now().strftime("%d/%m/%Y")
     update_lead(lead_id, {f"Touch_{touch_num}_Date": today})
+
+# Alias for audit script compatibility
+get_re_leads = get_leads
