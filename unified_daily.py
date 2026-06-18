@@ -17,10 +17,11 @@ SENT_LOG_RE = os.path.join(NANOSOFT_DIR, "emails_sent_re.jsonl")
 sys.path.insert(0, NANOSOFT_DIR)
 sys.path.insert(0, RE_PIPELINE_DIR)
 
-EMAIL_GAP = 180  # 3 minutes between emails
-RETRY_GAP = 60   # 1 minute retry gap
+EMAIL_GAP = 300  # 5 minutes between emails (Gmail rate limit safety)
+RETRY_GAP = 120  # 2 minute retry gap
 MAX_DAILY_WL = 20
 MAX_DAILY_RE = 20
+MAX_DAILY_TOTAL = 40  # Hard cap to stay well under Gmail's 500/day limit
 
 # ─── Logging ──────────────────────────────────────────────────
 def log(msg):
@@ -398,6 +399,21 @@ def run_re():
     log(f"RE RESULTS: sent={results['sent']} bounced={results['bounced']} errors={len(results['errors'])}")
     return results
 
+def _count_today_sends():
+    """Count total emails sent today from both WL and RE sent logs."""
+    from datetime import datetime
+    today = datetime.now(BD_TZ).strftime("%Y-%m-%d")
+    count = 0
+    for path in [SENT_LOG_WL, SENT_LOG_RE]:
+        try:
+            with open(path) as f:
+                for line in f:
+                    if line.strip() and today in line:
+                        count += 1
+        except:
+            pass
+    return count
+
 # ─── MAIN ────────────────────────────────────────────────────
 def main():
     # Prevent overlapping runs
@@ -405,6 +421,14 @@ def main():
     if lock_fd is None:
         log("ANOTHER PIPELINE RUN IS ACTIVE. Exiting.")
         sys.exit(0)
+
+    # Check daily send count — stop if we're near Gmail's 500/day limit
+    today_count = _count_today_sends()
+    if today_count >= MAX_DAILY_TOTAL:
+        log(f"DAILY LIMIT REACHED: {today_count}/{MAX_DAILY_TOTAL} sent today. Skipping.")
+        release_lock(lock_fd)
+        sys.exit(0)
+    log(f"Daily sends so far: {today_count}/{MAX_DAILY_TOTAL}")
 
     log("=" * 60)
     log("UNIFIED DAILY PIPELINE START")
