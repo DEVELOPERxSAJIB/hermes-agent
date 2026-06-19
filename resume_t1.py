@@ -5,7 +5,6 @@ Sends to WL leads that were queued due to Gmail daily limit.
 """
 import json
 import os
-import re
 import sys
 import time
 from datetime import datetime, timezone, timedelta
@@ -110,6 +109,7 @@ def main():
         pass
 
     from crm import get_crm
+    from quill_wl import make_email_t1
     crm = get_crm()
 
     sent = 0
@@ -131,32 +131,24 @@ def main():
             remaining = pending[i:]
             break
 
-        first = "there"
-        if "@" in email:
-            local = email.split("@")[0]
-            name = re.split(r"[._]", local)[0]
-            first = name.capitalize() if name else "there"
-
-        subject = f"Quick note about {company}"
-        body = f"""Hi {first},
-
-I was looking at {company} online.
-
-You seem to be doing solid work, but I wanted to reach out because I noticed you might be handling a lot of projects in-house.
-
-We are NanoSoft. We help agencies like yours with white label web development, custom software, and CRM projects. Your brand stays on everything. Your clients never know.
-
-Typical turnaround is 4 weeks. Full handoff. You take the credit.
-
-Worth a 15 minute call this week?
-
-SaJib Shikder
-NanoSoft | nanosoft.agency"""
+        # Build lead dict for quill_wl template
+        lead_dict = {
+            "Company Name": company,
+            "Email": email,
+            "Website": p.get("website", ""),
+            "Judge Score": p.get("score", ""),
+            "Source": p.get("source", ""),
+        }
+        d = make_email_t1(lead_dict)
+        if not d:
+            log(f"[{i+1}] SKIP (no template generated): {company}")
+            remaining.append(p)
+            continue
 
         log(f"[{i+1}/{len(pending)}] {company[:35]} | {email}")
-        ok, err = send_smtp(email, subject, body)
+        ok, err = send_smtp(email, d['subject'], d['body'])
         if ok:
-            append_sent_log(email, company, subject, "T1")
+            append_sent_log(email, company, d['subject'], "T1")
             try:
                 crm.update_wl_lead(company, {
                     "Status": "T1 Sent",
