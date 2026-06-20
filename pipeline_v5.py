@@ -22,7 +22,7 @@ RULES:
   - Date format: dd/mm/yyyy
   - WL score threshold: >= 7
 """
-import json, os, sys, time, re, logging
+import json, os, sys, time, re, logging, email
 from datetime import datetime, timezone, timedelta
 from collections import Counter
 
@@ -62,8 +62,258 @@ LOCK_FILE = os.path.join(NANOSOFT_DIR, "pipeline_v5.lock")
 OAUTH_TOKEN_FILE = "/home/ubuntu/.hermes/google_token.json"
 
 # Status values that should be skipped
-SKIP_STATUSES_WL = {"Bounced", "Lost", "Dead", "Closed", "Auto-Reply", "Auto-reply"}
-SKIP_STATUSES_RE = {"Bounced", "Dead", "Closed"}
+SKIP_STATUSES_WL = {"Bounced", "Lost", "Dead", "Closed", "Auto-Reply", "Auto-reply", "Replied"}
+SKIP_STATUSES_RE = {"Bounced", "Dead", "Closed", "Replied"}
+
+# Email validation — patterns that indicate INVALID emails
+INVALID_EMAIL_PATTERNS = [
+    # Obvious placeholder/example emails
+    r'@example\.(com|org|net)$',
+    r'@test\.(com|org|net)$',
+    r'@localhost$',
+    r'@invalid$',
+    r'@sample\.(com|org)$',
+    r'@demo\.(com|org)$',
+    # Image/file extensions masquerading as emails
+    r'\.(png|jpg|jpeg|gif|css|js|svg|webp|ico|bmp|tiff)$',
+    r'@.*\.(png|jpg|jpeg|gif|css|js|svg|webp)$',
+    # Package manager / library names
+    r'^(slick-carousel|jquery|bootstrap|react|angular|vue|webpack|npm|node)@',
+    r'@.*\.(npm|yarn|bower|grunt|gulp)\.',
+    # Numeric-only local part (likely not a real email)
+    r'^[0-9]{3,}@',
+    # Consecutive dots or multiple @ signs
+    r'\.{2,}',
+    r'@.*@',
+    # Spaces
+    r'\s',
+    # Abuse/spam keywords in local part
+    r'^(abuse|spam|phishing|scam|fake|bot|noreply|no-reply|donotreply)@',
+]
+
+def is_valid_email(email):
+    """Validate email address. Returns True if email looks legitimate."""
+    if not email or '@' not in email:
+        return False
+    email = email.strip().lower()
+    # Basic format check
+    if not re.match(r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$', email):
+        return False
+    # Check against invalid patterns
+    for pattern in INVALID_EMAIL_PATTERNS:
+        if re.search(pattern, email, re.IGNORECASE):
+            return False
+    # Domain must have at least one dot and valid TLD (2+ chars)
+    domain = email.split('@')[1]
+    if '.' not in domain or len(domain.split('.')[-1]) < 2:
+        return False
+    return True
+
+# ── REPLY DETECTION ─────────────────────────────────────────
+def detect_replies():
+    """
+    Scan Gmail inbox for replies from leads.
+    Returns list of (email_address, subject, snippet) tuples.
+    """
+    import imaplib
+    from email.header import decode_header
+
+    SMTP_USER = "nanosoftagency007@gmail.com"
+    replies = []
+
+    try:
+        mail = imaplib.IMAP4_SSL("imap.gmail.com")
+        mail.login(SMTP_USER, "wgxo ddup cdol kupl")
+        mail.select("INBOX")
+
+        # Search for emails received in last 24 hours (excluding our own sends)
+        since_date = (datetime.now() - timedelta(hours=24)).strftime("%d-%b-%Y")
+        status, messages = mail.search(None, f'(SINCE {since_date})')
+
+        if status != "OK":
+            mail.logout()
+            return replies
+
+        msg_ids = messages[0].split()
+
+        for msg_id in msg_ids[-200:]:  # Check last 200 emails max
+            try:
+                status, msg_data = mail.fetch(msg_id, "(RFC822)")
+                if status != "OK":
+                    continue
+
+                raw = msg_data[0][1]
+                msg = email.message_from_bytes(raw)
+
+                # Get sender
+                from_header = msg.get("From", "")
+                sender_email = re.findall(r'[\w.+-]+@[\w-]+\.[\w.-]+', from_header)
+                if not sender_email:
+                    continue
+                sender_email = sender_email[0].lower()
+
+                # Skip our own emails
+                if "nanosoftagency007" in sender_email:
+                    continue
+
+                # Skip automated/bounce emails
+                subject = ""
+                decoded = decode_header(msg.get("Subject", ""))
+                for part, encoding in decoded:
+                    if isinstance(part, bytes):
+                        subject += part.decode(encoding or "utf-8", errors="replace")
+                    else:
+                        subject += part
+
+                subject_lower = subject.lower()
+                skip_keywords = [
+                    "delivery status", "delivery failure", "mail delivery failed",
+                    "undelivered", "returned mail", "failure notice", "bounce",
+                    "auto-reply", "out of office", "vacation reply",
+                    "unsubscribe", "newsletter", "marketing",
+                ]
+                if any(kw in subject_lower for kw in skip_keywords):
+                    continue
+
+                # Get snippet
+                body = ""
+                if msg.is_multipart():
+                    for part in msg.walk():
+                        if part.get_content_type() == "text/plain":
+                            payload = part.get_payload(decode=True)
+                            if payload:
+                                body = payload.decode("utf-8", errors="replace")[:200]
+                                break
+                else:
+                    payload = msg.get_payload(decode=True)
+                    if payload:
+                        body = payload.decode("utf-8", errors="replace")[:200]
+
+                replies.append((sender_email, subject[:100], body[:150]))
+
+            except:
+                continue
+
+        mail.logout()
+    except Exception as e:
+        log.warning(f"Reply detection error: {e}")
+
+    return replies
+
+def update_replied_leads(replies):
+    """
+    Update lead status to 'Replied' for any email that matches a reply.
+    Updates both WL and RE sheets.
+    """
+    if not replies:
+        return 0
+
+    gc = get_gc()
+    updated = 0
+
+    # Check WL sheet
+    try:
+        ss = gc.open_by_key(WL_SHEET_ID)
+        ws = ss.worksheet("White Label")
+        all_rows = ws.get_all_records()
+        headers = ws.row_values(1)
+        email_col = headers.index("Email")
+        status_col = headers.index("Status")
+
+        reply_emails = {r[0] for r in replies}
+
+        for i, row in enumerate(all_rows, start=2):
+            email = str(row.get("Email", "")).strip().lower()
+            status = str(row.get("Status", "")).strip()
+            if email in reply_emails and status not in ("Replied", "Bounced", "Closed", "Dead", "Lost"):
+                ws.update_cell(i, status_col + 1, "Replied")
+                log.info(f"  WL reply detected: {email} → Replied")
+                updated += 1
+    except Exception as e:
+        log.warning(f"WL reply update error: {e}")
+
+    # Check RE sheet
+    try:
+        ss = gc.open_by_key(RE_SHEET_ID)
+        ws = ss.worksheet("Pipeline")
+        all_rows = ws.get_all_records()
+        headers = ws.row_values(1)
+        email_col = headers.index("Email")
+        status_col = headers.index("Status")
+
+        reply_emails = {r[0] for r in replies}
+
+        for i, row in enumerate(all_rows, start=2):
+            email = str(row.get("Email", "")).strip().lower()
+            status = str(row.get("Status", "")).strip()
+            if email in reply_emails and status not in ("Replied", "Bounced", "Closed", "Dead"):
+                ws.update_cell(i, status_col + 1, "Replied")
+                log.info(f"  RE reply detected: {email} → Replied")
+                updated += 1
+    except Exception as e:
+        log.warning(f"RE reply update error: {e}")
+
+    return updated
+
+# ── DAILY REPORT ─────────────────────────────────────────────
+def send_daily_report(wl_results, re_results, total):
+    """
+    Send daily summary report via Telegram.
+    """
+    try:
+        from hermes_tools import send_message
+
+        today = datetime.now(BD_TZ).strftime("%d %b %Y")
+
+        # Count follow-ups by checking sent log
+        today_str = datetime.now(BD_TZ).strftime("%Y-%m-%d")
+        wl_t1 = wl_t2 = wl_t3 = wl_t4 = 0
+        re_t1 = re_t2 = re_t3 = re_t4 = 0
+
+        for line in open(SENT_LOG_WL):
+            if today_str in line:
+                try:
+                    e = json.loads(line)
+                    t = e.get("template", "")
+                    if t == "T1": wl_t1 += 1
+                    elif t == "T2": wl_t2 += 1
+                    elif t == "T3": wl_t3 += 1
+                    elif t == "T4": wl_t4 += 1
+                except: pass
+
+        for line in open(SENT_LOG_RE):
+            if today_str in line:
+                try:
+                    e = json.loads(line)
+                    t = e.get("template", "")
+                    if t == "T1": re_t1 += 1
+                    elif t == "T2": re_t2 += 1
+                    elif t == "T3": re_t3 += 1
+                    elif t == "T4": re_t4 += 1
+                except: pass
+
+        msg = (
+            f"📊 **Daily Outreach Report — {today}**\n\n"
+            f"**White Label:**\n"
+            f"  T1 (Cold): {wl_t1}\n"
+            f"  T2 (FU1):  {wl_t2}\n"
+            f"  T3 (FU2):  {wl_t3}\n"
+            f"  T4 (FU3):  {wl_t4}\n"
+            f"  **WL Total: {wl_results['sent']}**\n\n"
+            f"**Real Estate:**\n"
+            f"  T1 (Cold): {re_t1}\n"
+            f"  T2 (FU1):  {re_t2}\n"
+            f"  T3 (FU2):  {re_t3}\n"
+            f"  T4 (FU3):  {re_t4}\n"
+            f"  **RE Total: {re_results['sent']}**\n\n"
+            f"**Grand Total: {total}**\n"
+            f"Errors: WL {len(wl_results['errors'])} | RE {len(re_results['errors'])}"
+        )
+
+        send_message(target="telegram", message=msg)
+        log.info("Daily report sent via Telegram")
+    except Exception as e:
+        log.warning(f"Could not send daily report: {e}")
 
 # ── LOGGING ─────────────────────────────────────────────────
 logging.basicConfig(
@@ -246,6 +496,12 @@ def run_wl():
 
             if not email or "@" not in email:
                 continue
+            # Email validation — skip invalid emails
+            raw_email = str(lead.get("Email", "")).strip()
+            if not is_valid_email(raw_email):
+                log.debug(f"  SKIP invalid email: {company} | {raw_email}")
+                results["skipped"] += 1
+                continue
             if email in processed_emails:
                 continue
             if status in SKIP_STATUSES_WL:
@@ -410,6 +666,11 @@ def run_re():
 
             if not email or "@" not in email:
                 continue
+            # Email validation — skip invalid emails
+            if not is_valid_email(email):
+                log.debug(f"  SKIP invalid email: {brokerage} | {email}")
+                results["skipped"] += 1
+                continue
             if email.lower() in processed_emails:
                 continue
             if status in SKIP_STATUSES_RE:
@@ -573,6 +834,19 @@ def main():
         log.info(f"WL: skipped={wl_results['skipped']} errors={len(wl_results['errors'])}")
         log.info(f"RE: skipped={re_results['skipped']} errors={len(re_results['errors'])}")
         log.info("=" * 60)
+
+        # Reply detection
+        log.info("Scanning Gmail for replies...")
+        replies = detect_replies()
+        if replies:
+            log.info(f"Found {len(replies)} replies. Updating lead statuses...")
+            updated = update_replied_leads(replies)
+            log.info(f"Updated {updated} leads to 'Replied'")
+        else:
+            log.info("No replies found.")
+
+        # Daily report
+        send_daily_report(wl_results, re_results, total)
 
         return {"wl": wl_results, "re": re_results, "total": total}
 
