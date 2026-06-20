@@ -3,7 +3,9 @@ import json, os, sys
 from datetime import datetime
 from google.oauth2.credentials import Credentials
 from googleapiclient.discovery import build
-from .config import TOKEN_PATH, SHEET_ID, SHEET_NAME, COL
+import sys, os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from config import TOKEN_PATH, SHEET_ID, SHEET_NAME, COL
 
 def _creds():
     with open(TOKEN_PATH) as f:

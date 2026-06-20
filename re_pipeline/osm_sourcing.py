@@ -9,7 +9,10 @@ import socket
 import requests
 from urllib.parse import urljoin, urlparse
 
-from .config import US_CITIES, GCC_CITIES, FRANCHISES
+import sys, os
+# Add parent directory to path for config import
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from config import US_CITIES, GCC_CITIES, FRANCHISES
 
 # US city coordinates (lat, lon)
 US_COORDS = {

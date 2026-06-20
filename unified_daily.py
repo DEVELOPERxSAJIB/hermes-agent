@@ -200,9 +200,10 @@ def run_wl():
     crm = NanoSoftCRM()
 
     make_fn = {"T1": make_email_t1, "T2": make_email_t2, "T3": make_email_t3, "T4": make_email_t4}
-    status_map = {"T1": ["New", "Unqualified"], "T2": ["T1 Sent", "Contacted"], "T3": ["T2 Sent"], "T4": ["T3 Sent"]}
+    status_map = {"T1": ["New"], "T2": ["T1 Sent"], "T3": ["T2 Sent"], "T4": ["T3 Sent"]}
     next_status = {"T1": "T1 Sent", "T2": "T2 Sent", "T3": "T3 Sent", "T4": "T4 Sent"}
     date_col = {"T1": "Sent date", "T2": "FU 1", "T3": "FU 2", "T4": "FU 3"}
+    date_fmt = "%d/%m/%Y"  # WL sheet uses dd/mm/yyyy format
 
     all_leads = crm.get_wl_all()
     sent_log = load_sent_log(SENT_LOG_WL)
@@ -273,7 +274,7 @@ def run_wl():
             if success:
                 append_sent_log(SENT_LOG_WL, email, company, d['subject'], template)
                 sent_log[f"{email}|{template}"] = {"to": email, "template": template}
-                updates = {"Status": next_status[template], date_col[template]: datetime.now(BD_TZ).strftime("%Y-%m-%d")}
+                updates = {"Status": next_status[template], date_col[template]: datetime.now(BD_TZ).strftime(date_fmt)}
                 crm.update_wl_lead(company, updates)
                 processed_emails.add(email)
                 results["sent"] += 1

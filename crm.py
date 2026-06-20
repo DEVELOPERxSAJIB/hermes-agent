@@ -3,18 +3,14 @@ NanoSoft CRM — Google Sheets wrapper
 Supports both Lead (SMB) and White Label (Agency Partnership) tabs.
 """
 import gspread
-from google.oauth2.service_account import Credentials
+from google.oauth2.credentials import Credentials as OAuthCredentials
 from datetime import datetime, timezone, timedelta
 import json
 import time
 import os
 
-SERVICE_ACCOUNT_FILE = "/home/ubuntu/nanosoft/gcp_service_account.json"
-SHEET_ID = "1S9jTTe1rKfe0GqqdVgXXgVkdtrRgHtwxu44pERYMOTo"
-SCOPES = [
-    "https://www.googleapis.com/auth/spreadsheets",
-    "https://www.googleapis.com/auth/drive",
-]
+OAUTH_TOKEN_FILE = "/home/ubuntu/.hermes/google_token.json"
+SHEET_ID = "1POJ1ffcC6Z4dFDbgQj3VlECYPmApzXXJ5orNzf2-Yuo"
 
 # ── Lead tab columns (original SMB outreach) ──
 LEAD_COLUMNS = [
@@ -76,7 +72,9 @@ class NanoSoftCRM:
     def __init__(self):
         if hasattr(self, 'creds'):
             return
-        self.creds = Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE, scopes=SCOPES)
+        with open(OAUTH_TOKEN_FILE) as f:
+            d = json.load(f)
+        self.creds = OAuthCredentials.from_authorized_user_info(d)
         self.gc = gspread.authorize(self.creds)
         # Retry on init — Google Sheets API may rate-limit
         self._init_with_retry()
@@ -86,7 +84,11 @@ class NanoSoftCRM:
         for i in range(attempts):
             try:
                 self.sh = self.gc.open_by_key(SHEET_ID)
-                self.ws_leads = self.sh.worksheet("Lead")
+                # Get or create worksheets
+                try:
+                    self.ws_leads = self.sh.worksheet("Lead")
+                except gspread.exceptions.WorksheetNotFound:
+                    self.ws_leads = self.sh.add_worksheet(title="Lead", rows=2000, cols=20)
                 self._ensure_headers(self.ws_leads, LEAD_COLUMNS)
                 self.ws_wl = self._get_or_create_wl_tab()
                 self.ws_analytics = self._get_or_create_analytics()
@@ -102,7 +104,10 @@ class NanoSoftCRM:
     def _ensure_headers(self, ws, columns):
         existing = ws.row_values(1)
         if len(existing) < len(columns) or existing[:5] != columns[:5]:
-            ws.update('A1:R1', [columns])
+            # Resize if needed
+            if ws.col_count < len(columns):
+                ws.resize(cols=len(columns))
+            ws.update(f'A1:{chr(64 + len(columns))}1', [columns])
 
     def _get_or_create_wl_tab(self):
         try:
@@ -128,6 +133,17 @@ class NanoSoftCRM:
             from google.auth.transport.requests import Request
             if self.creds.expired:
                 self.creds.refresh(Request())
+                # Save refreshed token
+                refreshed = {
+                    'token': self.creds.token,
+                    'refresh_token': self.creds.refresh_token,
+                    'token_uri': self.creds.token_uri,
+                    'client_id': self.creds.client_id,
+                    'client_secret': self.creds.client_secret,
+                    'scopes': self.creds.scopes,
+                }
+                with open(OAUTH_TOKEN_FILE, 'w') as f:
+                    json.dump(refreshed, f, indent=2)
                 self.gc = gspread.authorize(self.creds)
                 self.sh = self.gc.open_by_key(SHEET_ID)
                 self.ws_leads = self.sh.worksheet("Lead")
