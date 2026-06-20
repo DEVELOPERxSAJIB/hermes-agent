@@ -38,7 +38,7 @@ def update_wl_crm(email, reason):
 
 def update_re_crm(email, reason):
     """Mark RE lead as bounced."""
-    from sheets import get_leads, update_status
+    from re_pipeline.sheets import get_leads, update_status
     leads = get_leads()
     for lead in leads:
         if str(lead.get("Email", "")).strip().lower() == email.lower():
