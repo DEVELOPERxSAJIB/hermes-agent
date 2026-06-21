@@ -2,7 +2,7 @@
 import sys
 sys.path.insert(0, '/home/ubuntu/nanosoft/re_pipeline')
 
-from daily import morning_routine, evening_routine, weekly_report
+from daily import re_morning_routine as morning_routine, re_evening_routine as evening_routine, re_weekly_report as weekly_report
 from sheets import get_leads
 
 def run_morning():

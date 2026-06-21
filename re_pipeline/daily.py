@@ -14,7 +14,7 @@ from audit import run_audit
 from templates import get_template
 from osm_sourcing import scout_single_city
 from smtp_sender import send_email
-from .config import MAX_EMAILS_PER_DAY, MAX_LINKEDIN_DMS_PER_DAY, MAX_NEW_LEADS_PER_DAY, US_CITIES, GCC_CITIES
+from config import MAX_EMAILS_PER_DAY, MAX_LINKEDIN_DMS_PER_DAY, MAX_NEW_LEADS_PER_DAY, US_CITIES, GCC_CITIES
 
 def re_morning_routine(cities=None, max_new=MAX_NEW_LEADS_PER_DAY):
     """
