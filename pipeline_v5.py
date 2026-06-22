@@ -20,7 +20,7 @@ RULES:
   - Skip leads that replied, bounced, or are marked Dead/Lost/Closed
   - Dedup via sent_log (email|template)
   - Date format: dd/mm/yyyy
-  - WL score threshold: >= 7
+  - WL score threshold: >= 5 (lowered from 7 to expand active pool)
 """
 import json, os, sys, time, re, logging, email
 from datetime import datetime, timezone, timedelta
@@ -49,8 +49,8 @@ FU1_GAP = 4   # T2 = 4 days after T1
 FU2_GAP = 4   # T3 = 4 days after T2
 FU3_GAP = 7   # T4 = 7 days after T3
 
-# WL quality threshold
-WL_MIN_SCORE = 7
+# WL quality threshold (lowered from 7 to 5 to expand active lead pool)
+WL_MIN_SCORE = 5
 
 # File paths
 LOG_FILE = os.path.join(NANOSOFT_DIR, "pipeline_v5.log")
@@ -69,17 +69,26 @@ SKIP_STATUSES_RE = {"Bounced", "Dead", "Closed", "Replied"}
 INVALID_EMAIL_PATTERNS = [
     # Obvious placeholder/example emails
     r'@example\.(com|org|net)$',
-    r'@test\.(com|org|net)$',
+    r'@test\.(com|org|net)$',  # test.com is real but unlikely for B2B leads
     r'@localhost$',
     r'@invalid$',
     r'@sample\.(com|org)$',
     r'@demo\.(com|org)$',
+    r'@contoso\.(com|org)$',
+    r'@you@example\.com$',
     # Image/file extensions masquerading as emails
-    r'\.(png|jpg|jpeg|gif|css|js|svg|webp|ico|bmp|tiff)$',
-    r'@.*\.(png|jpg|jpeg|gif|css|js|svg|webp)$',
-    # Package manager / library names
-    r'^(slick-carousel|jquery|bootstrap|react|angular|vue|webpack|npm|node)@',
+    r'\.(png|jpg|jpeg|gif|css|js|svg|webp|ico|bmp|tiff|webp|mjs)$',
+    r'@.*\.(png|jpg|jpeg|gif|css|js|svg|webp|mjs)$',
+    # Filenames with @ (e.g., "Logo-@america-300x148.webp", "default-utils.js@_0.45")
+    r'^[a-z-]+-@[a-z]+-\d+x\d+\.',
+    r'^[a-zA-Z.-]+@[_.][0-9]',
+    # Package manager / library names with version numbers
+    r'^(slick-carousel|jquery|bootstrap|react|angular|vue|webpack|npm|node|gsap|splide|select2|intl-segmenter|intl-tel-input|markdown-it|defer\.js)@',
     r'@.*\.(npm|yarn|bower|grunt|gulp)\.',
+    # Version numbers in email (e.g., "package@1.2.3")
+    r'@[0-9]+\.[0-9]+\.[0-9]+',
+    # Query parameters in email (e.g., "email@domain.com?subject=...")
+    r'\?subject=',
     # Numeric-only local part (likely not a real email)
     r'^[0-9]{3,}@',
     # Consecutive dots or multiple @ signs
@@ -328,6 +337,25 @@ logging.basicConfig(
 log = logging.getLogger("pipeline")
 
 # ── AUTH ────────────────────────────────────────────────────
+def refresh_token():
+    """Try to refresh the OAuth token. Returns True if successful."""
+    from google.auth.transport.requests import Request
+    try:
+        with open(OAUTH_TOKEN_FILE) as f:
+            d = json.load(f)
+        from google.oauth2.credentials import Credentials
+        creds = Credentials.from_authorized_user_info(d)
+        if creds.expired and creds.refresh_token:
+            creds.refresh(Request())
+            # Save refreshed token
+            refreshed = json.loads(creds.to_json())
+            with open(OAUTH_TOKEN_FILE, 'w') as f:
+                json.dump(refreshed, f, indent=2)
+            return True
+    except Exception as e:
+        log.warning(f"Token refresh failed: {e}")
+    return False
+
 def get_gc():
     """Get authorized gspread client using OAuth token."""
     from google.oauth2.credentials import Credentials
@@ -335,6 +363,13 @@ def get_gc():
     with open(OAUTH_TOKEN_FILE) as f:
         d = json.load(f)
     creds = Credentials.from_authorized_user_info(d)
+    if creds.expired:
+        if not refresh_token():
+            raise RuntimeError("OAuth token expired and refresh failed. Re-authorization required.")
+        # Reload refreshed token
+        with open(OAUTH_TOKEN_FILE) as f:
+            d = json.load(f)
+        creds = Credentials.from_authorized_user_info(d)
     return gspread.authorize(creds)
 
 # ── LOCK ────────────────────────────────────────────────────
@@ -521,7 +556,7 @@ def run_wl():
             eligible = False
 
             if template == "T1":
-                # New outreach: status must be "New" and score >= 7
+                # New outreach: status must be "New" and score >= WL_MIN_SCORE (5)
                 if status == "New" and score.isdigit() and int(score) >= WL_MIN_SCORE:
                     eligible = True
 

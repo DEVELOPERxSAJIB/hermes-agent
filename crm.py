@@ -75,6 +75,16 @@ class NanoSoftCRM:
         with open(OAUTH_TOKEN_FILE) as f:
             d = json.load(f)
         self.creds = OAuthCredentials.from_authorized_user_info(d)
+        # Refresh token if expired
+        if self.creds.expired and self.creds.refresh_token:
+            try:
+                from google.auth.transport.requests import Request
+                self.creds.refresh(Request())
+                refreshed = json.loads(self.creds.to_json())
+                with open(OAUTH_TOKEN_FILE, 'w') as f:
+                    json.dump(refreshed, f, indent=2)
+            except Exception as e:
+                pass  # Will fail below with clear error
         self.gc = gspread.authorize(self.creds)
         # Retry on init — Google Sheets API may rate-limit
         self._init_with_retry()
