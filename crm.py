@@ -10,6 +10,7 @@ import time
 import os
 
 OAUTH_TOKEN_FILE = "/home/ubuntu/.hermes/google_token.json"
+SERVICE_ACCOUNT_FILE = "/home/ubuntu/nanosoft/gcp_service_account.json"
 SHEET_ID = "1POJ1ffcC6Z4dFDbgQj3VlECYPmApzXXJ5orNzf2-Yuo"
 
 # ── Lead tab columns (original SMB outreach) ──
@@ -72,19 +73,32 @@ class NanoSoftCRM:
     def __init__(self):
         if hasattr(self, 'creds'):
             return
-        with open(OAUTH_TOKEN_FILE) as f:
-            d = json.load(f)
-        self.creds = OAuthCredentials.from_authorized_user_info(d)
-        # Refresh token if expired
-        if self.creds.expired and self.creds.refresh_token:
-            try:
-                from google.auth.transport.requests import Request
-                self.creds.refresh(Request())
-                refreshed = json.loads(self.creds.to_json())
-                with open(OAUTH_TOKEN_FILE, 'w') as f:
-                    json.dump(refreshed, f, indent=2)
-            except Exception as e:
-                pass  # Will fail below with clear error
+        # Try OAuth first, fall back to service account
+        try:
+            with open(OAUTH_TOKEN_FILE) as f:
+                d = json.load(f)
+            self.creds = OAuthCredentials.from_authorized_user_info(d)
+            # Refresh token if expired
+            if self.creds.expired and self.creds.refresh_token:
+                try:
+                    from google.auth.transport.requests import Request
+                    self.creds.refresh(Request())
+                    refreshed = json.loads(self.creds.to_json())
+                    with open(OAUTH_TOKEN_FILE, 'w') as f:
+                        json.dump(refreshed, f, indent=2)
+                except Exception:
+                    pass
+            self.gc = gspread.authorize(self.creds)
+            self._init_with_retry()
+            return  # OAuth worked
+        except Exception:
+            pass  # Fall through to service account
+        # Service account fallback
+        from google.oauth2.service_account import Credentials as SACredentials
+        self.creds = SACredentials.from_service_account_file(
+            SERVICE_ACCOUNT_FILE,
+            scopes=['https://www.googleapis.com/auth/spreadsheets', 'https://www.googleapis.com/auth/drive']
+        )
         self.gc = gspread.authorize(self.creds)
         # Retry on init — Google Sheets API may rate-limit
         self._init_with_retry()

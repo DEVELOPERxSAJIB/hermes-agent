@@ -8,14 +8,22 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from config import TOKEN_PATH, SHEET_ID, SHEET_NAME, COL
 
 def _creds():
-    with open(TOKEN_PATH) as f:
-        d = json.load(f)
-    return Credentials(
-        token=d['token'], refresh_token=d.get('refresh_token'),
-        token_uri=d.get('token_uri', 'https://oauth2.googleapis.com/token'),
-        client_id=d['client_id'], client_secret=d['client_secret'],
-        scopes=d.get('scopes')
-    )
+    # Try OAuth first, fall back to service account
+    try:
+        with open(TOKEN_PATH) as f:
+            d = json.load(f)
+        return Credentials(
+            token=d['token'], refresh_token=d.get('refresh_token'),
+            token_uri=d.get('token_uri', 'https://oauth2.googleapis.com/token'),
+            client_id=d['client_id'], client_secret=d.get('client_secret',''),
+            scopes=d.get('scopes')
+        )
+    except Exception:
+        from google.oauth2.service_account import Credentials as SACredentials
+        return SACredentials.from_service_account_file(
+            os.path.expanduser("~/nanosoft/gcp_service_account.json"),
+            scopes=['https://www.googleapis.com/auth/spreadsheets.readonly']
+        )
 
 def _service():
     return build('sheets', 'v4', credentials=_creds())
