@@ -7,11 +7,45 @@ import sys, os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from config import TOKEN_PATH, SHEET_ID, SHEET_NAME, COL
 
+def _sa_creds():
+    from google.oauth2.service_account import Credentials as SACredentials
+    return SACredentials.from_service_account_file(
+        os.path.expanduser("~/nanosoft/gcp_service_account.json"),
+        scopes=['https://www.googleapis.com/auth/spreadsheets.readonly']
+    )
+
 def _creds():
     # Try OAuth first, fall back to service account
     try:
         with open(TOKEN_PATH) as f:
             d = json.load(f)
+        # Check expiry from token JSON before constructing creds
+        expiry_str = d.get('expiry', '')
+        if expiry_str:
+            try:
+                from datetime import datetime, timezone
+                expiry_str_norm = expiry_str.replace('Z', '+00:00')
+                expiry_dt = datetime.fromisoformat(expiry_str_norm)
+                if expiry_dt.tzinfo is None:
+                    expiry_dt = expiry_dt.replace(tzinfo=timezone.utc)
+                if datetime.now(timezone.utc) > expiry_dt:
+                    # Token expired — try refresh, fall back to SA
+                    creds = Credentials(
+                        token=d['token'], refresh_token=d.get('refresh_token'),
+                        token_uri=d.get('token_uri', 'https://oauth2.googleapis.com/token'),
+                        client_id=d['client_id'], client_secret=d.get('client_secret',''),
+                        scopes=d.get('scopes')
+                    )
+                    if creds.refresh_token:
+                        try:
+                            import google.auth.transport.requests
+                            creds.refresh(google.auth.transport.requests.Request())
+                            return creds
+                        except Exception:
+                            return _sa_creds()
+                    return _sa_creds()
+            except Exception:
+                pass
         return Credentials(
             token=d['token'], refresh_token=d.get('refresh_token'),
             token_uri=d.get('token_uri', 'https://oauth2.googleapis.com/token'),
@@ -19,11 +53,7 @@ def _creds():
             scopes=d.get('scopes')
         )
     except Exception:
-        from google.oauth2.service_account import Credentials as SACredentials
-        return SACredentials.from_service_account_file(
-            os.path.expanduser("~/nanosoft/gcp_service_account.json"),
-            scopes=['https://www.googleapis.com/auth/spreadsheets.readonly']
-        )
+        return _sa_creds()
 
 def _service():
     return build('sheets', 'v4', credentials=_creds())

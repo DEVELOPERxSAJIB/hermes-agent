@@ -31,7 +31,11 @@ def update_wl_crm(email, reason):
     for lead in leads:
         if str(lead.get("Email", "")).strip().lower() == email.lower():
             company = str(lead.get("Company Name", "")).strip()
-            crm.update_wl_lead(company, {"Status": "Bounced", "Email": f"BOUNCED_{email}"})
+            # Strip existing BOUNCED_ prefix to avoid stacking
+            _clean = email
+            while _clean.startswith("BOUNCED_"):
+                _clean = _clean[len("BOUNCED_"):]
+            crm.update_wl_lead(company, {"Status": "Bounced", "Email": f"BOUNCED_{_clean}"})
             log(f"  WL CRM updated: {company} -> Bounced")
             return True
     return False

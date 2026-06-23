@@ -67,7 +67,11 @@ def check_crm_health():
         # Fix: mark as Bounced
         for company, email, status in bad_emails:
             try:
-                crm.update_wl_lead(company, {'Status': 'Bounced', 'Email': f'BOUNCED_{email}'})
+                # Strip any existing BOUNCED_ prefix to avoid stacking
+                clean_email = email
+                while clean_email.startswith('BOUNCED_'):
+                    clean_email = clean_email[len('BOUNCED_'):]
+                crm.update_wl_lead(company, {'Status': 'Bounced', 'Email': f'BOUNCED_{clean_email}'})
                 fixes.append(f"Marked {company[:30]} as Bounced (bad email: {email[:40]})")
             except:
                 pass

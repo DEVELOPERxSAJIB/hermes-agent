@@ -54,7 +54,11 @@ def main():
             stats["invalid"] += 1
             invalid_leads.append({"email": email, "company": company, "reason": detail})
             # Mark as bounced in CRM
-            crm.update_wl_lead(company, {"Status": "Bounced", "Email": f"BOUNCED_{email}"})
+            # Strip existing BOUNCED_ prefix to avoid stacking
+            _clean = email
+            while _clean.startswith("BOUNCED_"):
+                _clean = _clean[len("BOUNCED_"):]
+            crm.update_wl_lead(company, {"Status": "Bounced", "Email": f"BOUNCED_{_clean}"})
         
         # Log every 50
         if stats["total"] % 50 == 0:

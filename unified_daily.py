@@ -260,7 +260,11 @@ def run_wl():
             if not is_valid:
                 log(f"    SKIP [{i+1}] {company}: invalid email {email_to} - {verify_detail}")
                 results["skipped"] += 1
-                crm.update_wl_lead(company, {"Status": "Bounced", "Email": f"BOUNCED_{email}"})
+                # Strip existing BOUNCED_ prefix to avoid stacking
+                _clean = email
+                while _clean.startswith("BOUNCED_"):
+                    _clean = _clean[len("BOUNCED_"):]
+                crm.update_wl_lead(company, {"Status": "Bounced", "Email": f"BOUNCED_{clean}"})
                 continue
 
             # Re-check sent log right before sending (prevent dupes from parallel runs)
@@ -282,7 +286,11 @@ def run_wl():
             else:
                 # Check if it's a permanent bounce
                 if any(kw in error.lower() for kw in ['user unknown', 'mailbox not found', 'recipient rejected', 'invalid', 'does not exist', '550', '551', '552', '553']):
-                    crm.update_wl_lead(company, {"Status": "Bounced", "Email": f"BOUNCED_{email}"})
+                    # Strip existing BOUNCED_ prefix to avoid stacking
+                    _clean = email
+                    while _clean.startswith("BOUNCED_"):
+                        _clean = _clean[len("BOUNCED_"):]
+                    crm.update_wl_lead(company, {"Status": "Bounced", "Email": f"BOUNCED_{_clean}"})
                     log(f"    [{i+1}/{len(needs)}] BOUNCE {template} -> {email}: {error[:100]}")
                 else:
                     results["errors"].append(f"{template} {email}: {error[:100]}")
