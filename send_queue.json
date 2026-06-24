@@ -1,0 +1,878 @@
+{
+  "audit_emails": [
+    {
+      "rank": 1,
+      "company": "Trimwebsolutions",
+      "email": "info@trimwebsolutions.com",
+      "website": "https://trimwebsolutions.com",
+      "judge_score": 8,
+      "pain_point": "",
+      "services": "web development, mobile development, UI/UX design, eCommerce, custom software",
+      "team_size": "",
+      "country": "Canada",
+      "issues_found": [
+        "HTTP Error 500 - Internal Server Error",
+        "Site completely unreachable"
+      ],
+      "audit_score": 10,
+      "load_time_seconds": 0,
+      "severity": "critical",
+      "script_60s": "Hey mobile dev team, it's time for a 60-second website audit!\n\nI just checked out https://trimwebsolutions.com. Here's what I found:\n\nTheir website has critical problems: HTTP Error 500 - Internal Server Error and Site completely unreachable. Overall, I'd rate their web presence a 10 out of 10.\n\nAs a web development, mobile development, UI/UX design, company, their digital storefront is losing them clients right now. The first impression prospects get? It's not great.\n\nHere's the good news: this is exactly the kind of fix we can knock out this week. A modern, fast, mobile-responsive site with clear calls-to-action would completely transform their pipeline.\n\nTheir pain point is: they need better web presence to win more deals.\n\nThis is a warm lead, not a cold one. They're actively looking for help. Let's reach out before their competitors get to them first.\n\nWho's drafting the email? Let's close this one!",
+      "video_html": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Website Audit - Trimwebsolutions</title>\n    <style>\n        * { margin: 0; padding: 0; box-sizing: border-box; }\n        body { \n            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;\n            background: #0a0a0a; color: #fff; \n            display: flex; justify-content: center; align-items: center;\n            min-height: 100vh; padding: 20px;\n        }\n        .audit-card {\n            width: 1200px; height: 675px;\n            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);\n            border-radius: 16px; padding: 60px;\n            display: flex; flex-direction: column; justify-content: space-between;\n            position: relative; overflow: hidden;\n        }\n        .audit-card::before {\n            content: ''; position: absolute; top: -50%; right: -20%;\n            width: 400px; height: 400px; border-radius: 50%;\n            background: radial-gradient(circle, #ff444422 0%, transparent 70%);\n        }\n        .header {\n            display: flex; justify-content: space-between; align-items: flex-start;\n            position: relative; z-index: 1;\n        }\n        .company-name {\n            font-size: 42px; font-weight: 800; letter-spacing: -1px;\n        }\n        .score-badge {\n            background: #ff4444; color: #fff;\n            padding: 12px 24px; border-radius: 50px;\n            font-size: 24px; font-weight: 800;\n        }\n        .url {\n            font-size: 18px; color: #888; margin-top: 8px;\n        }\n        .issues-section {\n            flex: 1; display: flex; gap: 40px; margin-top: 30px;\n            position: relative; z-index: 1;\n        }\n        .issues-list {\n            flex: 1; list-style: none;\n        }\n        .issues-list li {\n            padding: 8px 0; padding-left: 28px; position: relative;\n            font-size: 18px; color: #ddd; border-bottom: 1px solid #333;\n        }\n        .issues-list li::before {\n            content: '\\2717'; position: absolute; left: 0;\n            color: #ff4444; font-weight: bold;\n        }\n        .right-panel {\n            flex: 1; display: flex; flex-direction: column; justify-content: center;\n            align-items: center; text-align: center;\n        }\n        .big-score {\n            font-size: 120px; font-weight: 900; color: #ff4444;\n            line-height: 1;\n        }\n        .score-label {\n            font-size: 16px; color: #ff4444; text-transform: uppercase;\n            letter-spacing: 3px; margin-top: 8px;\n        }\n        .footer {\n            display: flex; justify-content: space-between; align-items: center;\n            border-top: 1px solid #333; padding-top: 20px;\n            position: relative; z-index: 1;\n        }\n        .brand {\n            font-size: 24px; font-weight: 700; color: #fff;\n        }\n        .brand span { color: #4a9eff; }\n        .cta-hint {\n            font-size: 16px; color: #4a9eff;\n        }\n    </style>\n</head>\n<body>\n    <div class=\"audit-card\">\n        <div class=\"header\">\n            <div>\n                <div class=\"company-name\">Trimwebsolutions</div>\n                <div class=\"url\">https://trimwebsolutions.com</div>\n            </div>\n            <div class=\"score-badge\">CRITICAL</div>\n        </div>\n        <div class=\"issues-section\">\n            <ul class=\"issues-list\">\n                <li>HTTP Error 500 - Internal Server Error</li>\n                <li>Site completely unreachable</li>\n            </ul>\n            <div class=\"right-panel\">\n                <div class=\"big-score\">10/10</div>\n                <div class=\"score-label\">Website Score</div>\n            </div>\n        </div>\n        <div class=\"footer\">\n            <div class=\"brand\">Nano<span>Soft</span> Audit System</div>\n            <div class=\"cta-hint\">Personalized outreach opportunity</div>\n        </div>\n    </div>\n</body>\n</html>",
+      "video_filename": "audit_trimwebsolutions.html"
+    },
+    {
+      "rank": 2,
+      "company": "Velvetech LLC",
+      "email": "info@velvetech.com",
+      "website": "https://velvetech.com/",
+      "judge_score": 10,
+      "pain_point": "actively seeking development partners for overflow, scaling fast, likely needs reliable dev capacity",
+      "services": "web development, mobile development, UI/UX design, cloud/DevOps, AI/ML, eCommerce, SaaS, QA/Testing, consulting, staff augmentation, custom software",
+      "team_size": "50 - 249",
+      "country": "Sunny Isles Beach, FL",
+      "issues_found": [
+        "HTTP Error 429 - Too Many Requests",
+        "Works on HTTP only (no SSL)"
+      ],
+      "audit_score": 7,
+      "load_time_seconds": 0,
+      "severity": "critical",
+      "script_60s": "Hey mobile dev team, it's time for a 60-second website audit!\n\nI just checked out https://velvetech.com/. Here's what I found:\n\nTheir website has critical problems: HTTP Error 429 - Too Many Requests and Works on HTTP only (no SSL). Overall, I'd rate their web presence a 7 out of 10.\n\nAs a web development, mobile development, UI/UX design, company, their digital storefront is losing them clients right now. The first impression prospects get? It's not great.\n\nHere's the good news: this is exactly the kind of fix we can knock out this week. A modern, fast, mobile-responsive site with clear calls-to-action would completely transform their pipeline.\n\nTheir pain point is: actively seeking development partners for overflow, scaling fast, likely needs r.\n\nThis is a warm lead, not a cold one. They're actively looking for help. Let's reach out before their competitors get to them first.\n\nWho's drafting the email? Let's close this one!",
+      "video_html": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Website Audit - Velvetech LLC</title>\n    <style>\n        * { margin: 0; padding: 0; box-sizing: border-box; }\n        body { \n            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;\n            background: #0a0a0a; color: #fff; \n            display: flex; justify-content: center; align-items: center;\n            min-height: 100vh; padding: 20px;\n        }\n        .audit-card {\n            width: 1200px; height: 675px;\n            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);\n            border-radius: 16px; padding: 60px;\n            display: flex; flex-direction: column; justify-content: space-between;\n            position: relative; overflow: hidden;\n        }\n        .audit-card::before {\n            content: ''; position: absolute; top: -50%; right: -20%;\n            width: 400px; height: 400px; border-radius: 50%;\n            background: radial-gradient(circle, #ff444422 0%, transparent 70%);\n        }\n        .header {\n            display: flex; justify-content: space-between; align-items: flex-start;\n            position: relative; z-index: 1;\n        }\n        .company-name {\n            font-size: 42px; font-weight: 800; letter-spacing: -1px;\n        }\n        .score-badge {\n            background: #ff4444; color: #fff;\n            padding: 12px 24px; border-radius: 50px;\n            font-size: 24px; font-weight: 800;\n        }\n        .url {\n            font-size: 18px; color: #888; margin-top: 8px;\n        }\n        .issues-section {\n            flex: 1; display: flex; gap: 40px; margin-top: 30px;\n            position: relative; z-index: 1;\n        }\n        .issues-list {\n            flex: 1; list-style: none;\n        }\n        .issues-list li {\n            padding: 8px 0; padding-left: 28px; position: relative;\n            font-size: 18px; color: #ddd; border-bottom: 1px solid #333;\n        }\n        .issues-list li::before {\n            content: '\\2717'; position: absolute; left: 0;\n            color: #ff4444; font-weight: bold;\n        }\n        .right-panel {\n            flex: 1; display: flex; flex-direction: column; justify-content: center;\n            align-items: center; text-align: center;\n        }\n        .big-score {\n            font-size: 120px; font-weight: 900; color: #ff4444;\n            line-height: 1;\n        }\n        .score-label {\n            font-size: 16px; color: #ff4444; text-transform: uppercase;\n            letter-spacing: 3px; margin-top: 8px;\n        }\n        .footer {\n            display: flex; justify-content: space-between; align-items: center;\n            border-top: 1px solid #333; padding-top: 20px;\n            position: relative; z-index: 1;\n        }\n        .brand {\n            font-size: 24px; font-weight: 700; color: #fff;\n        }\n        .brand span { color: #4a9eff; }\n        .cta-hint {\n            font-size: 16px; color: #4a9eff;\n        }\n    </style>\n</head>\n<body>\n    <div class=\"audit-card\">\n        <div class=\"header\">\n            <div>\n                <div class=\"company-name\">Velvetech LLC</div>\n                <div class=\"url\">https://velvetech.com/</div>\n            </div>\n            <div class=\"score-badge\">CRITICAL</div>\n        </div>\n        <div class=\"issues-section\">\n            <ul class=\"issues-list\">\n                <li>HTTP Error 429 - Too Many Requests</li>\n                <li>Works on HTTP only (no SSL)</li>\n            </ul>\n            <div class=\"right-panel\">\n                <div class=\"big-score\">7/10</div>\n                <div class=\"score-label\">Website Score</div>\n            </div>\n        </div>\n        <div class=\"footer\">\n            <div class=\"brand\">Nano<span>Soft</span> Audit System</div>\n            <div class=\"cta-hint\">Personalized outreach opportunity</div>\n        </div>\n    </div>\n</body>\n</html>",
+      "video_filename": "audit_velvetech_llc.html"
+    },
+    {
+      "rank": 3,
+      "company": "Boundev",
+      "email": "hello@boundev.ai",
+      "website": "https://boundev.ai",
+      "judge_score": 5,
+      "pain_point": "",
+      "services": "cloud/DevOps",
+      "team_size": "",
+      "country": "",
+      "issues_found": [
+        "No copyright year found",
+        "No modern typography/fonts",
+        "No clear call-to-action buttons",
+        "No animations or dynamic content"
+      ],
+      "audit_score": 4,
+      "load_time_seconds": 0.07,
+      "severity": "warning",
+      "script_60s": "Hey growth team, it's time for a 60-second website audit!\n\nI just checked out https://boundev.ai. Here's what I found:\n\nTheir site has several issues including no copyright year found, no modern typography/fonts. Overall, I'd rate their web presence a 4 out of 10.\n\nAs a cloud/DevOps company, their digital storefront is losing them clients right now. The first impression prospects get? It's not great.\n\nHere's the good news: this is exactly the kind of fix we can knock out this week. A modern, fast, mobile-responsive site with clear calls-to-action would completely transform their pipeline.\n\nTheir pain point is: they need better web presence to win more deals.\n\nThis is a warm lead, not a cold one. They're actively looking for help. Let's reach out before their competitors get to them first.\n\nWho's drafting the email? Let's close this one!",
+      "video_html": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Website Audit - Boundev</title>\n    <style>\n        * { margin: 0; padding: 0; box-sizing: border-box; }\n        body { \n            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;\n            background: #0a0a0a; color: #fff; \n            display: flex; justify-content: center; align-items: center;\n            min-height: 100vh; padding: 20px;\n        }\n        .audit-card {\n            width: 1200px; height: 675px;\n            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);\n            border-radius: 16px; padding: 60px;\n            display: flex; flex-direction: column; justify-content: space-between;\n            position: relative; overflow: hidden;\n        }\n        .audit-card::before {\n            content: ''; position: absolute; top: -50%; right: -20%;\n            width: 400px; height: 400px; border-radius: 50%;\n            background: radial-gradient(circle, #ff880022 0%, transparent 70%);\n        }\n        .header {\n            display: flex; justify-content: space-between; align-items: flex-start;\n            position: relative; z-index: 1;\n        }\n        .company-name {\n            font-size: 42px; font-weight: 800; letter-spacing: -1px;\n        }\n        .score-badge {\n            background: #ff8800; color: #fff;\n            padding: 12px 24px; border-radius: 50px;\n            font-size: 24px; font-weight: 800;\n        }\n        .url {\n            font-size: 18px; color: #888; margin-top: 8px;\n        }\n        .issues-section {\n            flex: 1; display: flex; gap: 40px; margin-top: 30px;\n            position: relative; z-index: 1;\n        }\n        .issues-list {\n            flex: 1; list-style: none;\n        }\n        .issues-list li {\n            padding: 8px 0; padding-left: 28px; position: relative;\n            font-size: 18px; color: #ddd; border-bottom: 1px solid #333;\n        }\n        .issues-list li::before {\n            content: '\\2717'; position: absolute; left: 0;\n            color: #ff8800; font-weight: bold;\n        }\n        .right-panel {\n            flex: 1; display: flex; flex-direction: column; justify-content: center;\n            align-items: center; text-align: center;\n        }\n        .big-score {\n            font-size: 120px; font-weight: 900; color: #ff8800;\n            line-height: 1;\n        }\n        .score-label {\n            font-size: 16px; color: #ff8800; text-transform: uppercase;\n            letter-spacing: 3px; margin-top: 8px;\n        }\n        .footer {\n            display: flex; justify-content: space-between; align-items: center;\n            border-top: 1px solid #333; padding-top: 20px;\n            position: relative; z-index: 1;\n        }\n        .brand {\n            font-size: 24px; font-weight: 700; color: #fff;\n        }\n        .brand span { color: #4a9eff; }\n        .cta-hint {\n            font-size: 16px; color: #4a9eff;\n        }\n    </style>\n</head>\n<body>\n    <div class=\"audit-card\">\n        <div class=\"header\">\n            <div>\n                <div class=\"company-name\">Boundev</div>\n                <div class=\"url\">https://boundev.ai</div>\n            </div>\n            <div class=\"score-badge\">NEEDS WORK</div>\n        </div>\n        <div class=\"issues-section\">\n            <ul class=\"issues-list\">\n                <li>No copyright year found</li>\n                <li>No modern typography/fonts</li>\n                <li>No clear call-to-action buttons</li>\n                <li>No animations or dynamic content</li>\n            </ul>\n            <div class=\"right-panel\">\n                <div class=\"big-score\">4/10</div>\n                <div class=\"score-label\">Website Score</div>\n            </div>\n        </div>\n        <div class=\"footer\">\n            <div class=\"brand\">Nano<span>Soft</span> Audit System</div>\n            <div class=\"cta-hint\">Personalized outreach opportunity</div>\n        </div>\n    </div>\n</body>\n</html>",
+      "video_filename": "audit_boundev.html"
+    },
+    {
+      "rank": 4,
+      "company": "Webnotix",
+      "email": "sales@webnotix.co.uk",
+      "website": "https://webnotix.co.uk",
+      "judge_score": 6,
+      "pain_point": "",
+      "services": "web development, mobile development, UI/UX design, eCommerce",
+      "team_size": "",
+      "country": "USA",
+      "issues_found": [
+        "Slow loading (3.9s)",
+        "No copyright year found"
+      ],
+      "audit_score": 3,
+      "load_time_seconds": 3.91,
+      "severity": "moderate",
+      "script_60s": "Hey mobile dev team, it's time for a 60-second website audit!\n\nI just checked out https://webnotix.co.uk. Here's what I found:\n\nWe noticed slow loading (3.9s) and no copyright year found. Overall, I'd rate their web presence a 3 out of 10.\n\nAs a web development, mobile development, UI/UX design, company, their digital storefront is losing them clients right now. The first impression prospects get? It's not great.\n\nHere's the good news: this is exactly the kind of fix we can knock out this week. A modern, fast, mobile-responsive site with clear calls-to-action would completely transform their pipeline.\n\nTheir pain point is: they need better web presence to win more deals.\n\nThis is a warm lead, not a cold one. They're actively looking for help. Let's reach out before their competitors get to them first.\n\nWho's drafting the email? Let's close this one!",
+      "video_html": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Website Audit - Webnotix</title>\n    <style>\n        * { margin: 0; padding: 0; box-sizing: border-box; }\n        body { \n            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;\n            background: #0a0a0a; color: #fff; \n            display: flex; justify-content: center; align-items: center;\n            min-height: 100vh; padding: 20px;\n        }\n        .audit-card {\n            width: 1200px; height: 675px;\n            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);\n            border-radius: 16px; padding: 60px;\n            display: flex; flex-direction: column; justify-content: space-between;\n            position: relative; overflow: hidden;\n        }\n        .audit-card::before {\n            content: ''; position: absolute; top: -50%; right: -20%;\n            width: 400px; height: 400px; border-radius: 50%;\n            background: radial-gradient(circle, #44aa4422 0%, transparent 70%);\n        }\n        .header {\n            display: flex; justify-content: space-between; align-items: flex-start;\n            position: relative; z-index: 1;\n        }\n        .company-name {\n            font-size: 42px; font-weight: 800; letter-spacing: -1px;\n        }\n        .score-badge {\n            background: #44aa44; color: #fff;\n            padding: 12px 24px; border-radius: 50px;\n            font-size: 24px; font-weight: 800;\n        }\n        .url {\n            font-size: 18px; color: #888; margin-top: 8px;\n        }\n        .issues-section {\n            flex: 1; display: flex; gap: 40px; margin-top: 30px;\n            position: relative; z-index: 1;\n        }\n        .issues-list {\n            flex: 1; list-style: none;\n        }\n        .issues-list li {\n            padding: 8px 0; padding-left: 28px; position: relative;\n            font-size: 18px; color: #ddd; border-bottom: 1px solid #333;\n        }\n        .issues-list li::before {\n            content: '\\2717'; position: absolute; left: 0;\n            color: #44aa44; font-weight: bold;\n        }\n        .right-panel {\n            flex: 1; display: flex; flex-direction: column; justify-content: center;\n            align-items: center; text-align: center;\n        }\n        .big-score {\n            font-size: 120px; font-weight: 900; color: #44aa44;\n            line-height: 1;\n        }\n        .score-label {\n            font-size: 16px; color: #44aa44; text-transform: uppercase;\n            letter-spacing: 3px; margin-top: 8px;\n        }\n        .footer {\n            display: flex; justify-content: space-between; align-items: center;\n            border-top: 1px solid #333; padding-top: 20px;\n            position: relative; z-index: 1;\n        }\n        .brand {\n            font-size: 24px; font-weight: 700; color: #fff;\n        }\n        .brand span { color: #4a9eff; }\n        .cta-hint {\n            font-size: 16px; color: #4a9eff;\n        }\n    </style>\n</head>\n<body>\n    <div class=\"audit-card\">\n        <div class=\"header\">\n            <div>\n                <div class=\"company-name\">Webnotix</div>\n                <div class=\"url\">https://webnotix.co.uk</div>\n            </div>\n            <div class=\"score-badge\">MODERATE</div>\n        </div>\n        <div class=\"issues-section\">\n            <ul class=\"issues-list\">\n                <li>Slow loading (3.9s)</li>\n                <li>No copyright year found</li>\n            </ul>\n            <div class=\"right-panel\">\n                <div class=\"big-score\">3/10</div>\n                <div class=\"score-label\">Website Score</div>\n            </div>\n        </div>\n        <div class=\"footer\">\n            <div class=\"brand\">Nano<span>Soft</span> Audit System</div>\n            <div class=\"cta-hint\">Personalized outreach opportunity</div>\n        </div>\n    </div>\n</body>\n</html>",
+      "video_filename": "audit_webnotix.html"
+    },
+    {
+      "rank": 5,
+      "company": "Euristiq",
+      "email": "hello@euristiq.com",
+      "website": "https://euristiq.com/",
+      "judge_score": 10,
+      "pain_point": "capacity constraints during peak demand, seeking reliable dev partners for overflow",
+      "services": "cloud/DevOps, AI/ML, SaaS, consulting, staff augmentation, custom software",
+      "team_size": "50 - 249",
+      "country": "Toronto , Canada. L'viv , Ukraine. Warszawa , Poland",
+      "issues_found": [
+        "Outdated copyright year (2016)",
+        "No modern typography/fonts"
+      ],
+      "audit_score": 3,
+      "load_time_seconds": 0.83,
+      "severity": "moderate",
+      "script_60s": "Hey growth team, it's time for a 60-second website audit!\n\nI just checked out https://euristiq.com/. Here's what I found:\n\nWe noticed outdated copyright year (2016) and no modern typography/fonts. Overall, I'd rate their web presence a 3 out of 10.\n\nAs a cloud/DevOps, AI/ML, SaaS, consulting, staff augme company, their digital storefront is losing them clients right now. The first impression prospects get? It's not great.\n\nHere's the good news: this is exactly the kind of fix we can knock out this week. A modern, fast, mobile-responsive site with clear calls-to-action would completely transform their pipeline.\n\nTheir pain point is: capacity constraints during peak demand, seeking reliable dev partners for overf.\n\nThis is a warm lead, not a cold one. They're actively looking for help. Let's reach out before their competitors get to them first.\n\nWho's drafting the email? Let's close this one!",
+      "video_html": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Website Audit - Euristiq</title>\n    <style>\n        * { margin: 0; padding: 0; box-sizing: border-box; }\n        body { \n            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;\n            background: #0a0a0a; color: #fff; \n            display: flex; justify-content: center; align-items: center;\n            min-height: 100vh; padding: 20px;\n        }\n        .audit-card {\n            width: 1200px; height: 675px;\n            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);\n            border-radius: 16px; padding: 60px;\n            display: flex; flex-direction: column; justify-content: space-between;\n            position: relative; overflow: hidden;\n        }\n        .audit-card::before {\n            content: ''; position: absolute; top: -50%; right: -20%;\n            width: 400px; height: 400px; border-radius: 50%;\n            background: radial-gradient(circle, #44aa4422 0%, transparent 70%);\n        }\n        .header {\n            display: flex; justify-content: space-between; align-items: flex-start;\n            position: relative; z-index: 1;\n        }\n        .company-name {\n            font-size: 42px; font-weight: 800; letter-spacing: -1px;\n        }\n        .score-badge {\n            background: #44aa44; color: #fff;\n            padding: 12px 24px; border-radius: 50px;\n            font-size: 24px; font-weight: 800;\n        }\n        .url {\n            font-size: 18px; color: #888; margin-top: 8px;\n        }\n        .issues-section {\n            flex: 1; display: flex; gap: 40px; margin-top: 30px;\n            position: relative; z-index: 1;\n        }\n        .issues-list {\n            flex: 1; list-style: none;\n        }\n        .issues-list li {\n            padding: 8px 0; padding-left: 28px; position: relative;\n            font-size: 18px; color: #ddd; border-bottom: 1px solid #333;\n        }\n        .issues-list li::before {\n            content: '\\2717'; position: absolute; left: 0;\n            color: #44aa44; font-weight: bold;\n        }\n        .right-panel {\n            flex: 1; display: flex; flex-direction: column; justify-content: center;\n            align-items: center; text-align: center;\n        }\n        .big-score {\n            font-size: 120px; font-weight: 900; color: #44aa44;\n            line-height: 1;\n        }\n        .score-label {\n            font-size: 16px; color: #44aa44; text-transform: uppercase;\n            letter-spacing: 3px; margin-top: 8px;\n        }\n        .footer {\n            display: flex; justify-content: space-between; align-items: center;\n            border-top: 1px solid #333; padding-top: 20px;\n            position: relative; z-index: 1;\n        }\n        .brand {\n            font-size: 24px; font-weight: 700; color: #fff;\n        }\n        .brand span { color: #4a9eff; }\n        .cta-hint {\n            font-size: 16px; color: #4a9eff;\n        }\n    </style>\n</head>\n<body>\n    <div class=\"audit-card\">\n        <div class=\"header\">\n            <div>\n                <div class=\"company-name\">Euristiq</div>\n                <div class=\"url\">https://euristiq.com/</div>\n            </div>\n            <div class=\"score-badge\">MODERATE</div>\n        </div>\n        <div class=\"issues-section\">\n            <ul class=\"issues-list\">\n                <li>Outdated copyright year (2016)</li>\n                <li>No modern typography/fonts</li>\n            </ul>\n            <div class=\"right-panel\">\n                <div class=\"big-score\">3/10</div>\n                <div class=\"score-label\">Website Score</div>\n            </div>\n        </div>\n        <div class=\"footer\">\n            <div class=\"brand\">Nano<span>Soft</span> Audit System</div>\n            <div class=\"cta-hint\">Personalized outreach opportunity</div>\n        </div>\n    </div>\n</body>\n</html>",
+      "video_filename": "audit_euristiq.html"
+    },
+    {
+      "rank": 6,
+      "company": "Closeloop Technologies LLC",
+      "email": "sales@closeloop.com",
+      "website": "https://closeloop.com/",
+      "judge_score": 10,
+      "pain_point": "capacity constraints during growth, seeking development partners for overflow work",
+      "services": "web development, mobile development, cloud/DevOps, AI/ML, eCommerce, QA/Testing, consulting, staff augmentation",
+      "team_size": "50 - 249",
+      "country": "Mountain View , CA. Sahibzada Ajit Singh Nagar , India. Jaipur , India",
+      "issues_found": [
+        "No copyright year found",
+        "No modern typography/fonts",
+        "No animations or dynamic content"
+      ],
+      "audit_score": 3,
+      "load_time_seconds": 0.77,
+      "severity": "moderate",
+      "script_60s": "Hey mobile dev team, it's time for a 60-second website audit!\n\nI just checked out https://closeloop.com/. Here's what I found:\n\nWe noticed no copyright year found and no modern typography/fonts. Overall, I'd rate their web presence a 3 out of 10.\n\nAs a web development, mobile development, cloud/DevOps, company, their digital storefront is losing them clients right now. The first impression prospects get? It's not great.\n\nHere's the good news: this is exactly the kind of fix we can knock out this week. A modern, fast, mobile-responsive site with clear calls-to-action would completely transform their pipeline.\n\nTheir pain point is: capacity constraints during growth, seeking development partners for overflow wo.\n\nThis is a warm lead, not a cold one. They're actively looking for help. Let's reach out before their competitors get to them first.\n\nWho's drafting the email? Let's close this one!",
+      "video_html": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Website Audit - Closeloop Technologies LLC</title>\n    <style>\n        * { margin: 0; padding: 0; box-sizing: border-box; }\n        body { \n            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;\n            background: #0a0a0a; color: #fff; \n            display: flex; justify-content: center; align-items: center;\n            min-height: 100vh; padding: 20px;\n        }\n        .audit-card {\n            width: 1200px; height: 675px;\n            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);\n            border-radius: 16px; padding: 60px;\n            display: flex; flex-direction: column; justify-content: space-between;\n            position: relative; overflow: hidden;\n        }\n        .audit-card::before {\n            content: ''; position: absolute; top: -50%; right: -20%;\n            width: 400px; height: 400px; border-radius: 50%;\n            background: radial-gradient(circle, #44aa4422 0%, transparent 70%);\n        }\n        .header {\n            display: flex; justify-content: space-between; align-items: flex-start;\n            position: relative; z-index: 1;\n        }\n        .company-name {\n            font-size: 42px; font-weight: 800; letter-spacing: -1px;\n        }\n        .score-badge {\n            background: #44aa44; color: #fff;\n            padding: 12px 24px; border-radius: 50px;\n            font-size: 24px; font-weight: 800;\n        }\n        .url {\n            font-size: 18px; color: #888; margin-top: 8px;\n        }\n        .issues-section {\n            flex: 1; display: flex; gap: 40px; margin-top: 30px;\n            position: relative; z-index: 1;\n        }\n        .issues-list {\n            flex: 1; list-style: none;\n        }\n        .issues-list li {\n            padding: 8px 0; padding-left: 28px; position: relative;\n            font-size: 18px; color: #ddd; border-bottom: 1px solid #333;\n        }\n        .issues-list li::before {\n            content: '\\2717'; position: absolute; left: 0;\n            color: #44aa44; font-weight: bold;\n        }\n        .right-panel {\n            flex: 1; display: flex; flex-direction: column; justify-content: center;\n            align-items: center; text-align: center;\n        }\n        .big-score {\n            font-size: 120px; font-weight: 900; color: #44aa44;\n            line-height: 1;\n        }\n        .score-label {\n            font-size: 16px; color: #44aa44; text-transform: uppercase;\n            letter-spacing: 3px; margin-top: 8px;\n        }\n        .footer {\n            display: flex; justify-content: space-between; align-items: center;\n            border-top: 1px solid #333; padding-top: 20px;\n            position: relative; z-index: 1;\n        }\n        .brand {\n            font-size: 24px; font-weight: 700; color: #fff;\n        }\n        .brand span { color: #4a9eff; }\n        .cta-hint {\n            font-size: 16px; color: #4a9eff;\n        }\n    </style>\n</head>\n<body>\n    <div class=\"audit-card\">\n        <div class=\"header\">\n            <div>\n                <div class=\"company-name\">Closeloop Technologies LLC</div>\n                <div class=\"url\">https://closeloop.com/</div>\n            </div>\n            <div class=\"score-badge\">MODERATE</div>\n        </div>\n        <div class=\"issues-section\">\n            <ul class=\"issues-list\">\n                <li>No copyright year found</li>\n                <li>No modern typography/fonts</li>\n                <li>No animations or dynamic content</li>\n            </ul>\n            <div class=\"right-panel\">\n                <div class=\"big-score\">3/10</div>\n                <div class=\"score-label\">Website Score</div>\n            </div>\n        </div>\n        <div class=\"footer\">\n            <div class=\"brand\">Nano<span>Soft</span> Audit System</div>\n            <div class=\"cta-hint\">Personalized outreach opportunity</div>\n        </div>\n    </div>\n</body>\n</html>",
+      "video_filename": "audit_closeloop_technologies_llc.html"
+    },
+    {
+      "rank": 7,
+      "company": "Future Processing",
+      "email": "sales@future-processing.com",
+      "website": "https://www.future-processing.com/",
+      "judge_score": 10,
+      "pain_point": "actively seeking development partners for overflow",
+      "services": "cloud/DevOps, AI/ML, QA/Testing, consulting, staff augmentation, MVP development, custom software",
+      "team_size": "250 - 999",
+      "country": "Gliwice, Poland",
+      "issues_found": [
+        "No copyright year found",
+        "No modern typography/fonts",
+        "No clear call-to-action buttons"
+      ],
+      "audit_score": 3,
+      "load_time_seconds": 0.58,
+      "severity": "moderate",
+      "script_60s": "Hey growth team, it's time for a 60-second website audit!\n\nI just checked out https://www.future-processing.com/. Here's what I found:\n\nWe noticed no copyright year found and no modern typography/fonts. Overall, I'd rate their web presence a 3 out of 10.\n\nAs a cloud/DevOps, AI/ML, QA/Testing, consulting, staff company, their digital storefront is losing them clients right now. The first impression prospects get? It's not great.\n\nHere's the good news: this is exactly the kind of fix we can knock out this week. A modern, fast, mobile-responsive site with clear calls-to-action would completely transform their pipeline.\n\nTheir pain point is: actively seeking development partners for overflow.\n\nThis is a warm lead, not a cold one. They're actively looking for help. Let's reach out before their competitors get to them first.\n\nWho's drafting the email? Let's close this one!",
+      "video_html": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Website Audit - Future Processing</title>\n    <style>\n        * { margin: 0; padding: 0; box-sizing: border-box; }\n        body { \n            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;\n            background: #0a0a0a; color: #fff; \n            display: flex; justify-content: center; align-items: center;\n            min-height: 100vh; padding: 20px;\n        }\n        .audit-card {\n            width: 1200px; height: 675px;\n            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);\n            border-radius: 16px; padding: 60px;\n            display: flex; flex-direction: column; justify-content: space-between;\n            position: relative; overflow: hidden;\n        }\n        .audit-card::before {\n            content: ''; position: absolute; top: -50%; right: -20%;\n            width: 400px; height: 400px; border-radius: 50%;\n            background: radial-gradient(circle, #44aa4422 0%, transparent 70%);\n        }\n        .header {\n            display: flex; justify-content: space-between; align-items: flex-start;\n            position: relative; z-index: 1;\n        }\n        .company-name {\n            font-size: 42px; font-weight: 800; letter-spacing: -1px;\n        }\n        .score-badge {\n            background: #44aa44; color: #fff;\n            padding: 12px 24px; border-radius: 50px;\n            font-size: 24px; font-weight: 800;\n        }\n        .url {\n            font-size: 18px; color: #888; margin-top: 8px;\n        }\n        .issues-section {\n            flex: 1; display: flex; gap: 40px; margin-top: 30px;\n            position: relative; z-index: 1;\n        }\n        .issues-list {\n            flex: 1; list-style: none;\n        }\n        .issues-list li {\n            padding: 8px 0; padding-left: 28px; position: relative;\n            font-size: 18px; color: #ddd; border-bottom: 1px solid #333;\n        }\n        .issues-list li::before {\n            content: '\\2717'; position: absolute; left: 0;\n            color: #44aa44; font-weight: bold;\n        }\n        .right-panel {\n            flex: 1; display: flex; flex-direction: column; justify-content: center;\n            align-items: center; text-align: center;\n        }\n        .big-score {\n            font-size: 120px; font-weight: 900; color: #44aa44;\n            line-height: 1;\n        }\n        .score-label {\n            font-size: 16px; color: #44aa44; text-transform: uppercase;\n            letter-spacing: 3px; margin-top: 8px;\n        }\n        .footer {\n            display: flex; justify-content: space-between; align-items: center;\n            border-top: 1px solid #333; padding-top: 20px;\n            position: relative; z-index: 1;\n        }\n        .brand {\n            font-size: 24px; font-weight: 700; color: #fff;\n        }\n        .brand span { color: #4a9eff; }\n        .cta-hint {\n            font-size: 16px; color: #4a9eff;\n        }\n    </style>\n</head>\n<body>\n    <div class=\"audit-card\">\n        <div class=\"header\">\n            <div>\n                <div class=\"company-name\">Future Processing</div>\n                <div class=\"url\">https://www.future-processing.com/</div>\n            </div>\n            <div class=\"score-badge\">MODERATE</div>\n        </div>\n        <div class=\"issues-section\">\n            <ul class=\"issues-list\">\n                <li>No copyright year found</li>\n                <li>No modern typography/fonts</li>\n                <li>No clear call-to-action buttons</li>\n            </ul>\n            <div class=\"right-panel\">\n                <div class=\"big-score\">3/10</div>\n                <div class=\"score-label\">Website Score</div>\n            </div>\n        </div>\n        <div class=\"footer\">\n            <div class=\"brand\">Nano<span>Soft</span> Audit System</div>\n            <div class=\"cta-hint\">Personalized outreach opportunity</div>\n        </div>\n    </div>\n</body>\n</html>",
+      "video_filename": "audit_future_processing.html"
+    },
+    {
+      "rank": 8,
+      "company": "Primefirms",
+      "email": "info@primefirms.co",
+      "website": "https://primefirms.co",
+      "judge_score": 9,
+      "pain_point": "",
+      "services": "web development, mobile development, AI/ML, UI/UX design, eCommerce",
+      "team_size": "",
+      "country": "USA",
+      "issues_found": [
+        "No copyright year found",
+        "No modern typography/fonts"
+      ],
+      "audit_score": 2,
+      "load_time_seconds": 1.66,
+      "severity": "moderate",
+      "script_60s": "Hey mobile dev team, it's time for a 60-second website audit!\n\nI just checked out https://primefirms.co. Here's what I found:\n\nWe noticed no copyright year found and no modern typography/fonts. Overall, I'd rate their web presence a 2 out of 10.\n\nAs a web development, mobile development, AI/ML, UI/UX  company, their digital storefront is losing them clients right now. The first impression prospects get? It's not great.\n\nHere's the good news: this is exactly the kind of fix we can knock out this week. A modern, fast, mobile-responsive site with clear calls-to-action would completely transform their pipeline.\n\nTheir pain point is: they need better web presence to win more deals.\n\nThis is a warm lead, not a cold one. They're actively looking for help. Let's reach out before their competitors get to them first.\n\nWho's drafting the email? Let's close this one!",
+      "video_html": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Website Audit - Primefirms</title>\n    <style>\n        * { margin: 0; padding: 0; box-sizing: border-box; }\n        body { \n            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;\n            background: #0a0a0a; color: #fff; \n            display: flex; justify-content: center; align-items: center;\n            min-height: 100vh; padding: 20px;\n        }\n        .audit-card {\n            width: 1200px; height: 675px;\n            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);\n            border-radius: 16px; padding: 60px;\n            display: flex; flex-direction: column; justify-content: space-between;\n            position: relative; overflow: hidden;\n        }\n        .audit-card::before {\n            content: ''; position: absolute; top: -50%; right: -20%;\n            width: 400px; height: 400px; border-radius: 50%;\n            background: radial-gradient(circle, #44aa4422 0%, transparent 70%);\n        }\n        .header {\n            display: flex; justify-content: space-between; align-items: flex-start;\n            position: relative; z-index: 1;\n        }\n        .company-name {\n            font-size: 42px; font-weight: 800; letter-spacing: -1px;\n        }\n        .score-badge {\n            background: #44aa44; color: #fff;\n            padding: 12px 24px; border-radius: 50px;\n            font-size: 24px; font-weight: 800;\n        }\n        .url {\n            font-size: 18px; color: #888; margin-top: 8px;\n        }\n        .issues-section {\n            flex: 1; display: flex; gap: 40px; margin-top: 30px;\n            position: relative; z-index: 1;\n        }\n        .issues-list {\n            flex: 1; list-style: none;\n        }\n        .issues-list li {\n            padding: 8px 0; padding-left: 28px; position: relative;\n            font-size: 18px; color: #ddd; border-bottom: 1px solid #333;\n        }\n        .issues-list li::before {\n            content: '\\2717'; position: absolute; left: 0;\n            color: #44aa44; font-weight: bold;\n        }\n        .right-panel {\n            flex: 1; display: flex; flex-direction: column; justify-content: center;\n            align-items: center; text-align: center;\n        }\n        .big-score {\n            font-size: 120px; font-weight: 900; color: #44aa44;\n            line-height: 1;\n        }\n        .score-label {\n            font-size: 16px; color: #44aa44; text-transform: uppercase;\n            letter-spacing: 3px; margin-top: 8px;\n        }\n        .footer {\n            display: flex; justify-content: space-between; align-items: center;\n            border-top: 1px solid #333; padding-top: 20px;\n            position: relative; z-index: 1;\n        }\n        .brand {\n            font-size: 24px; font-weight: 700; color: #fff;\n        }\n        .brand span { color: #4a9eff; }\n        .cta-hint {\n            font-size: 16px; color: #4a9eff;\n        }\n    </style>\n</head>\n<body>\n    <div class=\"audit-card\">\n        <div class=\"header\">\n            <div>\n                <div class=\"company-name\">Primefirms</div>\n                <div class=\"url\">https://primefirms.co</div>\n            </div>\n            <div class=\"score-badge\">MODERATE</div>\n        </div>\n        <div class=\"issues-section\">\n            <ul class=\"issues-list\">\n                <li>No copyright year found</li>\n                <li>No modern typography/fonts</li>\n            </ul>\n            <div class=\"right-panel\">\n                <div class=\"big-score\">2/10</div>\n                <div class=\"score-label\">Website Score</div>\n            </div>\n        </div>\n        <div class=\"footer\">\n            <div class=\"brand\">Nano<span>Soft</span> Audit System</div>\n            <div class=\"cta-hint\">Personalized outreach opportunity</div>\n        </div>\n    </div>\n</body>\n</html>",
+      "video_filename": "audit_primefirms.html"
+    },
+    {
+      "rank": 9,
+      "company": "Lumitech",
+      "email": "yevhen.synii@lumitech.co",
+      "website": "https://lumitech.co/",
+      "judge_score": 10,
+      "pain_point": "actively seeking development partners for overflow, scaling fast, likely needs reliable dev capacity",
+      "services": "web development, mobile development, UI/UX design, cloud/DevOps, AI/ML, eCommerce, SaaS, QA/Testing, consulting, staff augmentation, MVP development, custom software",
+      "team_size": "50 - 249",
+      "country": "Dubai, United Arab Emirates",
+      "issues_found": [
+        "No copyright year found",
+        "No modern typography/fonts"
+      ],
+      "audit_score": 2,
+      "load_time_seconds": 1.54,
+      "severity": "moderate",
+      "script_60s": "Hey mobile dev team, it's time for a 60-second website audit!\n\nI just checked out https://lumitech.co/. Here's what I found:\n\nWe noticed no copyright year found and no modern typography/fonts. Overall, I'd rate their web presence a 2 out of 10.\n\nAs a web development, mobile development, UI/UX design, company, their digital storefront is losing them clients right now. The first impression prospects get? It's not great.\n\nHere's the good news: this is exactly the kind of fix we can knock out this week. A modern, fast, mobile-responsive site with clear calls-to-action would completely transform their pipeline.\n\nTheir pain point is: actively seeking development partners for overflow, scaling fast, likely needs r.\n\nThis is a warm lead, not a cold one. They're actively looking for help. Let's reach out before their competitors get to them first.\n\nWho's drafting the email? Let's close this one!",
+      "video_html": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Website Audit - Lumitech</title>\n    <style>\n        * { margin: 0; padding: 0; box-sizing: border-box; }\n        body { \n            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;\n            background: #0a0a0a; color: #fff; \n            display: flex; justify-content: center; align-items: center;\n            min-height: 100vh; padding: 20px;\n        }\n        .audit-card {\n            width: 1200px; height: 675px;\n            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);\n            border-radius: 16px; padding: 60px;\n            display: flex; flex-direction: column; justify-content: space-between;\n            position: relative; overflow: hidden;\n        }\n        .audit-card::before {\n            content: ''; position: absolute; top: -50%; right: -20%;\n            width: 400px; height: 400px; border-radius: 50%;\n            background: radial-gradient(circle, #44aa4422 0%, transparent 70%);\n        }\n        .header {\n            display: flex; justify-content: space-between; align-items: flex-start;\n            position: relative; z-index: 1;\n        }\n        .company-name {\n            font-size: 42px; font-weight: 800; letter-spacing: -1px;\n        }\n        .score-badge {\n            background: #44aa44; color: #fff;\n            padding: 12px 24px; border-radius: 50px;\n            font-size: 24px; font-weight: 800;\n        }\n        .url {\n            font-size: 18px; color: #888; margin-top: 8px;\n        }\n        .issues-section {\n            flex: 1; display: flex; gap: 40px; margin-top: 30px;\n            position: relative; z-index: 1;\n        }\n        .issues-list {\n            flex: 1; list-style: none;\n        }\n        .issues-list li {\n            padding: 8px 0; padding-left: 28px; position: relative;\n            font-size: 18px; color: #ddd; border-bottom: 1px solid #333;\n        }\n        .issues-list li::before {\n            content: '\\2717'; position: absolute; left: 0;\n            color: #44aa44; font-weight: bold;\n        }\n        .right-panel {\n            flex: 1; display: flex; flex-direction: column; justify-content: center;\n            align-items: center; text-align: center;\n        }\n        .big-score {\n            font-size: 120px; font-weight: 900; color: #44aa44;\n            line-height: 1;\n        }\n        .score-label {\n            font-size: 16px; color: #44aa44; text-transform: uppercase;\n            letter-spacing: 3px; margin-top: 8px;\n        }\n        .footer {\n            display: flex; justify-content: space-between; align-items: center;\n            border-top: 1px solid #333; padding-top: 20px;\n            position: relative; z-index: 1;\n        }\n        .brand {\n            font-size: 24px; font-weight: 700; color: #fff;\n        }\n        .brand span { color: #4a9eff; }\n        .cta-hint {\n            font-size: 16px; color: #4a9eff;\n        }\n    </style>\n</head>\n<body>\n    <div class=\"audit-card\">\n        <div class=\"header\">\n            <div>\n                <div class=\"company-name\">Lumitech</div>\n                <div class=\"url\">https://lumitech.co/</div>\n            </div>\n            <div class=\"score-badge\">MODERATE</div>\n        </div>\n        <div class=\"issues-section\">\n            <ul class=\"issues-list\">\n                <li>No copyright year found</li>\n                <li>No modern typography/fonts</li>\n            </ul>\n            <div class=\"right-panel\">\n                <div class=\"big-score\">2/10</div>\n                <div class=\"score-label\">Website Score</div>\n            </div>\n        </div>\n        <div class=\"footer\">\n            <div class=\"brand\">Nano<span>Soft</span> Audit System</div>\n            <div class=\"cta-hint\">Personalized outreach opportunity</div>\n        </div>\n    </div>\n</body>\n</html>",
+      "video_filename": "audit_lumitech.html"
+    },
+    {
+      "rank": 10,
+      "company": "Activeone",
+      "email": "commercial@activeone.co",
+      "website": "https://activeone.co/",
+      "judge_score": 10,
+      "pain_point": "capacity constraints during peak demand, scaling fast, likely needs reliable dev capacity",
+      "services": "SaaS, staff augmentation, MVP development, custom software",
+      "team_size": "10 - 49",
+      "country": "edell\u00edn, Colombia",
+      "issues_found": [
+        "No copyright year found",
+        "No modern typography/fonts"
+      ],
+      "audit_score": 2,
+      "load_time_seconds": 1.31,
+      "severity": "moderate",
+      "script_60s": "Hey growth team, it's time for a 60-second website audit!\n\nI just checked out https://activeone.co/. Here's what I found:\n\nWe noticed no copyright year found and no modern typography/fonts. Overall, I'd rate their web presence a 2 out of 10.\n\nAs a SaaS, staff augmentation, MVP development, custom  company, their digital storefront is losing them clients right now. The first impression prospects get? It's not great.\n\nHere's the good news: this is exactly the kind of fix we can knock out this week. A modern, fast, mobile-responsive site with clear calls-to-action would completely transform their pipeline.\n\nTheir pain point is: capacity constraints during peak demand, scaling fast, likely needs reliable dev.\n\nThis is a warm lead, not a cold one. They're actively looking for help. Let's reach out before their competitors get to them first.\n\nWho's drafting the email? Let's close this one!",
+      "video_html": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Website Audit - Activeone</title>\n    <style>\n        * { margin: 0; padding: 0; box-sizing: border-box; }\n        body { \n            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;\n            background: #0a0a0a; color: #fff; \n            display: flex; justify-content: center; align-items: center;\n            min-height: 100vh; padding: 20px;\n        }\n        .audit-card {\n            width: 1200px; height: 675px;\n            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);\n            border-radius: 16px; padding: 60px;\n            display: flex; flex-direction: column; justify-content: space-between;\n            position: relative; overflow: hidden;\n        }\n        .audit-card::before {\n            content: ''; position: absolute; top: -50%; right: -20%;\n            width: 400px; height: 400px; border-radius: 50%;\n            background: radial-gradient(circle, #44aa4422 0%, transparent 70%);\n        }\n        .header {\n            display: flex; justify-content: space-between; align-items: flex-start;\n            position: relative; z-index: 1;\n        }\n        .company-name {\n            font-size: 42px; font-weight: 800; letter-spacing: -1px;\n        }\n        .score-badge {\n            background: #44aa44; color: #fff;\n            padding: 12px 24px; border-radius: 50px;\n            font-size: 24px; font-weight: 800;\n        }\n        .url {\n            font-size: 18px; color: #888; margin-top: 8px;\n        }\n        .issues-section {\n            flex: 1; display: flex; gap: 40px; margin-top: 30px;\n            position: relative; z-index: 1;\n        }\n        .issues-list {\n            flex: 1; list-style: none;\n        }\n        .issues-list li {\n            padding: 8px 0; padding-left: 28px; position: relative;\n            font-size: 18px; color: #ddd; border-bottom: 1px solid #333;\n        }\n        .issues-list li::before {\n            content: '\\2717'; position: absolute; left: 0;\n            color: #44aa44; font-weight: bold;\n        }\n        .right-panel {\n            flex: 1; display: flex; flex-direction: column; justify-content: center;\n            align-items: center; text-align: center;\n        }\n        .big-score {\n            font-size: 120px; font-weight: 900; color: #44aa44;\n            line-height: 1;\n        }\n        .score-label {\n            font-size: 16px; color: #44aa44; text-transform: uppercase;\n            letter-spacing: 3px; margin-top: 8px;\n        }\n        .footer {\n            display: flex; justify-content: space-between; align-items: center;\n            border-top: 1px solid #333; padding-top: 20px;\n            position: relative; z-index: 1;\n        }\n        .brand {\n            font-size: 24px; font-weight: 700; color: #fff;\n        }\n        .brand span { color: #4a9eff; }\n        .cta-hint {\n            font-size: 16px; color: #4a9eff;\n        }\n    </style>\n</head>\n<body>\n    <div class=\"audit-card\">\n        <div class=\"header\">\n            <div>\n                <div class=\"company-name\">Activeone</div>\n                <div class=\"url\">https://activeone.co/</div>\n            </div>\n            <div class=\"score-badge\">MODERATE</div>\n        </div>\n        <div class=\"issues-section\">\n            <ul class=\"issues-list\">\n                <li>No copyright year found</li>\n                <li>No modern typography/fonts</li>\n            </ul>\n            <div class=\"right-panel\">\n                <div class=\"big-score\">2/10</div>\n                <div class=\"score-label\">Website Score</div>\n            </div>\n        </div>\n        <div class=\"footer\">\n            <div class=\"brand\">Nano<span>Soft</span> Audit System</div>\n            <div class=\"cta-hint\">Personalized outreach opportunity</div>\n        </div>\n    </div>\n</body>\n</html>",
+      "video_filename": "audit_activeone.html"
+    },
+    {
+      "rank": 11,
+      "company": "Amrithaa",
+      "email": "info@amrithaa.com",
+      "website": "https://amrithaa.com",
+      "judge_score": 8,
+      "pain_point": "",
+      "services": "web development, mobile development, UI/UX design, eCommerce",
+      "team_size": "",
+      "country": "",
+      "issues_found": [
+        "Site loads well - could use design refresh"
+      ],
+      "audit_score": 2,
+      "load_time_seconds": 1.22,
+      "severity": "moderate",
+      "script_60s": "Hey mobile dev team, it's time for a 60-second website audit!\n\nI just checked out https://amrithaa.com. Here's what I found:\n\nWe noticed site loads well - could use design refresh. Overall, I'd rate their web presence a 2 out of 10.\n\nAs a web development, mobile development, UI/UX design, company, their digital storefront is losing them clients right now. The first impression prospects get? It's not great.\n\nHere's the good news: this is exactly the kind of fix we can knock out this week. A modern, fast, mobile-responsive site with clear calls-to-action would completely transform their pipeline.\n\nTheir pain point is: they need better web presence to win more deals.\n\nThis is a warm lead, not a cold one. They're actively looking for help. Let's reach out before their competitors get to them first.\n\nWho's drafting the email? Let's close this one!",
+      "video_html": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Website Audit - Amrithaa</title>\n    <style>\n        * { margin: 0; padding: 0; box-sizing: border-box; }\n        body { \n            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;\n            background: #0a0a0a; color: #fff; \n            display: flex; justify-content: center; align-items: center;\n            min-height: 100vh; padding: 20px;\n        }\n        .audit-card {\n            width: 1200px; height: 675px;\n            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);\n            border-radius: 16px; padding: 60px;\n            display: flex; flex-direction: column; justify-content: space-between;\n            position: relative; overflow: hidden;\n        }\n        .audit-card::before {\n            content: ''; position: absolute; top: -50%; right: -20%;\n            width: 400px; height: 400px; border-radius: 50%;\n            background: radial-gradient(circle, #44aa4422 0%, transparent 70%);\n        }\n        .header {\n            display: flex; justify-content: space-between; align-items: flex-start;\n            position: relative; z-index: 1;\n        }\n        .company-name {\n            font-size: 42px; font-weight: 800; letter-spacing: -1px;\n        }\n        .score-badge {\n            background: #44aa44; color: #fff;\n            padding: 12px 24px; border-radius: 50px;\n            font-size: 24px; font-weight: 800;\n        }\n        .url {\n            font-size: 18px; color: #888; margin-top: 8px;\n        }\n        .issues-section {\n            flex: 1; display: flex; gap: 40px; margin-top: 30px;\n            position: relative; z-index: 1;\n        }\n        .issues-list {\n            flex: 1; list-style: none;\n        }\n        .issues-list li {\n            padding: 8px 0; padding-left: 28px; position: relative;\n            font-size: 18px; color: #ddd; border-bottom: 1px solid #333;\n        }\n        .issues-list li::before {\n            content: '\\2717'; position: absolute; left: 0;\n            color: #44aa44; font-weight: bold;\n        }\n        .right-panel {\n            flex: 1; display: flex; flex-direction: column; justify-content: center;\n            align-items: center; text-align: center;\n        }\n        .big-score {\n            font-size: 120px; font-weight: 900; color: #44aa44;\n            line-height: 1;\n        }\n        .score-label {\n            font-size: 16px; color: #44aa44; text-transform: uppercase;\n            letter-spacing: 3px; margin-top: 8px;\n        }\n        .footer {\n            display: flex; justify-content: space-between; align-items: center;\n            border-top: 1px solid #333; padding-top: 20px;\n            position: relative; z-index: 1;\n        }\n        .brand {\n            font-size: 24px; font-weight: 700; color: #fff;\n        }\n        .brand span { color: #4a9eff; }\n        .cta-hint {\n            font-size: 16px; color: #4a9eff;\n        }\n    </style>\n</head>\n<body>\n    <div class=\"audit-card\">\n        <div class=\"header\">\n            <div>\n                <div class=\"company-name\">Amrithaa</div>\n                <div class=\"url\">https://amrithaa.com</div>\n            </div>\n            <div class=\"score-badge\">MODERATE</div>\n        </div>\n        <div class=\"issues-section\">\n            <ul class=\"issues-list\">\n                <li>Site loads well - could use design refresh</li>\n            </ul>\n            <div class=\"right-panel\">\n                <div class=\"big-score\">2/10</div>\n                <div class=\"score-label\">Website Score</div>\n            </div>\n        </div>\n        <div class=\"footer\">\n            <div class=\"brand\">Nano<span>Soft</span> Audit System</div>\n            <div class=\"cta-hint\">Personalized outreach opportunity</div>\n        </div>\n    </div>\n</body>\n</html>",
+      "video_filename": "audit_amrithaa.html"
+    },
+    {
+      "rank": 12,
+      "company": "Kindgeek",
+      "email": "info@kindgeek.com",
+      "website": "https://www.kindgeek.com/",
+      "judge_score": 10,
+      "pain_point": "actively seeking development partners for overflow, likely has mobile expertise gaps requiring partner support",
+      "services": "web development, UI/UX design, cloud/DevOps, AI/ML, QA/Testing, consulting, staff augmentation, white label, custom software",
+      "team_size": "50 - 249",
+      "country": "L'viv, Ukraine",
+      "issues_found": [
+        "No copyright year found",
+        "No modern typography/fonts"
+      ],
+      "audit_score": 2,
+      "load_time_seconds": 1.13,
+      "severity": "moderate",
+      "script_60s": "Hey growth team, it's time for a 60-second website audit!\n\nI just checked out https://www.kindgeek.com/. Here's what I found:\n\nWe noticed no copyright year found and no modern typography/fonts. Overall, I'd rate their web presence a 2 out of 10.\n\nAs a web development, UI/UX design, cloud/DevOps, AI/ML company, their digital storefront is losing them clients right now. The first impression prospects get? It's not great.\n\nHere's the good news: this is exactly the kind of fix we can knock out this week. A modern, fast, mobile-responsive site with clear calls-to-action would completely transform their pipeline.\n\nTheir pain point is: actively seeking development partners for overflow, likely has mobile expertise .\n\nThis is a warm lead, not a cold one. They're actively looking for help. Let's reach out before their competitors get to them first.\n\nWho's drafting the email? Let's close this one!",
+      "video_html": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Website Audit - Kindgeek</title>\n    <style>\n        * { margin: 0; padding: 0; box-sizing: border-box; }\n        body { \n            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;\n            background: #0a0a0a; color: #fff; \n            display: flex; justify-content: center; align-items: center;\n            min-height: 100vh; padding: 20px;\n        }\n        .audit-card {\n            width: 1200px; height: 675px;\n            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);\n            border-radius: 16px; padding: 60px;\n            display: flex; flex-direction: column; justify-content: space-between;\n            position: relative; overflow: hidden;\n        }\n        .audit-card::before {\n            content: ''; position: absolute; top: -50%; right: -20%;\n            width: 400px; height: 400px; border-radius: 50%;\n            background: radial-gradient(circle, #44aa4422 0%, transparent 70%);\n        }\n        .header {\n            display: flex; justify-content: space-between; align-items: flex-start;\n            position: relative; z-index: 1;\n        }\n        .company-name {\n            font-size: 42px; font-weight: 800; letter-spacing: -1px;\n        }\n        .score-badge {\n            background: #44aa44; color: #fff;\n            padding: 12px 24px; border-radius: 50px;\n            font-size: 24px; font-weight: 800;\n        }\n        .url {\n            font-size: 18px; color: #888; margin-top: 8px;\n        }\n        .issues-section {\n            flex: 1; display: flex; gap: 40px; margin-top: 30px;\n            position: relative; z-index: 1;\n        }\n        .issues-list {\n            flex: 1; list-style: none;\n        }\n        .issues-list li {\n            padding: 8px 0; padding-left: 28px; position: relative;\n            font-size: 18px; color: #ddd; border-bottom: 1px solid #333;\n        }\n        .issues-list li::before {\n            content: '\\2717'; position: absolute; left: 0;\n            color: #44aa44; font-weight: bold;\n        }\n        .right-panel {\n            flex: 1; display: flex; flex-direction: column; justify-content: center;\n            align-items: center; text-align: center;\n        }\n        .big-score {\n            font-size: 120px; font-weight: 900; color: #44aa44;\n            line-height: 1;\n        }\n        .score-label {\n            font-size: 16px; color: #44aa44; text-transform: uppercase;\n            letter-spacing: 3px; margin-top: 8px;\n        }\n        .footer {\n            display: flex; justify-content: space-between; align-items: center;\n            border-top: 1px solid #333; padding-top: 20px;\n            position: relative; z-index: 1;\n        }\n        .brand {\n            font-size: 24px; font-weight: 700; color: #fff;\n        }\n        .brand span { color: #4a9eff; }\n        .cta-hint {\n            font-size: 16px; color: #4a9eff;\n        }\n    </style>\n</head>\n<body>\n    <div class=\"audit-card\">\n        <div class=\"header\">\n            <div>\n                <div class=\"company-name\">Kindgeek</div>\n                <div class=\"url\">https://www.kindgeek.com/</div>\n            </div>\n            <div class=\"score-badge\">MODERATE</div>\n        </div>\n        <div class=\"issues-section\">\n            <ul class=\"issues-list\">\n                <li>No copyright year found</li>\n                <li>No modern typography/fonts</li>\n            </ul>\n            <div class=\"right-panel\">\n                <div class=\"big-score\">2/10</div>\n                <div class=\"score-label\">Website Score</div>\n            </div>\n        </div>\n        <div class=\"footer\">\n            <div class=\"brand\">Nano<span>Soft</span> Audit System</div>\n            <div class=\"cta-hint\">Personalized outreach opportunity</div>\n        </div>\n    </div>\n</body>\n</html>",
+      "video_filename": "audit_kindgeek.html"
+    },
+    {
+      "rank": 13,
+      "company": "Diffco",
+      "email": "mail@diffco.us",
+      "website": "https://diffco.us/",
+      "judge_score": 10,
+      "pain_point": "capacity constraints during growth, seeking development partners for overflow work",
+      "services": "web development, mobile development, cloud/DevOps, AI/ML, eCommerce, SaaS, QA/Testing, consulting, staff augmentation",
+      "team_size": "50 - 249",
+      "country": "San Jose, CA",
+      "issues_found": [
+        "No copyright year found",
+        "No modern typography/fonts"
+      ],
+      "audit_score": 2,
+      "load_time_seconds": 0.83,
+      "severity": "moderate",
+      "script_60s": "Hey mobile dev team, it's time for a 60-second website audit!\n\nI just checked out https://diffco.us/. Here's what I found:\n\nWe noticed no copyright year found and no modern typography/fonts. Overall, I'd rate their web presence a 2 out of 10.\n\nAs a web development, mobile development, cloud/DevOps, company, their digital storefront is losing them clients right now. The first impression prospects get? It's not great.\n\nHere's the good news: this is exactly the kind of fix we can knock out this week. A modern, fast, mobile-responsive site with clear calls-to-action would completely transform their pipeline.\n\nTheir pain point is: capacity constraints during growth, seeking development partners for overflow wo.\n\nThis is a warm lead, not a cold one. They're actively looking for help. Let's reach out before their competitors get to them first.\n\nWho's drafting the email? Let's close this one!",
+      "video_html": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Website Audit - Diffco</title>\n    <style>\n        * { margin: 0; padding: 0; box-sizing: border-box; }\n        body { \n            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;\n            background: #0a0a0a; color: #fff; \n            display: flex; justify-content: center; align-items: center;\n            min-height: 100vh; padding: 20px;\n        }\n        .audit-card {\n            width: 1200px; height: 675px;\n            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);\n            border-radius: 16px; padding: 60px;\n            display: flex; flex-direction: column; justify-content: space-between;\n            position: relative; overflow: hidden;\n        }\n        .audit-card::before {\n            content: ''; position: absolute; top: -50%; right: -20%;\n            width: 400px; height: 400px; border-radius: 50%;\n            background: radial-gradient(circle, #44aa4422 0%, transparent 70%);\n        }\n        .header {\n            display: flex; justify-content: space-between; align-items: flex-start;\n            position: relative; z-index: 1;\n        }\n        .company-name {\n            font-size: 42px; font-weight: 800; letter-spacing: -1px;\n        }\n        .score-badge {\n            background: #44aa44; color: #fff;\n            padding: 12px 24px; border-radius: 50px;\n            font-size: 24px; font-weight: 800;\n        }\n        .url {\n            font-size: 18px; color: #888; margin-top: 8px;\n        }\n        .issues-section {\n            flex: 1; display: flex; gap: 40px; margin-top: 30px;\n            position: relative; z-index: 1;\n        }\n        .issues-list {\n            flex: 1; list-style: none;\n        }\n        .issues-list li {\n            padding: 8px 0; padding-left: 28px; position: relative;\n            font-size: 18px; color: #ddd; border-bottom: 1px solid #333;\n        }\n        .issues-list li::before {\n            content: '\\2717'; position: absolute; left: 0;\n            color: #44aa44; font-weight: bold;\n        }\n        .right-panel {\n            flex: 1; display: flex; flex-direction: column; justify-content: center;\n            align-items: center; text-align: center;\n        }\n        .big-score {\n            font-size: 120px; font-weight: 900; color: #44aa44;\n            line-height: 1;\n        }\n        .score-label {\n            font-size: 16px; color: #44aa44; text-transform: uppercase;\n            letter-spacing: 3px; margin-top: 8px;\n        }\n        .footer {\n            display: flex; justify-content: space-between; align-items: center;\n            border-top: 1px solid #333; padding-top: 20px;\n            position: relative; z-index: 1;\n        }\n        .brand {\n            font-size: 24px; font-weight: 700; color: #fff;\n        }\n        .brand span { color: #4a9eff; }\n        .cta-hint {\n            font-size: 16px; color: #4a9eff;\n        }\n    </style>\n</head>\n<body>\n    <div class=\"audit-card\">\n        <div class=\"header\">\n            <div>\n                <div class=\"company-name\">Diffco</div>\n                <div class=\"url\">https://diffco.us/</div>\n            </div>\n            <div class=\"score-badge\">MODERATE</div>\n        </div>\n        <div class=\"issues-section\">\n            <ul class=\"issues-list\">\n                <li>No copyright year found</li>\n                <li>No modern typography/fonts</li>\n            </ul>\n            <div class=\"right-panel\">\n                <div class=\"big-score\">2/10</div>\n                <div class=\"score-label\">Website Score</div>\n            </div>\n        </div>\n        <div class=\"footer\">\n            <div class=\"brand\">Nano<span>Soft</span> Audit System</div>\n            <div class=\"cta-hint\">Personalized outreach opportunity</div>\n        </div>\n    </div>\n</body>\n</html>",
+      "video_filename": "audit_diffco.html"
+    },
+    {
+      "rank": 14,
+      "company": "Itransition",
+      "email": "info@itransition.com",
+      "website": "https://www.itransition.com/",
+      "judge_score": 10,
+      "pain_point": "capacity constraints during growth, seeking development partners for overflow work",
+      "services": "cloud/DevOps, AI/ML, consulting, staff augmentation",
+      "team_size": "1,000 - 9,999",
+      "country": "Decatur, GA",
+      "issues_found": [
+        "No copyright year found",
+        "No modern typography/fonts"
+      ],
+      "audit_score": 2,
+      "load_time_seconds": 0.43,
+      "severity": "moderate",
+      "script_60s": "Hey growth team, it's time for a 60-second website audit!\n\nI just checked out https://www.itransition.com/. Here's what I found:\n\nWe noticed no copyright year found and no modern typography/fonts. Overall, I'd rate their web presence a 2 out of 10.\n\nAs a cloud/DevOps, AI/ML, consulting, staff augmentatio company, their digital storefront is losing them clients right now. The first impression prospects get? It's not great.\n\nHere's the good news: this is exactly the kind of fix we can knock out this week. A modern, fast, mobile-responsive site with clear calls-to-action would completely transform their pipeline.\n\nTheir pain point is: capacity constraints during growth, seeking development partners for overflow wo.\n\nThis is a warm lead, not a cold one. They're actively looking for help. Let's reach out before their competitors get to them first.\n\nWho's drafting the email? Let's close this one!",
+      "video_html": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Website Audit - Itransition</title>\n    <style>\n        * { margin: 0; padding: 0; box-sizing: border-box; }\n        body { \n            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;\n            background: #0a0a0a; color: #fff; \n            display: flex; justify-content: center; align-items: center;\n            min-height: 100vh; padding: 20px;\n        }\n        .audit-card {\n            width: 1200px; height: 675px;\n            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);\n            border-radius: 16px; padding: 60px;\n            display: flex; flex-direction: column; justify-content: space-between;\n            position: relative; overflow: hidden;\n        }\n        .audit-card::before {\n            content: ''; position: absolute; top: -50%; right: -20%;\n            width: 400px; height: 400px; border-radius: 50%;\n            background: radial-gradient(circle, #44aa4422 0%, transparent 70%);\n        }\n        .header {\n            display: flex; justify-content: space-between; align-items: flex-start;\n            position: relative; z-index: 1;\n        }\n        .company-name {\n            font-size: 42px; font-weight: 800; letter-spacing: -1px;\n        }\n        .score-badge {\n            background: #44aa44; color: #fff;\n            padding: 12px 24px; border-radius: 50px;\n            font-size: 24px; font-weight: 800;\n        }\n        .url {\n            font-size: 18px; color: #888; margin-top: 8px;\n        }\n        .issues-section {\n            flex: 1; display: flex; gap: 40px; margin-top: 30px;\n            position: relative; z-index: 1;\n        }\n        .issues-list {\n            flex: 1; list-style: none;\n        }\n        .issues-list li {\n            padding: 8px 0; padding-left: 28px; position: relative;\n            font-size: 18px; color: #ddd; border-bottom: 1px solid #333;\n        }\n        .issues-list li::before {\n            content: '\\2717'; position: absolute; left: 0;\n            color: #44aa44; font-weight: bold;\n        }\n        .right-panel {\n            flex: 1; display: flex; flex-direction: column; justify-content: center;\n            align-items: center; text-align: center;\n        }\n        .big-score {\n            font-size: 120px; font-weight: 900; color: #44aa44;\n            line-height: 1;\n        }\n        .score-label {\n            font-size: 16px; color: #44aa44; text-transform: uppercase;\n            letter-spacing: 3px; margin-top: 8px;\n        }\n        .footer {\n            display: flex; justify-content: space-between; align-items: center;\n            border-top: 1px solid #333; padding-top: 20px;\n            position: relative; z-index: 1;\n        }\n        .brand {\n            font-size: 24px; font-weight: 700; color: #fff;\n        }\n        .brand span { color: #4a9eff; }\n        .cta-hint {\n            font-size: 16px; color: #4a9eff;\n        }\n    </style>\n</head>\n<body>\n    <div class=\"audit-card\">\n        <div class=\"header\">\n            <div>\n                <div class=\"company-name\">Itransition</div>\n                <div class=\"url\">https://www.itransition.com/</div>\n            </div>\n            <div class=\"score-badge\">MODERATE</div>\n        </div>\n        <div class=\"issues-section\">\n            <ul class=\"issues-list\">\n                <li>No copyright year found</li>\n                <li>No modern typography/fonts</li>\n            </ul>\n            <div class=\"right-panel\">\n                <div class=\"big-score\">2/10</div>\n                <div class=\"score-label\">Website Score</div>\n            </div>\n        </div>\n        <div class=\"footer\">\n            <div class=\"brand\">Nano<span>Soft</span> Audit System</div>\n            <div class=\"cta-hint\">Personalized outreach opportunity</div>\n        </div>\n    </div>\n</body>\n</html>",
+      "video_filename": "audit_itransition.html"
+    },
+    {
+      "rank": 15,
+      "company": "Utility",
+      "email": "dave@utility.agency",
+      "website": "https://utility.agency/",
+      "judge_score": 10,
+      "pain_point": "capacity constraints during growth, seeking development partners for overflow work",
+      "services": "web development, mobile development, UI/UX design, cloud/DevOps, SaaS, consulting, staff augmentation",
+      "team_size": "50 - 249",
+      "country": "New York , NY Culver City , CA",
+      "issues_found": [
+        "No copyright year found",
+        "No clear call-to-action buttons"
+      ],
+      "audit_score": 2,
+      "load_time_seconds": 0.09,
+      "severity": "moderate",
+      "script_60s": "Hey mobile dev team, it's time for a 60-second website audit!\n\nI just checked out https://utility.agency/. Here's what I found:\n\nWe noticed no copyright year found and no clear call-to-action buttons. Overall, I'd rate their web presence a 2 out of 10.\n\nAs a web development, mobile development, UI/UX design, company, their digital storefront is losing them clients right now. The first impression prospects get? It's not great.\n\nHere's the good news: this is exactly the kind of fix we can knock out this week. A modern, fast, mobile-responsive site with clear calls-to-action would completely transform their pipeline.\n\nTheir pain point is: capacity constraints during growth, seeking development partners for overflow wo.\n\nThis is a warm lead, not a cold one. They're actively looking for help. Let's reach out before their competitors get to them first.\n\nWho's drafting the email? Let's close this one!",
+      "video_html": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Website Audit - Utility</title>\n    <style>\n        * { margin: 0; padding: 0; box-sizing: border-box; }\n        body { \n            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;\n            background: #0a0a0a; color: #fff; \n            display: flex; justify-content: center; align-items: center;\n            min-height: 100vh; padding: 20px;\n        }\n        .audit-card {\n            width: 1200px; height: 675px;\n            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);\n            border-radius: 16px; padding: 60px;\n            display: flex; flex-direction: column; justify-content: space-between;\n            position: relative; overflow: hidden;\n        }\n        .audit-card::before {\n            content: ''; position: absolute; top: -50%; right: -20%;\n            width: 400px; height: 400px; border-radius: 50%;\n            background: radial-gradient(circle, #44aa4422 0%, transparent 70%);\n        }\n        .header {\n            display: flex; justify-content: space-between; align-items: flex-start;\n            position: relative; z-index: 1;\n        }\n        .company-name {\n            font-size: 42px; font-weight: 800; letter-spacing: -1px;\n        }\n        .score-badge {\n            background: #44aa44; color: #fff;\n            padding: 12px 24px; border-radius: 50px;\n            font-size: 24px; font-weight: 800;\n        }\n        .url {\n            font-size: 18px; color: #888; margin-top: 8px;\n        }\n        .issues-section {\n            flex: 1; display: flex; gap: 40px; margin-top: 30px;\n            position: relative; z-index: 1;\n        }\n        .issues-list {\n            flex: 1; list-style: none;\n        }\n        .issues-list li {\n            padding: 8px 0; padding-left: 28px; position: relative;\n            font-size: 18px; color: #ddd; border-bottom: 1px solid #333;\n        }\n        .issues-list li::before {\n            content: '\\2717'; position: absolute; left: 0;\n            color: #44aa44; font-weight: bold;\n        }\n        .right-panel {\n            flex: 1; display: flex; flex-direction: column; justify-content: center;\n            align-items: center; text-align: center;\n        }\n        .big-score {\n            font-size: 120px; font-weight: 900; color: #44aa44;\n            line-height: 1;\n        }\n        .score-label {\n            font-size: 16px; color: #44aa44; text-transform: uppercase;\n            letter-spacing: 3px; margin-top: 8px;\n        }\n        .footer {\n            display: flex; justify-content: space-between; align-items: center;\n            border-top: 1px solid #333; padding-top: 20px;\n            position: relative; z-index: 1;\n        }\n        .brand {\n            font-size: 24px; font-weight: 700; color: #fff;\n        }\n        .brand span { color: #4a9eff; }\n        .cta-hint {\n            font-size: 16px; color: #4a9eff;\n        }\n    </style>\n</head>\n<body>\n    <div class=\"audit-card\">\n        <div class=\"header\">\n            <div>\n                <div class=\"company-name\">Utility</div>\n                <div class=\"url\">https://utility.agency/</div>\n            </div>\n            <div class=\"score-badge\">MODERATE</div>\n        </div>\n        <div class=\"issues-section\">\n            <ul class=\"issues-list\">\n                <li>No copyright year found</li>\n                <li>No clear call-to-action buttons</li>\n            </ul>\n            <div class=\"right-panel\">\n                <div class=\"big-score\">2/10</div>\n                <div class=\"score-label\">Website Score</div>\n            </div>\n        </div>\n        <div class=\"footer\">\n            <div class=\"brand\">Nano<span>Soft</span> Audit System</div>\n            <div class=\"cta-hint\">Personalized outreach opportunity</div>\n        </div>\n    </div>\n</body>\n</html>",
+      "video_filename": "audit_utility.html"
+    },
+    {
+      "rank": 16,
+      "company": "SPD Technology",
+      "email": "sales-ops@spd.tech",
+      "website": "https://spd.tech/",
+      "judge_score": 10,
+      "pain_point": "actively seeking development partners for overflow, scaling fast, likely needs reliable dev capacity",
+      "services": "web development, mobile development, UI/UX design, cloud/DevOps, AI/ML, eCommerce, SaaS, QA/Testing, consulting, staff augmentation, MVP development, custom software",
+      "team_size": "250 - 999",
+      "country": "London, England",
+      "issues_found": [
+        "No copyright year found",
+        "No modern typography/fonts"
+      ],
+      "audit_score": 2,
+      "load_time_seconds": 0.03,
+      "severity": "moderate",
+      "script_60s": "Hey mobile dev team, it's time for a 60-second website audit!\n\nI just checked out https://spd.tech/. Here's what I found:\n\nWe noticed no copyright year found and no modern typography/fonts. Overall, I'd rate their web presence a 2 out of 10.\n\nAs a web development, mobile development, UI/UX design, company, their digital storefront is losing them clients right now. The first impression prospects get? It's not great.\n\nHere's the good news: this is exactly the kind of fix we can knock out this week. A modern, fast, mobile-responsive site with clear calls-to-action would completely transform their pipeline.\n\nTheir pain point is: actively seeking development partners for overflow, scaling fast, likely needs r.\n\nThis is a warm lead, not a cold one. They're actively looking for help. Let's reach out before their competitors get to them first.\n\nWho's drafting the email? Let's close this one!",
+      "video_html": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Website Audit - SPD Technology</title>\n    <style>\n        * { margin: 0; padding: 0; box-sizing: border-box; }\n        body { \n            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;\n            background: #0a0a0a; color: #fff; \n            display: flex; justify-content: center; align-items: center;\n            min-height: 100vh; padding: 20px;\n        }\n        .audit-card {\n            width: 1200px; height: 675px;\n            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);\n            border-radius: 16px; padding: 60px;\n            display: flex; flex-direction: column; justify-content: space-between;\n            position: relative; overflow: hidden;\n        }\n        .audit-card::before {\n            content: ''; position: absolute; top: -50%; right: -20%;\n            width: 400px; height: 400px; border-radius: 50%;\n            background: radial-gradient(circle, #44aa4422 0%, transparent 70%);\n        }\n        .header {\n            display: flex; justify-content: space-between; align-items: flex-start;\n            position: relative; z-index: 1;\n        }\n        .company-name {\n            font-size: 42px; font-weight: 800; letter-spacing: -1px;\n        }\n        .score-badge {\n            background: #44aa44; color: #fff;\n            padding: 12px 24px; border-radius: 50px;\n            font-size: 24px; font-weight: 800;\n        }\n        .url {\n            font-size: 18px; color: #888; margin-top: 8px;\n        }\n        .issues-section {\n            flex: 1; display: flex; gap: 40px; margin-top: 30px;\n            position: relative; z-index: 1;\n        }\n        .issues-list {\n            flex: 1; list-style: none;\n        }\n        .issues-list li {\n            padding: 8px 0; padding-left: 28px; position: relative;\n            font-size: 18px; color: #ddd; border-bottom: 1px solid #333;\n        }\n        .issues-list li::before {\n            content: '\\2717'; position: absolute; left: 0;\n            color: #44aa44; font-weight: bold;\n        }\n        .right-panel {\n            flex: 1; display: flex; flex-direction: column; justify-content: center;\n            align-items: center; text-align: center;\n        }\n        .big-score {\n            font-size: 120px; font-weight: 900; color: #44aa44;\n            line-height: 1;\n        }\n        .score-label {\n            font-size: 16px; color: #44aa44; text-transform: uppercase;\n            letter-spacing: 3px; margin-top: 8px;\n        }\n        .footer {\n            display: flex; justify-content: space-between; align-items: center;\n            border-top: 1px solid #333; padding-top: 20px;\n            position: relative; z-index: 1;\n        }\n        .brand {\n            font-size: 24px; font-weight: 700; color: #fff;\n        }\n        .brand span { color: #4a9eff; }\n        .cta-hint {\n            font-size: 16px; color: #4a9eff;\n        }\n    </style>\n</head>\n<body>\n    <div class=\"audit-card\">\n        <div class=\"header\">\n            <div>\n                <div class=\"company-name\">SPD Technology</div>\n                <div class=\"url\">https://spd.tech/</div>\n            </div>\n            <div class=\"score-badge\">MODERATE</div>\n        </div>\n        <div class=\"issues-section\">\n            <ul class=\"issues-list\">\n                <li>No copyright year found</li>\n                <li>No modern typography/fonts</li>\n            </ul>\n            <div class=\"right-panel\">\n                <div class=\"big-score\">2/10</div>\n                <div class=\"score-label\">Website Score</div>\n            </div>\n        </div>\n        <div class=\"footer\">\n            <div class=\"brand\">Nano<span>Soft</span> Audit System</div>\n            <div class=\"cta-hint\">Personalized outreach opportunity</div>\n        </div>\n    </div>\n</body>\n</html>",
+      "video_filename": "audit_spd_technology.html"
+    },
+    {
+      "rank": 17,
+      "company": "Cheesecake Labs",
+      "email": "info@cheesecakelabs.com",
+      "website": "https://cheesecakelabs.com/",
+      "judge_score": 10,
+      "pain_point": "actively seeking development partners for overflow, scaling fast, likely needs reliable dev capacity",
+      "services": "web development, mobile development, UI/UX design, cloud/DevOps, AI/ML, QA/Testing, consulting, staff augmentation, MVP development, custom software",
+      "team_size": "50 - 249",
+      "country": "San Francisco, CA",
+      "issues_found": [
+        "No copyright year found",
+        "No modern typography/fonts"
+      ],
+      "audit_score": 2,
+      "load_time_seconds": 0.02,
+      "severity": "moderate",
+      "script_60s": "Hey mobile dev team, it's time for a 60-second website audit!\n\nI just checked out https://cheesecakelabs.com/. Here's what I found:\n\nWe noticed no copyright year found and no modern typography/fonts. Overall, I'd rate their web presence a 2 out of 10.\n\nAs a web development, mobile development, UI/UX design, company, their digital storefront is losing them clients right now. The first impression prospects get? It's not great.\n\nHere's the good news: this is exactly the kind of fix we can knock out this week. A modern, fast, mobile-responsive site with clear calls-to-action would completely transform their pipeline.\n\nTheir pain point is: actively seeking development partners for overflow, scaling fast, likely needs r.\n\nThis is a warm lead, not a cold one. They're actively looking for help. Let's reach out before their competitors get to them first.\n\nWho's drafting the email? Let's close this one!",
+      "video_html": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Website Audit - Cheesecake Labs</title>\n    <style>\n        * { margin: 0; padding: 0; box-sizing: border-box; }\n        body { \n            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;\n            background: #0a0a0a; color: #fff; \n            display: flex; justify-content: center; align-items: center;\n            min-height: 100vh; padding: 20px;\n        }\n        .audit-card {\n            width: 1200px; height: 675px;\n            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);\n            border-radius: 16px; padding: 60px;\n            display: flex; flex-direction: column; justify-content: space-between;\n            position: relative; overflow: hidden;\n        }\n        .audit-card::before {\n            content: ''; position: absolute; top: -50%; right: -20%;\n            width: 400px; height: 400px; border-radius: 50%;\n            background: radial-gradient(circle, #44aa4422 0%, transparent 70%);\n        }\n        .header {\n            display: flex; justify-content: space-between; align-items: flex-start;\n            position: relative; z-index: 1;\n        }\n        .company-name {\n            font-size: 42px; font-weight: 800; letter-spacing: -1px;\n        }\n        .score-badge {\n            background: #44aa44; color: #fff;\n            padding: 12px 24px; border-radius: 50px;\n            font-size: 24px; font-weight: 800;\n        }\n        .url {\n            font-size: 18px; color: #888; margin-top: 8px;\n        }\n        .issues-section {\n            flex: 1; display: flex; gap: 40px; margin-top: 30px;\n            position: relative; z-index: 1;\n        }\n        .issues-list {\n            flex: 1; list-style: none;\n        }\n        .issues-list li {\n            padding: 8px 0; padding-left: 28px; position: relative;\n            font-size: 18px; color: #ddd; border-bottom: 1px solid #333;\n        }\n        .issues-list li::before {\n            content: '\\2717'; position: absolute; left: 0;\n            color: #44aa44; font-weight: bold;\n        }\n        .right-panel {\n            flex: 1; display: flex; flex-direction: column; justify-content: center;\n            align-items: center; text-align: center;\n        }\n        .big-score {\n            font-size: 120px; font-weight: 900; color: #44aa44;\n            line-height: 1;\n        }\n        .score-label {\n            font-size: 16px; color: #44aa44; text-transform: uppercase;\n            letter-spacing: 3px; margin-top: 8px;\n        }\n        .footer {\n            display: flex; justify-content: space-between; align-items: center;\n            border-top: 1px solid #333; padding-top: 20px;\n            position: relative; z-index: 1;\n        }\n        .brand {\n            font-size: 24px; font-weight: 700; color: #fff;\n        }\n        .brand span { color: #4a9eff; }\n        .cta-hint {\n            font-size: 16px; color: #4a9eff;\n        }\n    </style>\n</head>\n<body>\n    <div class=\"audit-card\">\n        <div class=\"header\">\n            <div>\n                <div class=\"company-name\">Cheesecake Labs</div>\n                <div class=\"url\">https://cheesecakelabs.com/</div>\n            </div>\n            <div class=\"score-badge\">MODERATE</div>\n        </div>\n        <div class=\"issues-section\">\n            <ul class=\"issues-list\">\n                <li>No copyright year found</li>\n                <li>No modern typography/fonts</li>\n            </ul>\n            <div class=\"right-panel\">\n                <div class=\"big-score\">2/10</div>\n                <div class=\"score-label\">Website Score</div>\n            </div>\n        </div>\n        <div class=\"footer\">\n            <div class=\"brand\">Nano<span>Soft</span> Audit System</div>\n            <div class=\"cta-hint\">Personalized outreach opportunity</div>\n        </div>\n    </div>\n</body>\n</html>",
+      "video_filename": "audit_cheesecake_labs.html"
+    },
+    {
+      "rank": 18,
+      "company": "Ematicsolutions",
+      "email": "BOUNCED_Logo-@america-300x148.webp",
+      "website": "https://ematicsolutions.com",
+      "judge_score": 5,
+      "pain_point": "",
+      "services": "web development, UI/UX design, eCommerce",
+      "team_size": "",
+      "country": "UK",
+      "issues_found": [
+        "No copyright year found"
+      ],
+      "audit_score": 1,
+      "load_time_seconds": 1.45,
+      "severity": "moderate",
+      "script_60s": "Hey ecommerce team, it's time for a 60-second website audit!\n\nI just checked out https://ematicsolutions.com. Here's what I found:\n\nWe noticed no copyright year found. Overall, I'd rate their web presence a 1 out of 10.\n\nAs a web development, UI/UX design, eCommerce company, their digital storefront is losing them clients right now. The first impression prospects get? It's not great.\n\nHere's the good news: this is exactly the kind of fix we can knock out this week. A modern, fast, mobile-responsive site with clear calls-to-action would completely transform their pipeline.\n\nTheir pain point is: they need better web presence to win more deals.\n\nThis is a warm lead, not a cold one. They're actively looking for help. Let's reach out before their competitors get to them first.\n\nWho's drafting the email? Let's close this one!",
+      "video_html": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Website Audit - Ematicsolutions</title>\n    <style>\n        * { margin: 0; padding: 0; box-sizing: border-box; }\n        body { \n            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;\n            background: #0a0a0a; color: #fff; \n            display: flex; justify-content: center; align-items: center;\n            min-height: 100vh; padding: 20px;\n        }\n        .audit-card {\n            width: 1200px; height: 675px;\n            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);\n            border-radius: 16px; padding: 60px;\n            display: flex; flex-direction: column; justify-content: space-between;\n            position: relative; overflow: hidden;\n        }\n        .audit-card::before {\n            content: ''; position: absolute; top: -50%; right: -20%;\n            width: 400px; height: 400px; border-radius: 50%;\n            background: radial-gradient(circle, #44aa4422 0%, transparent 70%);\n        }\n        .header {\n            display: flex; justify-content: space-between; align-items: flex-start;\n            position: relative; z-index: 1;\n        }\n        .company-name {\n            font-size: 42px; font-weight: 800; letter-spacing: -1px;\n        }\n        .score-badge {\n            background: #44aa44; color: #fff;\n            padding: 12px 24px; border-radius: 50px;\n            font-size: 24px; font-weight: 800;\n        }\n        .url {\n            font-size: 18px; color: #888; margin-top: 8px;\n        }\n        .issues-section {\n            flex: 1; display: flex; gap: 40px; margin-top: 30px;\n            position: relative; z-index: 1;\n        }\n        .issues-list {\n            flex: 1; list-style: none;\n        }\n        .issues-list li {\n            padding: 8px 0; padding-left: 28px; position: relative;\n            font-size: 18px; color: #ddd; border-bottom: 1px solid #333;\n        }\n        .issues-list li::before {\n            content: '\\2717'; position: absolute; left: 0;\n            color: #44aa44; font-weight: bold;\n        }\n        .right-panel {\n            flex: 1; display: flex; flex-direction: column; justify-content: center;\n            align-items: center; text-align: center;\n        }\n        .big-score {\n            font-size: 120px; font-weight: 900; color: #44aa44;\n            line-height: 1;\n        }\n        .score-label {\n            font-size: 16px; color: #44aa44; text-transform: uppercase;\n            letter-spacing: 3px; margin-top: 8px;\n        }\n        .footer {\n            display: flex; justify-content: space-between; align-items: center;\n            border-top: 1px solid #333; padding-top: 20px;\n            position: relative; z-index: 1;\n        }\n        .brand {\n            font-size: 24px; font-weight: 700; color: #fff;\n        }\n        .brand span { color: #4a9eff; }\n        .cta-hint {\n            font-size: 16px; color: #4a9eff;\n        }\n    </style>\n</head>\n<body>\n    <div class=\"audit-card\">\n        <div class=\"header\">\n            <div>\n                <div class=\"company-name\">Ematicsolutions</div>\n                <div class=\"url\">https://ematicsolutions.com</div>\n            </div>\n            <div class=\"score-badge\">MODERATE</div>\n        </div>\n        <div class=\"issues-section\">\n            <ul class=\"issues-list\">\n                <li>No copyright year found</li>\n            </ul>\n            <div class=\"right-panel\">\n                <div class=\"big-score\">1/10</div>\n                <div class=\"score-label\">Website Score</div>\n            </div>\n        </div>\n        <div class=\"footer\">\n            <div class=\"brand\">Nano<span>Soft</span> Audit System</div>\n            <div class=\"cta-hint\">Personalized outreach opportunity</div>\n        </div>\n    </div>\n</body>\n</html>",
+      "video_filename": "audit_ematicsolutions.html"
+    },
+    {
+      "rank": 19,
+      "company": "Doit",
+      "email": "contact@doit.software",
+      "website": "https://doit.software",
+      "judge_score": 8,
+      "pain_point": "",
+      "services": "web development, mobile development, UI/UX design, cloud/DevOps, custom software",
+      "team_size": "",
+      "country": "USA",
+      "issues_found": [
+        "No copyright year found"
+      ],
+      "audit_score": 1,
+      "load_time_seconds": 0.73,
+      "severity": "moderate",
+      "script_60s": "Hey mobile dev team, it's time for a 60-second website audit!\n\nI just checked out https://doit.software. Here's what I found:\n\nWe noticed no copyright year found. Overall, I'd rate their web presence a 1 out of 10.\n\nAs a web development, mobile development, UI/UX design, company, their digital storefront is losing them clients right now. The first impression prospects get? It's not great.\n\nHere's the good news: this is exactly the kind of fix we can knock out this week. A modern, fast, mobile-responsive site with clear calls-to-action would completely transform their pipeline.\n\nTheir pain point is: they need better web presence to win more deals.\n\nThis is a warm lead, not a cold one. They're actively looking for help. Let's reach out before their competitors get to them first.\n\nWho's drafting the email? Let's close this one!",
+      "video_html": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Website Audit - Doit</title>\n    <style>\n        * { margin: 0; padding: 0; box-sizing: border-box; }\n        body { \n            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;\n            background: #0a0a0a; color: #fff; \n            display: flex; justify-content: center; align-items: center;\n            min-height: 100vh; padding: 20px;\n        }\n        .audit-card {\n            width: 1200px; height: 675px;\n            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);\n            border-radius: 16px; padding: 60px;\n            display: flex; flex-direction: column; justify-content: space-between;\n            position: relative; overflow: hidden;\n        }\n        .audit-card::before {\n            content: ''; position: absolute; top: -50%; right: -20%;\n            width: 400px; height: 400px; border-radius: 50%;\n            background: radial-gradient(circle, #44aa4422 0%, transparent 70%);\n        }\n        .header {\n            display: flex; justify-content: space-between; align-items: flex-start;\n            position: relative; z-index: 1;\n        }\n        .company-name {\n            font-size: 42px; font-weight: 800; letter-spacing: -1px;\n        }\n        .score-badge {\n            background: #44aa44; color: #fff;\n            padding: 12px 24px; border-radius: 50px;\n            font-size: 24px; font-weight: 800;\n        }\n        .url {\n            font-size: 18px; color: #888; margin-top: 8px;\n        }\n        .issues-section {\n            flex: 1; display: flex; gap: 40px; margin-top: 30px;\n            position: relative; z-index: 1;\n        }\n        .issues-list {\n            flex: 1; list-style: none;\n        }\n        .issues-list li {\n            padding: 8px 0; padding-left: 28px; position: relative;\n            font-size: 18px; color: #ddd; border-bottom: 1px solid #333;\n        }\n        .issues-list li::before {\n            content: '\\2717'; position: absolute; left: 0;\n            color: #44aa44; font-weight: bold;\n        }\n        .right-panel {\n            flex: 1; display: flex; flex-direction: column; justify-content: center;\n            align-items: center; text-align: center;\n        }\n        .big-score {\n            font-size: 120px; font-weight: 900; color: #44aa44;\n            line-height: 1;\n        }\n        .score-label {\n            font-size: 16px; color: #44aa44; text-transform: uppercase;\n            letter-spacing: 3px; margin-top: 8px;\n        }\n        .footer {\n            display: flex; justify-content: space-between; align-items: center;\n            border-top: 1px solid #333; padding-top: 20px;\n            position: relative; z-index: 1;\n        }\n        .brand {\n            font-size: 24px; font-weight: 700; color: #fff;\n        }\n        .brand span { color: #4a9eff; }\n        .cta-hint {\n            font-size: 16px; color: #4a9eff;\n        }\n    </style>\n</head>\n<body>\n    <div class=\"audit-card\">\n        <div class=\"header\">\n            <div>\n                <div class=\"company-name\">Doit</div>\n                <div class=\"url\">https://doit.software</div>\n            </div>\n            <div class=\"score-badge\">MODERATE</div>\n        </div>\n        <div class=\"issues-section\">\n            <ul class=\"issues-list\">\n                <li>No copyright year found</li>\n            </ul>\n            <div class=\"right-panel\">\n                <div class=\"big-score\">1/10</div>\n                <div class=\"score-label\">Website Score</div>\n            </div>\n        </div>\n        <div class=\"footer\">\n            <div class=\"brand\">Nano<span>Soft</span> Audit System</div>\n            <div class=\"cta-hint\">Personalized outreach opportunity</div>\n        </div>\n    </div>\n</body>\n</html>",
+      "video_filename": "audit_doit.html"
+    },
+    {
+      "rank": 20,
+      "company": "Azumo",
+      "email": "hello@azumo.co",
+      "website": "https://azumo.com/",
+      "judge_score": 10,
+      "pain_point": "capacity constraints during growth, seeking development partners for overflow work",
+      "services": "web development, mobile development, cloud/DevOps, AI/ML, QA/Testing, staff augmentation",
+      "team_size": "50 - 249",
+      "country": "San Francisco, CA",
+      "issues_found": [
+        "No modern typography/fonts"
+      ],
+      "audit_score": 1,
+      "load_time_seconds": 0.04,
+      "severity": "moderate",
+      "script_60s": "Hey mobile dev team, it's time for a 60-second website audit!\n\nI just checked out https://azumo.com/. Here's what I found:\n\nWe noticed no modern typography/fonts. Overall, I'd rate their web presence a 1 out of 10.\n\nAs a web development, mobile development, cloud/DevOps, company, their digital storefront is losing them clients right now. The first impression prospects get? It's not great.\n\nHere's the good news: this is exactly the kind of fix we can knock out this week. A modern, fast, mobile-responsive site with clear calls-to-action would completely transform their pipeline.\n\nTheir pain point is: capacity constraints during growth, seeking development partners for overflow wo.\n\nThis is a warm lead, not a cold one. They're actively looking for help. Let's reach out before their competitors get to them first.\n\nWho's drafting the email? Let's close this one!",
+      "video_html": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Website Audit - Azumo</title>\n    <style>\n        * { margin: 0; padding: 0; box-sizing: border-box; }\n        body { \n            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;\n            background: #0a0a0a; color: #fff; \n            display: flex; justify-content: center; align-items: center;\n            min-height: 100vh; padding: 20px;\n        }\n        .audit-card {\n            width: 1200px; height: 675px;\n            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);\n            border-radius: 16px; padding: 60px;\n            display: flex; flex-direction: column; justify-content: space-between;\n            position: relative; overflow: hidden;\n        }\n        .audit-card::before {\n            content: ''; position: absolute; top: -50%; right: -20%;\n            width: 400px; height: 400px; border-radius: 50%;\n            background: radial-gradient(circle, #44aa4422 0%, transparent 70%);\n        }\n        .header {\n            display: flex; justify-content: space-between; align-items: flex-start;\n            position: relative; z-index: 1;\n        }\n        .company-name {\n            font-size: 42px; font-weight: 800; letter-spacing: -1px;\n        }\n        .score-badge {\n            background: #44aa44; color: #fff;\n            padding: 12px 24px; border-radius: 50px;\n            font-size: 24px; font-weight: 800;\n        }\n        .url {\n            font-size: 18px; color: #888; margin-top: 8px;\n        }\n        .issues-section {\n            flex: 1; display: flex; gap: 40px; margin-top: 30px;\n            position: relative; z-index: 1;\n        }\n        .issues-list {\n            flex: 1; list-style: none;\n        }\n        .issues-list li {\n            padding: 8px 0; padding-left: 28px; position: relative;\n            font-size: 18px; color: #ddd; border-bottom: 1px solid #333;\n        }\n        .issues-list li::before {\n            content: '\\2717'; position: absolute; left: 0;\n            color: #44aa44; font-weight: bold;\n        }\n        .right-panel {\n            flex: 1; display: flex; flex-direction: column; justify-content: center;\n            align-items: center; text-align: center;\n        }\n        .big-score {\n            font-size: 120px; font-weight: 900; color: #44aa44;\n            line-height: 1;\n        }\n        .score-label {\n            font-size: 16px; color: #44aa44; text-transform: uppercase;\n            letter-spacing: 3px; margin-top: 8px;\n        }\n        .footer {\n            display: flex; justify-content: space-between; align-items: center;\n            border-top: 1px solid #333; padding-top: 20px;\n            position: relative; z-index: 1;\n        }\n        .brand {\n            font-size: 24px; font-weight: 700; color: #fff;\n        }\n        .brand span { color: #4a9eff; }\n        .cta-hint {\n            font-size: 16px; color: #4a9eff;\n        }\n    </style>\n</head>\n<body>\n    <div class=\"audit-card\">\n        <div class=\"header\">\n            <div>\n                <div class=\"company-name\">Azumo</div>\n                <div class=\"url\">https://azumo.com/</div>\n            </div>\n            <div class=\"score-badge\">MODERATE</div>\n        </div>\n        <div class=\"issues-section\">\n            <ul class=\"issues-list\">\n                <li>No modern typography/fonts</li>\n            </ul>\n            <div class=\"right-panel\">\n                <div class=\"big-score\">1/10</div>\n                <div class=\"score-label\">Website Score</div>\n            </div>\n        </div>\n        <div class=\"footer\">\n            <div class=\"brand\">Nano<span>Soft</span> Audit System</div>\n            <div class=\"cta-hint\">Personalized outreach opportunity</div>\n        </div>\n    </div>\n</body>\n</html>",
+      "video_filename": "audit_azumo.html"
+    }
+  ],
+  "spy_emails": [
+    {
+      "brokerage": "Bluechip Real Estate",
+      "email": "bill@billclarksonrealestate.com",
+      "phone": "+971****1212",
+      "city": "Dubai",
+      "state": "UAE",
+      "address": "Downtown Dubai",
+      "mockup_file": "spy_mockups/bluechip-real-estate-dubai.html",
+      "email_body": "Hi there,\n\nI was looking at Bluechip Real Estate's presence in Dubai and noticed your social media channels are pretty quiet right now.\n\nFor brokerages in the Dubai market, that's usually where warm buyers are scrolling before they ever pick up the phone.\n\nI put together 3 Instagram post concepts specifically for Dubai \u2014 the kind of content that gets saves, shares, and DMs. I even designed mockups so you can see exactly how they'd look on your feed.\n\nWant me to send them over? No charge, just want your read on them.\n\nIf they land, we can talk about what ongoing content support would look like for Bluechip Real Estate.\n\nSaJib Shikder\nNanoSoft Agency | nanosoft.agency",
+      "status": "mockups_created",
+      "social_media_status": "dead/inactive"
+    },
+    {
+      "brokerage": "Amy Koch",
+      "email": "fscottc21@movephoenix.com",
+      "phone": "+1-602-386-7343",
+      "city": "Phoenix",
+      "state": "AZ",
+      "address": "Scottsdale, Phoenix",
+      "mockup_file": "spy_mockups/amy-koch-phoenix.html",
+      "email_body": "Hi there,\n\nI was looking at Amy Koch's presence in Phoenix and noticed your social media channels are pretty quiet right now.\n\nFor brokerages in the Phoenix market, that's usually where warm buyers are scrolling before they ever pick up the phone.\n\nI put together 3 Instagram post concepts specifically for Phoenix \u2014 the kind of content that gets saves, shares, and DMs. I even designed mockups so you can see exactly how they'd look on your feed.\n\nWant me to send them over? No charge, just want your read on them.\n\nIf they land, we can talk about what ongoing content support would look like for Amy Koch.\n\nSaJib Shikder\nNanoSoft Agency | nanosoft.agency",
+      "status": "mockups_created",
+      "social_media_status": "dead/inactive"
+    },
+    {
+      "brokerage": "Central Commercial Real Estate",
+      "email": "bill@billclarksonrealestate.com",
+      "phone": "",
+      "city": "Miami",
+      "state": "FL",
+      "address": "390 Northwest 26th Street Miami",
+      "mockup_file": "spy_mockups/central-commercial-miami.html",
+      "email_body": "Hi there,\n\nI was looking at Central Commercial Real Estate's presence in Miami and noticed your social media channels are pretty quiet right now.\n\nFor brokerages in the Miami market, that's usually where warm buyers are scrolling before they ever pick up the phone.\n\nI put together 3 Instagram post concepts specifically for Miami \u2014 the kind of content that gets saves, shares, and DMs. I even designed mockups so you can see exactly how they'd look on your feed.\n\nWant me to send them over? No charge, just want your read on them.\n\nIf they land, we can talk about what ongoing content support would look like for Central Commercial Real Estate.\n\nSaJib Shikder\nNanoSoft Agency | nanosoft.agency",
+      "status": "mockups_created",
+      "social_media_status": "dead/inactive"
+    },
+    {
+      "brokerage": "Three Towers For Real Estate & Cont. Co.",
+      "email": "bill@billclarksonrealestate.com",
+      "phone": "",
+      "city": "Doha",
+      "state": "Qatar",
+      "address": "West Bay, Doha",
+      "mockup_file": "spy_mockups/three-towers-doha.html",
+      "email_body": "Hi there,\n\nI was looking at Three Towers For Real Estate & Cont. Co.'s presence in Doha and noticed your social media channels are pretty quiet right now.\n\nFor brokerages in the Doha market, that's usually where warm buyers are scrolling before they ever pick up the phone.\n\nI put together 3 Instagram post concepts specifically for Doha \u2014 the kind of content that gets saves, shares, and DMs. I even designed mockups so you can see exactly how they'd look on your feed.\n\nWant me to send them over? No charge, just want your read on them.\n\nIf they land, we can talk about what ongoing content support would look like for Three Towers For Real Estate & Cont. Co..\n\nSaJib Shikder\nNanoSoft Agency | nanosoft.agency",
+      "status": "mockups_created",
+      "social_media_status": "dead/inactive"
+    },
+    {
+      "brokerage": "ULR Properties - Dallas",
+      "email": "poonam.mhatre@brookfieldproperties.com",
+      "phone": "+1-214-233-6158",
+      "city": "Dallas",
+      "state": "TX",
+      "address": "2320 North Houston Street Dallas",
+      "mockup_file": "spy_mockups/ulr-properties-dallas.html",
+      "email_body": "Hi there,\n\nI was looking at ULR Properties - Dallas's presence in Dallas and noticed your social media channels are pretty quiet right now.\n\nFor brokerages in the Dallas market, that's usually where warm buyers are scrolling before they ever pick up the phone.\n\nI put together 3 Instagram post concepts specifically for Dallas \u2014 the kind of content that gets saves, shares, and DMs. I even designed mockups so you can see exactly how they'd look on your feed.\n\nWant me to send them over? No charge, just want your read on them.\n\nIf they land, we can talk about what ongoing content support would look like for ULR Properties - Dallas.\n\nSaJib Shikder\nNanoSoft Agency | nanosoft.agency",
+      "status": "mockups_created",
+      "social_media_status": "dead/inactive"
+    },
+    {
+      "brokerage": "Inner City Development & Realtors",
+      "email": "israel@ifrhomes.com",
+      "phone": "",
+      "city": "Houston",
+      "state": "TX",
+      "address": "Houston Heights, Houston",
+      "mockup_file": "spy_mockups/inner-city-development-houston.html",
+      "email_body": "Hi there,\n\nI was looking at Inner City Development & Realtors's presence in Houston and noticed your social media channels are pretty quiet right now.\n\nFor brokerages in the Houston market, that's usually where warm buyers are scrolling before they ever pick up the phone.\n\nI put together 3 Instagram post concepts specifically for Houston \u2014 the kind of content that gets saves, shares, and DMs. I even designed mockups so you can see exactly how they'd look on your feed.\n\nWant me to send them over? No charge, just want your read on them.\n\nIf they land, we can talk about what ongoing content support would look like for Inner City Development & Realtors.\n\nSaJib Shikder\nNanoSoft Agency | nanosoft.agency",
+      "status": "mockups_created",
+      "social_media_status": "dead/inactive"
+    },
+    {
+      "brokerage": "DC Capital Group USA",
+      "email": "sales@stockworth.com",
+      "phone": "+1-407-907-6442",
+      "city": "Orlando",
+      "state": "FL",
+      "address": "Lake Nona, Orlando",
+      "mockup_file": "spy_mockups/dc-capital-group-orlando.html",
+      "email_body": "Hi there,\n\nI was looking at DC Capital Group USA's presence in Orlando and noticed your social media channels are pretty quiet right now.\n\nFor brokerages in the Orlando market, that's usually where warm buyers are scrolling before they ever pick up the phone.\n\nI put together 3 Instagram post concepts specifically for Orlando \u2014 the kind of content that gets saves, shares, and DMs. I even designed mockups so you can see exactly how they'd look on your feed.\n\nWant me to send them over? No charge, just want your read on them.\n\nIf they land, we can talk about what ongoing content support would look like for DC Capital Group USA.\n\nSaJib Shikder\nNanoSoft Agency | nanosoft.agency",
+      "status": "mockups_created",
+      "social_media_status": "dead/inactive"
+    },
+    {
+      "brokerage": "Etmam Real Estate",
+      "email": "bill@billclarksonrealestate.com",
+      "phone": "",
+      "city": "Kuwait City",
+      "state": "Kuwait",
+      "address": "Sharq, Kuwait City",
+      "mockup_file": "spy_mockups/etmam-real-estate-kuwait.html",
+      "email_body": "Hi there,\n\nI was looking at Etmam Real Estate's presence in Kuwait City and noticed your social media channels are pretty quiet right now.\n\nFor brokerages in the Kuwait City market, that's usually where warm buyers are scrolling before they ever pick up the phone.\n\nI put together 3 Instagram post concepts specifically for Kuwait City \u2014 the kind of content that gets saves, shares, and DMs. I even designed mockups so you can see exactly how they'd look on your feed.\n\nWant me to send them over? No charge, just want your read on them.\n\nIf they land, we can talk about what ongoing content support would look like for Etmam Real Estate.\n\nSaJib Shikder\nNanoSoft Agency | nanosoft.agency",
+      "status": "mockups_created",
+      "social_media_status": "dead/inactive"
+    },
+    {
+      "brokerage": "Guardian Towers Real Estate",
+      "email": "bill@billclarksonrealestate.com",
+      "phone": "",
+      "city": "Abu Dhabi",
+      "state": "UAE",
+      "address": "Corniche, Abu Dhabi",
+      "mockup_file": "spy_mockups/guardian-towers-abu-dhabi.html",
+      "email_body": "Hi there,\n\nI was looking at Guardian Towers Real Estate's presence in Abu Dhabi and noticed your social media channels are pretty quiet right now.\n\nFor brokerages in the Abu Dhabi market, that's usually where warm buyers are scrolling before they ever pick up the phone.\n\nI put together 3 Instagram post concepts specifically for Abu Dhabi \u2014 the kind of content that gets saves, shares, and DMs. I even designed mockups so you can see exactly how they'd look on your feed.\n\nWant me to send them over? No charge, just want your read on them.\n\nIf they land, we can talk about what ongoing content support would look like for Guardian Towers Real Estate.\n\nSaJib Shikder\nNanoSoft Agency | nanosoft.agency",
+      "status": "mockups_created",
+      "social_media_status": "dead/inactive"
+    },
+    {
+      "brokerage": "Real Estate Exchange",
+      "email": "bill@billclarksonrealestate.com",
+      "phone": "",
+      "city": "Muscat",
+      "state": "Oman",
+      "address": "Al Mouj, Muscat",
+      "mockup_file": "spy_mockups/real-estate-exchange-muscat.html",
+      "email_body": "Hi there,\n\nI was looking at Real Estate Exchange's presence in Muscat and noticed your social media channels are pretty quiet right now.\n\nFor brokerages in the Muscat market, that's usually where warm buyers are scrolling before they ever pick up the phone.\n\nI put together 3 Instagram post concepts specifically for Muscat \u2014 the kind of content that gets saves, shares, and DMs. I even designed mockups so you can see exactly how they'd look on your feed.\n\nWant me to send them over? No charge, just want your read on them.\n\nIf they land, we can talk about what ongoing content support would look like for Real Estate Exchange.\n\nSaJib Shikder\nNanoSoft Agency | nanosoft.agency",
+      "status": "mockups_created",
+      "social_media_status": "dead/inactive"
+    },
+    {
+      "brokerage": "Lantower Brandon Crossroads Leasing Office",
+      "email": "alsaqer@alsaqergroup.com",
+      "phone": "+1-844-606-4291",
+      "city": "Tampa",
+      "state": "FL",
+      "address": "Brandon, Tampa",
+      "mockup_file": "spy_mockups/lantower-brandon-tampa.html",
+      "email_body": "Hi there,\n\nI was looking at Lantower Brandon Crossroads Leasing Office's presence in Tampa and noticed your social media channels are pretty quiet right now.\n\nFor brokerages in the Tampa market, that's usually where warm buyers are scrolling before they ever pick up the phone.\n\nI put together 3 Instagram post concepts specifically for Tampa \u2014 the kind of content that gets saves, shares, and DMs. I even designed mockups so you can see exactly how they'd look on your feed.\n\nWant me to send them over? No charge, just want your read on them.\n\nIf they land, we can talk about what ongoing content support would look like for Lantower Brandon Crossroads Leasing Office.\n\nSaJib Shikder\nNanoSoft Agency | nanosoft.agency",
+      "status": "mockups_created",
+      "social_media_status": "dead/inactive"
+    },
+    {
+      "brokerage": "Israel, Finley & Ramos REALTORS",
+      "email": "israel@ifrhomes.com",
+      "phone": "+1-623-435-8181",
+      "city": "Phoenix",
+      "state": "AZ",
+      "address": "Phoenix, AZ",
+      "mockup_file": "spy_mockups/israel-finley-ramos-phoenix.html",
+      "email_body": "Hi there,\n\nI was looking at Israel, Finley & Ramos REALTORS's presence in Phoenix and noticed your social media channels are pretty quiet right now.\n\nFor brokerages in the Phoenix market, that's usually where warm buyers are scrolling before they ever pick up the phone.\n\nI put together 3 Instagram post concepts specifically for Phoenix \u2014 the kind of content that gets saves, shares, and DMs. I even designed mockups so you can see exactly how they'd look on your feed.\n\nWant me to send them over? No charge, just want your read on them.\n\nIf they land, we can talk about what ongoing content support would look like for Israel, Finley & Ramos REALTORS.\n\nSaJib Shikder\nNanoSoft Agency | nanosoft.agency",
+      "status": "mockups_created",
+      "social_media_status": "dead/inactive"
+    }
+  ],
+  "reverse_pitch": [
+    {
+      "subject": "quick question about Goji Labs's dev capacity",
+      "body": "Hi there,\n\nI noticed Goji Labs is handling overflow \u2014 and I'm genuinely curious about something.\n\nWhen you get more project requests than your small team can handle, what happens to the overflow?\n\nDo you turn them down, hire more, or work with outside partners?\n\nJust trying to understand how agencies like yours deal with it.\n\n\u2014 SaJib",
+      "type": "wl",
+      "lead_key": "Goji Labs|wl",
+      "company": "Goji Labs",
+      "email": "marketing@gojilabs.com",
+      "personalization": {
+        "name": "",
+        "city": "Los Angeles, CA",
+        "service": "mobile",
+        "team": "small team",
+        "pain_ref": "handling overflow"
+      }
+    },
+    {
+      "subject": "Mercury Development and the hiring question",
+      "body": "Hey there,\n\nSaw that Mercury Development has been handling overflow \u2014 exciting times.\n\nHere's what I'm curious about: when you're scaling this fast, is it harder to find good dev talent or to manage the workload you already have?\n\nI talk to a lot of agency owners and everyone has a different answer.\n\n\u2014 SaJib",
+      "type": "wl",
+      "lead_key": "Mercury Development|wl",
+      "company": "Mercury Development",
+      "email": "sales@mercurydevelopment.com",
+      "personalization": {
+        "name": "",
+        "city": "Aventura, FL",
+        "service": "mobile",
+        "team": "mid-size team",
+        "pain_ref": "handling overflow"
+      }
+    },
+    {
+      "subject": "what's your biggest bottleneck right now?",
+      "body": "Hi there,\n\nI've been looking at custom builds agencies in Irvine, CA and Kingsmen Digital Ventures keeps coming up.\n\nOne question: what's the one thing slowing down your delivery the most right now \u2014 is it people, process, or something else entirely?\n\nGenuinely curious.\n\n\u2014 SaJib",
+      "type": "wl",
+      "lead_key": "Kingsmen Digital Ventures|wl",
+      "company": "Kingsmen Digital Ventures",
+      "email": "hello@kingsmendv.com",
+      "personalization": {
+        "name": "",
+        "city": "Irvine, CA",
+        "service": "custom builds",
+        "team": "boutique team",
+        "pain_ref": "handling overflow"
+      }
+    },
+    {
+      "subject": "how do you handle the overflow at BairesDev?",
+      "body": "Hey there,\n\nRandom question \u2014 when BairesDev lands a big cloud/devops project and your large team is already stretched, what do you do?\n\nI'm asking because I work with agencies on exactly this and everyone's approach is different.\n\nWould love to hear how it works on your end.\n\n\u2014 SaJib",
+      "type": "wl",
+      "lead_key": "BairesDev|wl",
+      "company": "BairesDev",
+      "email": "hello@bairesdev.com",
+      "personalization": {
+        "name": "",
+        "city": "San Francisco, CA",
+        "service": "cloud/devops",
+        "team": "large team",
+        "pain_ref": "handling overflow"
+      }
+    },
+    {
+      "subject": "Infinum's mobile work \u2014 one question",
+      "body": "Hi there,\n\nStumbled across Infinum's work in mobile \u2014 really solid.\n\nQuick question: do you keep all your dev work in-house, or do you ever bring in outside help when things get busy?\n\nJust curious how a mid-size team handles the ups and downs.\n\n\u2014 SaJib",
+      "type": "wl",
+      "lead_key": "Infinum|wl",
+      "company": "Infinum",
+      "email": "hello@infinum.com",
+      "personalization": {
+        "name": "",
+        "city": "New York, NY",
+        "service": "mobile",
+        "team": "mid-size team",
+        "pain_ref": "handling overflow"
+      }
+    },
+    {
+      "subject": "the custom builds capacity question",
+      "body": "Hey there,\n\nI help custom builds agencies in Plano, TX with a specific problem \u2014 and I'm wondering if Agency Partner Interactive LL ever runs into it.\n\nHere's the question: when your small team is at full capacity and a great project comes in, what do you do?\n\nNo pitch \u2014 just genuinely curious.\n\n\u2014 SaJib",
+      "type": "wl",
+      "lead_key": "Agency Partner Interactive LL|wl",
+      "company": "Agency Partner Interactive LL",
+      "email": "hello@agencypartner.com",
+      "personalization": {
+        "name": "",
+        "city": "Plano, TX",
+        "service": "custom builds",
+        "team": "small team",
+        "pain_ref": "handling overflow"
+      }
+    },
+    {
+      "subject": "curious about MOBIKASA's growth",
+      "body": "Hi there,\n\nMOBIKASA seems to be handling overflow right now \u2014 always impressive to see.\n\nOne thing I'm curious about: as you grow, do you find it's easier to scale the team or to find reliable partners for the extra work?\n\nWould love your take.\n\n\u2014 SaJib",
+      "type": "wl",
+      "lead_key": "MOBIKASA|wl",
+      "company": "MOBIKASA",
+      "email": "info@mobikasa.com",
+      "personalization": {
+        "name": "",
+        "city": "New York, NY",
+        "service": "mobile",
+        "team": "small team",
+        "pain_ref": "handling overflow"
+      }
+    },
+    {
+      "subject": "a question about your small team",
+      "body": "Hey there,\n\nI work with small team in team scaling and I've got a question that only someone running the show can answer.\n\nWhat's harder right now \u2014 finding people who can actually deliver, or managing the projects you already have lined up?\n\nGenuinely want to know.\n\n\u2014 SaJib",
+      "type": "wl",
+      "lead_key": "Ancient|wl",
+      "company": "Ancient",
+      "email": "info@ancient.global",
+      "personalization": {
+        "name": "",
+        "city": "Ciudad de M\u00e9xico",
+        "service": "team scaling",
+        "team": "small team",
+        "pain_ref": "handling overflow"
+      }
+    },
+    {
+      "subject": "quick question about Plavno's dev capacity",
+      "body": "Hi there,\n\nI noticed Plavno is handling overflow \u2014 and I'm genuinely curious about something.\n\nWhen you get more project requests than your small team can handle, what happens to the overflow?\n\nDo you turn them down, hire more, or work with outside partners?\n\nJust trying to understand how agencies like yours deal with it.\n\n\u2014 SaJib",
+      "type": "wl",
+      "lead_key": "Plavno|wl",
+      "company": "Plavno",
+      "email": "sales@plavno.io",
+      "personalization": {
+        "name": "",
+        "city": "Alexandria, VA",
+        "service": "mobile",
+        "team": "small team",
+        "pain_ref": "handling overflow"
+      }
+    },
+    {
+      "subject": "TRooTech Business Solutions and the hiring question",
+      "body": "Hey Careers,\n\nSaw that TRooTech Business Solutions has been handling overflow \u2014 exciting times.\n\nHere's what I'm curious about: when you're scaling this fast, is it harder to find good dev talent or to manage the workload you already have?\n\nI talk to a lot of agency owners and everyone has a different answer.\n\n\u2014 SaJib",
+      "type": "wl",
+      "lead_key": "TRooTech Business Solutions|wl",
+      "company": "TRooTech Business Solutions",
+      "email": "careers@trootech.com",
+      "personalization": {
+        "name": "Careers",
+        "city": "Ahmedabad",
+        "service": "mobile",
+        "team": "mid-size team",
+        "pain_ref": "handling overflow"
+      }
+    },
+    {
+      "subject": "what's your biggest bottleneck right now?",
+      "body": "Hi there,\n\nI've been looking at ui/ux design agencies in Gonnet and Flux IT keeps coming up.\n\nOne question: what's the one thing slowing down your delivery the most right now \u2014 is it people, process, or something else entirely?\n\nGenuinely curious.\n\n\u2014 SaJib",
+      "type": "wl",
+      "lead_key": "Flux IT|wl",
+      "company": "Flux IT",
+      "email": "info@fluxitsoft.com",
+      "personalization": {
+        "name": "",
+        "city": "Gonnet",
+        "service": "ui/ux design",
+        "team": "small team",
+        "pain_ref": "handling overflow"
+      }
+    },
+    {
+      "subject": "how do you handle the overflow at DHDTech.io?",
+      "body": "Hey Diogo,\n\nRandom question \u2014 when DHDTech.io lands a big custom builds project and your team is already stretched, what do you do?\n\nI'm asking because I work with agencies on exactly this and everyone's approach is different.\n\nWould love to hear how it works on your end.\n\n\u2014 SaJib",
+      "type": "wl",
+      "lead_key": "DHDTech.io|wl",
+      "company": "DHDTech.io",
+      "email": "diogo@dhdtech.io",
+      "personalization": {
+        "name": "Diogo",
+        "city": "your area",
+        "service": "custom builds",
+        "team": "team",
+        "pain_ref": "handling overflow"
+      }
+    },
+    {
+      "subject": "Darly Solutions's mobile work \u2014 one question",
+      "body": "Hi there,\n\nStumbled across Darly Solutions's work in mobile \u2014 really solid.\n\nQuick question: do you keep all your dev work in-house, or do you ever bring in outside help when things get busy?\n\nJust curious how a small team handles the ups and downs.\n\n\u2014 SaJib",
+      "type": "wl",
+      "lead_key": "Darly Solutions|wl",
+      "company": "Darly Solutions",
+      "email": "hello@darly.solutions",
+      "personalization": {
+        "name": "",
+        "city": "McKinney, TX",
+        "service": "mobile",
+        "team": "small team",
+        "pain_ref": "handling overflow"
+      }
+    },
+    {
+      "subject": "the mobile capacity question",
+      "body": "Hey Us,\n\nI help mobile agencies in Luzern with a specific problem \u2014 and I'm wondering if SapientPro ever runs into it.\n\nHere's the question: when your small team is at full capacity and a great project comes in, what do you do?\n\nNo pitch \u2014 just genuinely curious.\n\n\u2014 SaJib",
+      "type": "wl",
+      "lead_key": "SapientPro|wl",
+      "company": "SapientPro",
+      "email": "us@sapient.pro",
+      "personalization": {
+        "name": "Us",
+        "city": "Luzern",
+        "service": "mobile",
+        "team": "small team",
+        "pain_ref": "handling overflow"
+      }
+    },
+    {
+      "subject": "curious about Alwaysfresh's growth",
+      "body": "Hi there,\n\nAlwaysfresh seems to be handling overflow right now \u2014 always impressive to see.\n\nOne thing I'm curious about: as you grow, do you find it's easier to scale the team or to find reliable partners for the extra work?\n\nWould love your take.\n\n\u2014 SaJib",
+      "type": "wl",
+      "lead_key": "Alwaysfresh|wl",
+      "company": "Alwaysfresh",
+      "email": "hello@alwaysfresh.io",
+      "personalization": {
+        "name": "",
+        "city": "Ukraine",
+        "service": "web development",
+        "team": "team",
+        "pain_ref": "handling overflow"
+      }
+    },
+    {
+      "subject": "a question about your team",
+      "body": "Hey London,\n\nI work with team in mobile and I've got a question that only someone running the show can answer.\n\nWhat's harder right now \u2014 finding people who can actually deliver, or managing the projects you already have lined up?\n\nGenuinely want to know.\n\n\u2014 SaJib",
+      "type": "wl",
+      "lead_key": "Devsdata|wl",
+      "company": "Devsdata",
+      "email": "london@devsdata.com",
+      "personalization": {
+        "name": "London",
+        "city": "USA",
+        "service": "mobile",
+        "team": "team",
+        "pain_ref": "handling overflow"
+      }
+    },
+    {
+      "subject": "quick question about Tcwglobal's dev capacity",
+      "body": "Hi there,\n\nI noticed Tcwglobal is handling overflow \u2014 and I'm genuinely curious about something.\n\nWhen you get more project requests than your team can handle, what happens to the overflow?\n\nDo you turn them down, hire more, or work with outside partners?\n\nJust trying to understand how agencies like yours deal with it.\n\n\u2014 SaJib",
+      "type": "wl",
+      "lead_key": "Tcwglobal|wl",
+      "company": "Tcwglobal",
+      "email": "hello@tcwglobal.com",
+      "personalization": {
+        "name": "",
+        "city": "USA",
+        "service": "team scaling",
+        "team": "team",
+        "pain_ref": "handling overflow"
+      }
+    },
+    {
+      "subject": "Winwithweb and the hiring question",
+      "body": "Hey there,\n\nSaw that Winwithweb has been handling overflow \u2014 exciting times.\n\nHere's what I'm curious about: when you're scaling this fast, is it harder to find good dev talent or to manage the workload you already have?\n\nI talk to a lot of agency owners and everyone has a different answer.\n\n\u2014 SaJib",
+      "type": "wl",
+      "lead_key": "Winwithweb|wl",
+      "company": "Winwithweb",
+      "email": "hello@tyler.com",
+      "personalization": {
+        "name": "",
+        "city": "your area",
+        "service": "mobile",
+        "team": "team",
+        "pain_ref": "handling overflow"
+      }
+    },
+    {
+      "subject": "what's your biggest bottleneck right now?",
+      "body": "Hi there,\n\nI've been looking at web development agencies in UK and Co keeps coming up.\n\nOne question: what's the one thing slowing down your delivery the most right now \u2014 is it people, process, or something else entirely?\n\nGenuinely curious.\n\n\u2014 SaJib",
+      "type": "wl",
+      "lead_key": "Co|wl",
+      "company": "Co",
+      "email": "hello@anchorwebagency.co.uk",
+      "personalization": {
+        "name": "",
+        "city": "UK",
+        "service": "web development",
+        "team": "team",
+        "pain_ref": "handling overflow"
+      }
+    },
+    {
+      "subject": "how do you handle the overflow at Unlimitedwp?",
+      "body": "Hey there,\n\nRandom question \u2014 when Unlimitedwp lands a big web development project and your team is already stretched, what do you do?\n\nI'm asking because I work with agencies on exactly this and everyone's approach is different.\n\nWould love to hear how it works on your end.\n\n\u2014 SaJib",
+      "type": "wl",
+      "lead_key": "Unlimitedwp|wl",
+      "company": "Unlimitedwp",
+      "email": "hello@unlimitedwp.com",
+      "personalization": {
+        "name": "",
+        "city": "USA",
+        "service": "web development",
+        "team": "team",
+        "pain_ref": "handling overflow"
+      }
+    }
+  ],
+  "stats": {
+    "audit_total": 20,
+    "spy_total": 12,
+    "reverse_pitch": 20,
+    "total_to_send": 52
+  }
+}

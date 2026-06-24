@@ -1,0 +1,6 @@
+HIGH-TOUCH SEND REPORT — 2026-06-23T22:41:08.476784
+============================================================
+Total attempted: 2
+Sent:    2
+Failed:  0
+Skipped: 50

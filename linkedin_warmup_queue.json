@@ -1,0 +1,212 @@
+[
+  {
+    "lead": {
+      "company": "Goji Labs",
+      "owner_name": "",
+      "linkedin_url": "",
+      "email": "marketing@gojilabs.com",
+      "country": "Los Angeles, CA",
+      "services": "web development, mobile development, UI/UX design, cloud/DevOps, SaaS, consulting, MVP development",
+      "team_size": "50 - 249",
+      "pain_point": "seeking development partners for overflow work, mobile expertise gaps in-house",
+      "judge_score": 8,
+      "status": "Unqualified"
+    },
+    "connection_note": "Hey @goji, noticed Goji Labs's mobile apps work — especially impressive for a small but mighty team. Curious how you handle the dev side when things get busy. Worth connecting?",
+    "connection_note_length": 176,
+    "follow_up_comments": [
+      "Thanks for connecting! That's a great point about mobile apps — what's the one thing you wish you could automate on the delivery side?",
+      "Interesting take. Out of curiosity, when Goji Labs gets more projects than the team can handle, what's the first thing you do?",
+      "Totally agree. Quick question — do you find it's easier to scale the team or find outside partners when things get busy?"
+    ]
+  },
+  {
+    "lead": {
+      "company": "Mercury Development",
+      "owner_name": "",
+      "linkedin_url": "",
+      "email": "sales@mercurydevelopment.com",
+      "country": "Aventura, FL",
+      "services": "web development, mobile development, UI/UX design, cloud/DevOps, AI/ML, SaaS, QA/Testing, consulting, staff augmentation",
+      "team_size": "250 - 999",
+      "pain_point": "capacity constraints during growth, seeking development partners for overflow work",
+      "judge_score": 9,
+      "status": "Unqualified"
+    },
+    "connection_note": "Hi @mercury, Mercury Development has a great reputation in Aventura, FL's mobile apps scene. Always interesting seeing how agencies like yours manage capacity. Open to connect?",
+    "connection_note_length": 176,
+    "follow_up_comments": [
+      "Hey @mercury, thanks for connecting! Random question — what's the hardest part of running a couple-hundred-person team in mobile apps?",
+      "Good to be connected. I'm always curious — when Mercury Development lands a big project, how far out is your dev team booked?",
+      "Thanks for the connect! If you could wave a magic wand and fix one thing about how Mercury Development delivers projects, what would it be?"
+    ]
+  },
+  {
+    "lead": {
+      "company": "Closeloop Technologies LLC",
+      "owner_name": "",
+      "linkedin_url": "",
+      "email": "sales@closeloop.com",
+      "country": "Mountain View , CA. Sahibzada Ajit Singh Nagar , India. Jaipur , India",
+      "services": "web development, mobile development, cloud/DevOps, AI/ML, eCommerce, QA/Testing, consulting, staff augmentation",
+      "team_size": "50 - 249",
+      "pain_point": "capacity constraints during growth, seeking development partners for overflow work",
+      "judge_score": 10,
+      "status": "T1 Sent"
+    },
+    "connection_note": "Hey @closeloop, heard Closeloop Technologies LLC is handling overflow right now — always cool to see. Quick question: do you keep dev work in-house or work with outside partners?",
+    "connection_note_length": 178,
+    "follow_up_comments": [
+      "Hey @closeloop, thanks for connecting! Random question — what's the hardest part of running a small but mighty team in mobile apps?",
+      "Good to be connected. I'm always curious — when Closeloop Technologies LLC lands a big project, how far out is your dev team booked?",
+      "Thanks for the connect! If you could wave a magic wand and fix one thing about how Closeloop Technologies LLC delivers projects, what would it be?"
+    ]
+  },
+  {
+    "lead": {
+      "company": "Utility",
+      "owner_name": "Dave Cohen",
+      "linkedin_url": "https://www.linkedin.com/in/davidlcohen/",
+      "email": "dave@utility.agency",
+      "country": "New York , NY Culver City , CA",
+      "services": "web development, mobile development, UI/UX design, cloud/DevOps, SaaS, consulting, staff augmentation",
+      "team_size": "50 - 249",
+      "pain_point": "capacity constraints during growth, seeking development partners for overflow work",
+      "judge_score": 10,
+      "status": "T1 Sent"
+    },
+    "connection_note": "Hi Dave, stumbled across Utility's work in mobile apps. Solid stuff. Genuinely curious — what's your biggest bottleneck on the delivery side right now?",
+    "connection_note_length": 151,
+    "follow_up_comments": [
+      "Hey Dave, thanks for connecting! Random question — what's the hardest part of running a small but mighty team in mobile apps?",
+      "Good to be connected. I'm always curious — when Utility lands a big project, how far out is your dev team booked?",
+      "Thanks for the connect! If you could wave a magic wand and fix one thing about how Utility delivers projects, what would it be?"
+    ]
+  },
+  {
+    "lead": {
+      "company": "Euristiq",
+      "owner_name": "",
+      "linkedin_url": "",
+      "email": "hello@euristiq.com",
+      "country": "Toronto , Canada. L'viv , Ukraine. Warszawa , Poland",
+      "services": "cloud/DevOps, AI/ML, SaaS, consulting, staff augmentation, custom software",
+      "team_size": "50 - 249",
+      "pain_point": "capacity constraints during peak demand, seeking reliable dev partners for overflow",
+      "judge_score": 10,
+      "status": "T1 Sent"
+    },
+    "connection_note": "Hey @euristiq, Euristiq looks like it's doing cool work in custom builds. I help agencies like yours handle overflow dev without the hiring headache. Worth a chat?",
+    "connection_note_length": 163,
+    "follow_up_comments": [
+      "Hey @euristiq, thanks for connecting! Random question — what's the hardest part of running a small but mighty team in custom builds?",
+      "Good to be connected. I'm always curious — when Euristiq lands a big project, how far out is your dev team booked?",
+      "Thanks for the connect! If you could wave a magic wand and fix one thing about how Euristiq delivers projects, what would it be?"
+    ]
+  },
+  {
+    "lead": {
+      "company": "BairesDev",
+      "owner_name": "",
+      "linkedin_url": "",
+      "email": "hello@bairesdev.com",
+      "country": "San Francisco, CA",
+      "services": "cloud/DevOps",
+      "team_size": "1,000 - 9,999",
+      "pain_point": "capacity constraints during peak demand, seeking reliable dev partners for overflow",
+      "judge_score": 7,
+      "status": "Unqualified"
+    },
+    "connection_note": "Hi @bairesdev, fellow cloud/devops person here — noticed BairesDev's work and impressed. Always good to connect with people running 900+ person team. Worth connecting?",
+    "connection_note_length": 167,
+    "follow_up_comments": [
+      "Thanks for connecting! That's a great point about cloud/devops — what's the one thing you wish you could automate on the delivery side?",
+      "Interesting take. Out of curiosity, when BairesDev gets more projects than the team can handle, what's the first thing you do?",
+      "Totally agree. Quick question — do you find it's easier to scale the team or find outside partners when things get busy?"
+    ]
+  },
+  {
+    "lead": {
+      "company": "Infinum",
+      "owner_name": "",
+      "linkedin_url": "",
+      "email": "hello@infinum.com",
+      "country": "New York, NY",
+      "services": "web development, mobile development, UI/UX design, consulting",
+      "team_size": "250 - 999",
+      "pain_point": "seeking development partners for overflow work, mobile expertise gaps in-house",
+      "judge_score": 7,
+      "status": "Unqualified"
+    },
+    "connection_note": "Hey @infinum, Infinum stands out in the New York, NY mobile apps market. Curious — when you're at capacity, what happens to the extra project requests?",
+    "connection_note_length": 151,
+    "follow_up_comments": [
+      "Thanks for connecting! That's a great point about mobile apps — what's the one thing you wish you could automate on the delivery side?",
+      "Interesting take. Out of curiosity, when Infinum gets more projects than the team can handle, what's the first thing you do?",
+      "Totally agree. Quick question — do you find it's easier to scale the team or find outside partners when things get busy?"
+    ]
+  },
+  {
+    "lead": {
+      "company": "Itransition",
+      "owner_name": "",
+      "linkedin_url": "",
+      "email": "info@itransition.com",
+      "country": "Decatur, GA",
+      "services": "cloud/DevOps, AI/ML, consulting, staff augmentation",
+      "team_size": "1,000 - 9,999",
+      "pain_point": "capacity constraints during growth, seeking development partners for overflow work",
+      "judge_score": 10,
+      "status": "T1 Sent"
+    },
+    "connection_note": "Hi @itransition, Itransition's portfolio in team scaling is genuinely impressive. Quick one: do you ever wish you had more dev bandwidth without growing the team?",
+    "connection_note_length": 162,
+    "follow_up_comments": [
+      "Hey @itransition, thanks for connecting! Random question — what's the hardest part of running a 900+ person team in team scaling?",
+      "Good to be connected. I'm always curious — when Itransition lands a big project, how far out is your dev team booked?",
+      "Thanks for the connect! If you could wave a magic wand and fix one thing about how Itransition delivers projects, what would it be?"
+    ]
+  },
+  {
+    "lead": {
+      "company": "Diffco",
+      "owner_name": "",
+      "linkedin_url": "",
+      "email": "mail@diffco.us",
+      "country": "San Jose, CA",
+      "services": "web development, mobile development, cloud/DevOps, AI/ML, eCommerce, SaaS, QA/Testing, consulting, staff augmentation",
+      "team_size": "50 - 249",
+      "pain_point": "capacity constraints during growth, seeking development partners for overflow work",
+      "judge_score": 10,
+      "status": "T1 Sent"
+    },
+    "connection_note": "Hey @diffco, saw Diffco is handling overflow — exciting times. Random question: what's harder right now, finding dev talent or managing the workload?",
+    "connection_note_length": 149,
+    "follow_up_comments": [
+      "Hey @diffco, thanks for connecting! Random question — what's the hardest part of running a small but mighty team in mobile apps?",
+      "Good to be connected. I'm always curious — when Diffco lands a big project, how far out is your dev team booked?",
+      "Thanks for the connect! If you could wave a magic wand and fix one thing about how Diffco delivers projects, what would it be?"
+    ]
+  },
+  {
+    "lead": {
+      "company": "Azumo",
+      "owner_name": "",
+      "linkedin_url": "",
+      "email": "hello@azumo.co",
+      "country": "San Francisco, CA",
+      "services": "web development, mobile development, cloud/DevOps, AI/ML, QA/Testing, staff augmentation",
+      "team_size": "50 - 249",
+      "pain_point": "capacity constraints during growth, seeking development partners for overflow work",
+      "judge_score": 10,
+      "status": "T1 Sent"
+    },
+    "connection_note": "Hi @azumo, Azumo has been on my radar for a while — great mobile apps work. Would love to connect and hear how you're handling the handling overflow phase.",
+    "connection_note_length": 155,
+    "follow_up_comments": [
+      "Hey @azumo, thanks for connecting! Random question — what's the hardest part of running a small but mighty team in mobile apps?",
+      "Good to be connected. I'm always curious — when Azumo lands a big project, how far out is your dev team booked?",
+      "Thanks for the connect! If you could wave a magic wand and fix one thing about how Azumo delivers projects, what would it be?"
+    ]
+  }
+]
