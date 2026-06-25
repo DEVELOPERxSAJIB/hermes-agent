@@ -25,15 +25,59 @@ def log(msg):
     print(f"[{ts}] {msg}", flush=True)
 
 def get_sheet_service():
-    with open(TOKEN_PATH) as f:
-        d = json.load(f)
-    creds = Credentials(
-        token=d['token'], refresh_token=d.get('refresh_token'),
-        token_uri=d.get('token_uri', 'https://oauth2.googleapis.com/token'),
-        client_id=d['client_id'], client_secret=d['client_secret'],
-        scopes=d.get('scopes')
-    )
-    return build('sheets', 'v4', credentials=creds)
+    # Try OAuth first, fall back to service account
+    try:
+        with open(TOKEN_PATH) as f:
+            d = json.load(f)
+        from datetime import datetime as _dt, timezone as _tz
+        expiry_str = d.get('expiry', '')
+        if expiry_str:
+            try:
+                expiry_str_norm = expiry_str.replace('Z', '+00:00')
+                expiry_dt = _dt.fromisoformat(expiry_str_norm)
+                if expiry_dt.tzinfo is None:
+                    expiry_dt = expiry_dt.replace(tzinfo=_tz.utc)
+                if _dt.now(_tz.utc) > expiry_dt:
+                    # Token expired, try refresh
+                    creds = Credentials(
+                        token=d['token'], refresh_token=d.get('refresh_token'),
+                        token_uri=d.get('token_uri', 'https://oauth2.googleapis.com/token'),
+                        client_id=d['client_id'], client_secret=d['client_secret'],
+                        scopes=d.get('scopes')
+                    )
+                    if creds.refresh_token:
+                        try:
+                            import google.auth.transport.requests
+                            creds.refresh(google.auth.transport.requests.Request())
+                            # Verify the refreshed token works
+                            svc = build('sheets', 'v4', credentials=creds)
+                            svc.spreadsheets().get(spreadsheetId=SHEET_ID).execute()
+                            return svc
+                        except Exception:
+                            pass
+                    # Fall through to service account
+                    raise Exception("OAuth expired/revoked, using SA")
+            except Exception:
+                pass
+        creds = Credentials(
+            token=d['token'], refresh_token=d.get('refresh_token'),
+            token_uri=d.get('token_uri', 'https://oauth2.googleapis.com/token'),
+            client_id=d['client_id'], client_secret=d['client_secret'],
+            scopes=d.get('scopes')
+        )
+        # Verify OAuth creds work before returning
+        svc = build('sheets', 'v4', credentials=creds)
+        svc.spreadsheets().get(spreadsheetId=SHEET_ID).execute()
+        return svc
+    except Exception:
+        # Service account fallback
+        from google.oauth2.service_account import Credentials as SACredentials
+        sa_path = os.path.expanduser("~/nanosoft/gcp_service_account.json")
+        sa_creds = SACredentials.from_service_account_file(
+            sa_path,
+            scopes=['https://www.googleapis.com/auth/spreadsheets']
+        )
+        return build('sheets', 'v4', credentials=sa_creds)
 
 def get_existing(service):
     result = service.spreadsheets().values().get(
