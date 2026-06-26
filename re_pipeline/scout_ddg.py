@@ -246,42 +246,34 @@ def main():
                         existing_emails.add(best_email.lower())
                         existing_names.add(company.lower())
                         log(f"  NEW: {company[:35]} | {best_email}")
+
+                        # Write incrementally so partial results survive timeout
+                        try:
+                            row = [''] * 20
+                            row[0] = str(len(all_new_leads))
+                            row[1] = lead.get('Brokerage_Name', '')
+                            row[4] = lead.get('City', '')
+                            row[5] = lead.get('State_Country', '')
+                            row[6] = lead.get('Market', '')
+                            row[7] = lead.get('Website', '')
+                            row[8] = lead.get('Email', '')
+                            row[11] = lead.get('Lead_Source', 'ddg_search')
+                            row[13] = lead.get('Angle', 'A')
+                            row[14] = 'New'
+                            service.spreadsheets().values().append(
+                                spreadsheetId=SHEET_ID, range=f'{SHEET_NAME}!A1',
+                                valueInputOption='RAW', body={'values': [row]}
+                            ).execute()
+                            log(f"    -> written to sheet")
+                        except Exception as e:
+                            log(f"    -> sheet write failed: {e}")
             
             time.sleep(2)  # Rate limit between searches
         
         time.sleep(3)  # Rate limit between cities
     
-    log(f"\nTotal new leads found: {len(all_new_leads)}")
-    
-    if all_new_leads:
-        # Add to sheet
-        result = service.spreadsheets().values().get(
-            spreadsheetId=SHEET_ID, range=f'{SHEET_NAME}!A1:A500'
-        ).execute()
-        next_id = len(result.get('values', [])) + 1
-        
-        values = []
-        for lead in all_new_leads:
-            row = [''] * 20
-            row[0] = str(next_id)
-            row[1] = lead.get('Brokerage_Name', '')
-            row[4] = lead.get('City', '')
-            row[5] = lead.get('State_Country', '')
-            row[6] = lead.get('Market', '')
-            row[7] = lead.get('Website', '')
-            row[8] = lead.get('Email', '')
-            row[11] = lead.get('Lead_Source', 'ddg_search')
-            row[13] = lead.get('Angle', 'A')
-            row[14] = 'New'
-            values.append(row)
-            next_id += 1
-        
-        service.spreadsheets().values().append(
-            spreadsheetId=SHEET_ID, range=f'{SHEET_NAME}!A1',
-            valueInputOption='RAW', body={'values': values}
-        ).execute()
-        log(f"Added {len(values)} leads to sheet")
-    else:
+    log(f"\nTotal new leads found & written: {len(all_new_leads)}")
+    if not all_new_leads:
         log("No new leads found")
 
 if __name__ == "__main__":
