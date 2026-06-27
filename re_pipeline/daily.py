@@ -32,7 +32,7 @@ def re_morning_routine(cities=None, max_new=MAX_NEW_LEADS_PER_DAY):
         "errors": []
     }
 
-    # Step 1: Send pending follow-ups
+    # Step 1: Send pending follow-ups (T2/T3/T4) + T1 to unsent "New" leads
     leads = get_leads()
     today = datetime.now()
     today_str = today.strftime("%d/%m/%Y")
@@ -53,7 +53,12 @@ def re_morning_routine(cities=None, max_new=MAX_NEW_LEADS_PER_DAY):
         email = lead.get("Email", "")
 
         next_touch = None
-        if touch1 and not touch2:
+
+        # FIX: If status is "New" and no Touch_1_Date, send T1 immediately
+        if status == "New" and not touch1 and email:
+            next_touch = 1
+        # Otherwise, follow up on existing sequence
+        elif touch1 and not touch2:
             try:
                 d = datetime.strptime(touch1, "%d/%m/%Y")
                 if (today - d).days >= 3:
@@ -84,8 +89,12 @@ def re_morning_routine(cities=None, max_new=MAX_NEW_LEADS_PER_DAY):
         success, error = send_email(email, tmpl["subject"], tmpl["body"])
         if success:
             update_touch_date(lead["Lead_ID"], next_touch)
-            update_status(lead["Lead_ID"], "Followed-Up")
-            results["follow_ups_sent"] += 1
+            if next_touch == 1:
+                update_status(lead["Lead_ID"], "Contacted")
+                results["touch1_sent"] += 1
+            else:
+                update_status(lead["Lead_ID"], "Followed-Up")
+                results["follow_ups_sent"] += 1
             emails_sent += 1
         elif "bounce" in error.lower() or "refused" in error.lower():
             update_status(lead["Lead_ID"], "Bounced")

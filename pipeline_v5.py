@@ -590,9 +590,12 @@ def run_wl():
             if eligible:
                 needs.append(lead)
 
-        # Cap T1 at daily limit
-        if template == "T1":
-            needs = needs[:MAX_DAILY_T1_WL]
+        # Cap WL total at MAX_DAILY_T1_WL (20) — follow-ups first, then T1 gets remaining room
+        room_left = MAX_DAILY_T1_WL - results["sent"]
+        if room_left <= 0:
+            needs = []
+        else:
+            needs = needs[:room_left]
 
         if not needs:
             log.info(f"  {template}: no leads need this")
@@ -601,11 +604,6 @@ def run_wl():
         log.info(f"  {template}: {len(needs)} leads")
 
         for i, lead in enumerate(needs):
-            # Check daily total cap
-            if daily_sent >= MAX_DAILY_TOTAL:
-                log.info(f"  Daily total cap reached ({MAX_DAILY_TOTAL}). Stopping.")
-                break
-
             email = str(lead.get("Email", "")).strip()
             company = str(lead.get("Company Name", "")).strip()
 
@@ -759,9 +757,12 @@ def run_re():
             if eligible:
                 needs.append(lead)
 
-        # Cap T1 at daily limit
-        if template == "T1":
-            needs = needs[:MAX_DAILY_T1_RE]
+        # Cap RE total at MAX_DAILY_T1_RE (20) — follow-ups first, then T1 gets remaining room
+        room_left = MAX_DAILY_T1_RE - results["sent"]
+        if room_left <= 0:
+            needs = []
+        else:
+            needs = needs[:room_left]
 
         if not needs:
             log.info(f"  {template}: no leads need this")
@@ -770,11 +771,6 @@ def run_re():
         log.info(f"  {template}: {len(needs)} leads")
 
         for i, lead in enumerate(needs):
-            # Check daily total cap
-            if daily_sent >= MAX_DAILY_TOTAL:
-                log.info(f"  Daily total cap reached ({MAX_DAILY_TOTAL}). Stopping.")
-                break
-
             email = str(lead.get("Email", "")).strip()
             brokerage = str(lead.get("Brokerage_Name", "")).strip()
             city = str(lead.get("City", "")).strip()
