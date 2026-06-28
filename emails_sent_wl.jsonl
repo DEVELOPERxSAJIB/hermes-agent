@@ -111,7 +111,6 @@
 {"to": "hello@selleo.com", "company": "selleo", "subject": "capacity at selleo", "sent_at": "2026-06-04T18:38:11.350628+06:00", "message_id": "19e92a4237819da2", "template": "T1"}
 {"to": "sales@digiscorp.com", "company": "Digis, a Fiverr company (NYSE: FVRR)", "subject": "quick question about Digis,", "sent_at": "2026-06-04T18:41:12.909093+06:00", "message_id": "19e92a6e9fe29bc4", "template": "T1"}
 {"to": "info@geekyants.com", "company": "GeekyAnts", "subject": "GeekyAnts overflow question", "sent_at": "2026-06-04T18:44:14.372433+06:00", "message_id": "19e92a9adc1f8f22", "template": "T1"}
-{"company": "Empat", "email": "dkl@empat.tech", "template": "T1", "sent_at": "2026-06-04 12:56", "message_id": "19e92b4affece675"}
 {"to": "info@humaiwebsitesukltd.co.uk", "company": "Humaiwebs", "subject": "Humaiwebs overflow question", "sent_at": "2026-06-05T00:57:38.721978+06:00", "message_id": "19e93ff8bccb5345", "template": "T1"}
 {"to": "biz@penninetechnolabs.com", "company": "Penninetechnolabs", "subject": "mobile development overflow", "sent_at": "2026-06-05T01:00:40.973665+06:00", "message_id": "19e9402530fe84cb", "template": "T1"}
 {"to": "sales@vrinsofts.com", "company": "Vrinsofts", "subject": "Vrinsofts overflow question", "sent_at": "2026-06-05T01:03:42.845447+06:00", "message_id": "19e940518ac1b484", "template": "T1"}
@@ -827,3 +826,11 @@
 {"to": "vitalii.o@codelibry.com", "company": "Codelibry", "subject": "Codelibry overflow", "template": "T1", "sent_at": "2026-06-27T15:03:48.434665+06:00"}
 {"to": "hello@rvsiglobal.co.uk", "company": "Rvsiglobal", "subject": "Rvsiglobal overflow", "template": "T1", "sent_at": "2026-06-27T15:06:53.100708+06:00"}
 {"to": "info@creativethinkdigital.co.uk", "company": "Creativethinkdigital", "subject": "Creativethinkdigital overflow", "template": "T1", "sent_at": "2026-06-27T15:09:57.062774+06:00"}
+{"to": "enquiry@purevpn.com", "company": "Purevpn", "subject": "Purevpn overflow", "template": "T1", "sent_at": "2026-06-28T00:28:38.446063+06:00"}
+{"to": "info@associative.in", "company": "Associative", "subject": "Associative overflow", "template": "T1", "sent_at": "2026-06-28T00:31:44.765252+06:00"}
+{"to": "Info@WaterCollaborativeDelivery.org", "company": "Watercollaborativedelivery", "subject": "Watercollaborativedelivery overflow", "template": "T1", "sent_at": "2026-06-28T00:34:49.386611+06:00"}
+{"to": "info@wpwhitelabelagency.com", "company": "Wpwhitelabelagency", "subject": "Wpwhitelabelagency overflow", "template": "T1", "sent_at": "2026-06-28T00:36:51.609263+06:00"}
+{"to": "marketing@vendasta.com", "company": "Vendasta", "subject": "Vendasta overflow", "template": "T1", "sent_at": "2026-06-28T00:39:55.634771+06:00"}
+{"to": "info@softlinevp.com", "company": "Softlinevp", "subject": "Softlinevp overflow", "template": "T1", "sent_at": "2026-06-28T00:43:00.010904+06:00"}
+{"to": "partnerships@zestcode.digital", "company": "Zestcode", "subject": "Zestcode overflow", "template": "T1", "sent_at": "2026-06-28T00:54:14.846313+06:00"}
+{"to": "hello@valmax.agency", "company": "Valmax", "subject": "Valmax overflow", "template": "T1", "sent_at": "2026-06-28T00:57:19.284275+06:00"}

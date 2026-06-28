@@ -53,6 +53,40 @@ def update_re_crm(email, reason):
             return True
     return False
 
+def _update_wl_crm_cached(email, wl_leads, wl_crm, reason):
+    """Mark WL as bounced using pre-fetched leads list."""
+    for lead in wl_leads:
+        if str(lead.get("Email", "")).strip().lower() == email.lower():
+            company = str(lead.get("Company Name", "")).strip()
+            _clean = email
+            while _clean.startswith("BOUNCED_"):
+                _clean = _clean[len("BOUNCED_"):]
+            wl_crm.update_wl_lead(company, {"Status": "Bounced", "Email": f"BOUNCED_{_clean}"})
+            log(f"  WL CRM updated: {company} -> Bounced")
+            return True
+    return False
+
+def _update_re_crm_cached(email, re_leads, reason):
+    """Mark RE as bounced using pre-fetched leads list — direct sheet write."""
+    from re_pipeline.sheets import COL, SHEET_ID, SHEET_NAME, _service
+    svc = _service()
+    for i, lead in enumerate(re_leads):
+        if str(lead.get("Email", "")).strip().lower() == email.lower():
+            lead_id = lead.get("Lead_ID")
+            if lead_id:
+                row_num = i + 2  # +1 header, +1 0-index
+                col_letter = chr(65 + COL["Status"])
+                cell = f"{SHEET_NAME}!{col_letter}{row_num}"
+                svc.spreadsheets().values().update(
+                    spreadsheetId=SHEET_ID,
+                    range=cell,
+                    valueInputOption="RAW",
+                    body={"values": [["Bounced"]]}
+                ).execute()
+                log(f"  RE CRM updated: {lead.get('Brokerage_Name','')} -> Bounced")
+            return True
+    return False
+
 def main():
     log("=" * 50)
     log("DAILY BOUNCE TRACKER")
@@ -67,13 +101,39 @@ def main():
     except Exception as e:
         log(f"Inbox scan error: {e}")
 
-    # 2. Update CRM for each bounced email
+    # Deduplicate bounce emails to avoid redundant processing
+    bounced_unique = list(set(bounced))
+    if len(bounced_unique) < len(bounced):
+        log(f"Deduplicated to {len(bounced_unique)} unique bounced emails")
+
+    # 2. Pre-fetch all CRM leads once (avoid per-lead quota exhaustion)
+    log("Pre-fetching RE leads from CRM...")
+    re_leads = []
+    try:
+        from re_pipeline.sheets import get_leads
+        re_leads = get_leads()
+        log(f"Fetched {len(re_leads)} RE leads")
+    except Exception as e:
+        log(f"RE leads fetch error: {e}")
+
+    log("Pre-fetching WL leads from CRM...")
+    wl_crm = None
+    wl_leads = []
+    try:
+        from crm import NanoSoftCRM
+        wl_crm = NanoSoftCRM()
+        wl_leads = wl_crm.get_wl_all()
+        log(f"Fetched {len(wl_leads)} WL leads")
+    except Exception as e:
+        log(f"WL CRM init error: {e}")
+
+    # 3. Update CRM for each bounced email (using cached leads)
     wl_updated = 0
     re_updated = 0
-    for email in bounced:
-        if update_wl_crm(email, "inbox bounce"):
+    for email in bounced_unique:
+        if wl_crm and _update_wl_crm_cached(email, wl_leads, wl_crm, "inbox bounce"):
             wl_updated += 1
-        if update_re_crm(email, "inbox bounce"):
+        if _update_re_crm_cached(email, re_leads, "inbox bounce"):
             re_updated += 1
         # Log to bounce log
         with open(LOG_FILE, "a") as f:

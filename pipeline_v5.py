@@ -62,8 +62,13 @@ LOCK_FILE = os.path.join(NANOSOFT_DIR, "pipeline_v5.lock")
 OAUTH_TOKEN_FILE = "/home/ubuntu/.hermes/google_token.json"
 
 # Status values that should be skipped
-SKIP_STATUSES_WL = {"Bounced", "Lost", "Dead", "Closed", "Auto-Reply", "Auto-reply", "Replied"}
-SKIP_STATUSES_RE = {"Bounced", "Dead", "Closed", "Replied"}
+# Statuses that mean "this lead pipeline is done" — skip for ALL templates
+TERMINAL_STATUSES_WL = {"Bounced", "Lost", "Dead", "Closed", "Auto-Reply", "Auto-reply", "Replied"}
+# Statuses that mean "already sent" — skip only for T1 (follow-ups still need to process)
+SENT_STATUSES_WL = {"T1 Sent", "T2 Sent", "T3 Sent", "T4 Sent"}
+# Same for RE
+TERMINAL_STATUSES_RE = {"Bounced", "Dead", "Closed", "Replied"}
+SENT_STATUSES_RE = {"T3 Sent", "Followed-Up", "T4 Sent", "Contacted"}
 
 # Email validation — patterns that indicate INVALID emails
 INVALID_EMAIL_PATTERNS = [
@@ -125,8 +130,7 @@ def detect_replies():
     Returns list of (email_address, subject, snippet) tuples.
     """
     import imaplib
-    from email.header import decode_header
-
+    from datetime import datetime, timedelta
     SMTP_USER = "nanosoftagency007@gmail.com"
     replies = []
 
@@ -145,34 +149,26 @@ def detect_replies():
 
         msg_ids = messages[0].split()
 
-        for msg_id in msg_ids[-200:]:  # Check last 200 emails max
+        for msg_id in msg_ids[-50:]:  # Check last 50 emails (fast)
             try:
-                status, msg_data = mail.fetch(msg_id, "(RFC822)")
+                status, msg_data = mail.fetch(msg_id, "(BODY[HEADER.FIELDS (FROM SUBJECT)])")
                 if status != "OK":
                     continue
+                header = msg_data[0][1].decode("utf-8", errors="ignore")
 
-                raw = msg_data[0][1]
-                msg = email.message_from_bytes(raw)
-
-                # Get sender
-                from_header = msg.get("From", "")
-                sender_email = re.findall(r'[\w.+-]+@[\w-]+\.[\w.-]+', from_header)
-                if not sender_email:
+                # Get sender from header
+                from_match = re.search(r'<([^>]+)>', header.split('From:')[-1].split('\n')[0]) if 'From:' in header else None
+                if not from_match:
                     continue
-                sender_email = sender_email[0].lower()
+                sender_email = from_match.group(1).lower()
 
                 # Skip our own emails
                 if "nanosoftagency007" in sender_email:
                     continue
 
-                # Skip automated/bounce emails
-                subject = ""
-                decoded = decode_header(msg.get("Subject", ""))
-                for part, encoding in decoded:
-                    if isinstance(part, bytes):
-                        subject += part.decode(encoding or "utf-8", errors="replace")
-                    else:
-                        subject += part
+                # Get subject from header
+                subj_match = re.search(r'Subject: (.+)', header)
+                subject = subj_match.group(1).strip() if subj_match else ""
 
                 subject_lower = subject.lower()
                 skip_keywords = [
@@ -184,21 +180,7 @@ def detect_replies():
                 if any(kw in subject_lower for kw in skip_keywords):
                     continue
 
-                # Get snippet
-                body = ""
-                if msg.is_multipart():
-                    for part in msg.walk():
-                        if part.get_content_type() == "text/plain":
-                            payload = part.get_payload(decode=True)
-                            if payload:
-                                body = payload.decode("utf-8", errors="replace")[:200]
-                                break
-                else:
-                    payload = msg.get_payload(decode=True)
-                    if payload:
-                        body = payload.decode("utf-8", errors="replace")[:200]
-
-                replies.append((sender_email, subject[:100], body[:150]))
+                replies.append((sender_email, subject[:100], ""))
 
             except:
                 continue
@@ -234,7 +216,7 @@ def update_replied_leads(replies):
         for i, row in enumerate(all_rows, start=2):
             email = str(row.get("Email", "")).strip().lower()
             status = str(row.get("Status", "")).strip()
-            if email in reply_emails and status not in ("Replied", "Bounced", "Closed", "Dead", "Lost"):
+            if email in reply_emails and status not in ("Replied", "Bounced", "Closed", "Dead", "Lost", "Auto-Reply", "Auto-reply"):
                 ws.update_cell(i, status_col + 1, "Replied")
                 log.info(f"  WL reply detected: {email} → Replied")
                 updated += 1
@@ -539,7 +521,11 @@ def run_wl():
                 continue
             if email in processed_emails:
                 continue
-            if status in SKIP_STATUSES_WL:
+            # Skip terminal statuses for all templates
+            if status in TERMINAL_STATUSES_WL:
+                continue
+            # For T1, also skip already-sent statuses (they need follow-ups, not new T1)
+            if template == "T1" and status in SENT_STATUSES_WL:
                 continue
 
             # Dedup check
@@ -637,16 +623,16 @@ def run_wl():
                         status_col = 19  # S (Status)
                         if template == "T1":
                             ws.update_cell(row_idx, 15, today_str())  # Sent date
-                            ws.update_cell(row_idx, status_col, "T1 Sent")
+                            ws.update_cell(row_idx, status_col, "Contacted")
                         elif template == "T2":
                             ws.update_cell(row_idx, 16, today_str())  # FU 1
-                            ws.update_cell(row_idx, status_col, "T2 Sent")
+                            ws.update_cell(row_idx, status_col, "Contacted")
                         elif template == "T3":
                             ws.update_cell(row_idx, 17, today_str())  # FU 2
-                            ws.update_cell(row_idx, status_col, "T3 Sent")
+                            ws.update_cell(row_idx, status_col, "Contacted")
                         elif template == "T4":
                             ws.update_cell(row_idx, 18, today_str())  # FU 3
-                            ws.update_cell(row_idx, status_col, "T4 Sent")
+                            ws.update_cell(row_idx, status_col, "Contacted")
                 except Exception as e:
                     log.warning(f"  Sheet update error for {company}: {e}")
 
@@ -656,7 +642,7 @@ def run_wl():
                 results["errors"].append(f"{template} {email}: {error[:80]}")
 
             # Gap between emails
-            if i < len(needs) - 1 and daily_sent < MAX_DAILY_TOTAL:
+            if i < len(needs) - 1:
                 time.sleep(EMAIL_GAP)
 
     log.info(f"WL RESULTS: sent={results['sent']} skipped={results['skipped']} errors={len(results['errors'])}")
@@ -706,7 +692,11 @@ def run_re():
                 continue
             if email.lower() in processed_emails:
                 continue
-            if status in SKIP_STATUSES_RE:
+            # Skip terminal statuses for all templates
+            if status in TERMINAL_STATUSES_RE:
+                continue
+            # For T1, also skip already-sent statuses (they need follow-ups, not new T1)
+            if template == "T1" and status in SENT_STATUSES_RE:
                 continue
 
             # Dedup check
@@ -811,13 +801,13 @@ def run_re():
                                 ws.update_cell(ri, status_col, "Contacted")
                             elif template == "T2":
                                 ws.update_cell(ri, t2_col, today_str())
-                                ws.update_cell(ri, status_col, "Followed-Up")
+                                ws.update_cell(ri, status_col, "Contacted")
                             elif template == "T3":
                                 ws.update_cell(ri, t3_col, today_str())
-                                ws.update_cell(ri, status_col, "T3 Sent")
+                                ws.update_cell(ri, status_col, "Contacted")
                             elif template == "T4":
                                 ws.update_cell(ri, t4_col, today_str())
-                                ws.update_cell(ri, status_col, "T4 Sent")
+                                ws.update_cell(ri, status_col, "Contacted")
                             break
                 except Exception as e:
                     log.warning(f"  Sheet update error for {brokerage}: {e}")
@@ -828,7 +818,7 @@ def run_re():
                 results["errors"].append(f"{template} {email}: {error[:80]}")
 
             # Gap between emails
-            if i < len(needs) - 1 and daily_sent < MAX_DAILY_TOTAL:
+            if i < len(needs) - 1:
                 time.sleep(EMAIL_GAP)
 
     log.info(f"RE RESULTS: sent={results['sent']} skipped={results['skipped']} errors={len(results['errors'])}")
