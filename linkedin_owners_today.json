@@ -478,5 +478,165 @@
     "owner_linkedin": "https://in.linkedin.com/in/kamalavel",
     "source": "ddgs",
     "scraped_at": "2026-06-27T04:02:41.600586"
+  },
+  {
+    "company": "Goodface agency\r",
+    "company_linkedin": "https://www.linkedin.com/company/goodface-agency",
+    "owner_name": "Adam Guild",
+    "owner_linkedin": "https://www.linkedin.com/in/adamharrisonguild",
+    "source": "ddgs",
+    "scraped_at": "2026-06-28T04:01:19.051229"
+  },
+  {
+    "company": "Caxy Consulting",
+    "company_linkedin": "https://www.linkedin.com/company/caxy-inc-",
+    "owner_name": "Michael LaVista",
+    "owner_linkedin": "https://www.linkedin.com/in/michaellavista",
+    "source": "ddgs",
+    "scraped_at": "2026-06-28T04:01:25.118289"
+  },
+  {
+    "company": "HotShots Labs | IOS & Android | Flutter mobile app development",
+    "company_linkedin": "https://www.linkedin.com/company/hotshots-labs",
+    "owner_name": "Sterling Albury",
+    "owner_linkedin": "https://www.linkedin.com/in/sterling-albury-14485140",
+    "source": "ddgs",
+    "scraped_at": "2026-06-28T04:01:30.297743"
+  },
+  {
+    "company": "ThinkPalm Technologies",
+    "company_linkedin": "https://www.linkedin.com/company/thinkpalm-technologies-pvt-ltd",
+    "owner_name": "Sarath M.",
+    "owner_linkedin": "https://www.linkedin.com/in/sarathmohanc",
+    "source": "ddgs",
+    "scraped_at": "2026-06-28T04:01:33.720819"
+  },
+  {
+    "company": "Qualhon Informatics Pvt. Ltd",
+    "company_linkedin": "https://www.linkedin.com/company/qualhon",
+    "owner_name": "Thomas George",
+    "owner_linkedin": "https://www.linkedin.com/in/thomas-george-1690786",
+    "source": "ddgs",
+    "scraped_at": "2026-06-28T04:01:37.233006"
+  },
+  {
+    "company": "Scalex360",
+    "company_linkedin": "https://www.linkedin.com/company/scalex360",
+    "owner_name": "Saksham Agrawal",
+    "owner_linkedin": "https://www.linkedin.com/in/saksham-agrawal-6b467a1b2",
+    "source": "ddgs",
+    "scraped_at": "2026-06-28T04:01:44.030311"
+  },
+  {
+    "company": "Wildnettechnologies",
+    "company_linkedin": "https://www.linkedin.com/company/wildnet-technologies",
+    "owner_name": "Mohammad Kashif",
+    "owner_linkedin": "https://www.linkedin.com/in/iammohammadkashif",
+    "source": "ddgs",
+    "scraped_at": "2026-06-28T04:01:48.435869"
+  },
+  {
+    "company": "Tripleminds",
+    "company_linkedin": "https://www.linkedin.com/company/triple-minds",
+    "owner_name": "Ben Oldham",
+    "owner_linkedin": "https://www.linkedin.com/in/ben-l-oldham",
+    "source": "ddgs",
+    "scraped_at": "2026-06-28T04:01:52.516041"
+  },
+  {
+    "company": "Flexiple",
+    "company_linkedin": "https://www.linkedin.com/company/flexiple",
+    "owner_name": "Daniel-wise Ojaide",
+    "owner_linkedin": "https://www.linkedin.com/in/daniel-wise-ojaide",
+    "source": "ddgs",
+    "scraped_at": "2026-06-28T04:02:02.370223"
+  },
+  {
+    "company": "Nimapinfotech",
+    "company_linkedin": "https://www.linkedin.com/company/nimapinfotech",
+    "owner_name": "Michelle Adam",
+    "owner_linkedin": "https://www.linkedin.com/in/michelle-adam-b038a0249",
+    "source": "ddgs",
+    "scraped_at": "2026-06-28T04:02:09.336548"
+  },
+  {
+    "company": "Weareyellowball",
+    "company_linkedin": "https://www.linkedin.com/company/yellowball",
+    "owner_name": "Nic Lapham",
+    "owner_linkedin": "https://uk.linkedin.com/in/niclapham",
+    "source": "ddgs",
+    "scraped_at": "2026-06-28T04:02:19.656842"
+  },
+  {
+    "company": "Qrolic",
+    "company_linkedin": "https://www.linkedin.com/company/qrolic-technologies",
+    "owner_name": "Ravat Parmar",
+    "owner_linkedin": "https://in.linkedin.com/in/ravatparmar",
+    "source": "ddgs",
+    "scraped_at": "2026-06-28T04:02:30.769975"
+  },
+  {
+    "company": "Fireart",
+    "company_linkedin": "https://www.linkedin.com/company/2975640",
+    "owner_name": "Dima Venglinski",
+    "owner_linkedin": "https://pl.linkedin.com/in/venglinski",
+    "source": "ddgs",
+    "scraped_at": "2026-06-28T04:02:35.213245"
+  },
+  {
+    "company": "Instawork",
+    "company_linkedin": "https://www.linkedin.com/company/instawork",
+    "owner_name": "Vinayak Ranade",
+    "owner_linkedin": "https://www.linkedin.com/in/vinayakranade",
+    "source": "ddgs",
+    "scraped_at": "2026-06-28T04:02:39.290086"
+  },
+  {
+    "company": "Nimbata",
+    "company_linkedin": "https://www.linkedin.com/company/nimbata",
+    "owner_name": "Demitris Pournarakis",
+    "owner_linkedin": "https://www.linkedin.com/in/demitris-pournarakis",
+    "source": "ddgs",
+    "scraped_at": "2026-06-28T04:02:45.481499"
+  },
+  {
+    "company": "E2Msolutions",
+    "company_linkedin": "https://www.linkedin.com/company/e2m-solutions",
+    "owner_name": "Brent Weaver",
+    "owner_linkedin": "https://www.linkedin.com/in/brentweaver",
+    "source": "ddgs",
+    "scraped_at": "2026-06-28T04:02:52.127116"
+  },
+  {
+    "company": "Mailmunch",
+    "company_linkedin": "https://www.linkedin.com/company/mailmunch",
+    "owner_name": "Muhammad Feroz",
+    "owner_linkedin": "https://pk.linkedin.com/in/muhammadferoz850",
+    "source": "ddgs",
+    "scraped_at": "2026-06-28T04:03:10.974770"
+  },
+  {
+    "company": "Themindstudios",
+    "company_linkedin": "https://www.linkedin.com/company/mindstudios",
+    "owner_name": "",
+    "owner_linkedin": "https://ua.linkedin.com/in/dobritskiy",
+    "source": "ddgs",
+    "scraped_at": "2026-06-28T04:03:27.288336"
+  },
+  {
+    "company": "Trawex",
+    "company_linkedin": "https://www.linkedin.com/company/trawex-technologies",
+    "owner_name": "Trawex Technologies",
+    "owner_linkedin": "https://in.linkedin.com/in/trawex",
+    "source": "ddgs",
+    "scraped_at": "2026-06-28T04:03:33.449630"
+  },
+  {
+    "company": "Monocubed",
+    "company_linkedin": "https://www.linkedin.com/company/monocubed",
+    "owner_name": "David Baszucki",
+    "owner_linkedin": "https://www.linkedin.com/in/davidbaszucki",
+    "source": "ddgs",
+    "scraped_at": "2026-06-28T04:03:52.324516"
   }
 ]
