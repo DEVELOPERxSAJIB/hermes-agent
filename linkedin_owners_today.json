@@ -638,5 +638,32 @@
     "owner_linkedin": "https://www.linkedin.com/in/davidbaszucki",
     "source": "ddgs",
     "scraped_at": "2026-06-28T04:03:52.324516"
+  },
+  {
+    "company": "Freelancer",
+    "company_linkedin": "https://www.linkedin.com/company/freelancer-com",
+    "owner_name": "Matt Barrie",
+    "owner_linkedin": "https://au.linkedin.com/in/mattbarrie",
+    "confidence": "medium",
+    "is_founder": false,
+    "scraped_at": "2026-06-29T04:01:03.165744"
+  },
+  {
+    "company": "Risingstarinfotech",
+    "company_linkedin": "https://www.linkedin.com/company/rising-star-ingotech",
+    "owner_name": "Ashish M.",
+    "owner_linkedin": "https://in.linkedin.com/in/ashish-m-744460120",
+    "confidence": "medium",
+    "is_founder": false,
+    "scraped_at": "2026-06-29T04:02:20.283048"
+  },
+  {
+    "company": "Median",
+    "company_linkedin": "https://www.linkedin.com/company/median-co",
+    "owner_name": "John Snyder",
+    "owner_linkedin": "https://www.linkedin.com/in/johncsnyder",
+    "confidence": "medium",
+    "is_founder": false,
+    "scraped_at": "2026-06-29T04:03:24.746076"
   }
 ]
