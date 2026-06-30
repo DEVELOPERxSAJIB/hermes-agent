@@ -665,5 +665,41 @@
     "confidence": "medium",
     "is_founder": false,
     "scraped_at": "2026-06-29T04:03:24.746076"
+  },
+  {
+    "company": "Wpwebinfotech",
+    "company_linkedin": "https://www.linkedin.com/company/wpwebinfotech",
+    "owner_name": "Daya Mevada",
+    "owner_linkedin": "https://in.linkedin.com/in/daya-mevada-3581b667",
+    "confidence": "high",
+    "is_founder": true,
+    "scraped_at": "2026-06-30T04:00:17.560930"
+  },
+  {
+    "company": "Flowout",
+    "company_linkedin": "https://www.linkedin.com/company/flowout",
+    "owner_name": "Luka Mlakar",
+    "owner_linkedin": "https://si.linkedin.com/in/luka-mlakar",
+    "confidence": "high",
+    "is_founder": true,
+    "scraped_at": "2026-06-30T04:01:43.837655"
+  },
+  {
+    "company": "Sparkouttech",
+    "company_linkedin": "https://www.linkedin.com/company/sparkouttech",
+    "owner_name": "Harry Bui",
+    "owner_linkedin": "https://vn.linkedin.com/in/harrybui31",
+    "confidence": "high",
+    "is_founder": true,
+    "scraped_at": "2026-06-30T04:02:20.424274"
+  },
+  {
+    "company": "Zen9Marketing",
+    "company_linkedin": "https://www.linkedin.com/company/zen9marketing",
+    "owner_name": "Jon Sooy",
+    "owner_linkedin": "https://www.linkedin.com/in/jonericsooy",
+    "confidence": "medium",
+    "is_founder": false,
+    "scraped_at": "2026-06-30T04:02:44.170381"
   }
 ]
